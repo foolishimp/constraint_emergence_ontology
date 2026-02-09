@@ -31,6 +31,14 @@ A formal companion paper showing how LLMs instantiate the constraint-emergence a
 
 Published on Zenodo: [zenodo.org/records/16592400](https://zenodo.org/records/16592400)
 
+### [Ontology Templates](ontology_templates.md)
+
+Logical Encapsulation — a meta-template for constraint specifications. Converts an LLM from a generative peer into a mechanical evaluator by explicitly constraining it to reason within defined axioms and procedures. A practical application of the ontology's core insight: constraints enable structured computation.
+
+### [Political Ontology](political_ontology.md)
+
+Political OS v1.0 — an LLM constraint specification for political analysis. Applies the framework's structural approach to political systems: analyse power, incentives, and constraints without importing ideology, narratives, or subjective values. Game-theoretic analysis within the constraint ontology.
+
 ## Related Work
 
 - [ai_sdlc_method](https://github.com/foolishimp/ai_sdlc_method) - The AI SDLC methodology that provides the software engineering empirical ground referenced in Part VIII of the ontology
