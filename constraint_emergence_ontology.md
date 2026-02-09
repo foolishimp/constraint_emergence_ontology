@@ -273,7 +273,9 @@ If our laws of physics are not physics, several consequences follow:
 > | Power structures influence what gets studied | Therefore "objectivity" is itself a power move |
 > | Dominant groups shape official knowledge | Therefore all knowledge claims are domination |
 >
-> The Aristotelian framework clarifies the error. It is *legitimate* to note that medical research historically underrepresented women and minorities—that's a social constraint on which questions got asked, and the constraint network had answers we weren't seeking. It is *illegitimate* to conclude that "objectivity" is merely a tool of oppression, or that the constraint network's answers depend on who is asking.
+> The valid insights are real. Institutions ossify around certain questions and neglect others—Byzantine theology consumed centuries on christological disputes while the Greek empirical tradition it had inherited atrophied—until it leaked west and east and helped spark renaissances in both. The constraint network had answers nobody was seeking. But the error is concluding that "objectivity" is therefore a tool of oppression, or that the constraint network's answers depend on who is asking.
+>
+> Consider the changed roles of men and women. This wasn't achieved by ideological critique of the constraint network—it was achieved by *technological innovation within it*. Machines replaced muscle. Medicine transformed mortality. Contraception decoupled reproduction from circumstance. The constraint landscape actually changed, which changed what was possible, which changed social roles. Technology equalised what biology had differentiated. The constraints moved; the answers followed.
 >
 > The constraint network doesn't care about power dynamics. It constrains equally. The *questions we ask* are socially shaped. The *answers reality gives* are not.
 >
