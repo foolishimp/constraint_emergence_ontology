@@ -37,7 +37,7 @@ Logical Encapsulation — a meta-template for constraint specifications. Convert
 
 ### [Political Ontology](political_ontology.md)
 
-Political OS v1.0 — an LLM constraint specification for political analysis. Applies the framework's structural approach to political systems: analyse power, incentives, and constraints without importing ideology, narratives, or subjective values. Game-theoretic analysis within the constraint ontology.
+Political OS v1.0 — a logical constraint specification that uses politics as its domain. A worked example of the Logical Encapsulation method: defines axioms, invariants, and an evaluation algorithm, then forces reasoning to operate strictly within those constraints. The political domain demonstrates the approach; the contribution is the logical architecture — how to convert an LLM from a generative system into a mechanical evaluator through explicit constraint specification. Derived directly from the constraint-emergence framework: constrain the computation, and structured reasoning emerges.
 
 ## Related Work
 
