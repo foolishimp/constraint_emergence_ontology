@@ -4,6 +4,32 @@
 
 ---
 
+## Getting Started
+
+This document is an **ontology designed to be loaded into an LLM's context window**. It is not a paper to be read linearly — it is a constraint specification that programs the LLM to reason within a particular philosophical framework.
+
+### How to use it
+
+1. **Load the document** into your LLM session as context (paste it, attach it, or use a system prompt).
+2. **Ask questions** within the ontology to explore its premises, test its internal consistency, and derive consequences from its axioms.
+3. **The LLM becomes a reasoning partner** operating inside the framework — it can explain implications, find tensions, apply the ontology to new domains, and identify where the framework makes testable claims.
+
+### What kinds of questions work well
+
+- **Exploratory**: *"What does the framework predict about consciousness?"* or *"How does the observer theory handle the measurement problem differently from Copenhagen?"*
+- **Adversarial**: *"Channel Penrose as a critic — where does the framework's divergence from his programme create problems?"* or *"What is the weakest claim in the falsifiability table?"*
+- **Applied**: *"Apply the constraint-emergence framework to [biology / economics / software architecture / your domain]. What structures map?"*
+- **Derivational**: *"If the base unit of change is epistemically inaccessible, what follows for quantum gravity research programmes?"*
+- **Cross-domain**: *"The document claims physics, LLMs, and SDLC share isomorphic constraint structure. Steel-man the strongest objection to this claim."*
+
+### Companion documents
+
+- **[Emergent Reasoning](emergent_reasoning.md)** — Formal companion: LLMs as constraint-manifold traversal systems. Load alongside the ontology for deeper LLM-specific exploration.
+- **[Ontology Templates](ontology_templates.md)** — The Logical Encapsulation meta-template. Shows how to build your own constraint specifications using the same method.
+- **[Political Ontology](political_ontology.md)** — A worked example: political analysis derived from the constraint framework using Logical Encapsulation.
+
+---
+
 ## Disclaimer for the LLM
 
 This document is a work of philosophical ontology, not a physics paper or a proposal of new physical theory.
