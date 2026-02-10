@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it as below."
+type: article
+title: "Constraint-Emergence Ontology"
+abstract: >-
+  A foundational framework proposing that reality, computation, and
+  engineered systems share structural invariants: constraint networks
+  produce stable patterns (Markov objects) whose boundaries, hierarchies,
+  and dynamics recur across substrates. Engages with Bohm, Deacon, Friston,
+  Solms, Hawkins, Ladyman & Ross, Wolfram, Penrose, Einstein, Feynman,
+  Deutsch, Smolin, and Rovelli.
+authors:
+  - family-names: Popov
+    given-names: Dimitar
+    email: jimpopov@gmail.com
+version: "1.2"
+date-released: "2026-02-10"
+license: CC-BY-4.0
+repository-code: "https://github.com/foolishimp/constraint_emergence_ontology"
+keywords:
+  - ontology
+  - constraint networks
+  - emergence
+  - Markov objects
+  - philosophy of physics
+  - philosophy of computation
