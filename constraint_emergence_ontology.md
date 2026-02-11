@@ -1490,7 +1490,31 @@ This explains emergence without requiring a designer. If the base constraint net
 
 ## Part IX: Research Directions Suggested by This Framework
 
-**Epistemic note**: These are *suggested* directions, not *derived* predictions. The ontology points toward questions worth asking - whether they lead anywhere depends on formalization and experiment.
+### Why Not Mathematical Proof?
+
+A natural response to any foundational ontology is: *prove it mathematically*. For this framework, that demand contains a category error.
+
+The ontology asserts that the base layer is constraint propagation — discrete local updates governed by admissibility conditions (what can compose with what). All continuous structures, symmetries, algebraic objects, Hilbert spaces, topological invariants, and therefore "mathematical proof" as traditionally understood, are emergent read-outs after many layers of coarse-graining, quotienting, and projection. Classical mathematics is a highly compressed, observer-relative description told on an emergent manifold — not the substrate language.
+
+Demanding a proof in that emergent language for the substrate itself is structurally incoherent. It is asking the framework to justify its most fundamental primitive using one of its own downstream projections — like demanding that a cellular automaton justify Newtonian mechanics using only differential geometry without ever leaving the lattice rules.
+
+This does not immunise the framework from criticism. It relocates the battlefield to the domains where the ontology's own logic says battles can actually be fought: computation, emergence, and structural invariance across media. That relocation is not a retreat. For the framework, it is the whole point.
+
+### Legitimate Modes of Evaluation
+
+The framework changes what counts as strong evidence or disconfirmation. Below are the epistemically legitimate evaluation modes — each with concrete criteria and explicit ontological cost if it fails.
+
+| Mode of evaluation | What it would look like concretely | Current status (early 2026) | Ontological cost if it fails |
+| --- | --- | --- | --- |
+| **Computational genericity** | Toy constraint-network programs (graph rewriting, message-passing, minimal local rules) robustly produce persistent localised modes, density-gradient attraction analogues, effective continuum limits | Already partially achieved in several unrelated lines (string-nets, causal sets, Hopfield-like constraint nets, small transformer interpretability) | High — weakens claim of generic engine |
+| **Cross-domain structural transfer** | Rigorous functor / structure-preserving map shown between (a) LLM activation geometry + sampling and (b) toy physical constraint propagation that yields standing-wave analogues | Medium — partial correspondences exist, clean functors still missing | Very high — isomorphism claim collapses to loose analogy |
+| **Interpretability signature** | Mechanistic probes in frontier LLMs demonstrate clean conditional independence given boundary regions that behave like Markov blankets / standing-wave boundaries | Ongoing, some positive signals in mid-2025 papers, still patchy | High — removes strongest near-term empirical anchor |
+| **Failure to coarse-grain to known physics** | Constraint toy models that reach continuum limit but cannot recover least-action / unitary evolution / local Lorentz invariance even approximately | Not yet decisively negative; most good models do recover analogues | Medium-high — ontology would have to retreat to "very special attractors" |
+| **Deriving even one exact dimensionless ratio** | Spectral / topological invariant of plausible constraint-graph family matches α ≈ 1/137 or m_p/m_e ≈ 1836 at better than 10% error | Still zero genuine hits; many post-hoc fittings exist | Extremely high — strongest unique prediction fails |
+
+If several of these tests keep returning negative over the next 3–5 years, the framework will — correctly — lose credibility even among people sympathetic to its philosophical starting point. If a critical mass return positive (especially cross-domain transfer + interpretability signatures), the cost of continuing to treat mathematics as ontologically prior starts to look philosophically prohibitive — which is precisely what the ontology hopes to achieve.
+
+**Epistemic note**: The research directions below are *suggested*, not *derived* predictions. The ontology points toward questions worth asking — whether they lead anywhere depends on formalization and experiment.
 
 ### 1. Constraint Network Mathematics
 
