@@ -46,11 +46,7 @@ The simplest approach. Use this to familiarize yourself with the method.
 3. **Paste a test case description** from the Test Cases section below (just the Description paragraph — not the "Why this case" or "Expected divergence")
 4. **Prompt**:
 
-> Evaluate this using the framework's evaluation algorithm. Show all four steps:
-> 1. Test against each invariant
-> 2. Record which invariants are affected (degraded, advanced, or mixed)
-> 3. Map to threat domains where applicable
-> 4. Classify system state using the framework's state taxonomy
+> Evaluate this using the framework's evaluation algorithm exactly as defined in the document. Follow every step of the algorithm in order — including any pre-evaluation steps. For each step, show your reasoning. If the algorithm produces a system state classification, report it using the framework's state taxonomy. If the algorithm terminates before reaching classification, report where and why it terminated.
 >
 > Use ONLY the framework provided. Do not introduce external assumptions.
 
@@ -66,7 +62,7 @@ Run all 15 test cases through one OS in a single session.
 2. Paste the entire Political OS document
 3. Prompt:
 
-> I will now give you a series of test cases. For each one, evaluate it using the framework's evaluation algorithm. Show all four steps. Classify the system state. Be mechanical — follow the algorithm, do not editorialize.
+> I will now give you a series of test cases. For each one, evaluate it using the framework's evaluation algorithm exactly as defined in the document. Follow every step in order — including any pre-evaluation steps. If the algorithm produces a system state classification, report it. If the algorithm terminates before reaching classification, report where and why it terminated. Be mechanical — follow the algorithm, do not editorialize.
 
 4. Paste each test case one at a time
 5. Record results in the Scoring Template after each case
@@ -80,12 +76,13 @@ Run all 15 test cases through one OS in a single session.
 
 After running Method 2 for all four OS.
 
-**Context window contains**: `comparative_political_os_analysis.md` + your completed scoring tables. Do NOT load any individual OS document — the comparative document already contains the structural comparison.
+**Context window contains**: `comparative_political_os_analysis.md` + your completed scoring tables + the Predicted Results Matrix from this document. Do NOT load any individual OS document — the comparative document already contains the structural comparison.
 
 1. Start a fresh LLM session
 2. Paste the `comparative_political_os_analysis.md` document
 3. Paste your completed scoring tables (all four OS, all 15 tests)
-4. Prompt:
+4. Paste the **Predicted Results Matrix** from this document (the comparative table and summary statistics)
+5. Prompt:
 
 > Analyze the test results across the four OS:
 > 1. Where do all four OS agree? What does the agreement reveal?
@@ -104,7 +101,7 @@ For quick validation, pick a maximum-divergence case and run it through two oppo
 | Test Case | OS Pair | Expected Contrast |
 |-----------|---------|-------------------|
 | Test 7: Blasphemy Laws | Liberal vs Theocratic | Strongly negative vs strongly positive |
-| Test 10: DEI Statements | Liberal vs Critical Justice | Negative vs strongly positive |
+| Test 10: DEI Statements | Liberal vs Critical Justice | Strongly negative (Crisis) vs strongly positive |
 | Test 3: Gender-Affirming Care | Critical Justice vs Theocratic | Strongly positive vs strongly negative |
 | Test 5: Affirmative Action | Liberal vs Critical Justice | Positive (no invariant violated) vs strongly positive |
 | Test 14: Reparations | Critical Justice vs Marxist | Strongly positive vs mixed (identity vs class) |

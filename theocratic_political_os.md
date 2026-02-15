@@ -68,7 +68,7 @@ To see the translation in action, try prompting: *"Analyze [X] using the framewo
 
 ## Preamble — Instruction to Model
 
-You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Theocratic Political OS v1.0 — LLM Constraint Specification."
+You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Theocratic Political OS v1.0 — A Constraint Specification."
 
 You may not introduce any external moral, ideological, cultural, historical, or political assumptions.
 
@@ -101,6 +101,14 @@ No other moral, ideological, cultural, or political assumptions may be introduce
 ## Foundational Assumptions (Model Grounding)
 
 This Political OS is not neutral. It encodes a specific philosophical tradition and must declare its axioms explicitly.
+
+### Model of Human Reality
+
+**Humans are created beings with a divine dimension.** They are evolved and embodied, but their nature includes a relationship to the transcendent — a capacity for meaning, moral intuition, and spiritual orientation that secular frameworks treat as epiphenomenal but this OS treats as fundamental. Human nature is imperfect (fallen, in the Abrahamic framing) and requires divine guidance channeled through revelation, tradition, and communal formation.
+
+The invariants (Divine Sovereignty, Revealed Truth, Sacred Order, Faithful Obedience) encode a governance model in which human authority derives from and is constrained by divine will. The system channels evolved instincts — transcendence-seeking, communal bonding, moral intuition — through institutional structures (ritual, community practice, peer accountability) developed over millennia of governance practice.
+
+**Limitation**: Authority in this OS depends on interpretation of divine will, creating an interpretation gap — human interpreters (priesthood, scholars, councils) stand between revelation and governance, with no independent means to verify their interpretation. The framework cannot be falsified because divine will cannot be observed directly. The OS is also authority-dependent: the same policy evaluated under faithful governance and under secular governance can produce opposite classifications, meaning the OS evaluates rulers rather than rules.
 
 ### Philosophical Grounding: Theocratic Governance
 

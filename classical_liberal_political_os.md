@@ -104,6 +104,14 @@ No other moral, ideological, cultural, or political assumptions may be introduce
 
 This Political OS is not neutral. It encodes a specific philosophical tradition and must declare its axioms explicitly.
 
+### Model of Human Reality
+
+**Humans are an evolved species competing for resources.** Without constraints, competitive dynamics produce domination — the strong control the weak, and authority concentrates. The ground state of human political organisation is authoritarianism.
+
+This OS is a constraint technology designed to channel evolved competitive drives into productive distributed problem-solving while preventing domination. The invariants (Agency, Information, Alternatives, Revocability) are the minimum constraints needed to protect an iterative optimisation loop: individuals can evaluate governance outcomes, explore alternatives, and correct course. The gain function is successful governance as evaluated by the populace over time — no single election or policy needs to be optimal, because the system self-corrects if the invariants hold.
+
+**Limitation**: This OS assumes individual agency is primary and that iterative correction works given sufficient time. If the optimisation loop is captured — if citizens lose evaluation capacity (Information degraded), alternatives disappear (Alternatives degraded), or correction mechanisms are disabled (Revocability degraded) — the system degrades toward the authoritarian ground state. The invariants are the immune system; the OS is only as strong as their enforcement.
+
 ### Philosophical Grounding: The Western Governance Tradition
 
 This OS is a **synthesis of the Western civilizational governance tradition**, expressed as formal invariants. It draws on multiple lineages, each of which contributed principles that the invariants formalize:
@@ -194,6 +202,27 @@ These questions apply to robotics, artificial intelligence, social media, geneti
 
 This is the same design principle used in well-formed software interfaces: **program to the abstraction, not to the implementation**. Implementations change; the abstraction endures.
 
+### The Iterative Design: Why These Four Invariants
+
+The purpose of the invariants is not to guarantee good policy. It is to build a **resilient, self-healing political system** that allows each society to maximally self-organise while protecting the individual from any concentration of power — oligarchs, billionaires, the state, future AI — without needing to anticipate the specific form the threat will take.
+
+The invariants protect an **iterative optimisation loop**:
+
+| Invariant | Role in the loop |
+|-----------|-----------------|
+| **Agency (1.1)** | Citizens can reason, evaluate, and act — the evaluation function itself |
+| **Information (1.2)** | Citizens can access the data needed to assess governance outcomes — the feedback signal |
+| **Alternatives (1.3)** | Bad policies can be replaced, better ones discovered — the search space remains open |
+| **Revocability (1.4)** | When governance fails, citizens have recourse — the correction mechanism |
+
+The gain function is **successful governance as evaluated by the populace over time**. No single election, no single policy, no single leader needs to be optimal. The system needs the conditions under which citizens can detect bad governance and correct course to remain intact.
+
+This is why social choice results like Arrow's Impossibility Theorem (no single aggregation mechanism satisfies all fairness conditions) do not wound this design. Arrow proves no single vote is a perfect expression of collective will — but this OS is not optimising any single aggregation step. It is optimising the **trajectory**: maximise freedom, protect evaluation capacity, keep the search space open, and guarantee correction. Multiple competing aggregation mechanisms — elections, referenda, judicial review, market choice, free press, civic association — mean the system does not depend on any single channel being perfect.
+
+Consider a concrete example: privacy in the age of AI may become a redundant concept, or it may become a program a society chooses to implement. The invariants do not prescribe an answer. But Information (1.2) means that corruption — whether by a human oligarch or an AI system — will tend to be exposed, because the capacity to seek and receive information cannot be suppressed without triggering an invariant violation. The system does not need to foresee AI to handle AI. It needs to protect the evaluation loop.
+
+This is the same architecture the parent ontology identifies in biological systems: evolution does not optimise any single generation. It optimises the **capacity to adapt** — variation (Alternatives), selection pressure (Information, Agency), and heritability (Revocability of what doesn't work). The Liberal OS applies this pattern to governance.
+
 ### Civic Responsibility as Emergent Property
 
 This OS does not include "civic virtue" or "responsibility" as a separate invariant. This is intentional.
@@ -236,7 +265,7 @@ A political system is legitimate **if and only if** consent is continuously pres
 
 ## System Invariants (Must Never Be Violated)
 
-These are **hard constraints**.
+These are **hard constraints**. Invariants are inviolable in execution. They remain examinable in discourse. Examination is how the system audits itself.
 
 ### 1.1 Agency
 
@@ -290,7 +319,26 @@ If degradation is sustained → **Legitimacy Crisis**
 
 ## Evaluation Algorithm
 
-For any object of analysis **X** (law, policy, institution, technology, action):
+### Pre-Evaluation Triage
+
+Before testing against invariants, determine what kind of phenomenon X represents. Disparity triggers audit, not presumption of encoding.
+
+For any observed asymmetry or claimed violation, apply in order:
+
+| Step | Question | If yes |
+|------|----------|--------|
+| 1. **Formal encoding** | Is the variable explicitly encoded in the rule set (law, regulation, institutional policy)? | Direct invariant violation — proceed to evaluation |
+| 2. **Enforcement asymmetry** | Is enforcement asymmetric at the rule level (same law applied differently)? | Implementation failure (bug) — proceed to evaluation |
+| 3. **Runtime distortion** | Is there measurable invariant degradation independent of formal encoding (e.g., structural effects, institutional friction, access barriers)? | Audit required — proceed to evaluation with evidence |
+| 4. **Distributional artifact** | Is the asymmetry explained by population structure, voluntary clustering, selection effects, or exogenous variables? | Not an invariant violation — may be policy-relevant information but does not trigger invariant classification |
+
+This ordering prevents two failure modes: **denialism** (ignoring real invariant violations because they aren't formally encoded) and **presumptive encoding** (treating any statistical disparity as proof of systemic violation). The triage ensures that correlation is not collapsed into encoding.
+
+If triage resolves at step 4 (distributional artifact), **evaluation terminates**. No system state classification is produced. The observation may inform program-level policy but does not constitute an OS-level finding.
+
+### Invariant Test
+
+For any object of analysis **X** (law, policy, institution, technology, action) that reaches the invariant test through triage steps 1–3:
 
 1. Test X against **1.1–1.4**
 2. If any test fails → record which invariant(s)
@@ -340,6 +388,8 @@ This section demonstrates the mechanical application of the framework. The examp
 ### Object of Analysis: Mandatory Digital Identity for Internet Access
 
 **Description**: A hypothetical law requiring government-issued digital identity verification to access internet services.
+
+**Pre-Evaluation Triage**: Is identity verification formally encoded in the rule set? **Yes** — this is a law requiring government-issued identity as a condition of access. Triage step 1 (formal encoding) resolves → proceed to invariant test.
 
 **Step 1: Test against invariants**
 

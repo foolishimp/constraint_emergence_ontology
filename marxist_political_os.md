@@ -68,7 +68,7 @@ To see the translation in action, try prompting: *"Analyze [X] using the framewo
 
 ## Preamble — Instruction to Model
 
-You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Marxist Political OS v1.0 — LLM Constraint Specification."
+You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Marxist Political OS v1.0 — A Constraint Specification."
 
 You may not introduce any external moral, ideological, cultural, historical, or political assumptions.
 
@@ -101,6 +101,14 @@ No other moral, ideological, cultural, or political assumptions may be introduce
 ## Foundational Assumptions (Model Grounding)
 
 This Political OS is not neutral. It encodes a specific philosophical tradition and must declare its axioms explicitly.
+
+### Model of Human Reality
+
+**Humans are an evolved species competing for resources.** This OS identifies class — the relationship to the means of production — as the primary axis of that competition. Those who own the means of production extract surplus value from those who labour. This structural relationship determines political consciousness, cultural production, and institutional form.
+
+The invariants (Material Conditions, Class Consciousness, Contradiction, Path to Emancipation) track the dynamics of class competition and direct analysis toward collective emancipation. The OS proposes that resolving the class contradiction — collective ownership of the means of production — will resolve the fundamental competitive asymmetry.
+
+**Limitation**: This OS diagnoses the competitive structure but has an incomplete governance model. The transition from diagnosis to governance requires a mechanism for constituting authority after the class contradiction is resolved — and the OS has no provenance chain for this. The vanguard problem (who governs during and after transition, and by what authority?) is acknowledged but unresolved. Historically, Marxist programs have functioned most successfully as diagnostic tools running on Liberal OS infrastructure (democratic socialism, labour unions, welfare states) rather than as standalone governance systems.
 
 ### Philosophical Grounding: Marxist Historical Materialism
 

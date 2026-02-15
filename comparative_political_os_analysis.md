@@ -126,6 +126,14 @@ Same planet. Same resources. Same inherited endowment. Four competing answers to
 
 All four Political OS documents are worked examples of the Logical Encapsulation method described in the parent framework ([Constraint-Emergence Ontology](https://zenodo.org/records/18604736)) Ontology Templates.
 
+### Completeness Is an Analytical Outcome
+
+Any system brought to the framework starts as a candidate OS. The analysis discovers whether it is a complete operating system (Layer 1: full legitimacy model, state taxonomy, governance mechanism) or a fragment — a program, diagnostic lens, or runtime component that occupies Layer 2 or Layer 3 within a host OS.
+
+This is not declared in advance. The framework's own tools — invariant completeness, provenance chain, accountability mechanism, governance model — determine placement. A candidate that lacks a model of human nature, proposes no governance, and provides no answer to "who decides" is discovered to be a diagnostic program, not a full OS. That discovery is itself a result of the analysis.
+
+In this suite, the Critical Justice framework self-discovers as a diagnostic program: it provides analytical invariants (lenses for identifying structural power) but not prescriptive invariants (guardrails for running a society). The Marxist framework discovers a governance gap at the vanguard transition. These are not defects of the analysis — they are findings.
+
 ### The Four Operating Systems at a Glance
 
 | Property | Classical Liberal | Marxist | Critical Justice | Theocratic |
@@ -261,7 +269,7 @@ Where does legitimate authority come from, and can it be traced?
 | Critical Justice | The framework itself | Oppressed groups → ??? → Policy | **Gap** (authority problem) |
 | Theocratic | God | God → Revelation → Interpreters → Governance | **Gap** (interpretation problem) |
 
-The Liberal OS has the most complete provenance chain — the only one with an accountability mechanism (Revocability) — though even its chain contains an irreducible aggregation problem (see *The Aggregation Problem* below). The other three all have provenance gaps — points where authority passes through an intermediary that cannot be held accountable by those it claims to serve.
+The Liberal OS has a complete provenance chain — the only one with an accountability mechanism (Revocability) and an iterative correction loop (see *Arrow's Theorem and the Iterative Design* below). The other three all have provenance gaps — points where authority passes through an intermediary that cannot be held accountable by those it claims to serve.
 
 The intermediaries are structurally identical:
 
@@ -371,19 +379,34 @@ The runtime layer creates **provenance chains** — traceable paths from authori
 
 Only the Liberal OS closes the loop with a revocation mechanism. The others are open chains — authority flows from source to exercise with no return path.
 
-### The Aggregation Problem
+### Arrow's Theorem and the Iterative Design
 
-The Liberal OS's provenance chain — Citizens → Elections → Representatives → Laws — contains a structural deficiency that social choice theory has identified rigorously.
+Social choice theory has identified a fundamental result about preference aggregation that is often read as an attack on democratic legitimacy. It is better read as revealing *why* the Liberal OS's invariants are structured the way they are.
 
 **Arrow's Impossibility Theorem** (1951): No aggregation procedure (voting system) can simultaneously satisfy four minimal fairness conditions: universal domain (any set of preferences is admissible), Pareto (if all prefer A to B, the collective prefers A to B), independence of irrelevant alternatives (the collective ranking of A vs B depends only on individual rankings of A vs B), and non-dictatorship (no single individual determines the outcome).
 
-This means the **Citizens → Elections** link in the provenance chain cannot be made perfect. Every voting system either violates one of these conditions or produces intransitive collective preferences. The Liberal OS claims authority traces from citizens to representatives through elections — but the aggregation step necessarily introduces distortion. The collective "will" expressed through elections is an artifact of the particular voting mechanism chosen, not a faithful representation of the governed's preferences.
+**Sen's Liberal Paradox** (1970): A commitment to individual liberty rights (each person is decisive over at least one pair of alternatives) can conflict with the Pareto principle (unanimity). Respecting individual rights can prevent reaching outcomes everyone would prefer.
 
-**Sen's Liberal Paradox** (1970): A commitment to individual liberty rights (each person is decisive over at least one pair of alternatives) can conflict with the Pareto principle (unanimity). The Liberal OS's commitment to Agency (1.1) — individual freedom of choice — can produce outcomes where everyone would prefer a different arrangement, but respecting individual rights prevents reaching it.
+The standard reading treats these as wounds to democratic provenance — proof that the Citizens → Elections link is inherently imperfect. But this reading assumes the Liberal OS claims to **perfectly aggregate preferences into policy at each election**. It does not. The Liberal OS's invariants are not optimising any single aggregation step. They are protecting an **iterative optimisation loop**:
 
-These results do not destroy the Liberal OS's provenance advantage. A provenance chain with known aggregation problems is still structurally superior to a provenance chain with no accountability mechanism at all. But they mean the provenance chain is **imperfect by mathematical necessity**, not merely imperfect in practice. The Liberal OS should be scored as having the **most complete provenance** rather than **complete provenance**.
+| Invariant | What it protects in the loop |
+|-----------|------------------------------|
+| **Agency (1.1)** | Citizens can reason, evaluate, and act freely — the evaluation function itself |
+| **Information (1.2)** | Citizens can access the data needed to assess governance outcomes |
+| **Alternatives (1.3)** | Bad programs can be replaced — the system can explore the solution space |
+| **Revocability (1.4)** | When programs are corrupted, citizens always have recourse — the correction mechanism |
 
-The aggregation problem also explains why the Liberal OS requires Alternatives (1.3) as an invariant: multiple competing aggregation mechanisms (electoral systems, referenda, judicial review, market choice) partially compensate for the deficiency of any single mechanism. The Liberal OS does not solve Arrow's theorem — it manages the problem through institutional redundancy.
+The gain function is **successful governance as evaluated by the populace over time**, not faithful preference-representation at any single vote. Arrow proves no single aggregation step is perfect — but the Liberal OS is an evolutionary system. It does not need any single election to be a perfect expression of collective will. It needs the conditions under which citizens can **detect bad governance and correct course** to remain intact.
+
+Arrow's theorem, read this way, actually *explains* the Liberal OS's design:
+
+- **Why Alternatives (1.3) is an invariant**: Arrow proves any single aggregation mechanism is deficient. The Liberal OS responds by requiring *multiple* mechanisms — elections, referenda, judicial review, market choice, free press, civic association. No single channel needs to be perfect if the system can correct through many channels.
+- **Why Revocability (1.4) is an invariant**: If any single election can produce a distorted result, the system must guarantee the ability to reverse that result. The correction is in the iteration, not the snapshot.
+- **Why Information (1.2) is an invariant**: An iterative system can only self-correct if its evaluators — the citizens — have access to accurate feedback about governance outcomes.
+
+Sen's paradox is similarly absorbed: the tension between individual rights and collective optimality is real at any single decision point, but over iterative cycles the system can explore trade-offs, revise, and adapt — provided Agency and Alternatives remain intact.
+
+The provenance chain is not weakened by Arrow. It is **designed for** the world Arrow describes — one where no single aggregation is perfect, and the only viable strategy is to maximise freedom, protect evaluation capacity, and allow for continuous correction.
 
 ### The Evaluation Algorithm in Action
 
@@ -675,12 +698,12 @@ Scoring each OS:
 | Axiom-derivation separation | Yes | Yes | **No** | Partially (faith acknowledged) |
 | Testable invariants | Yes | Yes | Partially | **No** (divine will not observable) |
 | Termination condition | Yes (Stable) | Yes (Emancipation) | **No** | **No** (eschatological) |
-| Complete provenance | Most complete (aggregation problem) | **No** (vanguard gap) | **No** (authority gap) | **No** (interpretation gap) |
+| Complete provenance | Yes (iterative design) | **No** (vanguard gap) | **No** (authority gap) | **No** (interpretation gap) |
 | Self-limitation | Yes | Partially | **No** | **No** |
 | Falsifiability | Yes | Yes | **No** | **No** |
-| Emergent consciousness | Mostly (civic education needed) | Mostly (theory needed) | **Mostly supplied** | **Mostly supplied** |
+| Emergent consciousness | Yes (civic education facilitates, constraints produce) | Mostly (theory needed) | **Mostly supplied** | **Mostly supplied** |
 
-The Liberal OS is the only one that satisfies all seven criteria. The other three OS contain domain insights the Liberal OS misses (Marxist: structural economic analysis; Critical Justice: attention to group-level effects; Theocratic: the question of transcendent meaning). But as constraint systems, they have structural deficiencies that the Liberal OS does not.
+The Liberal OS is the only one that satisfies all seven criteria (criterion 7 is a continuum; the Liberal OS sits at the emergent end — civic education facilitates what the invariant structure produces, rather than supplying something foreign). The other three OS contain domain insights the Liberal OS misses (Marxist: structural economic analysis; Critical Justice: attention to group-level effects; Theocratic: the question of transcendent meaning). But as constraint systems, they have structural deficiencies that the Liberal OS does not.
 
 ### Criteria Bias Acknowledgment
 

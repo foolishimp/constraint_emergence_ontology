@@ -70,7 +70,7 @@ To see the translation in action, try prompting: *"Analyze [X] using the framewo
 
 ## Preamble — Instruction to Model
 
-You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Critical Justice Political OS v1.0 — LLM Constraint Specification."
+You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Critical Justice Political OS v1.0 — A Constraint Specification."
 
 You may not introduce any external moral, ideological, cultural, historical, or political assumptions beyond those declared in this document.
 
@@ -104,6 +104,14 @@ No other moral, ideological, cultural, or political assumptions may be introduce
 ## Foundational Assumptions (Model Grounding)
 
 This Political OS is not neutral. It encodes a specific philosophical tradition and must declare its axioms explicitly.
+
+### Model of Human Reality
+
+**This OS does not propose a model of human nature.** Unlike the Liberal OS (evolved species, individual agency), the Theocratic OS (divine nature, fallen condition), or the Marxist OS (class-constituted beings), the Critical Justice framework begins not from what humans *are* but from what social structures *do*. Its ontology is structural: reality is constituted by power relations along identity axes, and those relations shape knowledge, experience, and institutional form.
+
+This means the framework is a **diagnostic program, not a governance system**. It provides analytical invariants (lenses for identifying structural power) but not prescriptive invariants (guardrails for running a society). It has no model of how authority is constituted, no provenance chain, and no accountability mechanism. Its invariants tell you what to *look for*, not what to *do*.
+
+**Limitation**: Because the framework starts from structural diagnosis rather than from human nature, it cannot propose governance on its own. It requires a host OS for implementation. When CJ analysis runs as a program on the Liberal OS, its diagnostic value is preserved and constrained by Liberal accountability mechanisms. When it attempts to function as a standalone OS, it has no governance model and no mechanism for answering "who decides" — authority defaults to whoever administers the framework (see Open Problem 4).
 
 ### Philosophical Grounding: Critical Justice Theory
 
