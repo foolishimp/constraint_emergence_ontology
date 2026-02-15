@@ -9,7 +9,7 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 - **constraint_emergence_ontology.md** (v1.2, ~1,670 lines) - Core ontological framework
 - **emergent_reasoning.md** - Formal companion: LLMs as constraint-manifold traversal systems
 - **ontology_templates.md** - Logical Encapsulation meta-template for LLM constraint specs
-- **political_ontology.md** - Worked example of Logical Encapsulation applied to political analysis
+- **Political OS Suite** - Four Political OS constraint specifications (Classical Liberal, Marxist, Critical Justice, Theocratic) plus comparative analysis (The Governance Stack), US Democratic OS implementation, and test suite
 
 ## Core Framework (constraint_emergence_ontology.md)
 

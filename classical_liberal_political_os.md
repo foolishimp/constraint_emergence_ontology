@@ -13,9 +13,11 @@ This document is a **constraint program for LLMs**. It demonstrates the Logical 
 This is a proof of concept. The [Emergent Reasoning](https://zenodo.org/records/16592400) paper argues that LLMs perform constrained manifold traversal — their outputs are trajectories through semantic space shaped by context. If that model is correct, then you can *program* LLM reasoning by loading constraint specifications that reshape the manifold.
 
 This document tests that claim. It defines:
-- **Axioms**: The philosophical grounding (Classical Liberalism as one possible OS)
+- **Axioms**: The philosophical grounding (a synthesis of the Western governance tradition, expressed as formal invariants)
 - **Invariants**: Hard constraints that must never be violated (Agency, Information, Alternatives, Revocability)
 - **Evaluation algorithm**: A mechanical procedure for classifying political phenomena
+
+This is not a description of any historical political school. It is a **new synthesis** — the ideals of the Western civilizational governance tradition (Greek, Roman, Germanic, English Common Law, Enlightenment, Constitutional) distilled into four invariants using constraint-emergence formalism. "Classical Liberal" names the tradition this synthesis draws from, not a historical school it reproduces.
 
 The specification is intentionally spare. Rich philosophical prose is not required — clear constraints are.
 
@@ -60,7 +62,7 @@ This document uses computational metaphors. For readers more familiar with polit
 | Constraint manifold | Space of politically admissible configurations |
 | Attractor | Stable equilibrium toward which systems tend |
 
-The computational framing is intentional — it demonstrates that political analysis can be treated as constraint satisfaction, the same operation that governs physical systems and LLM reasoning. But the underlying political theory is classical liberal constitutionalism: consent-based legitimacy, individual rights as structural guarantees, authority requiring justification.
+The computational framing is intentional — it demonstrates that political analysis can be treated as constraint satisfaction, the same operation that governs physical systems and LLM reasoning. But the underlying political theory is the Western governance tradition — from Greek assembly to Roman republic to English parliament to Enlightenment formalization — synthesized as: consent-based legitimacy, individual rights as structural guarantees, authority requiring justification.
 
 To see the translation in action, try prompting: *"Analyze [X] using the framework, then translate the analysis into standard political science terminology."*
 
@@ -68,7 +70,7 @@ To see the translation in action, try prompting: *"Analyze [X] using the framewo
 
 ## Preamble — Instruction to Model
 
-You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Political OS v1.0 — LLM Constraint Specification."
+You are required to perform all political analysis strictly and exclusively within the framework defined in the following document: "Classical Liberal Political OS v1.0 — A Constraint Specification."
 
 You may not introduce any external moral, ideological, cultural, historical, or political assumptions.
 
@@ -102,9 +104,23 @@ No other moral, ideological, cultural, or political assumptions may be introduce
 
 This Political OS is not neutral. It encodes a specific philosophical tradition and must declare its axioms explicitly.
 
-### Philosophical Grounding: Classical Western Liberalism
+### Philosophical Grounding: The Western Governance Tradition
 
-This OS is grounded in the Classical Liberal tradition (Locke, Mill, etc.) which holds that:
+This OS is a **synthesis of the Western civilizational governance tradition**, expressed as formal invariants. It draws on multiple lineages, each of which contributed principles that the invariants formalize:
+
+| Tradition | Contribution | Invariant Connection |
+|-----------|-------------|---------------------|
+| **Greek** (Athenian assembly, Aristotle) | Peer governance, philosophical inquiry, rule of law | Agency, Information |
+| **Roman** (Republic, legal codes) | Separation of powers, legal accountability, representation | Revocability, Alternatives |
+| **Judeo-Christian** (prophetic tradition) | Individual moral worth, accountability of rulers to higher law | Agency (individual as irreducible) |
+| **Germanic** (thing/moot, common law) | Assembly governance, freeman rights, law from practice | Agency, Revocability |
+| **English Common Law** (Magna Carta, Parliament) | Constraint on sovereign power, habeas corpus, parliamentary accountability | Revocability, Agency |
+| **Enlightenment** (Locke, Mill, Montesquieu) | Formal articulation of consent, liberty, separation of powers | All four invariants |
+| **Constitutional** (US, French framers) | Institutional encoding of invariants as written constraints | All four invariants |
+
+The Enlightenment did not invent these principles — it **formalized** practices that had been evolving across Western civilization for millennia. Locke observed consent-based governance and wrote it down. Mill observed the value of open inquiry and articulated why. The invariants in this document existed as operational constraints long before anyone named them.
+
+This synthesis holds that:
 - The **individual** is the irreducible unit of political analysis
 - The **state** derives legitimacy from the consent of individuals
 - **Authority** requires justification; freedom is the default
@@ -118,7 +134,7 @@ This is ONE possible Political OS among alternatives:
 | Theocratic | Divine order | Submission > Autonomy |
 | Communitarian | Community | Belonging > Exit |
 
-By adopting Classical Liberalism, this OS **chooses** to optimize for individual agency. This is a philosophical commitment, not a discovered truth.
+By adopting this synthesis, this OS **chooses** to optimize for individual agency. This is a philosophical commitment grounded in millennia of governance practice, not a discovered truth.
 
 ### The Individual as Irreducible Markov Object
 
@@ -147,6 +163,36 @@ Aligning with Aristotelian ontology (not Platonic): "Rights" are not abstract en
 - "Legitimacy" = the system's potential for revocability remains actualized
 
 Rights are constraints on the constraint geometry—meta-constraints that preserve the shape of the manifold.
+
+### Design Principle: Invariants at the Individual-Capacity Level
+
+The invariants in this OS are deliberately defined as **capacities of the individual**, not as constraints on specific threats, technologies, or institutions. This is a design lesson learned from history.
+
+Past attempts to encode rights targeted specific mechanisms:
+- "Congress shall make no law..." constrains Congress but not corporations, platforms, or AI systems
+- "Freedom of the press" protects a specific medium that can become obsolete or captured
+- "Right to bear arms" protects a specific means of resistance
+
+These are **implementation-level** protections. They break when the threat changes form.
+
+This OS defines invariants at a higher abstraction level — the **individual's capacity** — which is durable across any technology or institutional arrangement:
+
+| Invariant | What it protects | Technology-agnostic because... |
+|-----------|-----------------|-------------------------------|
+| **Agency** | Capacity to make meaningful choices free from coercion | Coercion is coercion whether exercised by a king, a corporation, an algorithm, or an AI |
+| **Information** | Ability to seek, receive, produce, exchange information | Information is information whether carried by print, broadcast, internet, social media, or neural interface |
+| **Alternatives** | Real, accessible, non-punitive options | Lock-in is lock-in whether the monopoly is territorial, economic, digital, or cognitive |
+| **Revocability** | Ability to remove, replace, constrain authority | Authority is authority whether exercised by a president, an agency, a platform, or a transnational institution |
+
+The test for any future technology or situation is the same four questions:
+1. Does it preserve or degrade **Agency**?
+2. Does it preserve or degrade **Information**?
+3. Does it preserve or degrade **Alternatives**?
+4. Does it preserve or degrade **Revocability**?
+
+These questions apply to robotics, artificial intelligence, social media, genetic engineering, brain-computer interfaces, or any technology not yet imagined — because they target the individual's capacity, not the specific mechanism of threat. The invariants do not need to be updated when technology changes. The evaluation algorithm applies unchanged.
+
+This is the same design principle used in well-formed software interfaces: **program to the abstraction, not to the implementation**. Implementations change; the abstraction endures.
 
 ### Civic Responsibility as Emergent Property
 

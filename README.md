@@ -35,9 +35,24 @@ Published on Zenodo: [zenodo.org/records/16592400](https://zenodo.org/records/16
 
 Logical Encapsulation — a meta-template for constraint specifications. Converts an LLM from a generative peer into a mechanical evaluator by explicitly constraining it to reason within defined axioms and procedures. A practical application of the ontology's core insight: constraints enable structured computation.
 
-### [Political Ontology](political_ontology.md)
+### Political OS Suite
 
-Political OS v1.0 — a logical constraint specification that uses politics as its domain. A worked example of the Logical Encapsulation method: defines axioms, invariants, and an evaluation algorithm, then forces reasoning to operate strictly within those constraints. The political domain demonstrates the approach; the contribution is the logical architecture — how to convert an LLM from a generative system into a mechanical evaluator through explicit constraint specification. Derived directly from the constraint-emergence framework: constrain the computation, and structured reasoning emerges.
+Four Political OS documents — each a logical constraint specification that uses politics as its domain. Worked examples of the Logical Encapsulation method: define axioms, invariants, and an evaluation algorithm, then force reasoning to operate strictly within those constraints. The political domain demonstrates the approach; the contribution is the logical architecture.
+
+| Document | OS | Primary Unit |
+|----------|-----|-------------|
+| [Classical Liberal Political OS](classical_liberal_political_os.md) | Classical Liberal | Individual |
+| [Marxist Political OS](marxist_political_os.md) | Marxist | Class |
+| [Critical Justice Political OS](critical_justice_political_os.md) | Critical Justice | Intersectional identity group |
+| [Theocratic Political OS](theocratic_political_os.md) | Theocratic | Divine order |
+
+Supporting documents:
+
+| Document | Purpose |
+|----------|---------|
+| [The Governance Stack](comparative_political_os_analysis.md) | Layered governance model and cross-OS structural analysis |
+| [US Democratic Political OS](us_democratic_political_os.md) | US Constitutional system as implementation of the Liberal OS |
+| [Political OS Test Suite](political_os_test_suite.md) | 15 test cases with predicted results and 5 evaluation methods |
 
 ## Related Work
 
