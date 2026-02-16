@@ -6,10 +6,13 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 
 ## Documents
 
-- **constraint_emergence_ontology.md** (v1.2, ~1,670 lines) - Core ontological framework
+- **constraint_emergence_ontology.md** (v1.2) - Core ontological framework (includes Part VIII-D: Constraint Functor)
 - **emergent_reasoning.md** - Formal companion: LLMs as constraint-manifold traversal systems
 - **ontology_templates.md** - Logical Encapsulation meta-template for LLM constraint specs
-- **Political OS Suite** - Four Political OS constraint specifications (Classical Liberal, Marxist, Critical Justice, Theocratic) plus comparative analysis (The Governance Stack), US Democratic OS implementation, and test suite
+- **political_os/** - Political OS Suite subdirectory containing:
+  - Four OS constraint specifications (Classical Liberal, Marxist, Critical Justice, Theocratic)
+  - Comparative analysis (The Governance Stack), US Democratic OS implementation, test suite
+  - reports/ - Real-world invariant analyses
 
 ## Core Framework (constraint_emergence_ontology.md)
 
@@ -18,12 +21,13 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 - **Part I (Sections 1-18)**: The ontology — constraint networks, Markov objects, emergent manifolds, observer theory, meaning
 - **Part II**: Philosophical positioning — relationships to Einstein, Bohm, Feynman, Wolfram, Penrose, Deutsch, Deacon, Smolin
 - **Part VIII**: Domain mappings — physics, software engineering (AI SDLC), LLMs
+- **Part VIII-D**: The Constraint Functor — formal category-theoretic bridge between physical and computational Markov objects
 - **Part IX**: Research agenda and falsifiability
 - **Appendix**: Formal summary of emergent reasoning in LLMs
 
 ### Key Concepts
 - **Constraint network**: Fundamental substrate — reality as self-organising constraints
-- **Markov objects**: Stable patterns with constraint-defined boundaries (extends Friston's Markov blankets)
+- **Markov objects**: Stable patterns with constraint-defined boundaries (IS Friston's Markov blanket in substrate-neutral vocabulary)
 - **Emergent manifolds**: Hierarchical layers with their own effective laws
 - **Laws != Physics**: Mathematical descriptions are evolved cognitive tools, not the substrate
 - **Meaning as invariant**: Pattern matched against model — same operation at every scale

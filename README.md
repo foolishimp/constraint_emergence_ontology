@@ -18,7 +18,27 @@ From this ontology, two practical contributions follow:
 
 2. **Logical Encapsulation** — a method for programming LLM reasoning by loading constraint specifications (axioms, invariants, evaluation algorithms) rather than detailed instructions. This converts an LLM from a generative peer into a mechanical evaluator.
 
-The Political OS Suite is the primary worked example of Logical Encapsulation: four competing political philosophies expressed as formal constraint specifications, each producing mechanically divergent analyses of the same political phenomena.
+The [Political OS Suite](political_os/) is the primary worked example of Logical Encapsulation: four competing political philosophies expressed as formal constraint specifications, each producing mechanically divergent analyses of the same political phenomena.
+
+## Repository Structure
+
+```
+constraint_emergence_ontology/
+├── constraint_emergence_ontology.md   # Core ontology
+├── emergent_reasoning.md              # Formal companion: LLMs as constraint-manifold traversal
+├── ontology_templates.md              # Logical Encapsulation meta-template
+└── political_os/                      # Worked example: Political OS Suite
+    ├── README.md                      # Political OS introduction and reading guide
+    ├── classical_liberal_political_os.md
+    ├── marxist_political_os.md
+    ├── critical_justice_political_os.md
+    ├── theocratic_political_os.md
+    ├── us_democratic_political_os.md
+    ├── comparative_political_os_analysis.md
+    ├── political_os_test_suite.md
+    └── reports/                       # Real-world invariant analyses
+        └── 2026-02-16-australia-invariant-analysis.md
+```
 
 ## Documents
 
@@ -26,28 +46,20 @@ The Political OS Suite is the primary worked example of Logical Encapsulation: f
 
 | Document | Description |
 |----------|-------------|
-| [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.2). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant. Engages with Bohm, Deacon, Friston, Wolfram, Penrose, Deutsch, and others. |
+| [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.2). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
 | [Emergent Reasoning](emergent_reasoning.md) | Formal companion paper. LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as trajectory instability. Published on [Zenodo](https://zenodo.org/records/16592400). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. |
 
-### Political OS Suite
+### [Political OS Suite](political_os/)
 
-Four political philosophies expressed as formal constraint specifications — worked examples of Logical Encapsulation using politics as the domain.
+Four political philosophies expressed as formal constraint specifications, plus comparative analysis, test suite, and real-world reports. See the [Political OS README](political_os/README.md) for full details and reading guide.
 
-| Document | OS | Primary Unit | Nature |
-|----------|----|-------------|--------|
-| [Classical Liberal Political OS](classical_liberal_political_os.md) | Classical Liberal | Individual | Full governance system |
-| [Marxist Political OS](marxist_political_os.md) | Marxist | Class | Diagnostic with governance gap |
-| [Critical Justice Political OS](critical_justice_political_os.md) | Critical Justice | Intersectional identity group | Diagnostic program |
-| [Theocratic Political OS](theocratic_political_os.md) | Theocratic | Divine order | Full governance system |
-
-### Supporting Documents
-
-| Document | Purpose |
-|----------|---------|
-| [The Governance Stack](comparative_political_os_analysis.md) | Layered governance model (hardware → OS → runtime → program → bootstrap) and cross-OS structural analysis. Includes the completeness-as-discovery methodology. |
-| [US Democratic Political OS](us_democratic_political_os.md) | The US Constitutional system mapped as an implementation of the Classical Liberal OS — where invariants are structurally protected and where they depend on corruptible programs. |
-| [Political OS Test Suite](political_os_test_suite.md) | 15 test cases with predicted results across all four OS. Five evaluation methods for systematic validation. |
+| Document | OS | Nature |
+|----------|----|--------|
+| [Classical Liberal](political_os/classical_liberal_political_os.md) | Classical Liberal | Full governance system |
+| [Marxist](political_os/marxist_political_os.md) | Marxist | Diagnostic with governance gap |
+| [Critical Justice](political_os/critical_justice_political_os.md) | Critical Justice | Diagnostic program |
+| [Theocratic](political_os/theocratic_political_os.md) | Theocratic | Full governance system |
 
 ## How to Read This
 
@@ -58,22 +70,12 @@ Four political philosophies expressed as formal constraint specifications — wo
 
 ### If you want to see the method in action
 
-1. Read **[Ontology Templates](ontology_templates.md)** to understand Logical Encapsulation — the technique of programming LLM reasoning through constraint specifications.
-2. Load **[Classical Liberal Political OS](classical_liberal_political_os.md)** into a fresh LLM session. Ask it to evaluate a political phenomenon. Observe how constraints shape the output.
-3. Load a different OS (e.g., [Marxist](marxist_political_os.md)) in a new session with the same question. Compare the mechanically divergent results.
+1. Read **[Ontology Templates](ontology_templates.md)** to understand Logical Encapsulation.
+2. Go to the [Political OS Suite](political_os/) — follow its README for how to load and test the constraint specifications.
 
-### If you want to run the test suite
+### If you want to understand the Political OS
 
-1. Read the **[Political OS Test Suite](political_os_test_suite.md)** for instructions and test cases.
-2. Each LLM session gets **exactly one OS document** — never load two OS documents in the same session.
-3. Follow Method 1 (single case) to familiarize yourself, then Method 2 (full suite) for systematic validation.
-4. The predicted results matrix lets you verify whether the LLM is reasoning within constraints or drifting to its training priors.
-
-### If you want to understand the comparative analysis
-
-1. Read the four OS documents first (or at least the Classical Liberal and one other).
-2. Read **[The Governance Stack](comparative_political_os_analysis.md)** — the layered model from hardware (planet) through OS, runtime, program, and bootstrap.
-3. The comparative analysis discovers which candidates are full operating systems and which are fragments (diagnostic programs, lenses). This is an analytical outcome, not an assumption.
+See the [Political OS README](political_os/README.md) for the full reading guide, test suite instructions, and real-world analysis reports.
 
 ## Related Work
 
