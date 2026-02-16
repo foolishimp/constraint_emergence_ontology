@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="545 0 1910 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="3000" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071429"/>
+      <stop offset="0.55" stop-color="#111C2E"/>
+      <stop offset="1" stop-color="#1D232D"/>
+    </linearGradient>
+    <radialGradient id="bio1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 520) rotate(31) scale(560 360)">
+      <stop stop-color="#5CC8FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#5CC8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bio2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 360) rotate(18) scale(420 260)">
+      <stop stop-color="#FFB46A" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFB46A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" stroke="#9FC4E8" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="3000" height="1000" fill="url(#bg)"/>
+  <rect width="3000" height="1000" fill="url(#grid)"/>
+
+  <g id="diagram" transform="translate(-120 40) scale(1.15 1.06)">
+    <ellipse cx="540" cy="520" rx="660" ry="360" fill="url(#bio1)"/>
+    <ellipse cx="760" cy="360" rx="460" ry="270" fill="url(#bio2)"/>
+
+    <g stroke="#7FD8FF" stroke-opacity="0.42" stroke-width="2">
+      <path d="M930 390L1120 330L1300 390L1460 340L1640 420L1820 360"/>
+      <path d="M960 560L1140 500L1320 540L1500 500L1680 560L1860 520"/>
+      <path d="M980 700L1160 650L1340 700L1520 640L1700 690L1880 650"/>
+      <path d="M1120 330L1140 500L1160 650"/>
+      <path d="M1300 390L1320 540L1340 700"/>
+      <path d="M1460 340L1500 500L1520 640"/>
+      <path d="M1640 420L1680 560L1700 690"/>
+    </g>
+
+    <g fill="#BEEBFF">
+      <circle cx="1120" cy="330" r="8"/>
+      <circle cx="1140" cy="500" r="8"/>
+      <circle cx="1160" cy="650" r="8"/>
+      <circle cx="1300" cy="390" r="8"/>
+      <circle cx="1320" cy="540" r="8"/>
+      <circle cx="1340" cy="700" r="8"/>
+      <circle cx="1460" cy="340" r="8"/>
+      <circle cx="1500" cy="500" r="8"/>
+      <circle cx="1520" cy="640" r="8"/>
+      <circle cx="1640" cy="420" r="8"/>
+      <circle cx="1680" cy="560" r="8"/>
+      <circle cx="1700" cy="690" r="8"/>
+    </g>
+
+    <g fill="#10202D" stroke="#7ED6FF" stroke-width="1.8" filter="url(#glow)">
+      <ellipse cx="2370" cy="320" rx="250" ry="120"/>
+      <ellipse cx="2440" cy="520" rx="300" ry="140"/>
+      <ellipse cx="2340" cy="720" rx="230" ry="110"/>
+    </g>
+
+    <g stroke-linecap="round" fill="none" filter="url(#glow)">
+      <path d="M1280 390C1650 270 1970 180 2220 305C2290 340 2320 330 2370 320" stroke="#5ED3FF" stroke-width="4"/>
+      <path d="M1340 700C1660 760 1980 760 2230 620C2320 575 2360 560 2440 520" stroke="#78E5FF" stroke-width="4"/>
+      <path d="M1500 500C1770 500 2040 470 2260 680C2305 720 2310 720 2340 720" stroke="#FFBD75" stroke-width="4"/>
+      <path d="M1160 650C1480 580 1830 520 2110 520C2220 520 2330 520 2440 520" stroke="#95DCFF" stroke-width="2.8" opacity="0.8"/>
+    </g>
+  </g>
+
+  <g transform="translate(180 0)">
+    <text x="0" y="142" fill="#ECF8FF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="124" font-weight="700" letter-spacing="1.2">
+      Constraint-Emergence Ontology
+    </text>
+    <text x="0" y="218" fill="#A9DFFF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="44" font-weight="500" letter-spacing="0.8">
+      Emergent manifold structure across physical and computational systems
+    </text>
+  </g>
+
+  <g id="phase-labels" transform="translate(0 0)">
+    <line x1="220" y1="890" x2="2780" y2="890" stroke="#8FC8E8" stroke-opacity="0.3" stroke-width="1.6"/>
+    <line x1="620" y1="874" x2="620" y2="906" stroke="#9EE2FF" stroke-opacity="0.75" stroke-width="2"/>
+    <line x1="1500" y1="874" x2="1500" y2="906" stroke="#9EE2FF" stroke-opacity="0.75" stroke-width="2"/>
+    <line x1="2380" y1="874" x2="2380" y2="906" stroke="#9EE2FF" stroke-opacity="0.75" stroke-width="2"/>
+    <text x="620" y="952" text-anchor="middle" fill="#DFF3FF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="600" letter-spacing="0.6">
+      Reality
+    </text>
+    <text x="1500" y="952" text-anchor="middle" fill="#DFF3FF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="600" letter-spacing="0.6">
+      Manifold
+    </text>
+    <text x="2380" y="952" text-anchor="middle" fill="#DFF3FF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="600" letter-spacing="0.6">
+      Markov Objects
+    </text>
+  </g>
+</svg>

@@ -6,17 +6,31 @@ abstract: >-
   A foundational framework proposing that reality, computation, and
   engineered systems share structural invariants: constraint networks
   produce stable patterns (Markov objects) whose boundaries, hierarchies,
-  and dynamics recur across substrates. Engages with Bohm, Deacon, Friston,
-  Solms, Hawkins, Ladyman & Ross, Wolfram, Penrose, Einstein, Feynman,
-  Deutsch, Smolin, and Rovelli.
+  and dynamics recur across substrates. Includes formal companion work on
+  emergent reasoning in LLMs, a method for programming LLM reasoning via
+  constraint specifications, and a political philosophy suite demonstrating
+  the method across four ideological frameworks with six real-world analyses.
 authors:
   - family-names: Popov
     given-names: Dimitar
     email: jimpopov@gmail.com
 version: "1.2"
-date-released: "2026-02-10"
+date-released: "2026-02-16"
 license: CC-BY-4.0
 repository-code: "https://github.com/foolishimp/constraint_emergence_ontology"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18573722"
+    description: "Constraint-Emergence Ontology"
+  - type: doi
+    value: "10.5281/zenodo.16592399"
+    description: "Emergent Reasoning in Large Language Models"
+  - type: doi
+    value: "10.5281/zenodo.18653641"
+    description: "Programming LLM Reasoning (Ontology Templates)"
+  - type: doi
+    value: "10.5281/zenodo.18638455"
+    description: "The Political Operating System"
 keywords:
   - ontology
   - constraint networks
@@ -24,3 +38,7 @@ keywords:
   - Markov objects
   - philosophy of physics
   - philosophy of computation
+  - LLM reasoning
+  - AI safety
+  - political philosophy
+  - constraint specification
