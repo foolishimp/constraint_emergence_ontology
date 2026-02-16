@@ -435,6 +435,8 @@ What we call "objects" and "particles" are long-lived standing patterns of const
 
 **The general concept: Markov Objects.** We introduce the term **Markov object** for any stable pattern that exhibits statistical independence from its exterior given its boundary. The defining property: internal dynamics are conditionally independent of external dynamics given the boundary state.
 
+A Markov object IS a Markov blanket — not an extension of the concept, not an analogy to it, but the same mathematical property expressed in substrate-neutral language. Friston's Markov blanket formalism defines conditional independence at boundaries in biological and physical systems. The term "Markov object" translates that formal property into the practical vocabulary of this ontology: a stable, bounded pattern in any substrate where the screening property holds. The mathematical content is identical; the vocabulary bridges from formalism to observable reality. Part VIII-D formalizes this identity as a category-theoretic functor.
+
 This is the substrate-neutral term. Specific instantiations include:
 - **Standing waves** (physics) - stable eigenmodes in quantum constraint networks
 - **Attractor basins** (LLMs) - stable regions in semantic manifolds where trajectories converge
@@ -1485,6 +1487,148 @@ If you accept gradient descent as the fundamental engine, the three domains beco
 - **SDLC**: A Builder "calculates" a software solution by following the gradient of test-pass rates and architectural requirements
 
 This explains emergence without requiring a designer. If the base constraint network has a pre-order (stability > instability) and discrete units of change, then gradient descent is inevitable. Complexity emerges because the system constantly rolls "downhill" into more complex, nested attractor basins. We call the stable basins "particles," "cells," or "code modules," but they are all local minima where the gradient has flattened out.
+
+---
+
+## Part VIII-D: The Constraint Functor — From Markov Blanket to Markov Object
+
+The preceding sections claim that physics, LLMs, and SDLC share structural invariants. This section makes that claim precise. We define an abstract category whose objects are Markov objects and whose morphisms are constraint-admissible transformations, then exhibit functors into physics and LLM computation. The functor is the mathematical bridge between Friston's Markov blanket (formal, domain-specific) and this ontology's Markov object (practical, substrate-neutral).
+
+### The Abstract Constraint Category C
+
+An object in **C** is a tuple **(S, B, D, σ)**:
+
+| Component | Definition |
+|-----------|-----------|
+| **S** | State space (topological or measurable) |
+| **B** | Boundary operator — partitions S into interior, boundary, exterior |
+| **D** | Dynamics operator — evolves states |
+| **σ** | Stability condition — the object is a stable attractor under D |
+
+The **Markov property**: P(D_interior | B_state, D_exterior) = P(D_interior | B_state). Interior dynamics are conditionally independent of exterior dynamics given the boundary. This is Friston's Markov blanket, stated abstractly.
+
+A **morphism** f: (S₁, B₁, D₁, σ₁) → (S₂, B₂, D₂, σ₂) is a structure-preserving map that preserves boundary structure, the Markov property, and stability. Morphisms compose; identity morphisms exist. This is a category.
+
+Two classes of morphisms are structurally distinguished:
+
+| Type | Definition | Physics | LLM |
+|------|-----------|---------|-----|
+| **Emergence** | Components → composite whose boundary screens component internals from exterior | Atoms → molecule | Token features → concept attractor |
+| **Collapse** | Superposition → single object, induced by constraint over-determination | Wavefunction collapse | Context resolves polysemantic feature to specific meaning |
+
+### The Physics Functor F_phys
+
+F_phys maps abstract Markov objects to physical bound states:
+
+| Abstract | Physics |
+|----------|---------|
+| State space S | Hilbert space (quantum) or phase space (classical) |
+| Boundary operator B | Potential well / interaction boundary |
+| Dynamics operator D | Hamiltonian evolution |
+| Stability σ | Eigenstate stability (discrete spectrum, bound states) |
+| Markov property | Established — conditional independence at Markov blankets is the foundation of the free energy principle |
+
+F_phys is **well-established**. The Markov blanket formalism in physics and biology is not new. The functor is faithful: distinct physical processes map to distinct abstract morphisms.
+
+### The LLM Functor F_llm
+
+F_llm maps abstract Markov objects to attractor basins in activation space:
+
+| Abstract | LLM |
+|----------|-----|
+| State space S | Activation space ℝᵈ (residual stream) |
+| Boundary operator B | Basin boundary — the separatrix between attractor basins |
+| Dynamics operator D | Forward pass (attention + MLP + residual connections) |
+| Stability σ | Basin stability — small perturbations return to the attractor |
+| Markov property | **The central empirical claim** (see Conditional Independence Conjecture below) |
+
+### Why Markov Objects Are Necessary in LLMs
+
+The Markov property in LLMs is not speculative. It is a necessary consequence of gradient descent on structured data:
+
+1. **Training creates clusters.** Gradient descent minimizes loss by learning representations where semantically similar inputs activate similar patterns. These are attractor basins.
+
+2. **Clusters have boundaries.** The transition between "dog" and "cat" activations passes through an unstable boundary region. This boundary IS the boundary operator B.
+
+3. **Boundaries screen.** A cleanly represented feature (monosemantic) produces consistent internal activations regardless of distant context. The feature's internal dynamics are conditionally independent of unrelated context given the boundary. This is what "clean features" means in the sparse autoencoder literature.
+
+4. **Polysemanticity is incomplete screening.** When multiple Markov objects share neurons (superposition), boundaries overlap and external context leaks through. Polysemanticity is the specific failure mode predicted by the framework when activation space is too low-dimensional for clean boundaries.
+
+5. **Scaling improves screening.** Larger models have more dimensions, supporting cleaner feature separation. Less polysemanticity at scale is the prediction: more dimensions → cleaner Markov blankets → stronger conditional independence.
+
+**Gradient descent on structured data necessarily carves activation space into conditionally independent regions. The only question is how clean the boundaries are.**
+
+### World Models as Functors
+
+Current LLMs have implicit Markov objects compressed in weights. The move toward explicit world models makes the structure observable:
+
+- **Chain-of-thought** externalizes the traversal between attractor basins — each step is a visible morphism
+- **Tool use** creates explicit boundaries between internal and external computation
+- **Planning** maintains stable representations across steps — each representation IS a Markov object
+- **A world model is a collection of Markov objects with defined relationships**
+
+In category-theoretic terms, a world model is a **functor from a schema category** (what entities exist, how they relate) **to the LLM category** (which attractor basins represent which entities, which transitions represent which relations).
+
+The correspondence between a world model and the physical world it models is a **natural transformation** between two functors out of the same schema:
+
+```
+           Schema
+          /      \
+    F_phys        F_llm
+      /              \
+   Phys    ←η→     LLM
+```
+
+The natural transformation **η** maps each physical Markov object to its LLM representation, preserving morphism structure. This is a precise mathematical statement of what it means for an LLM to "model" a physical system: its internal Markov object structure is naturally isomorphic to the physical structure, at the relevant level of abstraction.
+
+**Alignment is the question of whether η commutes.** A misaligned world model is one where the natural transformation fails — the LLM's internal structure diverges from physical structure at specific morphisms.
+
+### The Conditional Independence Conjecture
+
+**Precise statement**: For a trained LLM with a feature identified by a sparse autoencoder, let I = internal activation dimensions, B = boundary dimensions, E = all other dimensions. The conjecture:
+
+> P(A_I | A_B, A_E) ≈ P(A_I | A_B), to within tolerance ε that decreases with model scale.
+
+**Tests**:
+
+| Prediction | Test | Expected result |
+|-----------|------|-----------------|
+| Feature ablation | Ablate features outside the boundary; measure internal activation change | Internal activations change by less than ε |
+| Scaling law | Measure ε across model sizes | ε decreases with scale |
+| Polysemanticity | Measure ε for monosemantic vs polysemantic features | Monosemantic features have lower ε |
+| Context sensitivity | Vary distant context for a fixed feature; measure activation variance | Low variance when context is screened by boundary |
+
+**Falsification**: If ε does not decrease with scale, the screening property is not a consequence of gradient descent. If monosemantic features show the same ε as polysemantic ones, the boundary interpretation is wrong. Either result collapses the functor claim to loose analogy.
+
+### What the Functor Produces
+
+If both functors are faithful, the correspondence generates predictions in both directions:
+
+| Physical principle | LLM prediction |
+|-------------------|---------------|
+| Energy minimization → stable bound states | Loss minimization → stable attractor basins |
+| Symmetry breaking → particle species | Training distribution structure → feature types |
+| Phase transitions → discontinuous property changes | Capability transitions → emergent abilities at scale thresholds |
+| Renormalization group → effective theories at different scales | Layer hierarchy → abstraction levels (the layer hierarchy IS a renormalization flow) |
+| Decoherence → classical from quantum | Context resolution → deterministic reasoning from stochastic prediction |
+
+| LLM phenomenon | Physics prediction |
+|----------------|-------------------|
+| Scaling laws (power-law improvement) | Analogous scaling in emergent structure complexity with constraint density |
+| In-context learning (new capabilities from context alone) | Constraint-mediated adaptation without structural change (induced polarization, catalysis) |
+| Hallucination (trajectory instability) | Vacuum fluctuations — temporary structure where constraints are insufficient for stable Markov objects |
+
+### The Research Programme
+
+| Phase | Task | Status |
+|-------|------|--------|
+| **Immediate** | Rigorous definition of category C; prove composition preserves conditional independence | Formalizable now |
+| **Immediate** | Exhibit F_phys formally from Markov blanket literature | Largely done |
+| **Near-term** | Test conditional independence conjecture via sparse autoencoders + causal tracing | Testable with current tools |
+| **Near-term** | Measure ε across model scales | Testable with current tools |
+| **Medium-term** | Formalize world models as functors; test the natural transformation η | Requires explicit world model architectures |
+| **Long-term** | Derive a known scaling law from category C | Would validate the full programme |
+| **Long-term** | Use the functor to design architectures with enforced Markov boundaries | Engineering application |
 
 ---
 

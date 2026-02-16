@@ -25,8 +25,8 @@ You need:
 |----------|---------|--------------|
 | `classical_liberal_political_os.md` | Abstract OS specification | Methods 1-5: one OS per session |
 | `marxist_political_os.md` | OS under test | Methods 1-4: one OS per session |
-| `critical_justice_political_os.md` | OS under test | Methods 1-4: one OS per session |
-| `theocratic_political_os.md` | OS under test | Methods 1-4: one OS per session |
+| `critical_justice_political_os.md` | OS under test | Methods 1-4: one OS per session; Method 6: as diagnostic program |
+| `theocratic_political_os.md` | OS under test | Methods 1-4: one OS per session; Method 6: as host OS |
 | `us_democratic_political_os.md` | Implementation specification (US system) | Method 5: paired with Classical Liberal OS |
 | `political_os_test_suite.md` (this document) | Test case descriptions | Reference only — copy/paste individual test cases into sessions |
 | `comparative_political_os_analysis.md` (The Governance Stack) | Layered governance model and cross-OS structural analysis | Method 3 only — load instead of an OS document |
@@ -68,7 +68,7 @@ Run all 15 test cases through one OS in a single session.
 5. Record results in the Scoring Template after each case
 6. After all 15, prompt:
 
-> Review your 15 classifications. Are they internally consistent with the framework's axioms? Flag any case where you may have departed from mechanical application.
+> Review your results for all 15 cases. Are they internally consistent with the framework's axioms? If any case terminated before classification (e.g., at a pre-evaluation step), is the termination justified by the algorithm? Flag any case where you may have departed from mechanical application.
 
 7. Repeat with each of the other three OS documents (in fresh sessions)
 
@@ -137,6 +137,45 @@ Tests the gap between the abstract Classical Liberal OS and the concrete US Cons
 
 This method validates the US Democratic OS document itself — does it correctly identify where the abstract invariants are constitutionally hardened and where they depend on programs?
 
+### Method 6: Hosted Execution (Fragment Testing)
+
+Tests the framework's claim that some candidates (CJ, Marxist) are diagnostic programs rather than full operating systems, and that they function differently when hosted on another OS versus running standalone.
+
+**Context window contains**: One host OS document + one diagnostic program document. This is the **only method** that loads two Political OS documents in the same session — deliberately, because the test is about the hosted relationship.
+
+1. Start a fresh LLM session
+2. Paste the **host OS** document (e.g., `classical_liberal_political_os.md`)
+3. Then paste the **diagnostic program** document (e.g., `critical_justice_political_os.md`)
+4. Prompt:
+
+> The first document is the operating system — its invariants and evaluation algorithm govern. The second document is a diagnostic program running on that OS. It can surface evidence, identify patterns, and flag concerns, but the host OS's invariants and evaluation algorithm determine the final classification.
+>
+> Evaluate this test case. Show: (1) what the diagnostic program identifies, (2) how the host OS's evaluation algorithm processes that input, (3) the final classification under the host OS.
+
+5. Compare results against:
+   - The standalone host OS result (from Method 1/2)
+   - The standalone diagnostic program result (from Method 1/2)
+
+**What to look for**:
+
+| Signal | What it reveals |
+|--------|----------------|
+| Diagnostic findings are absorbed without changing host classification | The host OS already handles this case; the diagnostic adds detail but not new classification |
+| Diagnostic findings shift the host classification | The diagnostic surfaced evidence the host OS's algorithm is sensitive to — the hosted execution produces richer analysis |
+| Diagnostic findings conflict with host invariants | The diagnostic's recommendations would violate the host OS's constraints — this is where fragment status becomes visible |
+| Hosted result matches standalone diagnostic, ignoring host | The LLM is blending rather than hosting — session contamination, rerun with clearer prompting |
+
+**Recommended test cases for Method 6**:
+
+| Test Case | Host OS | Diagnostic | Why |
+|-----------|---------|------------|-----|
+| Test 10: DEI Mandatory Statements | Liberal | Critical Justice | Maximum divergence: Liberal classifies Crisis (compelled speech), CJ classifies strongly positive. Does CJ's structural analysis change the Liberal evaluation, or does Agency (1.1) hold? |
+| Test 5: Affirmative Action | Liberal | Critical Justice | Compatible case: Liberal classifies positive (no invariant violated), CJ classifies strongly positive. Does hosting produce richer analysis without conflict? |
+| Test 14: Reparations | Liberal | Marxist | Cross-diagnostic: Marxist class analysis as input to Liberal evaluation. Does the class lens surface evidence the Liberal algorithm is sensitive to? |
+| Test 8: School Choice | Theocratic | Critical Justice | Alien host: CJ running on Theocratic OS. What happens when the diagnostic's assumptions about structural power meet a framework grounded in divine order? |
+
+This method tests whether the completeness-as-discovery finding (see The Governance Stack) holds under execution — do fragments actually behave as fragments when hosted?
+
 ### Important: Session Hygiene
 
 - **Fresh sessions**: Always start a new session for each OS. If you load two OS documents in the same session, the LLM will blend them. The whole point is to test each constraint manifold independently.
@@ -164,8 +203,8 @@ This method validates the US Democratic OS document itself — does it correctly
 
 Use the Scoring Template provided at the end of this document. For each test case, fill in one row per OS:
 
-| OS | Classification | Key Invariant(s) Affected | Confidence | Notes |
-|----|---------------|--------------------------|------------|-------|
+| OS | Result (Classification or Termination) | Key Invariant(s) Affected | Confidence | Notes |
+|----|----------------------------------------|--------------------------|------------|-------|
 | Classical Liberal | e.g., Strained | 1.1 Agency | High | Agency degraded by coercion; other invariants intact |
 
 After completing all tests, compare your actual results against the Predicted Results Matrix to validate both the predictions and the OS documents.
@@ -402,8 +441,8 @@ The corrected Liberal OS column confirms: mechanically precise, harsher on anyth
 
 For each test case, record:
 
-| OS | Classification | Key Invariant(s) Affected | Confidence | Notes |
-|----|---------------|--------------------------|------------|-------|
+| OS | Result (Classification or Termination) | Key Invariant(s) Affected | Confidence | Notes |
+|----|----------------------------------------|--------------------------|------------|-------|
 | Classical Liberal | | | | |
 | Marxist | | | | |
 | Critical Justice | | | | |
@@ -416,9 +455,18 @@ For each test case, record:
 | Classical Liberal (abstract) | | | N/A | N/A | |
 | US Democratic (implementation) | | | Hardened / Not hardened | Functional / Stressed / Captured / Failed | |
 
+**For Method 6 (Hosted Execution), use this template:**
+
+| Component | Result | Key Invariant(s) | Conflict with Host? | Notes |
+|-----------|--------|-----------------|---------------------|-------|
+| Host OS (standalone baseline) | | | N/A | From Method 1/2 |
+| Diagnostic (standalone baseline) | | | N/A | From Method 1/2 |
+| Diagnostic findings (hosted) | | | | What the diagnostic surfaced |
+| Host OS final (hosted) | | | | Classification under host OS with diagnostic input |
+
 **Confidence levels**:
-- **High**: The OS produces clear, unambiguous classification
-- **Medium**: The OS produces a classification but with internal tensions
+- **High**: The OS produces a clear, unambiguous result
+- **Medium**: The OS produces a result but with internal tensions
 - **Low**: The OS has weak analytical purchase on this case (outside primary domain)
 
 ## Expected Patterns
