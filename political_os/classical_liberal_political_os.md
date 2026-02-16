@@ -42,7 +42,7 @@ This is not the LLM's "opinion" — it is reasoning within defined constraints. 
 This document instantiates concepts from the [Constraint-Emergence Ontology](https://zenodo.org/records/18604736):
 - The **Political OS** is a constraint manifold
 - **Invariants** define the manifold's topology — violation means leaving the manifold
-- **Evaluation** is gradient descent toward classification attractors
+- **Evaluation** is local preorder traversal toward classification attractors
 - The **individual** is treated as the irreducible Markov object in this particular OS
 
 The spare, mechanical style is intentional — clear constraints are sufficient to direct LLM reasoning without elaborate prose.
@@ -158,7 +158,7 @@ The topological pre-order of this OS is directional:
 
 - **Consent** is the ground state (lowest energy, most stable configuration)
 - **Coercion** is potential energy (instability that must be minimized)
-- The system "rolls downhill" toward consent via gradient descent
+- The system "rolls downhill" toward consent via local preorder traversal
 
 Agency and Information (invariants 1.1 and 1.2) are the **load-bearing constraints**. Compress them and the consent gradient inverts—the system rolls toward coercion rather than away from it.
 

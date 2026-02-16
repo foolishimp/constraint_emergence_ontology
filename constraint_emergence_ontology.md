@@ -1566,7 +1566,7 @@ The existence of Markov objects in LLMs is not speculative — it is a necessary
 
 Current LLMs have implicit Markov objects compressed in weights. The move toward explicit world models makes the structure observable:
 
-- **Chain-of-thought** externalizes the traversal between attractor basins — each step is a visible morphism
+- **Chain-of-thought** *partially* externalizes the traversal between attractor basins — each step is a candidate visible morphism, but fidelity depends on constraint coupling between reasoning and verbalization processes (see Emergent Reasoning v3, Appendix A.5)
 - **Tool use** creates explicit boundaries between internal and external computation
 - **Planning** maintains stable representations across steps — each representation IS a Markov object
 - **A world model is a collection of Markov objects with defined relationships**
