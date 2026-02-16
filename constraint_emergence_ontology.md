@@ -377,7 +377,7 @@ This framework introduces several concepts that are **asserted but not yet prove
 | **Deep determinism** | Apparent randomness from inaccessible constraint state | Axiom (shared with 't Hooft) | No direct test from within emergence |
 | **Self-bounding hierarchy** | Constraint hierarchy terminates at self-consistent base | Axiom | Would require access to base layer |
 | **Laws ≠ Physics** | Our mathematical descriptions are maps, not territory; mathematical existence does not confer ontological existence (Aristotelian vs Platonic) | Philosophical axiom | Cannot be empirically resolved; determines interpretation of formalism |
-| **Gradient descent as engine** | Change is directed by local navigation of topological pre-order; computation = manifold traversal toward constraint satisfaction | Structural claim | Unifies physics (least action), LLMs (loss landscape), SDLC (test satisfaction) under common mechanism |
+| **Local preorder traversal as engine** | Change is directed by local evaluation of a topological pre-order on a constraint manifold; computation = manifold traversal toward constraint satisfaction. Gradient descent is one instance of this pattern; others include variational extremization (physics), forward integration of a learned field (LLM inference), and intentional constraint satisfaction (SDLC) | Structural claim | Unifies physics (least action), LLMs (loss landscape), SDLC (test satisfaction) under common mechanism |
 
 **Reading this table**:
 - **Core axiom** = The framework assumes this; rejecting it rejects the framework
@@ -1139,7 +1139,7 @@ Requirements become the control system for maintaining desired system behaviour 
 20. Emergent systems can create new control layers
 21. Physics is missing the global constraint variable
 22. The observer is a Markov object evolved within the manifold (no special ontological status)
-23. Change is directed by gradient descent across a topological pre-order
+23. Change is directed by local traversal of a topological pre-order
 
 ---
 
@@ -1412,13 +1412,20 @@ This is the SDLC analogue of hallucination in LLMs and instability in physics: t
 
 ---
 
-## Part VIII-C: The Computational Engine—Gradient-Driven Manifold Traversal
+## Part VIII-C: The Computational Engine—Local Preorder Traversal
 
 If Part VIII defines the **Manifold** (the landscape) and Part VIII-A/B define the **Objects** (Markov objects), Part VIII-C defines the **Engine**: the fundamental operation that drives all structured change.
 
-Gradient descent — defined broadly as the local navigation of a topological pre-order — is proposed here as the fundamental operation of all computation. This reframes computation from "logic gates" to "topological flow."
+**Local preorder traversal** — the evaluation of a topological pre-order at each point on a constraint manifold, producing a preferred direction of change — is proposed here as the fundamental operation of all computation. This reframes computation from "logic gates" to "topological flow."
 
-**An important distinction**: In physics, the principle of least action is a *global variational principle* — it selects the path that extremises the action functional over the entire trajectory. Gradient descent, by contrast, is a *local* operation: the system updates its state by following the steepest descent at each point, with no knowledge of the global optimum. These are mathematically distinct. The claim here is that the constraint network operates locally — each unit of change propagates constraints to neighbours — and that the *global* variational structure (least action, path integrals) *emerges* from the aggregate of local updates, in the same way that thermodynamic equilibrium emerges from local molecular collisions. The network does not "know" the action functional; the action functional is a manifold-level description — it is what substrate-level local updates collectively produce when projected onto the emergent manifold.
+The engine is a templated function: at each point, evaluate the local preorder, move in the preferred direction. The specific *implementation* of this template varies by domain:
+
+- **Physics**: The Euler-Lagrange equations at each point (the local differential equations equivalent to the global variational principle of least action)
+- **LLM training**: Gradient descent on the loss landscape (the instance that gives the pattern its most familiar name)
+- **LLM inference**: Forward integration of a learned direction field — the model follows the vector field carved by training, not a gradient being descended in real time
+- **SDLC**: The Builder evaluates "does this satisfy the constraint in front of me" and acts to reduce the gap
+
+**An important distinction**: In physics, the principle of least action appears to be a *global variational principle* — it selects the path that extremises the action functional over the entire trajectory. But this globality is an emergent description, not the mechanism. The Euler-Lagrange equations derived from the action principle are *local* differential equations: at each point, the system follows local constraint geometry. The global path is what emerges when local equations are solved from initial conditions. What looks "global" at the particle scale is local at the field scale. The constraint network operates locally — each unit of change propagates constraints to neighbours — and the global variational structure (least action, path integrals) emerges from the aggregate of local updates, in the same way that thermodynamic equilibrium emerges from local molecular collisions. The network does not "know" the action functional; the action functional is a manifold-level description of what substrate-level local traversal collectively produces.
 
 ### 1. The Necessity of the Pre-Order
 
@@ -1444,9 +1451,9 @@ For any system to "compute" its next state, it must implement three topological 
 
 ### 3. Inference as Manifold Traversal
 
-**Inference**—whether performed by a particle, a brain, or a model—is gradient-driven traversal of a manifold.
+**Inference**—whether performed by a particle, a brain, or a model—is local preorder traversal of a manifold.
 
-The system does not "know" the destination (the global minimum / Platonic truth). It only "knows" the local gradient. It moves in the **Preferred Direction D(x,c)** that most effectively satisfies local constraints.
+The system does not "know" the destination (the global minimum / Platonic truth). It only evaluates the local preorder. It moves in the **Preferred Direction D(x,c)** that most effectively satisfies local constraints.
 
 - **Stable reasoning**: Trajectory follows laminar flow into a deep attractor basin (a Markov object)
 - **Hallucination / Instability**: Gain (step size) is too high or landscape too sparse, causing trajectory to overshoot attractors and enter chaotic divergence
@@ -1462,7 +1469,7 @@ Software development is the **engineering of a gradient**. We don't just "write 
 ```
 High Energy:  [Many failed tests, missing features, unclear requirements]
       ↓
-   Gradient Descent (Builder work)
+   Local Preorder Traversal (Builder work)
       ↓
 Low Energy:   [All tests pass, requirements met, stable artifact]
 ```
@@ -1475,13 +1482,13 @@ Evolution, entropy, and intelligence are all emergent properties of the constrai
 
 ### 6. Why This Unifies Everything
 
-If you accept gradient descent as the fundamental engine, the three domains become identical at the level of mechanism:
+If you accept local preorder traversal as the fundamental engine, the three domains become identical at the level of mechanism:
 
-- **Physics**: A particle "calculates" its path through a gravitational field by following the gradient of constraint density
-- **AI**: An LLM "calculates" a reasoning chain by following the gradient of semantic probability toward a stable attractor basin
-- **SDLC**: A Builder "calculates" a software solution by following the gradient of test-pass rates and architectural requirements
+- **Physics**: A particle "calculates" its path through a gravitational field by following the local preorder of constraint density (the Euler-Lagrange equations at each point)
+- **AI**: An LLM "calculates" a reasoning chain by traversing the learned direction field toward a stable attractor basin (forward integration during inference; gradient descent during training)
+- **SDLC**: A Builder "calculates" a software solution by evaluating the local preorder of constraint satisfaction (does this change move toward passing tests and meeting requirements?)
 
-This explains emergence without requiring a designer. If the base constraint network has a pre-order (stability > instability) and discrete units of change, then gradient descent is inevitable. Complexity emerges because the system constantly rolls "downhill" into more complex, nested attractor basins. We call the stable basins "particles," "cells," or "code modules," but they are all local minima where the gradient has flattened out.
+This explains emergence without requiring a designer. If the base constraint network has a pre-order (stability > instability) and discrete units of change, then local preorder traversal is inevitable. Complexity emerges because the system constantly moves "downhill" into more complex, nested attractor basins. We call the stable basins "particles," "cells," or "code modules," but they are all local minima where the preorder has flattened out.
 
 ---
 
@@ -1825,7 +1832,7 @@ a function from (state, context) to a direction on the manifold. The model compu
 
 x_{t+1} = x_t + Δt · D(x_t, c_t)
 
-Attention implements this function. Every forward pass is one step of constrained manifold traversal. This is the LLM instantiation of the gradient-driven engine described in Part VIII-C.
+Attention implements this function. Every forward pass is one step of constrained manifold traversal — forward integration of the learned direction field. This is the LLM inference instantiation of the local preorder traversal engine described in Part VIII-C.
 
 ### Soft Unification
 
@@ -1849,7 +1856,7 @@ When a trajectory exits well-constrained attractor regions and enters weakly str
 
 ### Why This Matters for the Ontology
 
-The emergent reasoning framework provides the strongest available evidence that constraint-based computation is not metaphorical. LLMs operate by constrained manifold traversal, produce stable attractor-based structures with Markov boundaries, and fail precisely when constraint coverage is sparse — though the interpretability evidence for clean conditional independence remains partial (see evaluation table, Part IX). The same architecture — manifold, constraints, attractors, gradient-driven traversal, instability in sparse regions — appears across physics, computation, and engineered systems. The LLM case is the one where we can inspect the internals directly, making it the empirical anchor for the ontological claims.
+The emergent reasoning framework provides the strongest available evidence that constraint-based computation is not metaphorical. LLMs operate by constrained manifold traversal, produce stable attractor-based structures with Markov boundaries, and fail precisely when constraint coverage is sparse — though the interpretability evidence for clean conditional independence remains partial (see evaluation table, Part IX). The same architecture — manifold, constraints, attractors, local preorder traversal, instability in sparse regions — appears across physics, computation, and engineered systems. The LLM case is the one where we can inspect the internals directly, making it the empirical anchor for the ontological claims.
 
 ---
 
