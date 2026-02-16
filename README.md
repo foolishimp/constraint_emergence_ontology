@@ -28,9 +28,7 @@ constraint_emergence_ontology/
 ├── emergent_reasoning.md              # Formal companion: LLMs as constraint-manifold traversal
 ├── ontology_templates.md              # Logical Encapsulation meta-template
 ├── presentations/                     # PDF snapshots (periodically updated)
-│   ├── constraint_emergence_ontology.pdf
-│   ├── classical_liberal_political_os.pdf
-│   └── marxist_political_os.pdf
+│   └── constraint_emergence_ontology.pdf
 └── political_os/                      # Worked example: Political OS Suite
     ├── README.md                      # Political OS introduction and reading guide
     ├── classical_liberal_political_os.md
@@ -40,6 +38,9 @@ constraint_emergence_ontology/
     ├── us_democratic_political_os.md
     ├── comparative_political_os_analysis.md
     ├── political_os_test_suite.md
+    ├── presentations/                 # PDF snapshots (periodically updated)
+    │   ├── classical_liberal_political_os.pdf
+    │   └── marxist_political_os.pdf
     └── reports/                       # Real-world invariant analyses
         └── 2026-02-16-australia-invariant-analysis.md
 ```
