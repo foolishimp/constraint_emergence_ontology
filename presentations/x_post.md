@@ -50,7 +50,7 @@ Some of what fell out:
 
 - The same diagnostic produces opposite outcomes depending on where it sits in the governance stack. A program that identifies structural power can protect invariants when running on a liberal OS, or degrade them when it tries to become the OS.
 
-https://doi.org/10.5281/zenodo.18638455
+https://doi.org/10.5281/zenodo.18638454
 
 **Are You Losing Your Democracy?**
 

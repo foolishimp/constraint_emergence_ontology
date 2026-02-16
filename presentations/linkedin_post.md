@@ -50,7 +50,7 @@ The same event produces structurally divergent analyses - not because of opinion
 The suite includes six worked analyses applying one of the frameworks to real legislative programmes in Australia, the UK, Canada, Germany, the United States, and California. The focus is structural: how different constitutional architectures protect or fail to protect their own foundational commitments.
 
 Paper: *The Political Operating System*
-https://doi.org/10.5281/zenodo.18638455
+https://doi.org/10.5281/zenodo.18638454
 
 This connects to AI governance.
 If we are building guardrails for AI systems, the framework we choose is itself a constraint specification, whether we make it explicit or not.
