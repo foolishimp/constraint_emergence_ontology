@@ -61,4 +61,5 @@ This document is developed through adversarial review — channeling specific th
 ## Publication
 
 - Emergent Reasoning paper published on Zenodo: https://zenodo.org/records/16592399
-- Constraint-Emergence Ontology: Zenodo upload pending
+- Constraint-Emergence Ontology published on Zenodo: https://zenodo.org/records/18573722
+- Programming LLM Reasoning (Ontology Templates) published on Zenodo: https://zenodo.org/records/18653641
