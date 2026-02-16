@@ -105,16 +105,19 @@ In OS terms: the invariants are constitutionally encoded but include a documente
 - Step 1 (Formal encoding): Yes -- the bill formally encodes pre-emptive restraint on expression (peace bonds before an offence), a government-appointed commission with authority over online speech, and penalties for speech that reach life imprisonment.
 - Proceed to invariant test.
 
-**Invariant Test**:
-- Agency (1.1): **Severely degraded**. Pre-crime peace bonds allow the state to impose conditions on individuals based on predicted future speech -- this is compulsion based on anticipated rather than actual conduct. Life imprisonment for speech offences creates maximal coercive pressure. The Digital Safety Commission creates a new quasi-judicial enforcement body with authority over expression.
-- Information (1.2): **Severely degraded**. The combined effect of reinstated Section 13 (tribunal complaints for online speech), the Digital Safety Commission (regulatory authority over platforms), and escalated criminal penalties creates a comprehensive surveillance and enforcement apparatus over the information environment.
-- Alternatives (1.3): **Degraded**. The pre-crime peace bond mechanism reduces the space for dissenting expression -- individuals face judicial restraint not for what they said but for what a court believes they might say.
+**Invariant Test (if enacted as drafted)**:
+- Agency (1.1): **Would be severely degraded**. Pre-crime peace bonds would allow the state to impose conditions on individuals based on predicted future speech — compulsion based on anticipated rather than actual conduct. Life imprisonment for speech offences would create maximal coercive pressure. The Digital Safety Commission would create a new quasi-judicial enforcement body with authority over expression.
+- Information (1.2): **Would be severely degraded**. The combined effect of reinstated Section 13 (tribunal complaints for online speech), the Digital Safety Commission (regulatory authority over platforms), and escalated criminal penalties would create a comprehensive surveillance and enforcement apparatus over the information environment.
+- Alternatives (1.3): **Would be degraded**. The pre-crime peace bond mechanism would reduce the space for dissenting expression — individuals would face judicial restraint not for what they said but for what a court believes they might say.
 
-**System State**: Crisis (three invariants degraded) -- approaching **Authoritarian Dynamics** if combined with Revocability concerns regarding the Digital Safety Commission's accountability structure.
+**Invariant Test (actual status)**:
+- No invariant violation has occurred, because the bill did not pass. The framework does not classify unenacted legislation as a violation — only enacted laws and enforced policies trigger the evaluation.
 
-**Constitutional protection**: **Would be tested**. The pre-crime provisions and life imprisonment maximum would face serious Charter challenges under Sections 2(b) (expression), 7 (life, liberty, security), and 11(d) (presumption of innocence). However, the bill died on the Order Paper when Parliament was prorogued on 6 January 2025.
+**System State**: Stable (no invariant degraded — bill died on the Order Paper). The bill's introduction by a sitting government is diagnostic of policy direction but does not constitute an invariant violation.
 
-**Status**: Did not pass. Parliament prorogued January 2025. The bill died on the Order Paper. However, its introduction by a sitting government signals the policy direction -- the framework was designed, drafted, and presented as legislation by the governing party.
+**Constitutional protection**: **Would have been tested**. The pre-crime provisions and life imprisonment maximum would have faced serious Charter challenges under Sections 2(b) (expression), 7 (life, liberty, security), and 11(d) (presumption of innocence). The bill died on the Order Paper when Parliament was prorogued on 6 January 2025.
+
+**Status**: Did not pass. Parliament prorogued January 2025. The bill died on the Order Paper. Its introduction by a sitting government signals policy direction — the framework was designed, drafted, and presented as legislation by the governing party — but the framework classifies only enacted policy, not proposals.
 
 ---
 
@@ -247,7 +250,7 @@ In OS terms: the invariants are constitutionally encoded but include a documente
 - Agency (1.1): **Degraded** (in jurisdictions where Section 33 is invoked). Bill 21 directly constrains the agency of religious individuals in public service. Bill 96 constrains linguistic choice. Section 33 shields these constraints from Charter review.
 - Alternatives (1.3): **Degraded** (in jurisdictions where Section 33 is invoked). Religious individuals who wish to serve in Quebec public positions of authority must abandon religious expression. The alternative (leave Quebec) is available but constitutes punitive exit -- being forced to relocate to exercise a constitutionally guaranteed right.
 
-**System State**: Strained nationally, **Crisis** in Quebec (Agency, Alternatives, and Revocability degraded for affected individuals, with the correction mechanism -- judicial review -- pre-emptively disabled)
+**System State**: Authoritarian Dynamics (Revocability + Agency + Alternatives degraded in jurisdictions where Section 33 is invoked — the correction mechanism, judicial review, is pre-emptively disabled by the same legislature that violated the rights)
 
 **Constitutional protection**: **Self-undermining**. The Charter contains the mechanism for its own override. The Supreme Court has confirmed Section 33 is constitutionally valid. The only constraint on its use is political -- public backlash (which worked in Ontario but not in Quebec).
 
@@ -285,7 +288,7 @@ In OS terms: the invariants are constitutionally encoded but include a documente
 |-------------------|----------------------|--------------------------|---------|
 | Bill C-16 (gender identity) | Agency (1.1), Information (1.2) | Section 2(b) -- untested on compelled speech | Passed and active -- enforcement expanding |
 | Bill C-11 (Online Streaming) | Information (1.2), Agency (1.1) | Section 2(b) -- framed as economic regulation | Passed and active -- CRTC implementing |
-| Bill C-63 (Online Harms) | Agency (1.1), Information (1.2), Alternatives (1.3) | Would face serious Charter challenge | Died on Order Paper -- Parliament prorogued |
+| Bill C-63 (Online Harms) | None (did not pass) | Would face serious Charter challenge | Stable -- died on Order Paper; Parliament prorogued |
 | Bill C-18 (Online News) | Information (1.2), Alternatives (1.3) | Section 2(b) -- framed as economic regulation | Passed -- Meta news blackout, Google fund |
 | Emergencies Act invocation | Revocability (1.4), Agency (1.1), Information (1.2) | Charter Sections 2, 7, 8 -- Federal Court split | Precedent set -- appellate court upheld |
 | DEI/GBA+ mandates | Agency (1.1), Information (1.2) | Government-as-employer doctrine limits protection | Active -- institutionally entrenched |
@@ -361,5 +364,5 @@ Without these structural changes, Canada's constitutional architecture contains 
 - [R v Oakes, 1986 CanLII 46 (SCC)](https://www.canlii.org/en/ca/scc/doc/1986/1986canlii46/1986canlii46.html)
 - [Saskatchewan (Human Rights Commission) v Whatcott, 2013 SCC 11](https://www.canlii.org/en/ca/scc/doc/2013/2013scc11/2013scc11.html)
 - [Dore v Barreau du Quebec, 2012 SCC 12](https://www.canlii.org/en/ca/scc/doc/2012/2012scc12/2012scc12.html)
-- [Canadian Civil Liberties Association -- Bill C-63 analysis](https://ccla.org/major-cases-and-reports/online-harms/)
-- [OpenMedia -- Bill C-11 analysis](https://openmedia.org/article/item/bill-c-11-what-you-need-to-know)
+- [Canadian Civil Liberties Association -- Bill C-63 analysis (advocacy; legal analysis of Charter implications)](https://ccla.org/major-cases-and-reports/online-harms/)
+- [OpenMedia -- Bill C-11 analysis (advocacy; policy analysis of broadcasting regulation impacts)](https://openmedia.org/article/item/bill-c-11-what-you-need-to-know)

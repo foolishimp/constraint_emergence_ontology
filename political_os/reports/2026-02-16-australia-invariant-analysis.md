@@ -201,12 +201,12 @@ The framework points toward the structural remedy: **constitutional hardening of
 ## Sources
 
 - [Misinformation Bill — Parliament of Australia](https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7239)
-- [Misinformation Bill withdrawn — HRLA](https://www.hrla.org.au/a_win_for_free_speech_as_misinformation_and_disinformation_bill_abandoned)
-- [Respect at Work — Ashurst](https://www.ashurst.com/en/insights/respect-at-work-laws-introduced-a-positive-duty-to-prevent-sexual-harassment/)
-- [AHRC enforcement powers — Global Compliance News](https://www.globalcompliancenews.com/2024/01/06/https-insightplus-bakermckenzie-com-bm-dispute-resolution-australia-ahrcs-new-enforcement-powers-is-your-business-complying-with-the-positive-duty_12122023/)
+- [Misinformation Bill withdrawn — Human Rights Law Alliance (advocacy; legal analysis)](https://www.hrla.org.au/a_win_for_free_speech_as_misinformation_and_disinformation_bill_abandoned)
+- [Respect at Work Act — Ashurst (law firm; legislative summary)](https://www.ashurst.com/en/insights/respect-at-work-laws-introduced-a-positive-duty-to-prevent-sexual-harassment/)
+- [AHRC enforcement powers — Baker McKenzie via Global Compliance News (law firm; compliance summary)](https://www.globalcompliancenews.com/2024/01/06/https-insightplus-bakermckenzie-com-bm-dispute-resolution-australia-ahrcs-new-enforcement-powers-is-your-business-complying-with-the-positive-duty_12122023/)
 - [DFAT Diversity Strategy 2024-2027](https://www.dfat.gov.au/publications/about-us/inclusion-equity-and-diversity-strategy-2024-2027)
-- [DEI and Australian employment law — Landers & Rogers](https://www.landers.com.au/legal-insights-news/dei-under-scrutiny-an-employers-pitfall-or-a-legal-necessity-the-intersection-of-dei-and-australian-employment-law)
-- [Religious Discrimination Bill abandoned — Catholic Weekly](https://catholicweekly.com.au/labor-appears-to-abandon-religious-discrimination-bill-after-pm-comments/)
+- [DEI and Australian employment law — Landers & Rogers (law firm; legal analysis)](https://www.landers.com.au/legal-insights-news/dei-under-scrutiny-an-employers-pitfall-or-a-legal-necessity-the-intersection-of-dei-and-australian-employment-law)
+- [Religious Discrimination Bill abandoned — Catholic Weekly (media report citing PM Albanese statements)](https://catholicweekly.com.au/labor-appears-to-abandon-religious-discrimination-bill-after-pm-comments/)
 - [ALRC religious freedoms report — UNSW](https://www.unsw.edu.au/newsroom/news/2024/03/religious-discrimination-laws-australia)
 - [Australia migration outlook 2024 — OECD](https://www.oecd.org/en/publications/international-migration-outlook-2024_50b0353e-en/full-report/australia_820af7cf.html)
 - [Migration programme 2024-25 — Home Affairs](https://www.homeaffairs.gov.au/reports-and-publications/submissions-and-discussion-papers/australias-2024-25-permanent-migration-program)

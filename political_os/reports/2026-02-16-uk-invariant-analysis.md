@@ -248,7 +248,7 @@ The result: **the UK has the weakest formal invariant protection of any major li
 - Alternatives (1.3): **Strained**. Housing affordability crisis (UK house prices and rents at historic highs relative to earnings), NHS waiting lists (over 7 million by 2024), school places pressure, infrastructure strain -- all measurably affected by population growth rates that were not democratically authorized. The real, accessible alternatives for existing residents are degraded.
 - Revocability (1.4): **Strained (specific to the Rwanda Act)**. The Safety of Rwanda Act 2024 overrode a Supreme Court factual finding by declaring, as a matter of statute, that Rwanda was safe. This represents Parliament using its sovereignty to override the judiciary's assessment of fact -- a use of Parliamentary sovereignty that degrades the separation-of-powers tradition even if it is technically lawful. (The Act was subsequently repealed by Labour, so the precedent is not currently operative.)
 
-**System State**: Strained to Crisis (Agency and Alternatives strained by immigration volumes without democratic mandate; Revocability strained by the Rwanda Act's override of judicial findings)
+**System State**: Crisis (Agency and Alternatives degraded by immigration volumes without democratic mandate. Revocability was additionally degraded by the Rwanda Act's override of judicial findings, but the Act has since been repealed.)
 
 **Constitutional protection**: **None**. No referendum requirement for immigration levels. No constitutional mechanism for citizens to constrain the scale. Parliamentary sovereignty means Parliament can override court findings by statute (as the Rwanda Act demonstrated). The only correction mechanism is electoral -- and the electorate exercised it in July 2024, replacing the government. But the incoming government has not reversed the underlying immigration volumes.
 
@@ -330,7 +330,7 @@ The irony is historically precise: the country that invented constitutional cons
 - [ONS Net Migration Estimates](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration)
 - [Ofcom Online Safety Act implementation](https://www.ofcom.org.uk/online-safety)
 - [College of Policing -- Hate Crime Operational Guidance (revised 2023)](https://www.college.police.uk/guidance/hate-crime)
-- [Free Speech Union -- UK](https://freespeechunion.org/)
-- [Policy Exchange -- Academic Freedom](https://policyexchange.org.uk/publication/academic-freedom-in-the-uk/)
+- [Free Speech Union -- UK (advocacy; case documentation of speech-related enforcement actions)](https://freespeechunion.org/)
+- [Policy Exchange -- "Academic Freedom in the UK" (2020, survey-based research report)](https://policyexchange.org.uk/publication/academic-freedom-in-the-uk/)
 - [Joint Committee on Human Rights -- Online Safety Bill scrutiny](https://committees.parliament.uk/committee/93/human-rights-joint-committee/)
 - [Supreme Court Rwanda Judgment -- AAA & Others v Secretary of State [2023] UKSC 42](https://www.supremecourt.uk/cases/uksc-2023-0093.html)

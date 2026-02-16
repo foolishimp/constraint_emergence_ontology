@@ -55,7 +55,7 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 - Agency (1.1): **Degraded**. Federal employees' professional advancement tied to demonstrated engagement with a specific ideological framework. Compelled speech through mandatory training sessions requiring affirmation of contested sociological premises. The coercion is not survival-level but is career-consequential for millions of workers.
 - Information (1.2): **Degraded**. DEIA frameworks pre-determine analytical conclusions within the federal workforce (disparities = structural bias). This shapes policy analysis, grant allocation, regulatory priorities, and inter-agency communication. Information that contradicts equity premises is structurally discouraged.
 
-**System State**: Strained (two invariants degraded through institutional pressure rather than formal mandate)
+**System State**: Crisis (two invariants degraded — Agency and Information — through institutional pressure rather than formal mandate)
 
 **Constitutional protection**: **Partial**. The First Amendment protects federal employees' speech as citizens (Pickering v. Board of Education, 1968) but provides weaker protection for on-the-job speech (Garcetti v. Ceballos, 2006). The government-as-employer has broader authority to direct employee conduct than the government-as-sovereign. Constitutional protection exists but is attenuated in the employment context.
 
@@ -169,10 +169,10 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 
 **Invariant Test**:
 - Agency (1.1): **Degraded.** Federal employees fired without standard due process protections. Citizens dependent on federal services (Social Security, veterans' benefits, food safety inspection) face service disruption without recourse. The mass access to personal data by non-government personnel (Musk's engineers with unclear legal authority and security clearances) degrades the autonomy of millions of citizens whose PII is now accessible outside normal privacy safeguards.
-- Revocability (1.4): **Strained.** DOGE's authority derives from the president but is exercised by an unelected individual (Musk) with personal financial interests affected by federal policy (Tesla receives federal subsidies, SpaceX holds federal contracts, X/Twitter faces regulatory scrutiny). The provenance principle is directly engaged: authority exercised by someone who cannot be removed by the electorate, and whose personal financial interests conflict with his governmental role, weakens the Revocability chain. Congress has not authorized DOGE's scope, and the speed of action limits Congressional oversight.
-- Alternatives (1.3): **Degraded for affected populations.** Elimination of agencies (USAID, CFPB) removes institutional alternatives for populations dependent on their services. Federal employees face termination without standard civil service appeal mechanisms. The Impoundment Control Act requires Congressional approval for the executive to withhold appropriated funds -- DOGE's spending freezes may violate this requirement, eliminating the legislative alternative.
+- Revocability (1.4): **Degraded.** DOGE's authority derives from the president but is exercised by an unelected individual (Musk) with personal financial interests affected by federal policy (Tesla receives federal subsidies, SpaceX holds federal contracts, X/Twitter faces regulatory scrutiny). The provenance principle is directly engaged: authority exercised by someone who cannot be removed by the electorate, and whose personal financial interests conflict with his governmental role, degrades the Revocability chain. Congress has not authorized DOGE's scope, and the speed of action limits Congressional oversight.
+- Alternatives (1.3): **Degraded.** Elimination of agencies (USAID, CFPB) removes institutional alternatives for populations dependent on their services. Federal employees face termination without standard civil service appeal mechanisms. The Impoundment Control Act requires Congressional approval for the executive to withhold appropriated funds — DOGE's spending freezes may violate this requirement, eliminating the legislative alternative.
 
-**System State**: Crisis (three invariants degraded -- Agency, Revocability, and Alternatives all under stress)
+**System State**: Authoritarian Dynamics (Revocability + Agency + Alternatives degraded — unelected authority exercising quasi-governmental power without Congressional authorization, with personal financial conflicts of interest)
 
 **Constitutional protection**: **Active but outpaced.** Multiple federal courts issued temporary restraining orders and preliminary injunctions against DOGE actions: courts blocked mass firings, ordered reinstatement of probationary employees, blocked the dismantling of USAID, and ordered DOGE to return or secure sensitive data. A federal judge in February 2025 ordered DOGE personnel disconnected from Treasury payment systems. The judiciary is functioning -- but the speed of executive action means significant damage occurs before judicial review can engage. This reveals a structural vulnerability: constitutional hardening assumes the review cycle is faster than the action cycle. When it is not, invariants are degraded in the interim.
 
@@ -240,13 +240,16 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 - Step 1 (Formal encoding): Yes -- the executive order formally encodes a restriction on citizenship recognition that contradicts the constitutional text and Supreme Court precedent.
 - Proceed to invariant test.
 
-**Invariant Test**:
-- Agency (1.1): **Degraded if implemented.** Denying citizenship to persons born on US soil eliminates their political agency as citizens -- voting rights, legal protections, residency rights. For affected individuals, all four invariants are effectively negated.
-- Alternatives (1.3): **Degraded if implemented.** Non-citizen status in the country of one's birth eliminates alternatives for association, economic participation, and governance participation.
+**Invariant Test (if implemented)**:
+- Agency (1.1): **Would be degraded.** Denying citizenship to persons born on US soil would eliminate their political agency as citizens — voting rights, legal protections, residency rights. For affected individuals, all four invariants would be effectively negated.
+- Alternatives (1.3): **Would be degraded.** Non-citizen status in the country of one's birth would eliminate alternatives for association, economic participation, and governance participation.
 
-**System State**: Crisis (multiple invariants degraded for affected population -- if implemented)
+**Invariant Test (actual status)**:
+- No invariant violation has occurred, because the order was blocked before implementation. The framework does not classify blocked executive orders as violations — only enacted laws and enforced policies trigger the evaluation.
 
-**Constitutional protection**: **Immediate and effective.** A federal district judge issued a temporary restraining order blocking the order within days, calling it "blatantly unconstitutional." The Fourteenth Amendment's text is unambiguous, and the Supreme Court precedent (Wong Kim Ark) is directly on point. This is constitutional hardening at maximum effectiveness -- explicit constitutional text enforced by an independent judiciary blocked executive action before it could degrade invariants.
+**System State**: Stable (no invariant degraded — constitutional hardening prevented implementation)
+
+**Constitutional protection**: **Immediate and effective.** A federal district judge issued a temporary restraining order blocking the order within days, calling it "blatantly unconstitutional." The Fourteenth Amendment's text is unambiguous, and the Supreme Court precedent (Wong Kim Ark) is directly on point. This is constitutional hardening at maximum effectiveness — explicit constitutional text enforced by an independent judiciary blocked executive action before it could degrade invariants.
 
 **Status**: Blocked. The executive order has not been implemented. This is the **strongest case study** in the report of constitutional hardening working exactly as designed. The invariant (Agency for citizens born on US soil) is protected by explicit constitutional text, and the judiciary enforced it immediately.
 
@@ -285,10 +288,10 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 - Proceed to invariant test.
 
 **Invariant Test**:
-- Revocability (1.4): **Strained.** If the DOJ is perceived as -- or actually becomes -- a tool of the incumbent administration, the accountability mechanism is corrupted. The government cannot be held accountable through legal processes if the legal process is directed by the government for political purposes. This applies symmetrically: Biden-era prosecution of Trump could be seen as weaponizing DOJ against a political opponent; Trump-era dismissal of cases against allies and threatened prosecution of opponents is the mirror image.
-- Information (1.2): **Strained.** Politically directed investigations shape public information during elections. The timing and public disclosure of investigations has information effects that influence democratic outcomes.
+- Revocability (1.4): **Degraded.** If the DOJ is perceived as — or actually becomes — a tool of the incumbent administration, the accountability mechanism is corrupted. The government cannot be held accountable through legal processes if the legal process is directed by the government for political purposes. This applies symmetrically: Biden-era prosecution of Trump could be seen as weaponizing DOJ against a political opponent; Trump-era dismissal of cases against allies and threatened prosecution of opponents is the mirror image.
+- Information (1.2): **Degraded.** Politically directed investigations shape public information during elections. The timing and public disclosure of investigations has information effects that influence democratic outcomes.
 
-**System State**: Strained (Revocability weakened by erosion of prosecutorial independence norms; Information affected by politically timed disclosures)
+**System State**: Authoritarian Dynamics (Revocability + Information degraded — prosecutorial independence norms eroding from both directions, corrupting the accountability mechanism)
 
 **Constitutional protection**: **Structural but norm-dependent.** The Constitution gives the president executive authority including over the DOJ. It does not require prosecutorial independence -- it requires separation of powers. The check on DOJ politicization comes from: Congressional oversight (functioning but partisan), the judiciary (which can dismiss politically motivated cases), and tradition (the norm of DOJ independence). The norm is weakening under stress from both directions.
 
@@ -331,10 +334,10 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 - **However**, Step 3 (Runtime distortion) may apply: The scale of market intervention ($369 billion in directed subsidies) reshapes economic alternatives. Industries that compete with subsidized alternatives face structural disadvantage not from market forces but from government preference. This is a program-level decision with OS-level consequences if it degrades Alternatives.
 
 **Invariant Test**:
-- Alternatives (1.3): **Mildly strained.** Government industrial policy narrows the range of economically viable alternatives by subsidizing preferred options. However, the subsidies are incentives, not mandates -- market participants can still choose non-subsidized alternatives, though at competitive disadvantage. This is closer to Step 4 (distributional artifact) than Step 3 (runtime distortion) for most affected parties.
+- Alternatives (1.3): **Intact.** Government industrial policy narrows the range of economically viable alternatives by subsidizing preferred options. However, the subsidies are incentives, not mandates — market participants can still choose non-subsidized alternatives, though at competitive disadvantage. This is closer to Step 4 (distributional artifact) than Step 3 (runtime distortion) for most affected parties. No invariant violation.
 - Agency (1.1): **Intact.** No coercion or compulsion. Individuals and businesses retain freedom of choice, though the choice landscape is shaped by subsidy structure.
 
-**System State**: Stable to mildly Strained (Alternatives slightly narrowed by scale of market intervention, but no invariant formally violated)
+**System State**: Stable (no invariant degraded — this is a program-level policy decision that passed through constitutional channels)
 
 **Constitutional protection**: Not required -- the action passed through constitutional channels.
 
@@ -346,19 +349,19 @@ The US case uniquely demonstrates the **symmetry prediction**: a well-designed L
 
 | Legislative/Executive Action | Invariant(s) Affected | Constitutional Protection | Outcome |
 |------------------------------|----------------------|--------------------------|---------|
-| Biden federal DEI mandates (EO 14035) | Agency (1.1), Information (1.2) | Partial (weak for government employees) | Revoked by subsequent administration |
-| Trump anti-DEI EO + university threats | Agency (1.1), Information (1.2) | Active (courts blocking university provisions) | Federal workforce provisions active; university extensions under injunction |
-| Government-platform censorship coordination | Information (1.2), Agency (1.1) | **Failed** (dismissed on standing in Murthy v. Missouri) | Ceased politically, no legal prohibition established |
-| January 6 Capitol breach | Revocability (1.4), Agency (1.1) | **Held** (process completed, ECRA reform enacted) | Resolved; system self-repaired |
-| January 6 pardons | Revocability (1.4) | None (pardon power is constitutional) | Deterrent architecture weakened |
-| DOGE operations | Agency (1.1), Revocability (1.4), Alternatives (1.3) | Active but outpaced (courts issuing injunctions) | Contested; ongoing litigation |
-| Biden Title IX expansion | Agency (1.1), Information (1.2), Alternatives (1.3) | **Effective** (blocked by courts in 20+ states) | Withdrawn |
-| State book bans / curriculum laws | Information (1.2), Agency (1.1) | Partial (contested in courts) | Active; varies by state |
-| Birthright citizenship EO | Agency (1.1), Alternatives (1.3) | **Immediate and effective** (blocked within days) | Blocked; constitutional text enforced |
-| Immigration enforcement escalation | Agency (1.1), Alternatives (1.3) | Active (courts blocking specific methods) | Contested; ongoing |
-| DOJ independence erosion | Revocability (1.4), Information (1.2) | Structural but norm-dependent | Deteriorating from both directions |
-| Campus speech climate | Information (1.2), Agency (1.1) | Strong in principle, weak against self-censorship | Active; degradation from both directions |
-| Inflation Reduction Act | Alternatives (1.3) mildly | Not required (passed constitutionally) | Program-level decision; no OS violation |
+| Biden federal DEI mandates (EO 14035) | Agency (1.1), Information (1.2) | Partial (weak for government employees) | Crisis — revoked by subsequent administration |
+| Trump anti-DEI EO + university threats | Agency (1.1), Information (1.2) | Active (courts blocking university provisions) | Strained — federal workforce active; university extensions under injunction |
+| Government-platform censorship coordination | Information (1.2), Agency (1.1) | **Failed** (dismissed on standing in Murthy v. Missouri) | Crisis — ceased politically, no legal prohibition established |
+| January 6 Capitol breach | Revocability (1.4), Agency (1.1) | **Held** (process completed, ECRA reform enacted) | Stable — system self-repaired |
+| January 6 pardons | Revocability (1.4) | None (pardon power is constitutional) | Strained — deterrent architecture weakened |
+| DOGE operations | Agency (1.1), Revocability (1.4), Alternatives (1.3) | Active but outpaced (courts issuing injunctions) | Authoritarian Dynamics — contested; ongoing litigation |
+| Biden Title IX expansion | Agency (1.1), Information (1.2), Alternatives (1.3) | **Effective** (blocked by courts in 20+ states) | Stable — blocked before implementation |
+| State book bans / curriculum laws | Information (1.2), Agency (1.1) | Partial (contested in courts) | Crisis — active; varies by state |
+| Birthright citizenship EO | Agency (1.1), Alternatives (1.3) | **Immediate and effective** (blocked within days) | Stable — blocked; constitutional text enforced |
+| Immigration enforcement escalation | Agency (1.1), Alternatives (1.3) | Active (courts blocking specific methods) | Crisis — contested; ongoing |
+| DOJ independence erosion | Revocability (1.4), Information (1.2) | Structural but norm-dependent | Authoritarian Dynamics — deteriorating from both directions |
+| Campus speech climate | Information (1.2), Agency (1.1) | Strong in principle, weak against self-censorship | Crisis — active; degradation from both directions |
+| Inflation Reduction Act | None | Not required (passed constitutionally) | Stable — program-level decision; no OS violation |
 
 ---
 
