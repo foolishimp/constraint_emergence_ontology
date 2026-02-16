@@ -1433,6 +1433,8 @@ Computation cannot occur on a "flat" manifold. For structured change to exist, t
 
 Without this pre-order, the manifold is flat and no computation happens. The "slope" of the manifold is created by the density of constraints.
 
+**Why something rather than nothing?** The flat manifold — no regional directions, no preorder — is indistinguishable from nothing: no change, no structure, no observation possible. The moment the constraint network has any directional bias, local preorder traversal is inevitable, and structure follows. The preorder is not a feature imposed on some systems; it is what distinguishes existence from non-existence. Objecting that "everything has a preorder" mistakes foundational universality for vacuity — it is like objecting that every physical system has energy. The ones that don't aren't systems.
+
 | Domain | What Creates the Pre-Order |
 |--------|---------------------------|
 | Physics | Principle of Least Action (S) |
