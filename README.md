@@ -37,7 +37,7 @@ constraint_emergence_ontology/
     ├── critical_justice_political_os.md
     ├── theocratic_political_os.md
     ├── us_democratic_political_os.md
-    ├── political_operating_system.md
+    ├── political_operating_system.md   # Main paper — start here
     ├── political_os_test_suite.md
     ├── presentations/                 # PDF snapshots (periodically updated)
     │   ├── classical_liberal_political_os.pdf
@@ -64,14 +64,15 @@ constraint_emergence_ontology/
 
 ### [Political OS Suite](political_os/)
 
-Four political philosophies expressed as formal constraint specifications, plus comparative analysis, test suite, and real-world reports. See the [Political OS README](political_os/README.md) for full details and reading guide.
+Four political philosophies expressed as formal constraint specifications. Start with **[The Political Operating System](political_os/political_operating_system.md)** — the main paper introducing the Governance Stack model, structural comparison, and key findings. Then load individual OS specifications into an LLM to see them in action.
 
-| Document | OS | Nature |
-|----------|----|--------|
-| [Classical Liberal](political_os/classical_liberal_political_os.md) | Classical Liberal | Full governance system |
-| [Marxist](political_os/marxist_political_os.md) | Marxist | Diagnostic with governance gap |
-| [Critical Justice](political_os/critical_justice_political_os.md) | Critical Justice | Diagnostic program |
-| [Theocratic](political_os/theocratic_political_os.md) | Theocratic | Full governance system |
+| Document | Nature |
+|----------|--------|
+| [The Political Operating System](political_os/political_operating_system.md) | **Entry point** — Governance Stack, structural comparison, key findings |
+| [Classical Liberal OS](political_os/classical_liberal_political_os.md) | Full governance specification |
+| [Marxist OS](political_os/marxist_political_os.md) | Diagnostic with governance gap |
+| [Critical Justice OS](political_os/critical_justice_political_os.md) | Diagnostic program |
+| [Theocratic OS](political_os/theocratic_political_os.md) | Full governance specification |
 
 ## How to Read This
 
@@ -87,7 +88,7 @@ Four political philosophies expressed as formal constraint specifications, plus 
 
 ### If you want to understand the Political OS
 
-See the [Political OS README](political_os/README.md) for the full reading guide, test suite instructions, and real-world analysis reports.
+Start with **[The Political Operating System](political_os/political_operating_system.md)** — it frames the entire suite. See the [Political OS README](political_os/README.md) for quick start, test suite instructions, and real-world analysis reports.
 
 ## Related Work
 
