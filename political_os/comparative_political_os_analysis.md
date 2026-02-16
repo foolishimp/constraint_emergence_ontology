@@ -124,7 +124,7 @@ This is where ideology lives. The hardware is fixed. The OS is chosen.
 
 Same planet. Same resources. Same inherited endowment. Four competing answers to the question of how to govern it.
 
-All four Political OS documents are worked examples of the Logical Encapsulation method described in the parent framework ([Constraint-Emergence Ontology](https://zenodo.org/records/18604736)) Ontology Templates.
+All four Political OS documents are worked examples of the Logical Encapsulation method described in the parent framework ([Constraint-Emergence Ontology](https://zenodo.org/records/18573722)) Ontology Templates.
 
 ### Completeness Is an Analytical Outcome
 

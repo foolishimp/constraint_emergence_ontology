@@ -10,7 +10,7 @@ This document is a **constraint program for LLMs**. It demonstrates the Logical 
 
 ### What this document is
 
-This is a proof of concept. The [Emergent Reasoning](https://zenodo.org/records/16592400) paper argues that LLMs perform constrained manifold traversal — their outputs are trajectories through semantic space shaped by context. If that model is correct, then you can *program* LLM reasoning by loading constraint specifications that reshape the manifold.
+This is a proof of concept. The [Emergent Reasoning](https://zenodo.org/records/16592399) paper argues that LLMs perform constrained manifold traversal — their outputs are trajectories through semantic space shaped by context. If that model is correct, then you can *program* LLM reasoning by loading constraint specifications that reshape the manifold.
 
 This document tests that claim with **Critical Justice axioms**. It defines:
 - **Axioms**: The philosophical grounding (critical theory, intersectional analysis, structural power)
@@ -38,7 +38,7 @@ This is not the LLM's "opinion" — it is reasoning within defined constraints. 
 
 ### Connection to the parent framework
 
-This document instantiates concepts from the [Constraint-Emergence Ontology](https://zenodo.org/records/18604736):
+This document instantiates concepts from the [Constraint-Emergence Ontology](https://zenodo.org/records/18573722):
 - The **Political OS** is a constraint manifold
 - **Invariants** define the manifold's topology — violation means leaving the manifold
 - **Evaluation** is local preorder traversal toward classification attractors

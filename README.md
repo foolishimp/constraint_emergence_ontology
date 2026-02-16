@@ -59,7 +59,7 @@ constraint_emergence_ontology/
 | Document | Description |
 |----------|-------------|
 | [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.2). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
-| [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as trajectory instability. Published on [Zenodo](https://zenodo.org/records/16592400). |
+| [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as trajectory instability. Published on [Zenodo](https://zenodo.org/records/16592399). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. |
 
 ### [Political OS Suite](political_os/)
@@ -96,8 +96,8 @@ See the [Political OS README](political_os/README.md) for the full reading guide
 
 ## Publication
 
-- Emergent Reasoning paper: [Zenodo](https://zenodo.org/records/16592400)
-- Constraint-Emergence Ontology: [Zenodo](https://zenodo.org/records/18604736)
+- Emergent Reasoning paper: [Zenodo](https://zenodo.org/records/16592399)
+- Constraint-Emergence Ontology: [Zenodo](https://zenodo.org/records/18573722)
 
 ## Author
 

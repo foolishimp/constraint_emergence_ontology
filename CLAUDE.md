@@ -60,5 +60,5 @@ This document is developed through adversarial review — channeling specific th
 
 ## Publication
 
-- Emergent Reasoning paper published on Zenodo: https://zenodo.org/records/16592400
+- Emergent Reasoning paper published on Zenodo: https://zenodo.org/records/16592399
 - Constraint-Emergence Ontology: Zenodo upload pending
