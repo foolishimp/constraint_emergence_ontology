@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Australia presents a critical case study for the Liberal OS framework. The country operates under the same liberal invariants as other Western democracies, but with a distinctive vulnerability: **the invariants are carried primarily by tradition rather than constitutional hardening**. Australia has no bill of rights, no explicit free speech guarantee, no First Amendment equivalent, and no constitutional religious freedom clause. The constitution provides structural mechanisms (separation of powers, federalism, implied freedom of political communication) but leaves the core liberal invariants to convention, institutional norms, and civic culture.
+Australia presents a critical case study for the Liberal OS framework. The country operates under the same liberal invariants as other Western democracies, but with a distinctive vulnerability: **the invariants are carried primarily by tradition rather than constitutional hardening**. Australia has no bill of rights, no explicit free speech guarantee, and no First Amendment equivalent. Section 116 of the Constitution prohibits the Commonwealth from establishing a religion or prohibiting its free exercise, but the High Court has interpreted this narrowly — it constrains only federal legislative power, not state action, and has rarely been successfully invoked. The constitution provides structural mechanisms (separation of powers, federalism, implied freedom of political communication) but leaves the core liberal invariants to convention, institutional norms, and civic culture.
 
 The current Labor government's legislative programme (2022–2026) provides a natural experiment: what happens when a government implements policies informed by Critical Justice ideology in a system where liberal invariants lack constitutional protection?
 
@@ -21,7 +21,7 @@ The framework's prediction: invariant degradation succeeds where there is no con
 | Layer | US Implementation | Australian Implementation |
 |-------|------------------|--------------------------|
 | **OS (invariants)** | Same liberal invariants (Agency, Information, Alternatives, Revocability) | Same liberal invariants |
-| **Runtime (constitutional hardening)** | Bill of Rights, First Amendment, due process, equal protection | Sparse — implied freedom of political communication, separation of powers, federalism. No bill of rights, no explicit free speech, no religious freedom clause |
+| **Runtime (constitutional hardening)** | Bill of Rights, First Amendment, due process, equal protection | Sparse — implied freedom of political communication, separation of powers, federalism, s116 (narrow religious freedom, federal only). No bill of rights, no explicit free speech |
 | **Tradition layer** | Supplements the constitution | **Carries** the invariants — civic culture, institutional norms, "fair go" principle |
 | **Vulnerability** | Programs can corrupt, but constitutional hardening provides fallback | Programs can corrupt, and there is no constitutional fallback — if tradition erodes, invariants are unprotected |
 
@@ -119,7 +119,7 @@ The framework's prediction: invariant degradation succeeds where there is no con
 
 **System State**: Strained (existing protections eroding without replacement, ALRC recommendations pending)
 
-**Constitutional protection**: **None**. No constitutional religious freedom clause. No mechanism equivalent to the US First Amendment's free exercise clause.
+**Constitutional protection**: **Minimal**. Section 116 prohibits the Commonwealth from prohibiting the free exercise of religion, but the High Court has interpreted it narrowly (applies only to federal legislation, not state; rarely successfully invoked). No mechanism equivalent to the US First Amendment's broad free exercise protections.
 
 **Status**: Bill abandoned. Existing protections under ongoing legal and political pressure. No constitutional backstop.
 

@@ -2,7 +2,7 @@
 
 **Date**: 16 February 2026
 **Framework**: Classical Liberal Political OS v1.0
-**Period**: 2020 – February 2026 (Democratic supermajority legislature, Governors Newsom / successor)
+**Period**: 2020 – February 2026 (Democratic supermajority legislature, Governor Newsom)
 
 ---
 
