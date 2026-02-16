@@ -1626,7 +1626,7 @@ If both functors are faithful, the correspondence generates predictions in both 
 |-------|------|--------|
 | **Immediate** | Rigorous definition of category C; prove composition preserves conditional independence | Formalizable now |
 | **Immediate** | Exhibit F_phys formally from Markov blanket literature | Largely done |
-| **Immediate** | Show that constraint density generates the preorder *in the same structural way* across domains, not merely that a preorder exists in each (the triviality risk: almost any preference structure is a preorder; the non-trivial claim is that the relationship between constraint density and preorder structure is preserved by the functor) | Open — required for the engine claim to have content beyond pattern-naming |
+| **Immediate** | Show that constraint density generates the preorder *in the same structural way* across domains — that the relationship between constraint density and preorder structure is preserved by the functor. The universality of preorders is the thesis, not a weakness: if local preorder traversal is the substrate operation, its appearance in every domain is expected. The research task is demonstrating that this universality is structural (functor-preserved) rather than merely definitional | Open — required to distinguish foundational universality from vacuous generality |
 | **Near-term** | Test conditional independence conjecture via sparse autoencoders + causal tracing | Testable with current tools |
 | **Near-term** | Measure ε across model scales | Testable with current tools |
 | **Medium-term** | Formalize world models as functors; test the natural transformation η | Requires explicit world model architectures |
