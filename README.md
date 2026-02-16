@@ -27,6 +27,10 @@ constraint_emergence_ontology/
 ├── constraint_emergence_ontology.md   # Core ontology
 ├── emergent_reasoning.md              # Formal companion: LLMs as constraint-manifold traversal
 ├── ontology_templates.md              # Logical Encapsulation meta-template
+├── presentations/                     # PDF snapshots (periodically updated)
+│   ├── constraint_emergence_ontology.pdf
+│   ├── classical_liberal_political_os.pdf
+│   └── marxist_political_os.pdf
 └── political_os/                      # Worked example: Political OS Suite
     ├── README.md                      # Political OS introduction and reading guide
     ├── classical_liberal_political_os.md
