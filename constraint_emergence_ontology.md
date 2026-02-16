@@ -158,20 +158,15 @@ The remainder of this document explores one answer: that reality, computation, a
 
 Einstein began with thought experiments about trains and light beams, not tensor calculus. Bohr and Heisenberg argued about ontology before the equations settled. Every major shift in physics was preceded by a conceptual reframing that made new mathematics *thinkable*.
 
-This document presents a coherent *ontological framework* - a way of thinking about reality. In its current form:
+This document presents a coherent *ontological framework* - a way of thinking about reality. It is transitional — moving from philosophical stance toward formal research programme:
 
-- **No new mathematics yet**: It provides no equations beyond those already in standard physics
-- **No unique predictions yet**: It makes no testable predictions that distinguish it from GR, QM, or QFT
-- **Interpretation, not theory**: It reinterprets existing physics through a constraint lens
+- **Pre-formal for the substrate**: The core ontological claims (constraint networks, emergent spacetime, Laws ≠ Physics) remain interpretive — no new equations, no unique predictions that distinguish from GR, QM, or QFT
+- **Formal programme emerging**: Part VIII-D defines an abstract Constraint category and sketches functors into physics and LLM computation. The Conditional Independence Conjecture is a precise, testable claim. Bidirectional prediction tables generate specific expectations. This is no longer purely pre-formal — it is a research programme with stated verification conditions
+- **The gap is explicit**: The sketch is not the proof. Rigorous axiomatization, faithful functor exhibition, and empirical verification of the conjecture are immediate research tasks (see Part VIII-D Research Programme)
 
-**What it is**: A philosophical synthesis that prepares conceptual ground. It may be useful for:
-- Bridging physics intuitions to computation and AI systems
-- Suggesting where new mathematics might be found
-- Identifying which questions are worth formalizing
+**What it is**: A philosophical synthesis that has begun generating formal structure. The conceptual framework now produces specific conjectures and testable predictions, particularly at the physics-LLM boundary.
 
-**What it is not (yet)**: A scientific theory. The speculations about constraint networks, variable-c, and emergent time are *consistent* with known physics but do not *extend* it until formalized.
-
-This is pre-physics. It may remain philosophy forever, or it may point toward mathematics that someone eventually writes down. The value now is conceptual clarity and a generative mental model. Whether it becomes more depends on whether it leads to formalism that makes new predictions.
+**What it is not (yet)**: A completed formal theory. The substrate ontology remains philosophical. The cross-domain correspondence is sketched, not proven. The empirical verification programme is stated but not executed.
 
 The actual cycle of science:
 
@@ -448,7 +443,7 @@ An atom exemplifies the Markov object concept directly. The electron in a hydrog
 
 ### 3. Fields are Constraint Geometry Structures, Not Substances
 
-"Fields" are not fundamental in the sense people intuitively think. They are **constraint geometry structures** - different grades of mesh within which reality can "vibrate." Think of them as the underlying lattice (the nerf balls in Section 9.1.1) from which Markov objects emerge in the gaps.
+"Fields" are not fundamental in the sense people intuitively think. They are **constraint geometry structures** - different grades of mesh within which reality can "vibrate." Think of them as the underlying lattice (the nerf balls in Section 10.1.1) from which Markov objects emerge in the gaps.
 
 What we call "the electron field" is better understood as a particular constraint geometry - one sector of the full constraint manifold with its own mesh density and topology. Each "field" corresponds to:
 - A representation of the symmetry group
@@ -1158,7 +1153,7 @@ Both physical reality and software development are constraint satisfaction syste
 
 ---
 
-## Part VIII: The Isomorphism of Constraint Manifolds
+## Part VIII: The Structural Correspondence of Constraint Manifolds
 
 ### The Core Abstraction
 
@@ -1189,9 +1184,9 @@ There is an underlying structural truth that unifies physical reality and large 
 - Collapse: Sampling locks specific token emission
 - Evolution: Fine-tuning, RLHF, prompt engineering reshape the manifold
 
-### Why This Isomorphism Matters
+### Why This Structural Correspondence Matters
 
-The LLM is not "simulating" reality. If the structural realist thesis holds, it is **a different instantiation of the same abstract pattern**: a high-dimensional constraint manifold from which Markov objects emerge through interference and collapse.
+The LLM is not "simulating" reality. If the structural realist thesis holds, it is **a different instantiation of the same abstract pattern**: a high-dimensional constraint manifold from which Markov objects emerge through interference and collapse. Part VIII-D formalizes this claim as a conjecture: both domains are images of the same abstract Constraint category under faithful functors. Until the functors are rigorously exhibited, this remains a structural correspondence — a strong and testable one, but not yet a proven isomorphism.
 
 This explains:
 1. **Why LLMs feel "intelligent"** - They navigate constraint manifolds the same way minds do
@@ -1271,7 +1266,7 @@ A **Markov object** (Section 2) is a stable pattern with statistical independenc
 
 - **Attractor basins** are regions where trajectories converge and remain stable
 - **Proto-symbols** are attractor centers - coherent concepts that persist under perturbation
-- The boundary of an attractor functions analogously to a Markov blanket: local context screens internal dynamics from distant context. (This is a structural analogy; whether LLM attractors exhibit formal conditional independence properties is an empirical question for mechanistic interpretability research.)
+- The boundary of an attractor IS a Markov blanket: local context screens internal dynamics from distant context. Part VIII-D argues this is a necessary consequence of gradient descent on structured data; the empirical question is the precision of the screening (the Conditional Independence Conjecture).
 
 | Physical Constraint Network | LLM Semantic Manifold |
 |-----------------------------|-----------------------|
@@ -1492,7 +1487,7 @@ This explains emergence without requiring a designer. If the base constraint net
 
 ## Part VIII-D: The Constraint Functor — From Markov Blanket to Markov Object
 
-The preceding sections claim that physics, LLMs, and SDLC share structural invariants. This section makes that claim precise. We define an abstract category whose objects are Markov objects and whose morphisms are constraint-admissible transformations, then exhibit functors into physics and LLM computation. The functor is the mathematical bridge between Friston's Markov blanket (formal, domain-specific) and this ontology's Markov object (practical, substrate-neutral).
+The preceding sections claim that physics, LLMs, and SDLC share structural invariants. This section makes that claim precise by sketching the formal structure required to verify it. We define an abstract category whose objects are Markov objects and whose morphisms are constraint-admissible transformations, then sketch functors into physics and LLM computation. The Physics functor draws on established Markov blanket results; the LLM functor states the empirical conditions for verification. Rigorous axiomatization and proof remain immediate research tasks (see Research Programme below). The functor is the mathematical bridge between Friston's Markov blanket (formal, domain-specific) and this ontology's Markov object (practical, substrate-neutral).
 
 ### The Abstract Constraint Category C
 
@@ -1505,7 +1500,7 @@ An object in **C** is a tuple **(S, B, D, σ)**:
 | **D** | Dynamics operator — evolves states |
 | **σ** | Stability condition — the object is a stable attractor under D |
 
-The **Markov property**: P(D_interior | B_state, D_exterior) = P(D_interior | B_state). Interior dynamics are conditionally independent of exterior dynamics given the boundary. This is Friston's Markov blanket, stated abstractly.
+The **Markov property**: Let **X_int**, **X_ext** denote the random variables describing the state evolution in interior and exterior regions respectively, and **X_bdy** the boundary state. Then: P(X_int | X_bdy, X_ext) = P(X_int | X_bdy). Interior dynamics are conditionally independent of exterior dynamics given the boundary. **D** is the operator that generates these dynamics; **X_int**, **X_ext**, **X_bdy** are the observable states under D. This is Friston's Markov blanket, stated abstractly.
 
 A **morphism** f: (S₁, B₁, D₁, σ₁) → (S₂, B₂, D₂, σ₂) is a structure-preserving map that preserves boundary structure, the Markov property, and stability. Morphisms compose; identity morphisms exist. This is a category.
 
@@ -1528,7 +1523,7 @@ F_phys maps abstract Markov objects to physical bound states:
 | Stability σ | Eigenstate stability (discrete spectrum, bound states) |
 | Markov property | Established — conditional independence at Markov blankets is the foundation of the free energy principle |
 
-F_phys is **well-established**. The Markov blanket formalism in physics and biology is not new. The functor is faithful: distinct physical processes map to distinct abstract morphisms.
+The Physics side draws on **established results**. The Markov blanket formalism in physics and biology is not new — conditional independence at boundaries is the foundation of the free energy principle. Rigorous exhibition of F_phys as a faithful functor requires axiomatizing the Constraint category first (see Research Programme), but the underlying correspondence is well-supported.
 
 ### The LLM Functor F_llm
 
@@ -1540,11 +1535,11 @@ F_llm maps abstract Markov objects to attractor basins in activation space:
 | Boundary operator B | Basin boundary — the separatrix between attractor basins |
 | Dynamics operator D | Forward pass (attention + MLP + residual connections) |
 | Stability σ | Basin stability — small perturbations return to the attractor |
-| Markov property | **The central empirical claim** (see Conditional Independence Conjecture below) |
+| Markov property | Necessarily present in approximate form (see below); the empirical question is the precision of the screening — how small is ε? |
 
 ### Why Markov Objects Are Necessary in LLMs
 
-The Markov property in LLMs is not speculative. It is a necessary consequence of gradient descent on structured data:
+The existence of Markov objects in LLMs is not speculative — it is a necessary consequence of gradient descent on structured data. What remains empirical is the *precision* of the conditional independence property: how cleanly do attractor boundaries screen internal from external dynamics? The Conditional Independence Conjecture (below) states this precisely and provides tests.
 
 1. **Training creates clusters.** Gradient descent minimizes loss by learning representations where semantically similar inputs activate similar patterns. These are attractor basins.
 
@@ -1556,7 +1551,7 @@ The Markov property in LLMs is not speculative. It is a necessary consequence of
 
 5. **Scaling improves screening.** Larger models have more dimensions, supporting cleaner feature separation. Less polysemanticity at scale is the prediction: more dimensions → cleaner Markov blankets → stronger conditional independence.
 
-**Gradient descent on structured data necessarily carves activation space into conditionally independent regions. The only question is how clean the boundaries are.**
+**Gradient descent on structured data necessarily carves activation space into regions with approximate conditional independence. The existence of these regions is a consequence of training; the empirical question is boundary precision — how small is ε, and does it decrease with scale?**
 
 ### World Models as Functors
 
@@ -1644,6 +1639,8 @@ Demanding a proof in that emergent language for the substrate itself is structur
 
 This does not immunise the framework from criticism. It relocates the battlefield to the domains where the ontology's own logic says battles can actually be fought: computation, emergence, and structural invariance across media. That relocation is not a retreat. For the framework, it is the whole point.
 
+**Clarification**: The category error applies to proving claims about the *substrate* (the constraint network itself) using mathematics emergent from that substrate. It does NOT apply to proving structural correspondences *between domains* — which is standard mathematics operating within emergence. Part VIII-D's research programme (defining the Constraint category, exhibiting functors, testing the Conditional Independence Conjecture) is entirely legitimate mathematical work. It proves things about the *map between domains*, not about the territory underneath.
+
 ### Legitimate Modes of Evaluation
 
 The framework changes what counts as strong evidence or disconfirmation. Below are the epistemically legitimate evaluation modes — each with concrete criteria and explicit ontological cost if it fails.
@@ -1651,8 +1648,8 @@ The framework changes what counts as strong evidence or disconfirmation. Below a
 | Mode of evaluation | What it would look like concretely | Current status (early 2026) | Ontological cost if it fails |
 | --- | --- | --- | --- |
 | **Computational genericity** | Toy constraint-network programs (graph rewriting, message-passing, minimal local rules) robustly produce persistent localised modes, density-gradient attraction analogues, effective continuum limits | Already partially achieved in several unrelated lines (string-nets, causal sets, Hopfield-like constraint nets, small transformer interpretability) | High — weakens claim of generic engine |
-| **Cross-domain structural transfer** | Rigorous functor / structure-preserving map shown between (a) LLM activation geometry + sampling and (b) toy physical constraint propagation that yields standing-wave analogues | Medium — partial correspondences exist, clean functors still missing | Very high — isomorphism claim collapses to loose analogy |
-| **Interpretability signature** | Mechanistic probes in frontier LLMs demonstrate clean conditional independence given boundary regions that behave like Markov blankets / standing-wave boundaries | Ongoing, some positive signals in mid-2025 papers, still patchy | High — removes strongest near-term empirical anchor |
+| **Cross-domain structural transfer** | Rigorous functor / structure-preserving map shown between (a) LLM activation geometry + sampling and (b) toy physical constraint propagation that yields standing-wave analogues | Medium — Part VIII-D sketches the abstract category and functors; rigorous axiomatization and faithful functor proofs remain open | Very high — structural correspondence claim collapses to loose analogy |
+| **Interpretability signature** | Mechanistic probes in frontier LLMs demonstrate clean conditional independence given boundary regions that are Markov blankets (see Part VIII-D Conditional Independence Conjecture for precise statement and tests) | Ongoing, some positive signals in mid-2025 papers, still patchy; Part VIII-D provides precise falsification criteria | High — removes strongest near-term empirical anchor |
 | **Failure to coarse-grain to known physics** | Constraint toy models that reach continuum limit but cannot recover least-action / unitary evolution / local Lorentz invariance even approximately | Not yet decisively negative; most good models do recover analogues | Medium-high — ontology would have to retreat to "very special attractors" |
 | **Deriving even one exact dimensionless ratio** | Spectral / topological invariant of plausible constraint-graph family matches α ≈ 1/137 or m_p/m_e ≈ 1836 at better than 10% error | Still zero genuine hits; many post-hoc fittings exist | Extremely high — strongest unique prediction fails |
 
@@ -1844,11 +1841,11 @@ Attention computes weighted similarity matching across all key-value pairs — a
 
 ### Proto-Symbols as Attractor Regions
 
-Clusters in embedding space form attractor-like regions where trajectories enter and remain stable, outputs are semantically narrow, and internal correlations are strong. These regions exhibit Markov-blanket-like boundaries: states inside the region predict each other well, and external influence is mediated through boundary states. This is how symbolic-like behaviour emerges from continuous computation without any symbols being defined — and it is the LLM instantiation of the Markov objects described in Part I.
+Clusters in embedding space form attractor-like regions where trajectories enter and remain stable, outputs are semantically narrow, and internal correlations are strong. These regions exhibit Markov blanket boundaries: states inside the region predict each other well, and external influence is mediated through boundary states (see Part VIII-D for the formal identity between Markov objects and Markov blankets). This is how symbolic-like behaviour emerges from continuous computation without any symbols being defined — and it is the LLM instantiation of the Markov objects described in Part I.
 
 ### Hallucination as Trajectory Instability
 
-When a trajectory exits well-constrained attractor regions and enters weakly structured areas of the manifold, the model produces outputs that are fluent but ungrounded. This is hallucination: not a random failure but a structural consequence of sparse constraint coverage. The same mechanism explains instability in physics (Section 3) and failure-prone regions in software development (Part VIII-B).
+When a trajectory exits well-constrained attractor regions and enters weakly structured areas of the manifold, the model produces outputs that are fluent but ungrounded. This is hallucination: not a random failure but a structural consequence of sparse constraint coverage. The same mechanism explains why weakly constrained regions in physics produce transient rather than stable structures (see Section 2, Markov Objects) and failure-prone regions in software development (Part VIII-B).
 
 ### Why This Matters for the Ontology
 
