@@ -26,7 +26,7 @@ This document is an **ontology designed to be loaded into an LLM's context windo
 
 - **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** — Formal companion (separate repo): LLMs as constraint-manifold traversal systems. Load the v3 paper alongside the ontology for deeper LLM-specific exploration.
 - **[Ontology Templates](ontology_templates.md)** — The Logical Encapsulation meta-template. Shows how to build your own constraint specifications using the same method.
-- **[Political OS Suite](political_os/)** — Four worked examples (Classical Liberal, Marxist, Critical Justice, Theocratic) plus [The Governance Stack](political_os/comparative_political_os_analysis.md): political analysis derived from the constraint framework using Logical Encapsulation.
+- **[Political OS Suite](political_os/)** — Four worked examples (Classical Liberal, Marxist, Critical Justice, Theocratic) plus [The Political Operating System](political_os/political_operating_system.md): comparative structural analysis derived from the constraint framework using Logical Encapsulation.
 
 ---
 

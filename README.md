@@ -37,7 +37,7 @@ constraint_emergence_ontology/
     ├── critical_justice_political_os.md
     ├── theocratic_political_os.md
     ├── us_democratic_political_os.md
-    ├── comparative_political_os_analysis.md
+    ├── political_operating_system.md
     ├── political_os_test_suite.md
     ├── presentations/                 # PDF snapshots (periodically updated)
     │   ├── classical_liberal_political_os.pdf
@@ -45,7 +45,7 @@ constraint_emergence_ontology/
     │   ├── critical_justice_political_os.pdf
     │   ├── theocratic_political_os.pdf
     │   ├── us_democratic_political_os.pdf
-    │   ├── comparative_political_os_analysis.pdf
+    │   ├── political_operating_system.pdf
     │   ├── political_os_test_suite.pdf
     │   └── README.pdf
     └── reports/                       # Real-world invariant analyses

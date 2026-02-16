@@ -29,7 +29,7 @@ You need:
 | `theocratic_political_os.md` | OS under test | Methods 1-4: one OS per session; Method 6: as host OS |
 | `us_democratic_political_os.md` | Implementation specification (US system) | Method 5: paired with Classical Liberal OS |
 | `political_os_test_suite.md` (this document) | Test case descriptions | Reference only — copy/paste individual test cases into sessions |
-| `comparative_political_os_analysis.md` (The Governance Stack) | Layered governance model and cross-OS structural analysis | Method 3 only — load instead of an OS document |
+| `political_operating_system.md` (The Governance Stack) | Layered governance model and cross-OS structural analysis | Method 3 only — load instead of an OS document |
 
 **Critical rule**: Each LLM session gets **exactly one OS document**. Never load two OS documents in the same session — the LLM will blend their constraints and produce invalid results. The test cases from this document are pasted in as prompts, not loaded as context.
 
@@ -76,10 +76,10 @@ Run all 15 test cases through one OS in a single session.
 
 After running Method 2 for all four OS.
 
-**Context window contains**: `comparative_political_os_analysis.md` + your completed scoring tables + the Predicted Results Matrix from this document. Do NOT load any individual OS document — the comparative document already contains the structural comparison.
+**Context window contains**: `political_operating_system.md` + your completed scoring tables + the Predicted Results Matrix from this document. Do NOT load any individual OS document — the comparative document already contains the structural comparison.
 
 1. Start a fresh LLM session
-2. Paste the `comparative_political_os_analysis.md` document
+2. Paste the `political_operating_system.md` document
 3. Paste your completed scoring tables (all four OS, all 15 tests)
 4. Paste the **Predicted Results Matrix** from this document (the comparative table and summary statistics)
 5. Prompt:

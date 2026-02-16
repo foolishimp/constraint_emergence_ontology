@@ -1,6 +1,54 @@
-# The Governance Stack
+# The Political Operating System
 
 **How competing ideologies propose to carve up the resources of a planet we all inhabit**
+
+---
+
+## Introduction
+
+This paper asks a structural question: when different political philosophies evaluate the same political phenomenon, **why do they reach different conclusions** — and what determines the shape of each conclusion?
+
+The answer proposed here is that political philosophies are **constraint specifications** — formal systems of axioms, invariants, and evaluation algorithms that determine what counts as legitimate, what counts as a violation, and what counts as evidence. Load a different specification, get a different analysis. The divergence is not a matter of opinion but of structure: different axioms produce mechanically different outputs.
+
+To test this, four political philosophies have been expressed as formal constraint specifications using the [Logical Encapsulation](https://doi.org/10.5281/zenodo.18653641) method from the [Constraint-Emergence Ontology](https://doi.org/10.5281/zenodo.18573722): **Classical Liberal**, **Marxist**, **Critical Justice**, and **Theocratic**. Each specification can be loaded into an LLM as context, programming it to reason within that framework's axioms. The same political event — evaluated through four different specifications — produces four structurally divergent analyses.
+
+This paper provides the comparative structural analysis. It introduces a five-layer **Governance Stack** (Hardware → OS → Runtime → Programs → Bootstrap), places each specification within it, and discovers which candidates are complete operating systems and which are diagnostic fragments. Key findings include: the Critical Justice and Theocratic specifications are structurally isomorphic despite opposite content; the Marxist specification has a governance gap at the vanguard transition; and the same diagnostic produces opposite outcomes depending on where it sits in the stack.
+
+### The Suite
+
+This paper is the entry point to the Political OS Suite. The companion documents are the specifications themselves — each one a self-contained constraint system that can be loaded into an LLM and executed independently.
+
+| Document | What it is |
+|----------|-----------|
+| **This paper** | Structural analysis and comparative findings |
+| [Classical Liberal OS](classical_liberal_political_os.md) | Full governance specification — individual as primary unit, four invariants (Agency, Information, Alternatives, Revocability), iterative optimization loop |
+| [Marxist OS](marxist_political_os.md) | Diagnostic specification with governance gap — class as primary unit, strong exploitation diagnosis, vanguard gap at implementation |
+| [Critical Justice OS](critical_justice_political_os.md) | Diagnostic program — intersectional identity group as primary unit, analytical invariants for identifying structural power, no governance model |
+| [Theocratic OS](theocratic_political_os.md) | Theocratic governance specification — divine order as primary unit, divine authority with interpretation gap |
+| [US Democratic OS](us_democratic_political_os.md) | Implementation analysis — the US Constitutional system mapped as an instance of the Classical Liberal OS |
+| [Test Suite](political_os_test_suite.md) | 15 test cases with predicted results across all four OS. Six evaluation methods. |
+
+### How to read this
+
+**Start here.** This paper frames the entire suite. After reading it, load any individual OS specification into a fresh LLM session and ask it to evaluate a political phenomenon — you will see the constraint system in action. The [Test Suite](political_os_test_suite.md) provides structured experiments. One critical rule: each LLM session gets **exactly one OS specification**. Never load two in the same session.
+
+### Method
+
+Each OS specification was built using the [Logical Encapsulation](https://doi.org/10.5281/zenodo.18653641) meta-template: a four-layer architecture (Constraint Layer, Ontology Layer, Algorithm Layer, Operating Principle) that programs an LLM to reason within defined axioms rather than its training-data value pool. The theoretical foundation — why loading a constraint specification reshapes an LLM's reasoning trajectory — is formalized in the [Emergent Reasoning](https://doi.org/10.5281/zenodo.16592399) companion paper.
+
+---
+
+## The Governance Stack
+
+The analysis uses a five-layer model — the Governance Stack — to decompose how political systems are structured, from the physical substrate through to cultural reproduction.
+
+| Layer | Name | What it contains |
+|-------|------|-----------------|
+| 0 | Hardware (Reality OS) | Physical geography, resources, population, borders |
+| 1 | Political OS | Foundational axioms, invariants, evaluation algorithm |
+| 2 | Runtime (Institutions) | Courts, legislatures, enforcement, interpretation |
+| 3 | Programs | Policies, laws, institutional arrangements |
+| 4 | Bootstrap | Civic education, cultural transmission, OS replication |
 
 ---
 
