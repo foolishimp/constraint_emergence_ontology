@@ -1,12 +1,4 @@
-Below is a **ready-to-use document** containing both
-**(1) the descriptive preamble explaining why the method works**, and
-**(2) the reusable Meta-Template**.
-
-You can hand this to *any* LLM as context.
-
----
-
-# 🧩 **Logical Encapsulation — Meta-Template for Constraint Specifications**
+# Programming LLM Reasoning: A Meta-Template for Constraint Specifications
 
 ---
 
