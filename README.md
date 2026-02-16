@@ -49,7 +49,12 @@ constraint_emergence_ontology/
     │   ├── political_os_test_suite.pdf
     │   └── README.pdf
     └── reports/                       # Real-world invariant analyses
-        └── 2026-02-16-australia-invariant-analysis.md
+        ├── 2026-02-16-australia-invariant-analysis.md
+        ├── 2026-02-16-uk-invariant-analysis.md
+        ├── 2026-02-16-canada-invariant-analysis.md
+        ├── 2026-02-16-germany-invariant-analysis.md
+        ├── 2026-02-16-united-states-invariant-analysis.md
+        └── 2026-02-16-california-invariant-analysis.md
 ```
 
 ## Documents

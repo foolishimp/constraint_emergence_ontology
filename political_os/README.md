@@ -46,7 +46,12 @@ Real-world analyses applying the framework to current political events.
 
 | Report | Date | Subject |
 |--------|------|---------|
-| [Australia Invariant Analysis](reports/2026-02-16-australia-invariant-analysis.md) | 2026-02-16 | Australian Labor government legislative programme (2022-2026) analysed through Liberal OS invariants. Tests the prediction that tradition-carried invariants are more fragile than constitution-carried invariants. |
+| [Australia](reports/2026-02-16-australia-invariant-analysis.md) | 2026-02-16 | Labor government (2022-2026). Tests the prediction that tradition-carried invariants are more fragile than constitution-carried invariants. |
+| [United Kingdom](reports/2026-02-16-uk-invariant-analysis.md) | 2026-02-16 | Conservative and Labour governments (2019-2026). No written constitution — invariants carried entirely by convention and statute. Bi-directional degradation from both left and right. |
+| [Canada](reports/2026-02-16-canada-invariant-analysis.md) | 2026-02-16 | Trudeau government (2015-2025). Tests whether Charter rights with Section 1 and Section 33 overrides protect or enable invariant degradation. |
+| [Germany](reports/2026-02-16-germany-invariant-analysis.md) | 2026-02-16 | Scholz coalition (2021-2026). Strongest constitutional hardening (Grundgesetz + eternity clause + BVerfG) — but militant democracy doctrine creates a constitutional override mechanism. |
+| [United States](reports/2026-02-16-united-states-invariant-analysis.md) | 2026-02-16 | Biden and Trump administrations (2020-2026). Symmetrical analysis — both sides degrade different invariants. Tests constitutional hardening under stress from competing directions. |
+| [California](reports/2026-02-16-california-invariant-analysis.md) | 2026-02-16 | Democratic supermajority (2020-2026). Sub-national case study — tests whether state-level governance can degrade invariants despite federal constitutional protections. |
 
 ---
 
