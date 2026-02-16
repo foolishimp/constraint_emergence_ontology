@@ -25,11 +25,9 @@ The [Political OS Suite](political_os/) is the primary worked example of Logical
 ```
 constraint_emergence_ontology/
 ├── constraint_emergence_ontology.md   # Core ontology
-├── emergent_reasoning.md              # Formal companion: LLMs as constraint-manifold traversal
 ├── ontology_templates.md              # Logical Encapsulation meta-template
 ├── presentations/                     # PDF snapshots (periodically updated)
 │   ├── constraint_emergence_ontology.pdf
-│   ├── emergent_reasoning.pdf
 │   ├── ontology_templates.pdf
 │   └── README.pdf
 └── political_os/                      # Worked example: Political OS Suite
@@ -61,7 +59,7 @@ constraint_emergence_ontology/
 | Document | Description |
 |----------|-------------|
 | [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.2). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
-| [Emergent Reasoning](emergent_reasoning.md) | Formal companion paper. LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as trajectory instability. Published on [Zenodo](https://zenodo.org/records/16592400). |
+| [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as trajectory instability. Published on [Zenodo](https://zenodo.org/records/16592400). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. |
 
 ### [Political OS Suite](political_os/)
@@ -80,7 +78,7 @@ Four political philosophies expressed as formal constraint specifications, plus 
 ### If you want to understand the ontology
 
 1. Start with **[Constraint-Emergence Ontology](constraint_emergence_ontology.md)**. Read Part 0 (structural invariance) and Part I (the ontology itself — sections 1-18). Part II positions against existing thinkers; Part VIII maps to specific domains; Part IX is the research agenda.
-2. Read **[Emergent Reasoning](emergent_reasoning.md)** for the formal treatment of how LLMs instantiate the constraint architecture.
+2. Read **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** for the formal treatment of how LLMs instantiate the constraint architecture.
 
 ### If you want to see the method in action
 

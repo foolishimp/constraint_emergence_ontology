@@ -74,4 +74,4 @@ Real-world analyses applying the framework to current political events.
 This suite is a worked example of:
 - **[Constraint-Emergence Ontology](../constraint_emergence_ontology.md)** — the philosophical framework
 - **[Ontology Templates](../ontology_templates.md)** — the Logical Encapsulation method used to build each OS
-- **[Emergent Reasoning](../emergent_reasoning.md)** — the formal model of how LLMs process constraint specifications
+- **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** — the formal model of how LLMs process constraint specifications (separate repo)

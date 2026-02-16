@@ -24,7 +24,7 @@ This document is an **ontology designed to be loaded into an LLM's context windo
 
 ### Companion documents
 
-- **[Emergent Reasoning](emergent_reasoning.md)** — Formal companion: LLMs as constraint-manifold traversal systems. Load alongside the ontology for deeper LLM-specific exploration.
+- **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** — Formal companion (separate repo): LLMs as constraint-manifold traversal systems. Load the v3 paper alongside the ontology for deeper LLM-specific exploration.
 - **[Ontology Templates](ontology_templates.md)** — The Logical Encapsulation meta-template. Shows how to build your own constraint specifications using the same method.
 - **[Political OS Suite](political_os/)** — Four worked examples (Classical Liberal, Marxist, Critical Justice, Theocratic) plus [The Governance Stack](political_os/comparative_political_os_analysis.md): political analysis derived from the constraint framework using Logical Encapsulation.
 
@@ -1809,13 +1809,13 @@ The ontology suggests current anomalies may be pointing at the model boundary, n
 
 | Document | Relationship |
 |----------|--------------|
-| *Emergent Reasoning in Large Language Models* (this repository) | Formalizes how LLMs traverse constraint manifolds - the computational substrate that makes this ontology usable as a reasoning environment |
+| *[Emergent Reasoning in Large Language Models](https://github.com/foolishimp/emergent_reasoning)* | Formalizes how LLMs traverse constraint manifolds - the computational substrate that makes this ontology usable as a reasoning environment |
 
 ---
 
 ## Appendix: Emergent Reasoning in LLMs — Formal Foundation
 
-The computational claims in this document — that LLMs traverse constraint manifolds, that attractors function as proto-symbols, that hallucination is trajectory instability — rest on formal work developed in a companion paper: *Emergent Reasoning in Large Language Models: A Topological and Constraint-Based Formalization* (this repository, `emergent_reasoning.md`). The key structures are summarized here so that the ontology is self-contained.
+The computational claims in this document — that LLMs traverse constraint manifolds, that attractors function as proto-symbols, that hallucination is trajectory instability — rest on formal work developed in a companion paper: *Emergent Reasoning in Large Language Models: A Topological and Constraint-Based Formalization* ([separate repository](https://github.com/foolishimp/emergent_reasoning)). The key structures are summarized here so that the ontology is self-contained.
 
 ### The Semantic Manifold
 
