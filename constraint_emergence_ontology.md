@@ -1342,6 +1342,8 @@ The thesis of this framework is that these are the same formal objects instantia
 
 ## Part VIII-B: SDLC as Information-Driven Construction (Detailed)
 
+> **Note**: This section documents the SDLC-ontology correspondence at the level of the universal construction pattern (concept #38). The AI SDLC has since been formalised as an **Asset Graph Model** (v2.1) — four primitives (Graph, Iterate, Evaluators, Spec+Context), one universal iteration function — that provides concrete instances of several concepts propagated back to this ontology: cost dynamics on constraint manifolds (§VIII-C.7), composite trajectories and zoomable structure (§VIII-C.8). See [AI SDLC Asset Graph Model](https://github.com/foolishimp/ai_sdlc_method) for the full formalisation.
+
 The AI SDLC is an instance of the universal pattern identified in Part V: **encoded representation → constructor → constructed structure**. This section makes the correspondence precise and demonstrates the abiogenesis insight at work in software engineering.
 
 ### 1. The Specification (Encoded Representation)
@@ -1530,6 +1532,47 @@ If you accept local preorder traversal as the fundamental engine, the three doma
 - **SDLC**: A Builder "calculates" a software solution by evaluating the local preorder of constraint satisfaction (does this change move toward passing tests and meeting requirements?)
 
 This explains emergence without requiring a designer. If the base constraint network has a pre-order (stability > instability) and discrete units of change, then local preorder traversal is inevitable. Complexity emerges because the system constantly moves "downhill" into more complex, nested attractor basins. We call the stable basins "particles," "cells," or "code modules," but they are all local minima where the preorder has flattened out.
+
+### 7. Cost Dynamics on Constraint Manifolds
+
+Traversal on a constraint manifold has a cost structure. This was discovered in the SDLC instantiation (see [AI SDLC Asset Graph Model](https://github.com/foolishimp/ai_sdlc_method), §11) but applies across all domains.
+
+**The Hamiltonian of traversal**: At each step of local preorder traversal, two costs compose:
+
+```
+H(step) = T(iteration_cost) + V(constraint_delta)
+```
+
+- **T** (kinetic): The cost of each compute step — metabolic energy (biology), compute cycles (LLM), human time (SDLC), physical interaction (physics)
+- **V** (potential): The distance from convergence — how far the current state is from satisfying all constraints
+
+Constraint density (Section 10) is the **metric** on the manifold — it determines how "far apart" states are and therefore how much effort transitions require. Dense constraints = low V (well-constrained, cheap to converge). Sparse constraints = high V (degenerate, expensive to converge — the same condition that produces hallucination in LLMs and failure in SDLC).
+
+This connects three previously separate observations:
+1. Constraint density determines local update rates (Section 10, gravity)
+2. Sparse constraints produce probability degeneracy (Part VIII-A, hallucination)
+3. The cost of convergence scales inversely with constraint density
+
+The Hamiltonian structure is the same across substrates: physics (actual H = T + V), biology (metabolic cost + selection pressure), LLMs (compute cost + constraint satisfaction gap), SDLC (iteration cost + evaluator delta), politics (institutional effort + reform resistance).
+
+**Ground state**: The minimal-effort configuration satisfying all constraints. Over-engineered solutions (excited states) carry more energy than necessary.
+
+**Action minimisation**: Optimal trajectories through the constraint manifold minimise the total action ΣH — they converge at minimum cost. This is the principle of least action restated as a universal property of constraint manifold traversal, not a law of physics.
+
+### 8. Composite Trajectories and Zoomable Structure
+
+Complex Markov objects are not just hierarchically composed — they are **composites along trajectories** through the constraint manifold. A complex stable structure is produced by a sequence of construction operations, each producing a stable sub-structure that becomes a constraint for the next.
+
+The trajectory is not metaphorical. In any information-driven construction system (Part V, concept #38), the composite carries the full causal chain of its production:
+
+- **Biology**: An organism is the composite of all proteins produced by ribosomal translation of its genome — each protein a stable Markov object, the organism a composite trajectory through the construction graph
+- **Physics**: A complex bound state (molecule, crystal) is the composite of simpler bound states formed through a sequence of interactions, each intermediate stable enough to constrain the next
+- **SDLC**: A deployed feature is the composite of requirements, design, code, tests, and deployment — each a stable artifact produced along a trajectory through the asset graph
+- **LLM**: A complex output is the composite of reasoning steps, each intermediate output constraining the next
+
+The composite carries **intent lineage** — the full traceability chain from initial constraint signal to final stable structure. Each sub-component is a Markov object (usable without knowing its construction history), but the composite preserves the history for when it matters (traceability, debugging, evolution).
+
+This structure is **zoomable**: any edge in a construction graph can be expanded into a sub-graph of finer-grained transitions, and any sub-graph can be collapsed into a single edge. The granularity is a choice — the same operations (constraint manifold, local traversal, evaluators, encoded representation) apply at every scale. This is the hierarchy of constraint resolution (Section 4) made operational: the same abstract pattern recurs at every zoom level.
 
 ---
 

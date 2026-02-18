@@ -149,6 +149,16 @@ The Markov blanket of the document set: every concept the framework introduces, 
 | 75 | **LLMs as constraint manifold laboratories** | LLMs are empirically manipulable constraint systems; most accessible direction for testing the framework | §IX.6 | 53, 54, 62 | Meta |
 | 76 | **World models as functors** | A world model is a functor from a schema category to the LLM category; alignment is whether η commutes | §VIII-D | 61 | Conjecture |
 
+## X-A. SDLC Back-Propagation: Dynamics on Constraint Manifolds
+
+Concepts discovered in the [AI SDLC Asset Graph Model](https://github.com/foolishimp/ai_sdlc_method) (v2.1) instantiation that generalise to the parent ontology.
+
+| # | Concept | Definition | Location | Depends On | Status |
+|---|---------|-----------|----------|------------|--------|
+| 77 | **Cost dynamics on constraint manifolds** | Traversal cost H = T(iteration_cost) + V(constraint_delta). Constraint density (#16) is the metric: dense constraints = low V = cheap convergence; sparse constraints = high V = expensive convergence = degeneracy. Connects gravity (#24), hallucination (#54), and SDLC failure prediction. Ground state = minimal-effort solution satisfying all constraints. Action minimisation = optimal trajectories converge at minimum total H | §VIII-C.7 | 15, 16, 54 | Derived |
+| 78 | **Composite trajectory** | Complex Markov objects as composites of sub-objects produced along trajectories through the constraint manifold, carrying intent lineage (full causal chain). Not just hierarchical composition (#11) but sequential construction through multiple constraint edges. Each sub-component is a Markov object; the composite preserves history for traceability | §VIII-C.8 | 38, 7, 11 | Derived |
+| 79 | **Zoomable constraint structure** | Any transition in a constraint graph expandable into a sub-graph of finer-grained transitions; any sub-graph collapsible into a single edge. Granularity is a choice — the same operations apply at every scale. The hierarchy of constraint resolution (#11) made operational | §VIII-C.8 | 11, 15, 38 | Derived |
+
 ---
 
 ## Dependency Graph (Simplified)
@@ -202,13 +212,18 @@ LLM INSTANTIATIONS                                            │
 FORMAL PROGRAMME                                              │
   58-64 Category C, functors, conjectures ◄── 7 + 5 + 8      │
                                                               │
+SDLC BACK-PROPAGATION                                         │
+  77 Cost dynamics ◄── 15 + 16 + 54                           │
+  78 Composite trajectory ◄── 38 + 7 + 11                     │
+  79 Zoomable constraint structure ◄── 11 + 15 + 38           │
+                                                              │
 POLITICAL OS SUITE                                            │
-  77-83  Governance Stack architecture ◄── 7 + 9 + 10 + 11   │
-  84-91  Layer 0 (Hardware / Reality OS) ◄── 1 + 7 + 16      │
-  92-102 Layer 1 (Political OS core) ◄── 38 + 40 + 15        │
-  103-122 OS-specific concepts ◄── 92-102                     │
-  123-133 Structural analysis ◄── 92-102                      │
-  134-145 Cross-cutting findings ◄── 123-133                  │
+  80-86  Governance Stack architecture ◄── 7 + 9 + 10 + 11   │
+  87-94  Layer 0 (Hardware / Reality OS) ◄── 1 + 7 + 16      │
+  95-105 Layer 1 (Political OS core) ◄── 38 + 40 + 15        │
+  106-125 OS-specific concepts ◄── 95-105                     │
+  126-136 Structural analysis ◄── 95-105                      │
+  137-148 Cross-cutting findings ◄── 126-136                  │
 ```
 
 ---
@@ -223,42 +238,42 @@ Source documents: `political_os/political_operating_system.md` (The Political Op
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 77 | **Governance Stack** | Five-layer model: Hardware → Political OS → Runtime → Programs → Bootstrap. Structural analogue of the constraint hierarchy (concept 11) applied to political governance | POS §Stack | 10, 11 | Derived |
-| 78 | **Layer 0: Hardware (Reality OS)** | Physical geography, resources, population, borders — the substrate on which governance software runs | POS §L0 | 2, 16 | Derived |
-| 79 | **Layer 1: Political OS** | Foundational axioms, invariants, evaluation algorithm — the constraint specification | POS §L1 | 40, 77 | Derived |
-| 80 | **Layer 2: Runtime (Institutions)** | Courts, legislatures, enforcement, interpretation — the constructor that reads the specification and produces governance | POS §L2 | 41, 77 | Derived |
-| 81 | **Layer 3: Programs** | Policies, laws, institutional arrangements — the constructed structures operating within the OS | POS §L3 | 42, 77 | Derived |
-| 82 | **Layer 4: Bootstrap** | Civic education, cultural transmission, OS replication — how the encoding propagates across generations | POS §L4 | 44, 39, 77 | Derived |
-| 83 | **Logical Encapsulation** | Four-layer architecture (Constraint, Ontology, Algorithm, Operating Principle) for building LLM constraint specifications | POS §Method, ontology_templates.md | 40, 35 | Derived |
+| 80 | **Governance Stack** | Five-layer model: Hardware → Political OS → Runtime → Programs → Bootstrap. Structural analogue of the constraint hierarchy (concept 11) applied to political governance | POS §Stack | 10, 11 | Derived |
+| 81 | **Layer 0: Hardware (Reality OS)** | Physical geography, resources, population, borders — the substrate on which governance software runs | POS §L0 | 2, 16 | Derived |
+| 82 | **Layer 1: Political OS** | Foundational axioms, invariants, evaluation algorithm — the constraint specification | POS §L1 | 40, 80 | Derived |
+| 83 | **Layer 2: Runtime (Institutions)** | Courts, legislatures, enforcement, interpretation — the constructor that reads the specification and produces governance | POS §L2 | 41, 80 | Derived |
+| 84 | **Layer 3: Programs** | Policies, laws, institutional arrangements — the constructed structures operating within the OS | POS §L3 | 42, 80 | Derived |
+| 85 | **Layer 4: Bootstrap** | Civic education, cultural transmission, OS replication — how the encoding propagates across generations | POS §L4 | 44, 39, 80 | Derived |
+| 86 | **Logical Encapsulation** | Four-layer architecture (Constraint, Ontology, Algorithm, Operating Principle) for building LLM constraint specifications | POS §Method, ontology_templates.md | 40, 35 | Derived |
 
 ## XII. Layer 0: Hardware / Reality OS
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 84 | **Polity as Markov object** | A stable governance pattern with constraint-defined boundaries; its border is its Markov blanket | POS §L0 | 7, 8 | Instantiation of 7 |
-| 85 | **Constraint technology** | A technology that extends the reach of coherent administration (agriculture, writing, roads, print, constitutions) | POS §L0 | 1, 84 | Derived |
-| 86 | **Governance scaling** | Polity size determined by which constraint technologies are available; each technology enables a step-change in administrative reach | POS §L0 | 85, 84 | Derived |
-| 87 | **Shared legibility** | Common language, civic vocabulary, mutual intelligibility required for the OS to be readable by its users | POS §L0 | 84, 85 | Derived |
-| 88 | **Authoritarian ground state** | Within a polity, the default absent governance: the strongest actor dominates. The gravitational attractor every Political OS fights against | POS §L0 | 3, 84 | Derived |
-| 89 | **Inter-state anarchy** | Between polities, the stable ground state: no sovereign above states. Stable when actors are powerful enough that none can impose hierarchy | POS §L0 | 88 | Derived |
-| 90 | **Asymmetry of construction and destruction** | Distributed governance takes generations to build and a decade to destroy | POS §L0, §L4 | 88, 82 | Derived |
-| 91 | **Substrate requirements** | Bounded territory, resource base, governable population, shared legibility, institutional infrastructure — what the Hardware layer must provide | POS §L0 | 78, 84 | Derived |
+| 87 | **Polity as Markov object** | A stable governance pattern with constraint-defined boundaries; its border is its Markov blanket | POS §L0 | 7, 8 | Instantiation of 7 |
+| 88 | **Constraint technology** | A technology that extends the reach of coherent administration (agriculture, writing, roads, print, constitutions) | POS §L0 | 1, 87 | Derived |
+| 89 | **Governance scaling** | Polity size determined by which constraint technologies are available; each technology enables a step-change in administrative reach | POS §L0 | 88, 87 | Derived |
+| 90 | **Shared legibility** | Common language, civic vocabulary, mutual intelligibility required for the OS to be readable by its users | POS §L0 | 87, 88 | Derived |
+| 91 | **Authoritarian ground state** | Within a polity, the default absent governance: the strongest actor dominates. The gravitational attractor every Political OS fights against | POS §L0 | 3, 87 | Derived |
+| 92 | **Inter-state anarchy** | Between polities, the stable ground state: no sovereign above states. Stable when actors are powerful enough that none can impose hierarchy | POS §L0 | 91 | Derived |
+| 93 | **Asymmetry of construction and destruction** | Distributed governance takes generations to build and a decade to destroy | POS §L0, §L4 | 91, 85 | Derived |
+| 94 | **Substrate requirements** | Bounded territory, resource base, governable population, shared legibility, institutional infrastructure — what the Hardware layer must provide | POS §L0 | 81, 87 | Derived |
 
 ## XIII. Layer 1: Political OS Core
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 92 | **Political philosophy as constraint specification** | A formal system of axioms, invariants, and evaluation algorithm that determines what counts as legitimate, violation, or evidence | POS §L1 | 40, 79 | Derived |
-| 93 | **Primary unit** | The irreducible entity each OS treats as foundational: individual (Liberal), class (Marxist), intersectional identity group (CJ), divine order (Theocratic) | POS §L1 | 7, 92 | Instantiation of 7 |
-| 94 | **Pre-order (political)** | The directional gradient each OS defines: Consent > Coercion (Liberal), Emancipation > Exploitation (Marxist), Equity > Domination (CJ), Submission > Autonomy (Theocratic) | POS §L1 | 15, 92 | Instantiation of 15 |
-| 95 | **Invariant (political)** | A constraint that defines the political manifold's topology; performs different operations in each OS: prescriptive (Liberal), analytical (Marxist), hermeneutic (CJ), conformity (Theocratic) | POS §L1 | 9, 92 | Instantiation |
-| 96 | **Evaluation algorithm** | The procedure by which the OS classifies events against its invariants; what makes the specification mechanically operative | POS §L1, all OS specs | 92, 94, 95 | Derived |
-| 97 | **The unit problem** | Why should any particular unit be treated as irreducible? The choice is declared, not argued; each OS defines a different Markov object | POS §Unit Problem | 93, 7 | Derived |
-| 98 | **Termination condition** | Can the evaluation algorithm return "stable" or "achieved"? Stable (Liberal), teleological (Marxist), non-terminating (CJ), eschatological (Theocratic) | POS §Structural | 96 | Derived |
-| 99 | **OS/Program distinction** | Foundational invariants (OS) vs. policies operating within the OS (Programs); collapsing this distinction is a corruption mechanism | POS §L3 | 79, 81 | Derived |
-| 100 | **Diagnostic program vs full OS** | Some candidates self-discover as diagnostic programs (analytical tools) rather than complete operating systems (governance-capable); Marxist and CJ are diagnostics | POS §Structural | 92, 98 | Derived |
-| 101 | **Host OS requirement** | Diagnostic programs need a host OS for implementation; they cannot answer "who decides" on their own | POS §Structural | 100 | Derived |
-| 102 | **State taxonomy** | Classification of polity states (Stable, Strained, Crisis, Authoritarian Dynamics, Systemic Failure); each OS defines its own variant | All OS specs, Reports | 92, 95, 96 | Derived |
+| 95 | **Political philosophy as constraint specification** | A formal system of axioms, invariants, and evaluation algorithm that determines what counts as legitimate, violation, or evidence | POS §L1 | 40, 82 | Derived |
+| 96 | **Primary unit** | The irreducible entity each OS treats as foundational: individual (Liberal), class (Marxist), intersectional identity group (CJ), divine order (Theocratic) | POS §L1 | 7, 95 | Instantiation of 7 |
+| 97 | **Pre-order (political)** | The directional gradient each OS defines: Consent > Coercion (Liberal), Emancipation > Exploitation (Marxist), Equity > Domination (CJ), Submission > Autonomy (Theocratic) | POS §L1 | 15, 95 | Instantiation of 15 |
+| 98 | **Invariant (political)** | A constraint that defines the political manifold's topology; performs different operations in each OS: prescriptive (Liberal), analytical (Marxist), hermeneutic (CJ), conformity (Theocratic) | POS §L1 | 9, 95 | Instantiation |
+| 99 | **Evaluation algorithm** | The procedure by which the OS classifies events against its invariants; what makes the specification mechanically operative | POS §L1, all OS specs | 95, 97, 98 | Derived |
+| 100 | **The unit problem** | Why should any particular unit be treated as irreducible? The choice is declared, not argued; each OS defines a different Markov object | POS §Unit Problem | 96, 7 | Derived |
+| 101 | **Termination condition** | Can the evaluation algorithm return "stable" or "achieved"? Stable (Liberal), teleological (Marxist), non-terminating (CJ), eschatological (Theocratic) | POS §Structural | 99 | Derived |
+| 102 | **OS/Program distinction** | Foundational invariants (OS) vs. policies operating within the OS (Programs); collapsing this distinction is a corruption mechanism | POS §L3 | 82, 84 | Derived |
+| 103 | **Diagnostic program vs full OS** | Some candidates self-discover as diagnostic programs (analytical tools) rather than complete operating systems (governance-capable); Marxist and CJ are diagnostics | POS §Structural | 95, 101 | Derived |
+| 104 | **Host OS requirement** | Diagnostic programs need a host OS for implementation; they cannot answer "who decides" on their own | POS §Structural | 103 | Derived |
+| 105 | **State taxonomy** | Classification of polity states (Stable, Strained, Crisis, Authoritarian Dynamics, Systemic Failure); each OS defines its own variant | All OS specs, Reports | 95, 98, 99 | Derived |
 
 ## XIV. OS-Specific Concepts
 
@@ -266,72 +281,71 @@ Source documents: `political_os/political_operating_system.md` (The Political Op
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 103 | **Agency (Invariant 1.1)** | Freedom of choice without coercion | CL OS §Invariants | 95 | Axiom (within OS) |
-| 104 | **Information (Invariant 1.2)** | Ability to seek, receive, question information; the replication mechanism of the distributed OS | CL OS §Invariants | 95, 82 | Axiom (within OS) |
-| 105 | **Alternatives (Invariant 1.3)** | Real, accessible, non-punitive options must exist | CL OS §Invariants | 95 | Axiom (within OS) |
-| 106 | **Revocability (Invariant 1.4)** | Authority removable through peaceful mechanisms; the OS's self-limitation | CL OS §Invariants | 95 | Axiom (within OS) |
-| 107 | **Rights as admissible transformations** | Rights are not abstract entities but structural guarantees that certain morphisms remain available (Aristotelian ontology) | CL OS §Rights | 5, 95, 66 | Derived |
-| 108 | **Meta-OS** | The Liberal OS as a platform on which other political programs can run accountably; meta-constraints on how constraints may be applied | POS §Cross-cutting | 99, 103-106 | Derived |
-| 109 | **Iterative optimisation loop** | Individuals evaluate governance outcomes, explore alternatives, correct course; the Liberal OS does not optimise any single aggregation but protects the conditions for continuous correction | CL OS §Eval Algorithm, POS §L2 | 106, 44 | Derived |
+| 106 | **Agency (Invariant 1.1)** | Freedom of choice without coercion | CL OS §Invariants | 98 | Axiom (within OS) |
+| 107 | **Information (Invariant 1.2)** | Ability to seek, receive, question information; the replication mechanism of the distributed OS | CL OS §Invariants | 98, 85 | Axiom (within OS) |
+| 108 | **Alternatives (Invariant 1.3)** | Real, accessible, non-punitive options must exist | CL OS §Invariants | 98 | Axiom (within OS) |
+| 109 | **Revocability (Invariant 1.4)** | Authority removable through peaceful mechanisms; the OS's self-limitation | CL OS §Invariants | 98 | Axiom (within OS) |
+| 110 | **Rights as admissible transformations** | Rights are not abstract entities but structural guarantees that certain morphisms remain available (Aristotelian ontology) | CL OS §Rights | 5, 98, 66 | Derived |
+| 111 | **Meta-OS** | The Liberal OS as a platform on which other political programs can run accountably; meta-constraints on how constraints may be applied | POS §Cross-cutting | 102, 106-109 | Derived |
+| 112 | **Iterative optimisation loop** | Individuals evaluate governance outcomes, explore alternatives, correct course; the Liberal OS does not optimise any single aggregation but protects the conditions for continuous correction | CL OS §Eval Algorithm, POS §L2 | 109, 44 | Derived |
 
 ### Marxist OS
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 110 | **Material Conditions (Invariant 2.1)** | Who owns means of production, who labours, who extracts surplus | Marx OS §Invariants | 95 | Axiom (within OS) |
-| 111 | **Class Consciousness (Invariant 2.2)** | Degree to which classes understand their objective interests; emergent from material conditions, not injected | Marx OS §Invariants | 95, 3 | Axiom (within OS) |
-| 112 | **Contradiction (Invariant 2.3)** | Internal contradictions in the mode of production that drive historical change | Marx OS §Invariants | 95 | Axiom (within OS) |
-| 113 | **Path to Emancipation (Invariant 2.4)** | Whether phenomena advance or obstruct collective emancipation | Marx OS §Invariants | 95, 94 | Axiom (within OS) |
-| 114 | **Vanguard problem** | Who governs during and after transition, and by what authority? Acknowledged but structurally unresolved — the governance gap in the spec | POS §Structural | 110-113 | Derived |
+| 113 | **Material Conditions (Invariant 2.1)** | Who owns means of production, who labours, who extracts surplus | Marx OS §Invariants | 98 | Axiom (within OS) |
+| 114 | **Class Consciousness (Invariant 2.2)** | Degree to which classes understand their objective interests; emergent from material conditions, not injected | Marx OS §Invariants | 98, 3 | Axiom (within OS) |
+| 115 | **Contradiction (Invariant 2.3)** | Internal contradictions in the mode of production that drive historical change | Marx OS §Invariants | 98 | Axiom (within OS) |
+| 116 | **Path to Emancipation (Invariant 2.4)** | Whether phenomena advance or obstruct collective emancipation | Marx OS §Invariants | 98, 97 | Axiom (within OS) |
+| 117 | **Vanguard problem** | Who governs during and after transition, and by what authority? Acknowledged but structurally unresolved — the governance gap in the spec | POS §Structural | 113-116 | Derived |
 
 ### Critical Justice OS
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 115 | **Power Asymmetry (Invariant 3.1)** | Group-based hierarchies along identity axes | CJ OS §Invariants | 95 | Axiom (within OS) |
-| 116 | **Epistemic Position (Invariant 3.2)** | Whose knowledge is centred or marginalised | CJ OS §Invariants | 95 | Axiom (within OS) |
-| 117 | **Structural Reproduction (Invariant 3.3)** | How institutions reproduce asymmetries regardless of intent | CJ OS §Invariants | 95 | Axiom (within OS) |
-| 118 | **Transformative Praxis (Invariant 3.4)** | Whether phenomena dismantle or reproduce domination | CJ OS §Invariants | 95, 94 | Axiom (within OS) |
+| 118 | **Power Asymmetry (Invariant 3.1)** | Group-based hierarchies along identity axes | CJ OS §Invariants | 98 | Axiom (within OS) |
+| 119 | **Epistemic Position (Invariant 3.2)** | Whose knowledge is centred or marginalised | CJ OS §Invariants | 98 | Axiom (within OS) |
+| 120 | **Structural Reproduction (Invariant 3.3)** | How institutions reproduce asymmetries regardless of intent | CJ OS §Invariants | 98 | Axiom (within OS) |
+| 121 | **Transformative Praxis (Invariant 3.4)** | Whether phenomena dismantle or reproduce domination | CJ OS §Invariants | 98, 97 | Axiom (within OS) |
 
 ### Theocratic OS
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 119 | **Divine Sovereignty (Invariant 4.1)** | All political authority derives from God; no human institution may claim authority independent of or superior to divine will | Theo OS §Invariants | 95 | Axiom (within OS) |
-| 120 | **Revealed Truth (Invariant 4.2)** | Divine revelation is the ultimate source of knowledge for governance; human reason operates within bounds set by revelation | Theo OS §Invariants | 95 | Axiom (within OS) |
-| 121 | **Sacred Order (Invariant 4.3)** | Society must be structured in conformity with divine design; social roles, hierarchies, laws must reflect the order God has established | Theo OS §Invariants | 95 | Axiom (within OS) |
-| 122 | **Faithful Obedience (Invariant 4.4)** | The faithful community must maintain submission to divine authority as expressed through legitimate religious leadership and divinely ordained law | Theo OS §Invariants | 95 | Axiom (within OS) |
+| 122 | **Divine Sovereignty (Invariant 4.1)** | All political authority derives from God; no human institution may claim authority independent of or superior to divine will | Theo OS §Invariants | 98 | Axiom (within OS) |
+| 123 | **Revealed Truth (Invariant 4.2)** | Divine revelation is the ultimate source of knowledge for governance; human reason operates within bounds set by revelation | Theo OS §Invariants | 98 | Axiom (within OS) |
+| 124 | **Sacred Order (Invariant 4.3)** | Society must be structured in conformity with divine design; social roles, hierarchies, laws must reflect the order God has established | Theo OS §Invariants | 98 | Axiom (within OS) |
+| 125 | **Faithful Obedience (Invariant 4.4)** | The faithful community must maintain submission to divine authority as expressed through legitimate religious leadership and divinely ordained law | Theo OS §Invariants | 98 | Axiom (within OS) |
 
 ## XV. Structural Analysis Concepts
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 123 | **Consciousness model** | How each OS maintains the awareness its invariants require: emergent from structure (Liberal), emergent from material conditions (Marxist), cultivated/injected (CJ, Theocratic) | POS §Structural | 92, 95 | Derived |
-| 124 | **Interpretive class** | A class required to supply or maintain the OS's consciousness: vanguard (Marxist), DEI administrators (CJ), priesthood (Theocratic). The Liberal OS avoids one by making consciousness emergent | POS §Structural | 123, 41 | Derived |
-| 125 | **Provenance chain** | Traceable path from authority source through selection, interpretation, law, enforcement, and back to revocation. Only the Liberal OS closes the loop | POS §L2 | 80, 106 | Derived |
-| 126 | **Provenance gap** | Points where authority passes through an intermediary that cannot be held accountable; every interpretive class creates one | POS §Structural | 125, 124 | Derived |
-| 127 | **Immune maturity** | Resistance of an interpretive class to capture by self-interested actors; theocratic traditions have millennia, CJ has decades | POS §Structural, Theo OS §Immune Maturity | 124, 126 | Derived |
-| 128 | **Falsifiability (political)** | Whether the OS can recognise disconfirming evidence. CJ and Theocratic: disagreement is classified as evidence of the thing being critiqued (unfalsifiable by design) | POS §Structural | 92, 96 | Derived |
-| 129 | **Symmetry of evaluation** | Whether the same input always gets the same output regardless of actor. Liberal: symmetric. CJ: asymmetric (same action evaluated differently depending on identity position) | POS §Structural | 96, 95 | Derived |
-| 130 | **Self-limitation** | Whether the OS constrains its own authority. Revocability (Liberal) is the mechanism; CJ and Theocratic have none | POS §Structural | 106, 92 | Derived |
-| 131 | **Program corruption patterns** | Five mechanisms by which programs corrupt the OS: capture, scope expansion, invariant reclassification, indirect degradation, bootstrap corruption | POS §L3 | 99, 81, 79 | Derived |
-| 132 | **Bootstrap corruption** | A program captures the OS's replication mechanism (Layer 4); the most dangerous corruption because it is self-replicating | POS §L3, §L4 | 82, 131 | Derived |
-| 133 | **Formally intact but operationally hollow** | The signature pattern of program corruption: OS-level protections exist on paper but have been emptied of operational force | POS §L3 | 131 | Derived |
+| 126 | **Consciousness model** | How each OS maintains the awareness its invariants require: emergent from structure (Liberal), emergent from material conditions (Marxist), cultivated/injected (CJ, Theocratic) | POS §Structural | 95, 98 | Derived |
+| 127 | **Interpretive class** | A class required to supply or maintain the OS's consciousness: vanguard (Marxist), DEI administrators (CJ), priesthood (Theocratic). The Liberal OS avoids one by making consciousness emergent | POS §Structural | 126, 41 | Derived |
+| 128 | **Provenance chain** | Traceable path from authority source through selection, interpretation, law, enforcement, and back to revocation. Only the Liberal OS closes the loop | POS §L2 | 83, 109 | Derived |
+| 129 | **Provenance gap** | Points where authority passes through an intermediary that cannot be held accountable; every interpretive class creates one | POS §Structural | 128, 127 | Derived |
+| 130 | **Immune maturity** | Resistance of an interpretive class to capture by self-interested actors; theocratic traditions have millennia, CJ has decades | POS §Structural, Theo OS §Immune Maturity | 127, 129 | Derived |
+| 131 | **Falsifiability (political)** | Whether the OS can recognise disconfirming evidence. CJ and Theocratic: disagreement is classified as evidence of the thing being critiqued (unfalsifiable by design) | POS §Structural | 95, 99 | Derived |
+| 132 | **Symmetry of evaluation** | Whether the same input always gets the same output regardless of actor. Liberal: symmetric. CJ: asymmetric (same action evaluated differently depending on identity position) | POS §Structural | 99, 98 | Derived |
+| 133 | **Self-limitation** | Whether the OS constrains its own authority. Revocability (Liberal) is the mechanism; CJ and Theocratic have none | POS §Structural | 109, 95 | Derived |
+| 134 | **Program corruption patterns** | Five mechanisms by which programs corrupt the OS: capture, scope expansion, invariant reclassification, indirect degradation, bootstrap corruption | POS §L3 | 102, 84, 82 | Derived |
+| 135 | **Bootstrap corruption** | A program captures the OS's replication mechanism (Layer 4); the most dangerous corruption because it is self-replicating | POS §L3, §L4 | 85, 134 | Derived |
+| 136 | **Formally intact but operationally hollow** | The signature pattern of program corruption: OS-level protections exist on paper but have been emptied of operational force | POS §L3 | 134 | Derived |
 
 ## XVI. Cross-Cutting Findings
 
 | # | Concept | Definition | Location | Depends On | Status |
 |---|---------|-----------|----------|------------|--------|
-| 134 | **CJ ≈ Theocratic (structural isomorphism)** | Despite opposite content, CJ and Theocratic OS share: interpretive class, consciousness injection, predetermined conclusions, original condition requiring redemption, questioning as evidence, ongoing ritual of submission, eschatological promise without termination | POS §Cross-cutting | 115-118, 119-122, 123-130 | Derived |
-| 135 | **Stack-level determines outcome (control functor)** | Same diagnostic at different stack levels produces opposite outcomes: Marxism-as-program → democratic socialism; Marxism-as-OS → authoritarianism | POS §Cross-cutting | 99, 77 | Derived |
-| 136 | **Evolved systems vs diagnostic programs** | Liberal and Theocratic evolved from centuries/millennia of governance practice; Marxist and CJ designed to diagnose failures in existing systems | POS §Cross-cutting | 100, 39 | Derived |
-| 137 | **The invasive species dynamic** | CJ optimised in academic ecology, propagated into institutional ecology where its natural predators (falsifiability, open debate) do not exist | POS §Propagation | 128, 132 | Derived |
-| 138 | **Constitutional hardening** | Whether foundational commitments are constitutionally protected or carried only by tradition. Determines whether democratic self-correction succeeds or fails under stress | Reports | 95, 84 | Empirical finding |
-| 139 | **Well-formedness criteria** | Seven structural criteria: separated axioms/derivations, testable invariants, termination condition, complete provenance, self-limitation, falsifiability, emergent consciousness. Acknowledged bias toward Enlightenment tradition | POS §Well-formedness | 92, 123-130 | Derived (with caveat) |
-| 140 | **Defence in depth (separation stack)** | Multiple structural separations (federal/state, branches, chambers, elected/appointed, government/individual), each independently preventing power consolidation | US Dem OS §Separations | 108, 138 | Instantiation |
-| 141 | **Evolutionary bootstrapping** | The Liberal OS cannot be installed by force; it requires generations of distributed practice before formalisation (the abiogenesis insight applied to politics) | POS §L4, US Dem OS | 39, 82, 90 | Derived |
-| 142 | **Pre-Evaluation Triage** | Four-step filter before invariant testing: formal encoding → enforcement asymmetry → runtime distortion → distributional artifact. Prevents both denialism and presumptive encoding | CL OS §Eval Algorithm | 96, 109 | Derived |
-| 143 | **Built-in Assumptions** | Pre-loaded empirical claims that function as additional axioms within the CJ OS (e.g., Western colonialism as dominant structure, all disparities as structural). Explicitly declared to distinguish them from formal axioms | CJ OS §Built-in Assumptions | 92, 115-118 | Derived |
-| 144 | **Identity Paradox** | The CJ OS deconstructs identity categories (Foucault, Butler) while depending on them as stable units for analysis and policy. Strategic essentialism (Spivak) attempts to manage the tension but is operationally dropped | CJ OS §Open Problem 3 | 93, 115 | Derived |
-| 145 | **Reflexivity Deficit** | The CJ OS claims all knowledge is situated but does not apply this to itself; disagreement is classified as evidence of the thing being critiqued, creating structural unfalsifiability | CJ OS §Open Problem 5 | 128, 115-118 | Derived |
-
+| 137 | **CJ ≈ Theocratic (structural isomorphism)** | Despite opposite content, CJ and Theocratic OS share: interpretive class, consciousness injection, predetermined conclusions, original condition requiring redemption, questioning as evidence, ongoing ritual of submission, eschatological promise without termination | POS §Cross-cutting | 118-121, 122-125, 126-133 | Derived |
+| 138 | **Stack-level determines outcome (control functor)** | Same diagnostic at different stack levels produces opposite outcomes: Marxism-as-program → democratic socialism; Marxism-as-OS → authoritarianism | POS §Cross-cutting | 102, 80 | Derived |
+| 139 | **Evolved systems vs diagnostic programs** | Liberal and Theocratic evolved from centuries/millennia of governance practice; Marxist and CJ designed to diagnose failures in existing systems | POS §Cross-cutting | 103, 39 | Derived |
+| 140 | **The invasive species dynamic** | CJ optimised in academic ecology, propagated into institutional ecology where its natural predators (falsifiability, open debate) do not exist | POS §Propagation | 131, 135 | Derived |
+| 141 | **Constitutional hardening** | Whether foundational commitments are constitutionally protected or carried only by tradition. Determines whether democratic self-correction succeeds or fails under stress | Reports | 98, 87 | Empirical finding |
+| 142 | **Well-formedness criteria** | Seven structural criteria: separated axioms/derivations, testable invariants, termination condition, complete provenance, self-limitation, falsifiability, emergent consciousness. Acknowledged bias toward Enlightenment tradition | POS §Well-formedness | 95, 126-133 | Derived (with caveat) |
+| 143 | **Defence in depth (separation stack)** | Multiple structural separations (federal/state, branches, chambers, elected/appointed, government/individual), each independently preventing power consolidation | US Dem OS §Separations | 111, 141 | Instantiation |
+| 144 | **Evolutionary bootstrapping** | The Liberal OS cannot be installed by force; it requires generations of distributed practice before formalisation (the abiogenesis insight applied to politics) | POS §L4, US Dem OS | 39, 85, 93 | Derived |
+| 145 | **Pre-Evaluation Triage** | Four-step filter before invariant testing: formal encoding → enforcement asymmetry → runtime distortion → distributional artifact. Prevents both denialism and presumptive encoding | CL OS §Eval Algorithm | 99, 112 | Derived |
+| 146 | **Built-in Assumptions** | Pre-loaded empirical claims that function as additional axioms within the CJ OS (e.g., Western colonialism as dominant structure, all disparities as structural). Explicitly declared to distinguish them from formal axioms | CJ OS §Built-in Assumptions | 95, 118-121 | Derived |
+| 147 | **Identity Paradox** | The CJ OS deconstructs identity categories (Foucault, Butler) while depending on them as stable units for analysis and policy. Strategic essentialism (Spivak) attempts to manage the tension but is operationally dropped | CJ OS §Open Problem 3 | 96, 118 | Derived |
+| 148 | **Reflexivity Deficit** | The CJ OS claims all knowledge is situated but does not apply this to itself; disagreement is classified as evidence of the thing being critiqued, creating structural unfalsifiability | CJ OS §Open Problem 5 | 131, 118-121 | Derived |
