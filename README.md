@@ -25,6 +25,7 @@ The [Political OS Suite](political_os/) is the primary worked example of Logical
 ```
 constraint_emergence_ontology/
 ├── constraint_emergence_ontology.md   # Core ontology
+├── concepts.md                        # Concept index, dependencies, and status map
 ├── ontology_templates.md              # Logical Encapsulation meta-template
 ├── presentations/                     # PDF snapshots (periodically updated)
 │   ├── constraint_emergence_ontology.pdf
@@ -63,7 +64,8 @@ constraint_emergence_ontology/
 
 | Document | Description |
 |----------|-------------|
-| [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.2). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
+| [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.3). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant, information-driven construction pattern. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
+| [Concept Index](concepts.md) | Canonical concept map for the ontology: definitions, section locations, dependency graph, and epistemic status tags (axiom, derived, conjecture, instantiation). |
 | [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as probability degeneracy. Published on [Zenodo](https://zenodo.org/records/16592399). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. Published on [Zenodo](https://zenodo.org/records/18653641). |
 
@@ -84,7 +86,8 @@ Four political philosophies expressed as formal constraint specifications. Start
 ### If you want to understand the ontology
 
 1. Start with **[Constraint-Emergence Ontology](constraint_emergence_ontology.md)**. Read Part 0 (structural invariance) and Part I (the ontology itself — sections 1-18). Part II positions against existing thinkers; Part VIII maps to specific domains; Part IX is the research agenda.
-2. Read **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** for the formal treatment of how LLMs instantiate the constraint architecture.
+2. Use **[Concept Index](concepts.md)** as the glossary and dependency map while reading; it tracks definitions, section anchors, and concept status.
+3. Read **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** for the formal treatment of how LLMs instantiate the constraint architecture.
 
 ### If you want to see the method in action
 

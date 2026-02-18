@@ -6,7 +6,7 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 
 ## Documents
 
-- **constraint_emergence_ontology.md** (v1.2) - Core ontological framework (includes Part VIII-D: Constraint Functor)
+- **constraint_emergence_ontology.md** (v1.3) - Core ontological framework (includes Part VIII-D: Constraint Functor)
 - **[emergent_reasoning](https://github.com/foolishimp/emergent_reasoning)** - Formal companion (separate repo): LLMs as constraint-manifold traversal systems
 - **ontology_templates.md** - Logical Encapsulation meta-template for LLM constraint specs
 - **political_os/** - Political OS Suite subdirectory containing:
@@ -17,9 +17,10 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 ## Core Framework (constraint_emergence_ontology.md)
 
 ### Structure
-- **Part 0**: Structural invariance, universal computation, ontology of change
+- **Part 0**: Structural invariance, universal computation, ontology of change, generative principle
 - **Part I (Sections 1-18)**: The ontology — constraint networks, Markov objects, emergent manifolds, observer theory, meaning
 - **Part II**: Philosophical positioning — relationships to Einstein, Bohm, Feynman, Wolfram, Penrose, Deutsch, Deacon, Smolin
+- **Part V**: Bridge to AI SDLC — information-driven construction, abiogenesis insight
 - **Part VIII**: Domain mappings — physics, software engineering (AI SDLC), LLMs
 - **Part VIII-D**: The Constraint Functor — formal category-theoretic bridge between physical and computational Markov objects
 - **Part IX**: Research agenda and falsifiability
@@ -27,12 +28,16 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 
 ### Key Concepts
 - **Constraint network**: Fundamental substrate — reality as self-organising constraints
+- **Generative principle**: As soon as a stable configuration is possible within a constraint structure, it will emerge
 - **Markov objects**: Stable patterns with constraint-defined boundaries (IS Friston's Markov blanket in substrate-neutral vocabulary)
 - **Emergent manifolds**: Hierarchical layers with their own effective laws
 - **Laws != Physics**: Mathematical descriptions are evolved cognitive tools, not the substrate
 - **Meaning as invariant**: Pattern matched against model — same operation at every scale
-- **Evaluator-as-prompter**: brainstem->cortex, human->LLM, requirements->SDLC — same architecture
+- **Evaluator-as-prompter**: brainstem->cortex, human->LLM, specification->builder — same architecture
+- **Information-driven construction**: Encoded representation → constructor → constructed structure (universal pattern)
+- **Abiogenesis insight**: Constructor precedes specification; encoding emerges as solution to reliable replication
 - **Unit of change**: Discrete, fundamental; "time" is emergent measure of change on constraint surfaces
+- **Hallucination as degeneracy**: Probability landscape degenerate — multiple paths equivalent; label belongs to observer
 
 ### Terminology
 - "Platonic" / "Aristotelian" = shorthand for two poles of a perennial tension (ideas ARE reality vs ideas DESCRIBE reality), not strict historical attribution

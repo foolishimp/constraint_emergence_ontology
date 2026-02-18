@@ -25,6 +25,7 @@ This document is an **ontology designed to be loaded into an LLM's context windo
 ### Companion documents
 
 - **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** — Formal companion (separate repo): LLMs as constraint-manifold traversal systems. Load the v3 paper alongside the ontology for deeper LLM-specific exploration.
+- **[Concept Index](concepts.md)** — Canonical map of ontology terms, dependencies, and epistemic status (axiom, derived, instantiation, conjecture).
 - **[Ontology Templates](ontology_templates.md)** — The Logical Encapsulation meta-template. Shows how to build your own constraint specifications using the same method.
 - **[Political OS Suite](political_os/)** — Four worked examples (Classical Liberal, Marxist, Critical Justice, Theocratic) plus [The Political Operating System](political_os/political_operating_system.md): comparative structural analysis derived from the constraint framework using Logical Encapsulation.
 
@@ -93,6 +94,12 @@ Constraints:
 - Define boundaries that allow subsystems to exist
 
 Seen this way, constraints are not opposed to freedom or computation; they are what make structured change possible. Without constraint, everything is permitted—and nothing persists.
+
+The converse is the identifying principle of this framework:
+
+> **As soon as a stable configuration is possible within a constraint structure, it will emerge.**
+
+Constraints do not merely permit — they generate. Every Markov object the constraint manifold can sustain, it will sustain. Emergence is not selective; it is exhaustive. The constraint structure fills its own possibility space. This is the generative principle from which everything else in this document follows: the formation of particles, the emergence of life, the appearance of encoding and constructors, the structure of computation. None of these are improbable events that required special conditions. They are what constraints do.
 
 ### 0.4 Universal Computation as the Ambient Space
 
@@ -409,8 +416,8 @@ This document synthesizes key conclusions from a foundational exploration of how
 
 1. **Reconceptualizes physics** as constraint geometry rather than objects-in-space
 2. **Unifies quantum mechanics and emergence** through standing-wave hierarchies
-3. **Provides a bridge to computation and AI SDLC** via probabilistic and deterministic constraint systems
-4. **Grounds the AI SDLC methodology** in the same constraint-satisfaction principles that govern physical reality
+3. **Identifies the universal construction pattern** — encoded representation → constructor → constructed structure — operating across biology, computation, politics, and cognition
+4. **Grounds the AI SDLC methodology** as an instance of information-driven construction, with the abiogenesis insight that the constructor always precedes the specification
 
 ---
 
@@ -1008,7 +1015,22 @@ This is the mechanism operating throughout this document:
 
 The nerf-ball thought experiment (Section 10.1.1) — where reality happens *in the gaps between* the constraint structures — is absential causation rendered as spatial metaphor. Deacon provides the philosophical grounding for why this works: it is precisely the exclusion of possibilities that makes structured existence possible.
 
-Where this framework extends Deacon: he focused on biological emergence (how life and mind arise from matter). This document applies the same structural principle to physics (standing waves as constraint eigenmodes), computation (LLM attractors as constraint-stable patterns), and engineered systems (SDLC artifacts as constraint-satisfying configurations). The claim is that absential causation is not specific to biology — it is the universal mechanism of emergence across all substrates.
+Deacon's hierarchy of emergent dynamics — homeodynamic, morphodynamic, teleodynamic — maps onto this framework's account of how the information-driven construction pattern (Part V) arises from raw constraint dynamics. The correspondence is given here; the rest of this document uses its own vocabulary.
+
+| Deacon's term | What appears | In this framework |
+|--------------|-------------|-------------------|
+| **Homeodynamic** (dissipative) | Self-organising flow, no stable structure | Constraint propagation without Markov object formation |
+| **Morphodynamic** (form-producing) | Stable structure emerges directly from constraints | Markov objects form — standing waves, crystals, attractors |
+| **Teleodynamic** (self-maintaining) | A structure that preserves its own boundary conditions | A Markov object complex enough to reconstruct itself — the constructor, prior to any encoding. Deacon's "autogen" |
+| Beyond Deacon's hierarchy | The encoding separates from the mechanism | The constructor develops a representation of what it builds — DNA, specifications, constitutions |
+
+The homeodynamic→morphodynamic transition is where Markov objects appear. The morphodynamic→teleodynamic transition is where the constructor appears — Deacon's autogen, a self-maintaining system that repairs and reproduces itself but has no separable encoding. The third transition — from teleodynamic to representational — is where encoding separates from mechanism: the constructor's solution to reliable replication becomes a distinct representation that can be read, copied, and modified independently. Deacon's framework implies but does not formalise this third step; this document makes it explicit.
+
+This is the abiogenesis sequence identified in Part V — constraint → constructor → encoding → encoding drives constructor — grounded in Deacon's emergence hierarchy. The builder pattern is not fundamental. It emerges at the third transition, when self-maintaining systems become complex enough to externalise their construction logic into a separable representation.
+
+Each transition occurs not because it is needed, but because it is possible. The generative principle (Section 0.3) applies at every level: as soon as the constraint structure at one level can sustain a new stable configuration, that configuration will emerge. Morphodynamic structure emerges as soon as dissipative dynamics can sustain it. Teleodynamic structure emerges as soon as form-producing dynamics can sustain self-maintenance. Representational structure emerges as soon as self-maintaining systems can sustain separable encodings. The hierarchy is not designed — it is the constraint manifold filling its own possibility space.
+
+Where this framework extends Deacon: he focused on biological emergence (how life and mind arise from matter). This document applies the same structural principle to physics (standing waves as constraint eigenmodes), computation (LLM attractors as constraint-stable patterns), and engineered systems (SDLC artifacts as information-driven constructions). The claim is that absential causation is not specific to biology — it is the universal mechanism of emergence across all substrates.
 
 ---
 
@@ -1121,31 +1143,32 @@ This is not homeostasis in the physics sense. It is the same relationship betwee
 
 ---
 
-## Part VI: Consolidated Ontology (23 Principles)
+## Part VI: Consolidated Ontology (24 Principles)
 
-1. Reality is a self-consistent constraint system
-2. The universe evolves by constraint propagation
-3. Markov objects (standing waves, attractors) are stable constraint patterns
-4. Particles are mode families, not things
-5. Hilbert space is a compression format
-6. The wavefunction describes possibility, not substance
-7. Collapse is constraint locking
-8. Nonlocality is global constraint update
-9. Motion is pattern propagation, not thing-translation (c is the network propagation rate)
-10. Spacetime is an emergent canvas
-11. Time is the ordering of constraint change
-12. Gravity can be described as emerging from constraint density variation (as curvature is GR's description)
-13. Fields are constraint geometry structures (mesh from which Markov objects emerge)
-14. The Higgs is a vacuum order parameter
-15. Constants are emergent invariants
-16. The hierarchy is self-bounding
-17. Determinism exists at the deep layer
-18. Classical reality is constraint stability
-19. Computation is constraint engineering
-20. Emergent systems can create new control layers
-21. Physics is missing the global constraint variable
-22. The observer is a Markov object evolved within the manifold (no special ontological status)
-23. Change is directed by local traversal of a topological pre-order
+1. As soon as a stable configuration is possible within a constraint structure, it will emerge (the generative principle)
+2. Reality is a self-consistent constraint system
+3. The universe evolves by constraint propagation
+4. Markov objects (standing waves, attractors) are stable constraint patterns
+5. Particles are mode families, not things
+6. Hilbert space is a compression format
+7. The wavefunction describes possibility, not substance
+8. Collapse is constraint locking
+9. Nonlocality is global constraint update
+10. Motion is pattern propagation, not thing-translation (c is the network propagation rate)
+11. Spacetime is an emergent canvas
+12. Time is the ordering of constraint change
+13. Gravity can be described as emerging from constraint density variation (as curvature is GR's description)
+14. Fields are constraint geometry structures (mesh from which Markov objects emerge)
+15. The Higgs is a vacuum order parameter
+16. Constants are emergent invariants
+17. The hierarchy is self-bounding
+18. Determinism exists at the deep layer
+19. Classical reality is constraint stability
+20. Computation is constraint engineering
+21. Emergent systems can create new control layers
+22. Physics is missing the global constraint variable
+23. The observer is a Markov object evolved within the manifold (no special ontological status)
+24. Change is directed by local traversal of a topological pre-order
 
 ---
 
@@ -1474,7 +1497,7 @@ For any system to "compute" its next state, it must implement three topological 
 The system does not "know" the destination (the global minimum / Platonic truth). It only evaluates the local preorder. It moves in the **Preferred Direction D(x,c)** that most effectively satisfies local constraints.
 
 - **Stable reasoning**: Trajectory follows laminar flow into a deep attractor basin (a Markov object)
-- **Hallucination / Instability**: Gain (step size) is too high or landscape too sparse, causing trajectory to overshoot attractors and enter chaotic divergence
+- **Hallucination / Degeneracy**: Landscape is too sparse — the constraint manifold becomes degenerate and multiple paths carry equivalent probability; the system cannot distinguish one continuation from another
 
 ### 4. The SDLC as an Optimization Loop
 
@@ -1636,7 +1659,7 @@ If both functors are faithful, the correspondence generates predictions in both 
 |----------------|-------------------|
 | Scaling laws (power-law improvement) | Analogous scaling in emergent structure complexity with constraint density |
 | In-context learning (new capabilities from context alone) | Constraint-mediated adaptation without structural change (induced polarization, catalysis) |
-| Hallucination (trajectory instability) | Vacuum fluctuations — temporary structure where constraints are insufficient for stable Markov objects |
+| Hallucination (probability degeneracy) | Vacuum fluctuations — temporary structure where constraints are insufficient for stable Markov objects |
 
 ### The Research Programme
 
@@ -1879,6 +1902,6 @@ The emergent reasoning framework provides the strongest available evidence that 
 
 ---
 
-**Document Version**: 1.2
+**Document Version**: 1.3
 **Synthesis Date**: February 2026
 **Source**: Exploratory philosophical discourse on constraint-emergence ontology

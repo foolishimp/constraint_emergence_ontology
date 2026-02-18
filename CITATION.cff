@@ -14,8 +14,8 @@ authors:
   - family-names: Popov
     given-names: Dimitar
     email: jimpopov@gmail.com
-version: "1.2"
-date-released: "2026-02-16"
+version: "1.3"
+date-released: "2026-02-19"
 license: CC-BY-4.0
 repository-code: "https://github.com/foolishimp/constraint_emergence_ontology"
 identifiers:

@@ -123,8 +123,8 @@ This is ONE possible Political OS among alternatives:
 |---------------------|--------------|-------------------------------|
 | Classical Liberal | Individual | Consent > Coercion |
 | **Marxist (this document)** | Class | Emancipation > Exploitation |
+| Critical Justice | Intersectional identity group | Equity > Domination |
 | Theocratic | Divine order | Submission > Autonomy |
-| Communitarian | Community | Belonging > Exit |
 
 By adopting Marxism, this OS **chooses** to optimize for collective emancipation from exploitation. This is a philosophical commitment, not a discovered truth.
 

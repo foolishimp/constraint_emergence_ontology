@@ -138,9 +138,9 @@ This is ONE possible Political OS among alternatives:
 | Political OS Variant | Primary Unit | Pre-Order (Gradient Direction) |
 |---------------------|--------------|-------------------------------|
 | **Classical Liberal (this document)** | Individual | Consent > Coercion |
-| Collectivist | Class / Nation / State | Collective good > Individual preference |
+| Marxist | Class | Emancipation > Exploitation |
+| Critical Justice | Intersectional identity group | Equity > Domination |
 | Theocratic | Divine order | Submission > Autonomy |
-| Communitarian | Community | Belonging > Exit |
 
 By adopting this synthesis, this OS **chooses** to optimize for individual agency. This is a philosophical commitment grounded in millennia of governance practice, not a discovered truth.
 
