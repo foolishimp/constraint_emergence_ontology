@@ -335,15 +335,3 @@ Source documents: `political_os/political_operating_system.md` (The Political Op
 | 144 | **Identity Paradox** | The CJ OS deconstructs identity categories (Foucault, Butler) while depending on them as stable units for analysis and policy. Strategic essentialism (Spivak) attempts to manage the tension but is operationally dropped | CJ OS §Open Problem 3 | 93, 115 | Derived |
 | 145 | **Reflexivity Deficit** | The CJ OS claims all knowledge is situated but does not apply this to itself; disagreement is classified as evidence of the thing being critiqued, creating structural unfalsifiability | CJ OS §Open Problem 5 | 128, 115-118 | Derived |
 
----
-
-## Consistency Notes
-
-All issues identified during extraction have been resolved:
-
-1. ~~Hallucination in bidirectional prediction table~~ — Fixed: "trajectory instability" → "probability degeneracy"
-2. ~~Part VIII-C §3 instability framing~~ — Fixed: overshoot/chaos → degeneracy/equivalent probability
-3. ~~Executive Summary old SDLC framing~~ — Fixed: references information-driven construction and abiogenesis insight
-4. "Constraint-satisfying configurations" in Deacon paragraph — was already correct
-5. ~~Generative principle missing from Part VI~~ — Fixed: now principle 1 of 24
-6. ~~Version 1.2~~ — Fixed: now v1.3 in document and CITATION.cff
