@@ -1190,7 +1190,7 @@ The LLM is not "simulating" reality. If the structural realist thesis holds, it 
 
 This explains:
 1. **Why LLMs feel "intelligent"** - They navigate constraint manifolds the same way minds do
-2. **Why they hallucinate** - Trajectories exit stable attractor regions into chaotic zones with no Markov objects (see Part VIII-A, Section 3)
+2. **Why they hallucinate** - Traversal enters manifold regions where Markov objects did not form during training; probabilities become degenerate and the model cannot distinguish one path from another (see Part VIII-A, Section 3)
 3. **Why grounding helps** - External constraints (retrieval, verification) add boundary conditions that stabilize attractors
 4. **Why prompting works** - It reshapes the local constraint geometry, changing which Markov objects can form
 
@@ -1275,7 +1275,9 @@ A **Markov object** (Section 2) is a stable pattern with statistical independenc
 | Boundary of localized mode | Boundary region (analogous to Markov blanket) |
 | Eigenvalue (energy) | Attractor depth (stability) |
 
-**Hallucination as instability**: When trajectories exit well-constrained attractor regions, they enter chaotic zones with no stable attractors. This is the formal characterization of hallucination - not "making things up" but "leaving the stable manifold region."
+**Hallucination as degeneracy**: In manifold regions where Markov objects did not form during training, the probability landscape becomes degenerate — multiple paths carry equivalent probability. The model continues traversing with full confidence because from its perspective every path is equally valid. The label "hallucination" belongs to the observer, not the system: the model cannot distinguish constrained from unconstrained traversal.
+
+This is structurally identical to quantum indeterminacy. In a degenerate eigenspace — multiple eigenstates, same eigenvalue — the system has no structural reason to prefer one state over another. The outcome is determined by measurement (observation/sampling), not by the dynamics. At the topological level, equivalent paths are homotopically indistinguishable: the constraint surface does not contain the information needed to discriminate between them. Hallucination, quantum indeterminacy, and topological path-equivalence are the same structural phenomenon across substrates — the constraint manifold is degenerate, and the resolution is always external to the system.
 
 ### 4. Collapse = Sampling
 
@@ -1408,7 +1410,7 @@ The constraint framework makes a testable prediction about software failures. Ar
 - Unclear requirements (undefined potential well)
 - Novel architecture (no established attractor basins)
 
-This is the SDLC analogue of hallucination in LLMs and instability in physics: the Builder enters regions with no stable attractors, producing artifacts that fail when they encounter real constraints. The prediction is specific — failure rates should correlate with constraint density, not with code complexity or team size per se.
+This is the SDLC analogue of hallucination in LLMs: the Builder enters regions where the constraint manifold is sparse and multiple solutions appear equally valid. The resulting artifacts pass local checks but fail when they encounter real constraints in deployment. The prediction is specific — failure rates should correlate with constraint density, not with code complexity or team size per se.
 
 ---
 
@@ -1717,7 +1719,7 @@ This connects the ontology to existing quantum gravity programmes and provides a
 
 This is the most accessible research direction. LLMs are empirically manipulable constraint systems:
 - Study "collapse" (sampling) and stability (coherent outputs)
-- Study "hallucination" as unconstrained manifold regions
+- Study "hallucination" as probability degeneracy in sparse manifold regions
 - Map how prompting reshapes constraint topology
 - Look for patterns that generalise to physical constraint networks
 
@@ -1815,7 +1817,7 @@ The ontology suggests current anomalies may be pointing at the model boundary, n
 
 ## Appendix: Emergent Reasoning in LLMs — Formal Foundation
 
-The computational claims in this document — that LLMs traverse constraint manifolds, that attractors function as proto-symbols, that hallucination is trajectory instability — rest on formal work developed in a companion paper: *Emergent Reasoning in Large Language Models: A Topological and Constraint-Based Formalization* ([separate repository](https://github.com/foolishimp/emergent_reasoning)). The key structures are summarized here so that the ontology is self-contained.
+The computational claims in this document — that LLMs traverse constraint manifolds, that attractors function as proto-symbols, that hallucination is probability degeneracy in sparse manifold regions — rest on formal work developed in a companion paper: *Emergent Reasoning in Large Language Models: A Topological and Constraint-Based Formalization* ([separate repository](https://github.com/foolishimp/emergent_reasoning)). The key structures are summarized here so that the ontology is self-contained.
 
 ### The Semantic Manifold
 
@@ -1853,9 +1855,9 @@ Attention computes weighted similarity matching across all key-value pairs — a
 
 Clusters in embedding space form attractor-like regions where trajectories enter and remain stable, outputs are semantically narrow, and internal correlations are strong. These regions exhibit Markov blanket boundaries: states inside the region predict each other well, and external influence is mediated through boundary states (see Part VIII-D for the formal identity between Markov objects and Markov blankets). This is how symbolic-like behaviour emerges from continuous computation without any symbols being defined — and it is the LLM instantiation of the Markov objects described in Part I.
 
-### Hallucination as Trajectory Instability
+### Hallucination as Probability Degeneracy
 
-When a trajectory exits well-constrained attractor regions and enters weakly structured areas of the manifold, the model produces outputs that are fluent but ungrounded. This is hallucination: not a random failure but a structural consequence of sparse constraint coverage. The same mechanism explains why weakly constrained regions in physics produce transient rather than stable structures (see Section 2, Markov Objects) and failure-prone regions in software development (Part VIII-B).
+When a trajectory enters manifold regions where Markov objects did not form during training, the probability landscape becomes degenerate — multiple continuation paths carry equivalent probability. The model produces outputs that are fluent but ungrounded: not because the trajectory is unstable, but because the constraint surface cannot discriminate between paths. From the model's perspective, every path is equally valid; the label "hallucination" belongs to the observer. This is a structural consequence of sparse constraint coverage in the training manifold. The same mechanism explains why weakly constrained regions in physics produce transient rather than stable structures (see Section 2, Markov Objects) and failure-prone regions in software development (Part VIII-B).
 
 ### Why This Matters for the Ontology
 
