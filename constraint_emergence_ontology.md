@@ -866,7 +866,7 @@ The meaning-operation is identical at every point on this gradient. What differs
 
 This is structurally identical to a human prompting an LLM. The human evaluates (decides what matters, what to ask), produces a constraint signal (the prompt), and the LLM traverses its semantic manifold under that constraint. The prompt is not the computation — it is the context parameter of the preferred direction function. A simpler system provides direction; a more complex system does the constrained traversal. The substrate differs (neurochemistry vs text vs electricity); the architecture does not. The observer-evaluator is not a special category of thing — it is any Markov object that computes a delta and emits a constraint signal.
 
-The same pattern extends to engineered systems. In the AI SDLC methodology (Part VIII-B), requirements function as a homeostatic set-point. The development process — code, tests, deployment — traverses a manifold constrained by those requirements. Runtime telemetry, tagged with requirement keys, measures the actual state against the target state. The delta between runtime behaviour and requirements is the emotional signal of the system: it generates new intents, which flow back to the requirements stage and constrain the next traversal. Requirements evaluate; the delta prompts; the system responds. This is not analogy — it is the same architecture instantiated in software engineering: evaluator → constraint signal → constrained traversal → feedback → re-evaluation.
+The same pattern extends to engineered systems. In the AI SDLC methodology (Part VIII-B), the specification (requirements, architecture context, contracts, test suites) is the encoded representation that constrains what the constructor (builder) produces. Runtime telemetry, tagged with requirement keys, measures the constructed artifact against the specification. The delta between runtime behaviour and the encoding is the emotional signal of the system: it generates new intents, which feed back to update the specification and constrain the next construction cycle. The specification evaluates; the delta prompts; the constructor responds. This is not analogy — it is the same architecture instantiated in software engineering: evaluator → constraint signal → construction → feedback → encoding update.
 
 ---
 
@@ -1057,23 +1057,46 @@ Analogous to: phonons in crystals, magnons in magnets, Cooper pairs in supercond
 
 ## Part V: Bridge to AI SDLC and Computation
 
-### The Lens: SDLC as Constraint Engine
+### The Lens: SDLC as Information-Driven Construction
 
-In ontology language:
-- **Intent** = initial constraint bundle (requirements, risk, scope, success criteria)
-- **Assets** = standing patterns (code, configs, schemas, docs, models, pipelines)
-- **Operators** = constraint transformations (design, generate, refactor, test, review, deploy)
-- **Environment** = irreducible world (users, latency, cost, regulators, time)
-- **Collapse** = constraint locking into commit/release (branch becomes canonical artifact)
+The AI SDLC is not a physics system that settles into equilibrium. It is an **information-driven construction system** — the same architecture that operates in biology, political governance, and LLM reasoning.
 
-**AI SDLC**: A system that repeatedly applies transformations until constraints lock into a stable artifact.
+The pattern is universal: **encoded representation → constructor → constructed structure**.
+
+| Domain | Encoded representation | Constructor | Constructed structure |
+|--------|----------------------|-------------|---------------------|
+| Biology | DNA | Ribosome / cellular machinery | Protein / organism |
+| AI SDLC | Specification (requirements, schemas, contracts, tests) | Builder (LLM agent, compiler, test runner) | Artifact (code, config, deployment) |
+| Politics | Constitution / political philosophy | Governance institutions | Policy, law, social order |
+| LLM reasoning | Prompt / loaded constraint specification | Attention mechanism | Evaluation / output |
+| Neuroscience | Brainstem priority structure (affect) | Cortical computation | Behaviour |
+
+In each case, the encoding constrains what the constructor can produce. Different encodings, same constructor, different structures. This is not analogy — it is the same abstract operation.
+
+### The Abiogenesis Insight
+
+The encoding does not come first. In every domain, the **constructor precedes the specification**:
+
+- **Biology**: Self-organizing chemistry (proto-cells) preceded DNA. The machine came first; the encoding emerged as the machine's solution to reliable replication under constraint.
+- **SDLC**: Informal practice (hacking, trial and error) preceded formal specifications. The builder came first; specifications emerged as the practice's solution to reliable construction.
+- **Politics**: Tradition and custom preceded constitutions. Governance practice came first; encoded law emerged as the society's solution to reliable self-maintenance.
+
+The encoding is an emergent property of the constructor's need to persist. Once it exists, it takes over the driving role — but it was not first. The sequence is: **constraint → constructor → encoding → encoding drives constructor**.
+
+### The SDLC in Ontology Language
+
+- **Specification** = encoded representation (requirements, architecture context, schemas, contracts, test suites, standards)
+- **Builder** = constructor (AI agent, LLM, compiler, human developer) that reads the encoding and constructs artifacts
+- **Artifact** = constructed structure (code, configs, deployments) that satisfies the encoded constraints
+- **Environment** = selection pressure (users, latency, cost, regulators, runtime) that tests whether the artifact survives
+- **Feedback** = deviation signal that updates the encoding when the artifact fails in the environment
 
 ### Two Compute Regimes
 
 **Probabilistic compute** (stochastic expansion):
-- LLM generates candidate structures
-- Retrieval injects relevant constraints
-- Heuristics score candidates
+- LLM generates candidate structures from the encoding
+- Retrieval injects additional constraint information
+- Heuristics score candidates against the specification
 - For: design exploration, code generation, mapping, integration
 
 **Deterministic compute** (verification contraction):
@@ -1083,35 +1106,18 @@ In ontology language:
 - Security gates + policy engines
 - For: truth checking, invariant enforcement, reproducible artifacts
 
-The division is strict: probabilistic compute may propose; deterministic compute must dispose.
+The division mirrors biology: mutation (stochastic) proposes; selection (deterministic) disposes. The specification is the fitness landscape.
 
-### The SDLC Loop
+### The Requirements as Living Encoding
 
-```
-Stochastic expansion (explore) → Deterministic contraction (verify) → Lock (collapse)
-```
+Traditional SDLC: Requirements as fixed specifications — DNA as static blueprint.
+AI SDLC: Requirements as **living encoding** that:
+- Defines target structure (functional, quality, data)
+- Is continuously compared against runtime behavior (selection pressure)
+- Evolves based on deviations and insights (mutation of the encoding)
+- Drives corrective construction automatically (replication cycle)
 
-This is the pattern "explore → constrain → collapse" — the same structure as physical reality.
-
-### Formalization
-
-Every candidate change has belief scores:
-- P(correct | context)
-- P(safe | policy)
-- P(meets intent | tests)
-
-Each deterministic check updates posteriors sharply (to ~0 or ~1). The system is a pipeline that converts soft belief into hard truth.
-
-### The Requirements as Homeostasis Model
-
-Traditional SDLC: Requirements as fixed specifications.
-AI SDLC: Requirements as **living homeostasis model** that:
-- Defines target state (functional, quality, data)
-- Is continuously compared against runtime behavior
-- Evolves based on deviations and insights
-- Drives corrective action automatically
-
-Requirements become the control system for maintaining desired system behaviour — the same role played by the self-regulating constraint network at the foundation of physical reality.
+This is not homeostasis in the physics sense. It is the same relationship between DNA and organism: the encoding defines what the constructor builds, the environment selects for fitness, and the encoding updates across generations to reflect what works.
 
 ---
 
@@ -1147,9 +1153,9 @@ Requirements become the control system for maintaining desired system behaviour 
 
 Reality can be described as a self-organizing constraint network whose stable Markov objects project as particles and spacetime, whose density variations manifest as what we call gravity, whose compression is Hilbert space, and whose evolution produces everything we observe.
 
-The AI SDLC methodology inherits this same structure: intent generates constraints, constraints shape artifacts through probabilistic and deterministic operators, stable artifacts emerge through constraint satisfaction, and feedback loops maintain homeostasis between desired and actual states.
+The AI SDLC is an instance of the same pattern at the information-processing scale: encoded representations (specifications) drive constructors (builders) to produce stable structures (artifacts), the environment selects for fitness, and deviations feed back to update the encoding. The constructor precedes the specification — practice before process, tradition before constitution, proto-cell before DNA — and the encoding emerges as the constructor's solution to reliable replication under constraint.
 
-Both physical reality and software development are constraint satisfaction systems that produce stable, emergent structure through iterative refinement. The same architectural principles apply at both scales.
+Physical reality, biological systems, software development, and political governance are all constraint systems that produce stable, emergent structure through the same abstract operation: encoded representation → constructor → constructed structure. The substrates differ; the architecture is invariant.
 
 ---
 
@@ -1295,28 +1301,29 @@ Both are **constraint-locking events**: the moment when ambiguity resolves into 
 
 ### 5. The Unified Correspondence (Precise)
 
-| Concept | Physical Reality | LLM Semantic Space | SDLC |
+| Concept | Physical Reality | LLM Semantic Space | SDLC (Information-Driven Construction) |
 |---------|------------------|-------------------|------|
-| **Constraint manifold** | Global constraint network | Learned probability distribution | Requirements + Architecture Context + Data Context + Standards |
-| **Update rule** | Hamiltonian flow | Direction function D(x,c) | Builder stage transitions: D(artifact, context) → next_artifact |
-| **Interference** | Amplitude superposition | Soft unification (attention) | Design alternatives weighted against multiple constraint sources |
+| **Constraint manifold** | Global constraint network | Learned probability distribution | Specification: requirements + architecture context + data context + standards |
+| **Update rule** | Hamiltonian flow | Direction function D(x,c) | Constructor (builder): D(artifact, specification) → next_artifact |
+| **Interference** | Amplitude superposition | Soft unification (attention) | Design alternatives weighted against multiple specification sources |
 | **Markov object** | Standing wave / particle | Attractor basin / proto-symbol | Approved versioned artifact (passes all constraints, resists perturbation) |
 | **Collapse** | Decoherence | Sampling | UAT approval + Deploy (artifact becomes canonical) |
-| **Instability** | Decay / scattering | Hallucination | Failed tests, defects, business mismatch, incidents |
-| **Constraint source** | Potential / field | Context / prompt | Requirements, test suites, standards, architecture context |
-| **Boundary conditions** | Potential well walls | Prompt + retrieval | NFRs, SLAs, regulatory controls |
+| **Degeneracy** | Degenerate eigenspace | Hallucination (equivalent probabilities) | Sparse specification: multiple solutions appear equally valid |
+| **Encoding** | Physical law (constraint structure) | Trained weights (learned distribution) | Specification (requirements, contracts, test suites) |
+| **Constructor** | Field dynamics | Attention mechanism | Builder (LLM agent, compiler, human developer) |
+| **Selection pressure** | Environmental interaction | Sampling + evaluation | Runtime, users, regulators, cost |
 
 The thesis of this framework is that these are the same formal objects instantiated in different substrates—structural correspondence at the level of admissible transformations, which is where the invariants live.
 
 ---
 
-## Part VIII-B: SDLC as Constraint System (Detailed)
+## Part VIII-B: SDLC as Information-Driven Construction (Detailed)
 
-The AI SDLC methodology is a rigorous instantiation of the constraint framework. This section makes the correspondence precise.
+The AI SDLC is an instance of the universal pattern identified in Part V: **encoded representation → constructor → constructed structure**. This section makes the correspondence precise and demonstrates the abiogenesis insight at work in software engineering.
 
-### 1. The SDLC Constraint Manifold
+### 1. The Specification (Encoded Representation)
 
-The constraint manifold in SDLC is not just "requirements"—it's the full context stack:
+The specification in SDLC is not just "requirements" — it is the full encoding that constrains what the constructor can build:
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -1334,57 +1341,55 @@ The constraint manifold in SDLC is not just "requirements"—it's the full conte
 └─────────────────────────────────────────────────┘
 ```
 
-This is the analogue of:
-- **Physics**: The potential well that defines allowed particle states
-- **LLMs**: The learned distribution that defines probable token sequences
+This is structurally equivalent to DNA: a multi-layered encoding that determines what the constructor produces. The specification defines the space of allowed artifact configurations — not by settling into equilibrium, but by constraining what can be built.
 
-The constraint manifold defines the space of allowed artifact configurations.
+### 2. The Constructor (Builder)
 
-### 2. The SDLC Direction Function
-
-Each stage transition is a direction function application:
+Each stage transition is a construction operation:
 
 ```
-D(artifact_state, context) → next_artifact_state
+Constructor(artifact_state, specification) → next_artifact_state
 ```
 
 Where:
 - **artifact_state** = current code, configs, schemas, docs
-- **context** = requirements + architecture context + test results + feedback
-- **D** = the Builder (AI SDLC + Agent LLM) computing the next state
+- **specification** = requirements + architecture context + test results + feedback
+- **Constructor** = the Builder (AI agent, LLM, compiler, human developer) reading the encoding and producing structure
 
-The pipeline REQ → DES → TASKS → CODE → ST → UAT is a sequence of direction function applications, each transforming the artifact toward constraint satisfaction.
+The pipeline REQ → DES → TASKS → CODE → ST → UAT is a sequence of construction operations, each reading the specification and transforming the artifact toward the encoded target.
 
-### 3. Interference in SDLC: Design Alternative Evaluation
+This is the same operation as ribosomal translation: the constructor reads the encoding and produces structure. Different specifications, same constructor, different artifacts.
 
-In the Design stage, multiple constraint sources contribute simultaneously:
+### 3. Design as Specification Synthesis
 
-| Constraint Source | Pulls Toward |
+In the Design stage, multiple specification layers contribute simultaneously:
+
+| Specification Layer | Constrains Toward |
 |-------------------|--------------|
 | Architecture Context | Certain patterns, tech stack choices |
 | Data Architecture Context | Certain schemas, data flows |
 | Requirements | Certain capabilities, behaviors |
 | Standards | Certain implementations, styles |
 
-The Tech Lead (or AI agent) performs **weighted synthesis**—exactly like attention in LLMs. Design alternatives that align with multiple constraint sources **constructively reinforce**. Alternatives that conflict with constraints **destructively interfere** (get rejected or deprioritized).
+The Tech Lead (or AI agent) synthesises these layers — weighting, resolving conflicts, finding configurations that satisfy multiple constraints simultaneously. Design alternatives that align with multiple specification layers reinforce. Alternatives that conflict get rejected.
 
-The iteration loops in the SDLC diagrams (`DES -->|"Iterate / refine design"| DES`) are the process of interference resolution—cycling until a stable pattern emerges that satisfies all constraint sources.
+The iteration loops in SDLC (`DES -->|"Iterate / refine design"| DES`) are the process of synthesis resolution — cycling until a viable configuration emerges that satisfies the encoding.
 
 ### 4. Markov Objects in SDLC: Approved Artifacts
 
-An approved versioned artifact is a Markov object because it exhibits:
+An approved versioned artifact is a Markov object — a stable constructed structure — because it exhibits:
 
-1. **Conditional independence from exterior given boundary**: The artifact's internal behavior depends only on its inputs (the interface boundary), not on the development process that created it. Implementations satisfying the same interface are interchangeable.
+1. **Conditional independence from exterior given boundary**: The artifact's internal behavior depends only on its inputs (the interface boundary), not on the construction process that created it. Implementations satisfying the same interface are interchangeable — like proteins folded from different ribosomal pathways.
 
 2. **Stability under perturbation**: It passes all tests. Small changes to inputs produce predictable outputs. It resists drift.
 
 3. **Self-contained constraint satisfaction**: All internal constraints (tests, type checks, schema validations) are satisfied. The artifact is internally consistent.
 
-**Failed tests = the pattern hasn't stabilized into a Markov object yet.** The "standing wave" hasn't formed. The artifact is still in the chaotic region of the constraint manifold.
+**Failed tests = the constructor has not yet produced a stable structure from the encoding.** The artifact has not achieved the reliability needed to persist. This is the same as a misfolded protein: the constructor operated, but the result does not survive selection.
 
-### 5. Feedback Loops as Homeostasis
+### 5. Feedback as Encoding Update
 
-The dashed feedback lines in SDLC diagrams are **deviation signals**:
+The dashed feedback lines in SDLC diagrams are **deviation signals** — the environment reporting back to the encoding:
 
 ```
 DES -.-> REQ   (Functional, NFR, or data gaps)
@@ -1394,23 +1399,32 @@ ST -.-> REQ    (Defects, missing scenarios, data issues)
 UAT -.-> REQ   (Business mismatch, new needs)
 ```
 
-When the trajectory exits the stable region (constraints not satisfied), the system detects this and feeds back to the constraint source (Requirements) for correction.
+When the constructed artifact fails in the environment (tests fail, users reject, production incidents), the deviation feeds back to update the specification. The encoding evolves.
 
-This is the SDLC analogue of:
-- **Physics**: Measurement reveals system not in expected eigenstate → update description
-- **LLM**: Output fails verification → adjust context and regenerate
+This is the same relationship as organism and DNA across generations: the environment selects against unfit structures, and the encoding updates to reflect what works. In biology this happens across generations through mutation and selection. In SDLC it happens within cycles through feedback and specification revision.
 
-The Observer/Evaluator governance loop is the **runtime homeostasis model**—continuously comparing actual behavior against desired state and feeding deviations back as new Intent.
+The Observer/Evaluator governance loop is the **selection mechanism** — continuously comparing constructed artifacts against environmental fitness and feeding deviations back as specification updates.
 
 ### 6. Predictive Insight: Where SDLC Failures Cluster
 
-The constraint framework makes a testable prediction about software failures. Artifacts fail when built in regions of the constraint manifold with **sparse coverage**:
+The information-driven construction model makes a testable prediction about software failures. Artifacts fail when built from **sparse specifications**:
 
-- Few tests (weak constraint boundaries)
-- Unclear requirements (undefined potential well)
-- Novel architecture (no established attractor basins)
+- Few tests (the encoding does not constrain enough)
+- Unclear requirements (the encoding is ambiguous — multiple constructions appear equally valid)
+- Novel architecture (no prior construction history to inform the encoding)
 
-This is the SDLC analogue of hallucination in LLMs: the Builder enters regions where the constraint manifold is sparse and multiple solutions appear equally valid. The resulting artifacts pass local checks but fail when they encounter real constraints in deployment. The prediction is specific — failure rates should correlate with constraint density, not with code complexity or team size per se.
+This is the SDLC analogue of both hallucination in LLMs and probability degeneracy in physics: the specification is insufficiently constraining, so multiple constructed structures appear equally valid to the builder. The resulting artifacts pass local checks but fail when they encounter real selection pressure in deployment. The prediction is specific — failure rates should correlate with specification density, not with code complexity or team size per se.
+
+### 7. The Abiogenesis Pattern in Software
+
+The SDLC exhibits the same abiogenesis sequence identified in Part V:
+
+1. **Constraint**: Business need, technical limitation, user pain
+2. **Constructor**: Developers hacking, experimenting, building (practice precedes specification)
+3. **Encoding emerges**: Specifications, test suites, architecture documents crystallise from successful practice
+4. **Encoding drives constructor**: Formal specifications now direct the build process; the AI SDLC automates this with LLM agents reading specifications to construct artifacts
+
+The encoding was not first. Informal practice preceded formal specification in every software organisation. The specification emerged as the practice's solution to reliable, repeatable construction. Once it exists, it takes over the driving role — but the constructor was always prior.
 
 ---
 
