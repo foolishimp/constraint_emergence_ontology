@@ -1631,9 +1631,119 @@ The formal system adds structural vocabulary that makes implicit engineering kno
 
 ---
 
-## Part VII: Research Directions
+## Part VII: Reference Implementation
 
-### VII.1 Cross-Domain Graph Instantiation
+The formal system is not merely theoretical. A reference implementation on Claude Code demonstrates that the four primitives, four invariants, and composition law are sufficient to produce a working software construction methodology — and that the LLM itself can serve as the construction apparatus when the constraint surface is sufficiently specified.
+
+### VII.1 Architecture: Markdown as Code, LLM as Runtime
+
+The reference implementation delivers the methodology as a **Claude Code plugin** — not a traditional software system with compiled code, but a set of markdown agent definitions, YAML configurations, and slash commands that the LLM executes directly.
+
+```
+Plugin Package (.claude-plugin/plugins/aisdlc-methodology/v2/)
+│
+├── agents/
+│   └── aisdlc-iterate.md          ← The ONE agent (universal iterate)
+│
+├── commands/
+│   ├── aisdlc-start.md            ← State-driven routing (8 states)
+│   ├── aisdlc-status.md           ← Project-wide observability
+│   ├── aisdlc-iterate.md          ← Direct iterate invocation
+│   ├── aisdlc-init.md             ← Project scaffolding (Layer 3)
+│   ├── aisdlc-checkpoint.md       ← Session recovery
+│   ├── aisdlc-review.md           ← Spec-scale gradient
+│   ├── aisdlc-gap-analysis.md     ← Cross-edge gap aggregation
+│   ├── aisdlc-release.md          ← Release packaging
+│   ├── aisdlc-spawn.md            ← Vector spawning
+│   └── aisdlc-foldback.md         ← Spawn fold-back
+│
+└── config/
+    ├── graph_topology.yml          ← Asset types + admissible transitions
+    ├── edge_params/*.yml           ← 10 edge parameterisations
+    ├── evaluator_defaults.yml      ← Evaluator taxonomy per edge
+    ├── profiles/*.yml              ← 6 named projection profiles
+    └── feature_vector_template.yml ← Vector lifecycle tracking
+```
+
+The design choice is itself a validation of the formal system. The iterate agent reads edge parameterisation at runtime — it never hard-codes domain knowledge. Different edges produce different behaviour from the **same agent**, because the constraint surface (edge config + context + evaluators) is different. The agent IS the iterate() function (#45).
+
+### VII.2 Three-Layer Instantiation
+
+The three-layer architecture (Principle 12, Part II §II.1) maps directly to the implementation:
+
+| Formal Layer | Implementation | Ships As |
+|---|---|---|
+| **Layer 1: Engine** (universal) | `agents/aisdlc-iterate.md` + evaluator types + event sourcing primitives + `commands/*.md` | Plugin package (immutable per version) |
+| **Layer 2: Graph Package** (domain-specific) | `config/graph_topology.yml` + 10 edge parameterisations + constraint dimensions + projection profiles | Plugin config (forkable for other domains) |
+| **Layer 3: Project Binding** (instance-specific) | `.ai-workspace/context/` — `project_constraints.yml`, ADRs, data models, policy, standards | Scaffolded per project by `/aisdlc-init` |
+
+Upgrading the plugin (Layers 1+2) does not overwrite project bindings (Layer 3). Different graph packages can be created by forking the `config/` directory. This separation is not an implementation convenience — it is the formal system's functor structure (§II.2) made concrete: the same engine, applied to a different graph package, generates a different methodology.
+
+### VII.3 The LLM as Constructor
+
+The most consequential design decision: **the runtime is the LLM itself**. There is no orchestration framework, no state machine, no compiled code managing transitions. The Claude Code LLM reads the markdown specifications and YAML configurations, then executes the methodology by following the constraint surface.
+
+This validates a central claim of the formal system: the four primitives are substrate-neutral (#9). The constructor can be a human following a process document, a traditional software system executing compiled code, or an LLM executing markdown specifications. What matters is that the constraint surface (Spec + Context) is sufficiently specified to bound the constructor's behaviour (#11).
+
+The two-command UX layer demonstrates progressive disclosure: `/aisdlc-start` detects project state and routes to the appropriate edge (8 states handled), while `/aisdlc-status` provides project-wide observability. The full command set is available but rarely needed — most development sessions use only these two entry points.
+
+### VII.4 Sibling Implementations
+
+The formal system predicts that any platform capable of the four primitives can instantiate the methodology. Two sibling implementations test this prediction:
+
+| Platform | Engine Binding | Status |
+|---|---|---|
+| **Claude Code** | Markdown agent + YAML config, LLM-as-runtime | Complete, dogfooded |
+| **Gemini CLI** | Universal orchestration routine, same workspace contract | Design complete |
+| **Codex** | Tool-calling runtime (`exec_command`, `apply_patch`), same event log | Design complete |
+
+All three platforms bind to **identical platform-agnostic specification** (64 requirements across 13 categories). The specification defines what; each platform instantiates how. This is the functor structure in practice: three different encodings of the same formal system, connected by natural transformations (the shared event log contract and workspace schema).
+
+### VII.5 Dogfooding Results
+
+The reference implementation was dogfooded on a real project (Python CLI bookmark manager, 2026-02-20). Three edges were traversed: intent→requirements (1 iteration), requirements→design (1 iteration), design→code (2 iterations). All converged successfully.
+
+**What the dogfooding validated:**
+
+- **LLM-as-runtime is viable** — no custom code needed; markdown + YAML + edge configs sufficient for the LLM to execute the methodology
+- **Checklist composition works** — edge defaults + project constraints + feature overrides resolve cleanly at runtime
+- **REQ key discipline is automatic** — the template produces consistent `REQ-{TYPE}-{DOMAIN}-{SEQ}` keys without manual enforcement
+- **Iteration reports are legible** — structured checklist tables show exactly what passes and fails at each convergence check
+
+**What the dogfooding revealed (6 bugs, all fixable, none structural):**
+
+| Bug | Severity | Finding |
+|---|---|---|
+| Feature vector create-if-absent not specified | HIGH | Blocks first iteration for new features |
+| `$architecture.*` variable prefix undefined | HIGH | Resolution rules incomplete |
+| `no_ambiguous_language` criterion self-contradictory | MEDIUM | "May" banned then required in same checklist |
+| `docs/requirements/` path inconsistency | MEDIUM | v1.x holdover in v2 configs |
+| Duplicate checklist items (`compiles_or_parses`, `lint_passes`) | LOW | Redundant evaluator criteria |
+| Misnumbered steps in init command | COSMETIC | Documentation drift |
+
+**Critical empirical finding:** 5 of 7 build-time bugs in the tested project traced to **implicit constraint dimensions** — the design edge left ecosystem, deployment, or build dimensions unresolved, and those gaps cascaded downstream. This directly validates **Prediction 2** (missing constraint dimensions predict build failures) and motivated the mandatory dimension verification in the design edge parameterisation.
+
+### VII.6 What the Implementation Demonstrates
+
+The reference implementation is not just a tool — it is an empirical test of the formal system's claims:
+
+| Formal claim | Implementation evidence |
+|---|---|
+| Four primitives suffice | One agent + graph config + evaluator config + context directory — nothing else needed |
+| IntentEngine is composition, not primitive | The iterate agent composes the four primitives; it has no independent logic |
+| Constraint density predicts convergence cost | Missing dimensions caused predictable downstream failures |
+| Projections preserve invariants | Spike and PoC profiles skip edges but retain all four primitives |
+| Event sourcing enables self-observation | TELEM signals derived from event log; STATUS.md is a projection |
+| The graph is domain-constructed | Forking `config/` produces a different methodology; engine unchanged |
+| Functor renderings are real | Three platforms, same spec, different encodings, shared event contract |
+
+The formal system generated the implementation. The implementation tested the formal system. The bugs found were in parameterisation (Layer 2 and 3), never in the primitives (Layer 1). This is the pattern the formal system predicts: the engine is stable; emergence varies.
+
+---
+
+## Part VIII: Research Directions
+
+### VIII.1 Cross-Domain Graph Instantiation
 
 The four primitives claim domain independence. Testing this requires instantiating the engine with non-SDLC graph packages:
 
@@ -1666,7 +1776,7 @@ The four primitives claim domain independence. Testing this requires instantiati
 
 Each successful instantiation strengthens the claim that the engine is universal. Each failure reveals constraints the engine did not capture. The prediction: independent teams in different domains, given the same engine, will converge toward structurally similar mandatory waypoints — because the constraint topology of each domain has natural cleavage points that any iterative process discovers.
 
-### VII.2 Formal Verification of Invariant Preservation
+### VIII.2 Formal Verification of Invariant Preservation
 
 The projection function claims to preserve invariants. This is a verifiable claim:
 
@@ -1677,7 +1787,7 @@ The projection function claims to preserve invariants. This is a verifiable clai
 
 This connects to the ontology's Constraint category (concept #58): the asset graph and its projections should form a category whose morphisms are invariant-preserving projection functions. The objects are valid projections; the morphisms are projection transformations that preserve the four invariants. If this category can be exhibited, the formal system gains the full machinery of categorical reasoning — functors between graph packages, natural transformations between encodings, limits and colimits for composition.
 
-### VII.3 IntentEngine Generalisation
+### VIII.3 IntentEngine Generalisation
 
 The IntentEngine claims to be a universal processing unit — observer/evaluator at every scale. Testing this requires:
 
@@ -1686,7 +1796,7 @@ The IntentEngine claims to be a universal processing unit — observer/evaluator
 - **Scaling properties** — does the IntentEngine chain scale linearly, or does affect propagation introduce superlinear complexity? The affect phase is the critical bottleneck: if affect processing is O(n) in the number of signals, the chain scales linearly. If affect requires cross-signal correlation (this CVE + that dependency + that API change = compound risk), scaling may be superlinear.
 - **Cross-domain IntentEngine** — does the observer/evaluator/typed_output pattern appear in non-SDLC domains? In biological systems, the reflex arc is the same structure. In legal proceedings, the judge observes, evaluates ambiguity, and routes to one of three outcomes (dismiss, continue trial, escalate to higher court). The claim is that the three-way partition is a structural universal, not an SDLC artefact.
 
-### VII.4 Empirical Validation
+### VIII.4 Empirical Validation
 
 The formal system makes empirical predictions that can be tested against event logs from methodology instantiations:
 
@@ -1715,7 +1825,7 @@ The formal system generates these predictions; the event sourcing model makes th
 
 **Open question: meta-stability**: The formal system claims that the four primitives are stable — no fifth is needed. But is this claim itself stable? Could a domain instantiation reveal a pattern that requires a fifth primitive? The framework would need to absorb the discovery (modify the engine layer), which would violate the three-layer architecture's claim that the engine never changes. This is the deepest falsification target: not any specific prediction, but the sufficiency of the four primitives themselves.
 
-### VII.5 What Would Falsify This Formal System
+### VIII.5 What Would Falsify This Formal System
 
 | Falsifying observation | What it would mean |
 |---|---|
@@ -1730,7 +1840,7 @@ The formal system generates these predictions; the event sourcing model makes th
 
 The strongest claims — and therefore the most important to test — are: (a) the four primitives are necessary and sufficient, (b) the IntentEngine three-way partition is exhaustive, and (c) constraint density predicts convergence cost. These are structural claims about the formal system itself, not claims about any particular instantiation.
 
-### VII.6 Connections to Existing Research
+### VIII.6 Connections to Existing Research
 
 The formal system connects to several established research programmes:
 
@@ -1742,7 +1852,7 @@ The formal system connects to several established research programmes:
 
 **Constructor theory (Deutsch and Marletto)**: The three-layer architecture (Engine / Graph Package / Project Binding) parallels constructor theory's distinction between constructors (universal) and tasks (specific). The engine is a universal constructor; the graph package specifies which tasks are admissible; the project binding provides the input state. The formal system diverges from constructor theory in its emphasis on constraint (what bounds the constructor) rather than capability (what the constructor can do).
 
-### VII.7 The Paper as Self-Reference
+### VIII.7 The Paper as Self-Reference
 
 This paper is itself a Layer 2 artefact — a Graph Package encoding domain expertise. The SDLC domain has been traversed by practitioners (the author and collaborators), patterns have crystallised, and the graph topology and edge configurations have been encoded as this document. The paper follows the abiogenesis pattern it describes:
 
