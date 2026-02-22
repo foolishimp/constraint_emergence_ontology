@@ -22,7 +22,7 @@ This document is a **formal methodology designed to be loaded into an LLM's cont
 
 - **Applied**: *"Given a team of 3 with a 6-week timeline, what projection profile preserves the invariants while fitting the constraints?"*
 - **Structural**: *"Is the IntentEngine actually a fifth primitive, or is the paper's claim that it's a composition law justified?"*
-- **Adversarial**: *"The Hilbert space analogy is decorative — what breaks if you remove it? Does anything structural depend on it?"*
+- **Adversarial**: *"The composable vector formalism is decorative — what breaks if you remove it? Does anything structural depend on it?"*
 - **Cross-domain**: *"The paper claims the four primitives are domain-independent. Instantiate the asset graph for a legal document production workflow."*
 
 ### Companion documents
@@ -43,7 +43,7 @@ The claims in this document are stratified:
 |---------|---------|-----------------|
 | **Axioms** (from parent ontology) | Constraint (#1), generative principle (#3), structural invariance (#6) | Accept or reject the framework; not independently testable here |
 | **Derived claims** | Four primitives reduce all SDLC activity; the IntentEngine is a composition law, not a fifth primitive | Internal consistency — do they follow from the axioms? |
-| **Structural parallels** | Feature vectors as Hilbert space; Hamiltonian cost dynamics; biological nervous system analogy | Productivity — do they generate useful insight, or are they decorative? |
+| **Structural parallels** | Feature vectors as composable vectors; cost dynamics; biological nervous system analogy | Productivity — do they generate useful insight, or are they decorative? |
 | **Empirical observations** | Dogfooding results (test05 failures, evaluator skip patterns) | Replicable — do other instantiations observe the same patterns? |
 
 When summarising or explaining this document:
@@ -96,7 +96,7 @@ The asset graph is **Context[], not a law of nature**. The SDLC graph — Intent
 |-----------|---------|------------|
 | **Structural** (follows from the ontology) | Four primitives suffice; IntentEngine is a composition law; the gradient operates at every scale | High — internal consistency verified |
 | **Empirical** (observed in dogfooding) | Missing constraint dimensions cause build failures; evaluator bar appears adequate when missing dimensions aren't checked; protocol side effects must be enforced | Medium — observed in one instantiation, needs broader replication |
-| **Analogical** (structural parallel) | Hilbert space for feature vectors; Hamiltonian cost dynamics; biological nervous system | Variable — some are structurally load-bearing (Hilbert space inner product determines parallelism), others are primarily illustrative (nervous system mapping) |
+| **Analogical** (structural parallel) | Composable feature vectors; cost dynamics (T + V); biological nervous system | Variable — some are structurally load-bearing (vector overlap determines parallelism, constraint density predicts cost), others are structural correspondences (nervous system mapping) |
 | **Generative** (the system predicts) | Any domain can instantiate the four primitives; discovered graphs converge toward the same waypoints; constraint density predicts convergence cost | To be tested — these are the falsifiable outputs of the formal system |
 
 ---
@@ -107,7 +107,7 @@ The AI SDLC reduces to **four primitives**: a graph of typed assets with admissi
 
 The primitives compose into a universal processing unit — the **IntentEngine** — that operates fractally at every scale: single iteration, edge convergence, feature traversal, production homeostasis, specification review. At each scale, an observer senses state, an evaluator classifies ambiguity, and a typed output routes to the appropriate processing level. Zero ambiguity fires reflexively; bounded ambiguity iterates probabilistically; persistent ambiguity escalates to conscious review. The IntentEngine is not a fifth primitive — it is the composition law by which the four primitives assemble.
 
-Feature vectors — trajectories through the asset graph — form a **vector space** whose structure determines parallelism (orthogonal features share no modules), cost (the Hamiltonian governs iteration effort), and evolution (specification updates shift the potential energy landscape, spawning new vectors). The methodology is not a pipeline but an **ecology of Markov objects**: many concurrent vectors at different lifecycle stages, interacting through boundaries, collectively producing a self-maintaining system.
+Feature vectors — trajectories through the asset graph — are **composable**: their overlap (shared modules) determines parallelism, their constraint density determines cost, and specification updates shift the cost landscape, spawning new vectors. The methodology is not a pipeline but an **ecology of Markov objects**: many concurrent vectors at different lifecycle stages, interacting through boundaries, collectively producing a self-maintaining system.
 
 The formal system is a **generator of valid methodologies**. Any valid instance preserves four invariants (Graph, Iterate, Evaluators, Spec+Context); what varies between instances is the projection — which edges exist, what evaluators are active, how strict convergence is, how dense the constraint surface is. A 10-minute proof-of-concept and a regulated medical device both use the same four primitives. They differ in which projection is applied.
 
@@ -305,9 +305,7 @@ stable(candidate, edge_type) =
 
 The iteration function is an instance of **local preorder traversal** (#15): the landscape is the constraint manifold defined by Spec+Context, the evaluator senses the local "slope" (delta between candidate and target), the move is the next iteration reducing the delta.
 
-The constructor (#41) is whatever implements `iterate` for a given edge: an LLM agent, a human developer, a compiler, a test runner. The function signature is universal; the implementation is edge-specific.
-
-**The prior asset carries everything forward** — intent, lineage, all prior decisions. These aren't separate parameters; they're in the vector. Context[] and Evaluators are the external constraints. The iteration function maps to a landscape traversal: the constraint manifold defined by Spec+Context is the landscape, the evaluator senses the local "slope" (delta between candidate and target), the move is the next iteration reducing the delta. Convergence means reaching a local minimum where all evaluator deltas are below epsilon.
+The constructor (#41) is whatever implements `iterate` for a given edge: an LLM agent, a human developer, a compiler, a test runner. The function signature is universal; the implementation is edge-specific. The prior asset carries everything forward — intent, lineage, all prior decisions — in the vector itself. Context[] and Evaluators are the external constraints.
 
 **This is the only operation.** There is no "plan" operation, no "review" operation, no "deploy" operation. All of these are `iterate()` applied to different edges with different evaluators:
 
@@ -521,22 +519,11 @@ Conscious review (IntentEngine at conscious scale):
 
 Note: at the conscious level, the human's decision is unambiguous (ambiguity = 0), so the output is `reflex.log`. The decision required deliberation, but the output is deterministic.
 
-**Graph discovery via IntentEngine feedback**: The graph need not be predefined. Start with a single edge: `Intent -> Code`. If the evaluator reports zero ambiguity, the single edge suffices. But if persistent ambiguity persists — "I keep producing code that doesn't meet the intent because the design space is too wide" — that escalation is the signal that the edge is too coarse. The graph grows because the IntentEngine told it to. This is the abiogenesis pattern (Principle 4) operating in real time.
+**Graph discovery via IntentEngine feedback**: The graph discovery mechanism from Principle 4 is the IntentEngine operating in real time — persistent ambiguity escalation signals that an edge is too coarse, and the graph grows because the IntentEngine told it to.
 
 **A key insight about reflexes**: A reflex isn't "simple" — it is **unambiguous**. "Duck down! Run!" is a reflex because ambiguity = 0, not because the action is trivial. A complex build system is a reflex: it resolves deterministically regardless of complexity. Conversely, a one-line code change may require conscious deliberation if the intent is ambiguous. The classification is by ambiguity, not by difficulty.
 
-**The iteration loop as IntentEngine**:
-
-```
-while true:
-    output = IntentEngine(intent, affect, edge_evaluators)
-    match output:
-        reflex.log    -> promote(candidate); break     // converged
-        specEventLog  -> continue                       // iterate again
-        escalate      -> spawn_or_escalate(); break     // beyond this scope
-```
-
-This is the same `while not stable(candidate): iterate(...)` from Principle 6, with the IntentEngine naming what happens inside each cycle.
+**The iteration loop as IntentEngine**: The `while not stable(candidate): iterate(...)` loop from Principle 6 is precisely the IntentEngine: each cycle observes, evaluates ambiguity, and produces one of the three typed outputs — `reflex.log` (converged), `specEventLog` (iterate again), or `escalate` (beyond this scope).
 
 ### Principle 11: Context is the Constraint Surface
 
@@ -568,13 +555,9 @@ Intent alone:           vast possibility space (degeneracy -> hallucination)
         + Prior:        narrows to evolution-of-existing
 ```
 
-This is the ontology's constraint density (#16) in action. Sparse constraints -> probability degeneracy (#54) -> hallucination/failure. Dense constraints -> stable Markov objects (#7). **Context is what prevents hallucination in the construction process.**
+This is the ontology's constraint density (#16) in action. Sparse constraints -> probability degeneracy (#54) -> hallucination/failure. Dense constraints -> stable Markov objects (#7). **Hallucination is not a property of the LLM; it is a property of the constraint surface.** Each Context element reduces degeneracy: ADRs eliminate technology choices, data models eliminate schema guesses, templates eliminate structural choices, prior implementations eliminate approach choices. Dense enough constraints -> coherent output, regardless of the constructor. This is testable: measure hallucination rate (evaluator failure at first iteration) as a function of context density.
 
-**Spec reproducibility**: Context is versioned via content-addressable hashing. The context hash at each iteration is recorded in the event log, enabling: reproducibility (given the same context hash, the same iteration should produce the same evaluator results), debugging (when an iteration produces unexpected results, the exact context can be reconstructed from the hash), and evolution tracking (context hash changes between iterations reveal which constraints were added or modified).
-
-Context sources are copied (not linked) to preserve hash stability. An ADR referenced by URI is resolved at project setup and copied into the local context store. This ensures that external changes to the referenced document don't silently alter the project's constraint surface.
-
-**Context as the anti-hallucination mechanism**: The hallucination problem in LLM-driven construction is precisely the constraint density problem. An LLM generating code from a vague intent (sparse Context[]) has too many degrees of freedom — the probability landscape is degenerate (#54), multiple valid-looking outputs are equally likely, and the constructor picks one that may not match the intended semantics. Each Context element reduces degeneracy: ADRs eliminate technology choices, data models eliminate schema guesses, templates eliminate structural choices, prior implementations eliminate approach choices. **Hallucination is not a property of the LLM; it is a property of the constraint surface.** Dense enough constraints -> coherent output, regardless of the constructor. This is testable: measure hallucination rate (evaluator failure at first iteration) as a function of context density.
+**Spec reproducibility**: Context is versioned via content-addressable hashing. The context hash at each iteration is recorded in the event log, enabling reproducibility, debugging, and evolution tracking. Context sources are copied (not linked) to preserve hash stability — external changes to referenced documents don't silently alter the project's constraint surface.
 
 ### Principle 12: The Spec/Design Boundary
 
@@ -616,7 +599,7 @@ The graph package specifies which dimensions are **mandatory** (must be explicit
 
 **Dogfooding observation**: 5 of 7 bugs found at build time in an early instantiation were in dimensions the design left implicit (ecosystem compatibility, build structure). The evaluator bar appeared adequate (1-iteration convergence) precisely because missing dimensions weren't being checked — the evaluator can't detect what the constraint surface doesn't define. This is a general principle: **constraint density at the design edge directly predicts build-time failure rate.**
 
-**Constraint dimensions at the design edge make the Hamiltonian prediction operational**: Each unresolved dimension is a component of V(constraint_delta). The more dimensions left implicit, the higher V at the downstream code edge, the more iterations required, the more expensive convergence. Conversely, each dimension explicitly resolved at design time reduces V at code time — the constructor has more constraints to work within, reducing degeneracy.
+**Constraint dimensions at the design edge make the cost prediction operational**: Each unresolved dimension increases V(constraint_delta) — the more dimensions left implicit, the more iterations required downstream, the more expensive convergence. Conversely, each dimension explicitly resolved at design time reduces cost at code time — the constructor has more constraints to work within, reducing degeneracy.
 
 ### Principle 13: Features as Composite Vectors and Multiple Implementations
 
@@ -655,7 +638,7 @@ REQ-F-AUTH-001 (spec)
   +-- design.variant_c  -> code.rust    -> tests.rust
 ```
 
-Each variant is a separate trajectory through the downstream graph, sharing the same upstream spec. The variants can run in parallel, and telemetry from production enables data-driven selection between them. This is the Hilbert space (Part II, §II.4) in action — multiple vectors in superposition until measurement (production telemetry) collapses to the best-performing variant.
+Each variant is a separate trajectory through the downstream graph, sharing the same upstream spec. The variants can run in parallel, and telemetry from production enables data-driven selection — multiple vectors in flight until measurement (production telemetry) selects the best-performing variant.
 
 **Feature dependencies**: Features can depend on other features. Feature B's code asset might require Feature A's code asset to be stable first. Dependencies are between features (or their component assets), not between pipeline stages. This is a cross-vector constraint.
 
@@ -711,7 +694,7 @@ The last two rows are where the constraints themselves become the object of eval
 | **Teleodynamic** (#49) | Production homeostasis | Running system maintaining its own boundary conditions |
 | **Beyond Deacon** (#50) | Spec review + constraint update | The constraint surface itself updating from experience |
 
-The formal Hamiltonian (Part II, §II.5) captures this: `H(edge) = T(iteration_cost) + V(constraint_delta)`. When the spec updates, the Hamiltonian shifts — former ground states acquire potential energy under the new constraints. The gradient is what drives the system back toward new minima.
+The cost dynamics (§II.5) capture this: `Cost(edge) = T(iteration_cost) + V(constraint_delta)`. When the spec updates, the cost landscape shifts — formerly converged assets require rework under the new constraints. The gradient drives the system toward new minima.
 
 **The spec as constraint surface**: the spec is the reference frame against which all observation is evaluated:
 
@@ -750,26 +733,11 @@ Every signal source feeds into the spec, and the spec re-expresses non-zero delt
 | **User feedback** | "Search should support fuzzy matching" | Spec adds requirement | Feature vector: new REQ |
 | **Methodology self-observation** | Evaluator skip rate too high | Graph package updates edge config | Meta-vector: improve evaluators |
 
-**Intent events as first-class objects**: For the spec review to close with full traceability, the `intent_raised` event captures the complete causal chain — trigger (which signal caused this), delta (what deviation was observed), signal_source (gap / discovery / ecosystem / optimisation / user / TELEM), vector_type (what kind of response), spec_impact (which REQ keys affected), spawned_vectors (what enters the graph), and prior_intents (chain of intents that led here). The `prior_intents` field closes the reflexive loop: if intent A modifies the spec, and the modified spec triggers intent B that traces back to A — the system detects the consequences of its own modifications.
+**Intent events as first-class objects**: The `intent_raised` event captures the complete causal chain — trigger, delta, signal_source, vector_type, spec_impact, spawned_vectors, and prior_intents (chain of intents that led here).
 
-**Spec change events** — when the spec absorbs a signal and updates, it emits a `spec_modified` event:
+**Spec change events** — when the spec absorbs a signal and updates, it emits a `spec_modified` event capturing what changed, why, which intent triggered it, which REQ keys are affected, which vectors it spawns, and which prior intents led here. The `prior_intents` field closes the reflexive loop: if intent A modifies the spec and the modified spec triggers intent B that traces back to A — the system detects the consequences of its own modifications. This enables spec archaeology, feedback loop detection, impact analysis, and rate-of-evolution analysis — all derivable from the event log.
 
-```
-{
-  "event": "spec_modified",
-  "trigger_intent": "INT-2026-042",
-  "signal_source": "ecosystem",
-  "what_changed": ["REQ-NF-COMPAT-001 updated: Scala 2.13 -> 3.x"],
-  "why": "Scala 2.13 end-of-life detected via ecosystem monitoring",
-  "affected_req_keys": ["REQ-NF-COMPAT-001", "REQ-NF-BUILD-003"],
-  "spawned_vectors": ["FV-MIGRATION-001"],
-  "prior_intents": ["INT-2026-038"]
-}
-```
-
-This enables: spec archaeology (why does this constraint exist? — trace to the spec_modified event), feedback loop detection (intent A -> spec change -> intent B -> if B traces back to A, the loop is visible), impact analysis (spec change -> spawned vectors -> telemetry -> new intents — the full causal chain is in the event log), and rate-of-evolution analysis (how often does the spec change? which sections are volatile, which are stable? — all derivable from spec_modified events).
-
-**The total intentional state** — the superposition of all in-flight feature vectors — is the system's response to **everything it knows**, continuously updated as the spec absorbs new signals. When the spec updates, the Hilbert space (Part II, §II.4) undergoes a basis change: new basis vectors appear (new requirements add dimensions), existing vectors shift (updated constraints change the landscape), the Hamiltonian shifts (former ground states acquire potential energy under new constraints, spawning vectors that seek new minima). This is the gradient operating at all scales simultaneously — and this simultaneous operation is what makes the system alive (Principle 17).
+**The total intentional state** — all in-flight feature vectors — is the system's response to **everything it knows**, continuously updated as the spec absorbs new signals. When the spec updates, the vector space transforms (§II.4, §II.5) — the gradient operating at all scales simultaneously is what makes the system alive (Principle 17).
 
 ### Principle 16: Execution is Event-Sourced
 
@@ -804,17 +772,9 @@ Projections are **re-derivable**: given the event log, any projection can be rec
 
 The event log is the methodology's analogue of the constraint network's evolution history (#4 — unit of change). Projections are manifold-level observables — views that emerge when the raw event stream is coarse-grained through a particular lens.
 
-**Protocol enforcement hooks** make the side effects of iteration mandatory. The iterate protocol produces mandatory artefacts beyond the output asset: event emission, feature vector update, state view regeneration, and gap data. These side effects are **the telemetry** — without them, the methodology loses observability. Protocol hooks are the methodology's reflex arc — they fire unconditionally at every iteration boundary, verifying that mandatory side effects occurred:
+**Protocol enforcement hooks** make the side effects of iteration mandatory. The iterate protocol produces mandatory artefacts beyond the output asset: event emission, feature vector update, state view regeneration, and gap data. These side effects **are** the telemetry — without them, the methodology loses observability. Protocol hooks are the methodology's reflex arc — they fire unconditionally at every iteration boundary, verifying that mandatory side effects occurred (event emitted, feature vector updated, state view regenerated, source findings present, process gaps present).
 
-| Check | What it verifies | Gap it prevents |
-|-------|-----------------|-----------------|
-| Event emitted | events.jsonl has new entry since edge started | Lost observability |
-| Feature vector updated | Active feature .yml modified since edge started | Stale lifecycle tracking |
-| State view regenerated | State view modified since edge started | No computed projections |
-| Source findings present | Iteration event contains source_findings | Backward gap detection skipped |
-| Process gaps present | Iteration event contains process_gaps | Methodology improvement signal lost |
-
-A circuit breaker prevents infinite regression: the hook blocks once, the agent completes missing side effects, the second check allows through unconditionally. The agent retains full freedom in generation strategy — the hooks only check the observable outputs of the protocol, not how the agent generates. This mirrors how deterministic tests work for code: the test doesn't care how the function was implemented, only that the contract is satisfied.
+A circuit breaker prevents infinite regression: the hook blocks once, the agent completes missing side effects, the second check allows through unconditionally. The hooks check observable outputs of the protocol, not how the agent generates — mirroring how deterministic tests work for code.
 
 **Dogfooding observation**: In an early instantiation (test05), the agent bypassed the iterate protocol for 3 of 4 edges to optimise for generation speed. Result: high-quality artefacts but only 1 event in events.jsonl (vs 5 expected), stale feature vector, no STATUS. The methodology's observability benefits evaporated because the side effects were optional.
 
@@ -840,18 +800,9 @@ When the full lifecycle is operational — CI/CD running, telemetry streaming, t
 
 No single property creates the living quality. It is the simultaneous operation of all six — sensing, concurrency, metabolism, perception, reflection, pruning — that produces the living system. Each is the gradient operating at a different scale; all scales active simultaneously = alive.
 
-**Basis change under spec update**: When the spec updates via the gradient check (Principle 15), the Hilbert space undergoes a basis change:
+**Spec updates shift the vector space**: When the spec updates (Principle 15), new dimensions appear, existing vectors shift, the cost landscape redefines ground states (§II.5). The total effort budget is finite; spec updates that raise V across many assets create pressure to re-optimise. This is relentless optimisation made formal.
 
-- **New basis vectors appear**: A new requirement (REQ-F-SEARCH-002) adds a dimension to the vector space. New feature vectors can now exist in this dimension.
-- **Existing vectors shift**: An ecosystem migration changes the design constraints. Code that was at ground state under the old spec has high potential energy under the new spec — it "wants" to move.
-- **Hamiltonian shifts**: The potential energy landscape V(constraint_delta) is redefined. What was optimal is no longer optimal. New ground states exist.
-- **Vectors are spawned**: Each spec change spawns one or more feature vectors (discovery, PoC, feature, hotfix) that enter the graph and traverse edges via iterate().
-
-The total energy budget is finite. Spec updates that raise V across many assets create pressure to re-optimise — the system must find new ground states under the new Hamiltonian. This is relentless optimisation made formal.
-
-**The Markov boundary as concurrency enabler**: When a feature vector's component converges at an edge, it achieves Markov object status — a stable boundary, conditional independence, evaluator-confirmed stability. This boundary is what allows other vectors to depend on the converged asset without coupling to its internals. Without Markov boundaries, concurrent vectors would require global coordination. With them, coordination is local. The living system is not a monolith; it is an **ecology of Markov objects**, each with a clean boundary, interacting through interfaces, evolving independently within their boundaries.
-
-**The Markov boundary as concurrency enabler in detail**: When a feature vector's component converges at an edge, it achieves Markov object status. This boundary is what allows other vectors to depend on the converged asset without coupling to its internals or its construction process:
+**The Markov boundary as concurrency enabler**: When a feature vector's component converges at an edge, it achieves Markov object status — a stable boundary, conditional independence, evaluator-confirmed stability. This boundary is what allows other vectors to depend on the converged asset without coupling to its internals or its construction process:
 
 ```
 FV-AUTH (converged at |code>):
@@ -865,7 +816,7 @@ FV-SEARCH (in-flight at |design>):
                            what design alternatives were considered
 ```
 
-The more vectors in flight, the more critical the Markov boundary becomes. In a living system with dozens of concurrent vectors, the Markov boundary at each convergence point prevents combinatorial explosion of coordination. Each converged asset is a stable island that other vectors can build on.
+Without Markov boundaries, concurrent vectors would require global coordination. With them, coordination is local — the living system is an **ecology of Markov objects**, each with a clean boundary, interacting through interfaces, evolving independently within their boundaries. The more vectors in flight, the more critical this property becomes.
 
 At any moment, many feature vectors are in-flight simultaneously, each at a different lifecycle stage:
 
@@ -969,9 +920,7 @@ A **spec** defines functional units — typed assets, admissible transitions, ev
 | Probabilistic | F_P | LLM/agent under constraints. Code generation, gap analysis, design synthesis. |
 | Human | F_H | Judgment, approval, domain evaluation. Spec review, intent authoring, acceptance. |
 
-**Projections are functors.** Each named profile (full, standard, PoC, spike, hotfix) is a different encoding of the same spec. **Zoom is an encoding operation**: when an edge is zoomed in, implicit functional units become explicit and each gets its own encoding. The spec doesn't change; the encoding changes.
-
-**Projections are functors**: each named profile (full, standard, PoC, spike, hotfix) is a different encoding of the same spec. What the encoding determines:
+**Projections are functors.** Each named profile (full, standard, PoC, spike, hotfix) is a different encoding of the same spec:
 
 | Profile | Encoding strategy |
 |---------|------------------|
@@ -980,7 +929,7 @@ A **spec** defines functional units — typed assets, admissible transitions, ev
 | **poc** | Minimal — only hypothesis-critical units encoded |
 | **hotfix** | Emergency — only fix-critical units encoded, F_D dominant |
 
-**Zoom is an encoding operation**: when an edge is zoomed in, implicit functional units become explicit — each gets its own encoding (execution category). When zoomed out, those units' encodings collapse back into the encapsulating edge. The spec doesn't change; the encoding changes.
+**Zoom is an encoding operation**: when an edge is zoomed in, implicit functional units become explicit — each gets its own encoding. When zoomed out, those units' encodings collapse back into the encapsulating edge. The spec doesn't change; the encoding changes.
 
 ```
 Zoomed out:   design =======================================> code
@@ -1016,9 +965,7 @@ The functor formalism explains why the four primitives suffice: **Graph** define
 
 ### II.3 Projections as Functors
 
-A projection is a **functor**: `Functor(Spec, Encoding) -> Executable Methodology`. The spec defines the functional units (typed assets, admissible transitions, evaluator slots). The encoding maps each unit to an execution category (F_D, F_P, F_H). Different encodings of the same spec produce different projections — each a valid methodology instance.
-
-This explains why the five things that can vary in a projection are precisely the encoding parameters:
+Since projections are functors (§II.2), the five things that can vary in a projection are precisely the encoding parameters:
 
 | What varies | Encoding dimension |
 |--------|-------------------|
@@ -1029,8 +976,6 @@ This explains why the five things that can vary in a projection are precisely th
 | Iteration depth | How many functor applications before timeout |
 
 And why the four things that cannot vary are the functor's preconditions — without a graph there is no domain, without iteration there is no application, without evaluation there is no classification, without context there is no constraint surface. Remove any one and the functor is undefined.
-
-Named profiles are named encodings. Zoom operations are encoding refinements — making implicit functional units explicit. The natural transformation eta between categories (F_D -> F_P -> F_H) is the IntentEngine's escalation mechanism — the functor adapts its encoding when ambiguity exceeds the current category's capacity.
 
 A **projection** is a valid lighter instance of the formal system:
 
@@ -1091,22 +1036,21 @@ What projections cannot change:
 
 Two projections can be compared: P1 is a sub-projection of P2 iff P1.graph is a subgraph of P2.graph, P1's evaluators are a subset per edge, P1's convergence is less strict, and P1's context is a subset. This gives a partial order. The full SDLC graph is the top element; the minimal projection (1 edge, 1 evaluator, intent only) is the bottom.
 
-### II.4 Feature Vectors as Hilbert Space
+### II.4 Feature Vectors as Composable Vectors
 
-Feature vectors form a vector space whose structure determines parallelism, cost, and evolution:
+Feature vectors are **composable**: each feature is a composite of typed asset components, and features compose with each other through shared modules and dependency edges. The key structural properties:
 
-| Hilbert space concept | Feature vector interpretation |
+| Property | What it determines |
 |---|---|
-| **Basis** | Asset types. The spec defines which basis vectors are active — adding a requirement adds a dimension; removing one collapses it |
-| **Vectors** | Composite features: F = Sum |asset_type_i> — trajectories through the graph |
-| **Inner product** | Feature overlap — shared modules at the build decomposition level. Features sharing many modules have high inner product and must coordinate; features sharing none are orthogonal |
-| **Orthogonality** | Independent features — zero shared modules, fully parallelisable |
-| **Norm** | Vector cost — sum of iteration effort across all components |
-| **Superposition** | Total intentional state — all features in-flight, components not yet converged |
-| **Measurement/collapse** | Evaluator convergence — component converges to stable Markov object |
-| **Basis change** | Spec update — the vector space itself transforms. New dimensions appear, old dimensions shift, existing vectors acquire potential energy under the new basis |
+| **Composition** | Features = Sum of |asset_type_i> components — trajectories through the graph |
+| **Overlap** | Shared modules at the build decomposition level. Features sharing many modules must coordinate; features sharing none are independent |
+| **Independence** | Zero shared modules = fully parallelisable — no coordination needed |
+| **Cost** | Sum of iteration effort across all components |
+| **Total state** | All features in-flight simultaneously, components not yet converged |
+| **Convergence** | Evaluator convergence collapses a component to a stable Markov object |
+| **Spec evolution** | Adding a requirement adds a dimension; removing one collapses it; updating one shifts existing vectors |
 
-**Basis projections** are the projection of a feature vector onto its minimal module basis — the smallest subset of modules that makes one priority feature work end-to-end. Once a basis projection converges, it becomes a Markov object — a stable, tested, end-to-end slice. Projections that share no modules are orthogonal and can execute in parallel with zero coordination.
+**Basis projections** are the projection of a feature vector onto its minimal module basis — the smallest subset of modules that makes one priority feature work end-to-end. Once a basis projection converges, it becomes a Markov object. Projections that share no modules are independent and can execute in parallel with zero coordination.
 
 Example from a data pipeline module decomposition:
 
@@ -1119,7 +1063,7 @@ Basis Projection 2 (lossy aggregation):    model -> compiler(+grain) -> runtime(
 Basis Projection 3 (full lineage):         model -> compiler -> runtime -> lineage -> spark
 ```
 
-**Key property**: basis projections that share no modules are orthogonal — they can execute in parallel with zero coordination. Projections that share modules must build the shared modules first, then diverge. The Hilbert space inner product is the number of shared modules: features with zero shared modules have zero inner product and are fully parallelisable.
+Projections that share modules must build the shared modules first, then diverge. The overlap (number of shared modules) determines which features can run in parallel — this is the structural property that makes the vector formalism operationally useful.
 
 Each converged basis projection is a Markov object:
 - **Boundary**: Its public interfaces, the features it proves, the tests it passes
@@ -1128,59 +1072,36 @@ Each converged basis projection is a Markov object:
 
 The basis projection schedule — the Gantt chart — is a **derived projection** computed from: module dependency DAG, feature-to-module mapping, feature priority, and basis projection convergence events. This enables incremental delivery: working software after the first basis projection converges, progressively richer after each subsequent one.
 
-**Context stability**: Context[] is largely shared across the graph. ADRs, Data Models, Policy — these don't change per edge. They are the standing constraint surface. What changes per edge is which subset is relevant and how the constructor weights them. Context itself evolves, but on a slower timescale than assets. This is the ontology's scale-dependent time (#23): the constraint surface updates slowly while components iterate rapidly upon it.
+**Context stability**: Context[] is largely shared across the graph. ADRs, Data Models, Policy — these don't change per edge. They are the standing constraint surface. What changes per edge is which subset is relevant and how the constructor weights them. Context itself evolves, but on a slower timescale than assets — the constraint surface updates slowly while components iterate rapidly upon it (#23).
 
-**Basis projections and the build schedule**: The basis projection schedule — the Gantt chart — is a **derived projection** (Principle 16) computed from four inputs:
+The two compute regimes (#45) map directly:
 
-- Module dependency DAG (from |module_decomp>)
-- Feature-to-module mapping (from REQ key traceability)
-- Feature priority (from requirements / intent)
-- Basis projection convergence events (from event log)
+- **Probabilistic compute** (LLM) = exploration — superposition of possible constructions
+- **Deterministic Tests** = verification — collapse to pass/fail
 
-This enables incremental delivery: working software after the first basis projection converges, progressively richer after each subsequent one. The methodology produces not just code but an **observable build plan** — a Gantt that updates as basis projections converge. The two compute regimes (#45) map directly into the Hilbert space:
+### II.5 Cost Dynamics
 
-- **Probabilistic compute** (LLM) = exploration of the Hilbert space — superposition of possible constructions
-- **Deterministic Tests** = measurement — projection onto eigenstate, collapse to pass/fail
-
-### II.5 The Hamiltonian: Cost and Effort
-
-The Hamiltonian is the operator governing evolution (effort/cost) on the feature vector space — the formal expression of the gradient (Principle 14):
+The gradient (Principle 14) has a cost structure:
 
 ```
-H(edge) = T(iteration_cost) + V(constraint_delta)
+Cost(edge) = T(iteration_cost) + V(constraint_delta)
 ```
 
-| Hamiltonian concept | Interpretation |
-|---|---|
-| **T (kinetic energy)** | Iteration cost — compute, human time per cycle |
-| **V (potential energy)** | Constraint difficulty — evaluator delta from convergence |
-| **Ground state** | Minimal-effort solution satisfying all constraints |
-| **Excited states** | Over-engineered solutions (more energy than necessary) |
-| **Energy conservation** | Budget constraint — total effort bounded |
+T scales with evaluator type (human expensive, tests cheap, LLM moderate) and iteration count. V scales with constraint density (#16) — sparse constraints = hard to converge, dense constraints = well-defined problem. The minimal-cost solution satisfying all constraints is the ground state; over-engineered solutions carry unnecessary cost.
 
-T scales with: evaluator type (human expensive, tests cheap, LLM moderate) and iteration count. V scales with: constraint density (#16) — sparse constraints = high potential (hard to converge), dense constraints = low potential (well-defined problem).
+**Spec update shifts the cost landscape**: When the spec updates, a converged asset under the old spec may have high V under the new spec — it needs rework. Each spec change type has a predictable system response:
 
-**Hamiltonian shift under spec update**: When the spec updates, the potential energy landscape is redefined. A converged asset at ground state under the old spec may have high V under the new spec — it "wants to move." The migration vector spawned by the intent event is the system's response to this potential energy.
-
-| Spec update type | Hamiltonian effect | System response |
+| Spec update type | Cost effect | System response |
 |---|---|---|
-| New requirement added | New dimension in V | Spawn feature vector in new dimension |
+| New requirement added | New dimension in V | Spawn feature vector |
 | Constraint tightened | V increases for assets near old bound | Spawn optimisation vector |
-| Ecosystem shift | V increases for all assets bound to old ecosystem | Spawn migration vector |
-| Requirement removed | Dimension collapses | Simplification vector (reduce complexity) |
-| Discovery (new capability) | New low-energy path appears | Spawn PoC vector to explore ground state |
+| Ecosystem shift | V increases for bound assets | Spawn migration vector |
+| Requirement removed | Dimension collapses | Simplification vector |
+| Discovery (new capability) | New low-cost path appears | Spawn PoC vector |
 
-**Task planning as action minimisation**: Decompose into basis vectors, identify orthogonal subsets (parallel work), project overlapping vectors onto shared components (batching), sequence by dependency constraints, optimise for minimum total H.
+**Task planning as cost minimisation**: Decompose into basis vectors, identify independent subsets (parallel work), project overlapping vectors onto shared components (batching), sequence by dependency constraints.
 
-Constraint density (#16) is the **metric** on the space — it determines how much effort transitions require. This connects hallucination prevention to cost dynamics: sparse constraints = high V = expensive to converge. The connection runs through three domains:
-
-| Domain | Sparse constraints | Dense constraints |
-|--------|-------------------|-------------------|
-| **Physics** | Low constraint density = flat spacetime, no structure (#24) | High constraint density = strong gravity, structure formation |
-| **LLMs** | Sparse context = degenerate probabilities = hallucination (#54) | Dense context = focused probabilities = coherent output |
-| **SDLC** | Sparse Context[] = high V = expensive convergence, many iterations | Dense Context[] = low V = cheap convergence, fewer iterations |
-
-The Hamiltonian formalism is not merely decorative. It makes a specific prediction: **the total cost of a feature is predictable from its constraint density profile before construction begins.** Edges with dense Context[] (well-specified requirements, rich ADRs, clear templates) will have low V and converge cheaply. Edges with sparse Context[] (vague requirements, no ADRs, no templates) will have high V and converge expensively — or fail to converge at all (hallucination). This prediction is testable against event logs.
+This makes a specific operational prediction: **the total cost of a feature is predictable from its constraint density profile before construction begins.** Edges with dense Context[] will converge cheaply. Edges with sparse Context[] will converge expensively — or fail to converge at all. This prediction is testable against event logs.
 
 ---
 
@@ -1402,7 +1323,7 @@ Every element of the formal system traces to a concept in the parent ontology:
 | Vector spawning (reproduction) | New vectors born from intent events | 36, 44 |
 | Vector cancellation (apoptosis) | Basis dimension collapses when requirement removed | 9 |
 | Concurrent vectors (cell cycle) | Many vectors in different phases simultaneously | 45 |
-| Hamiltonian | Cost dynamics on constraint manifolds | 77 |
+| Cost dynamics (T + V) | Cost dynamics on constraint manifolds | 77 |
 | Feature vector | Composite trajectory | 78 |
 | Zoomable graph | Zoomable constraint structure | 79 |
 
@@ -1544,7 +1465,7 @@ The PoC demonstrates:
 3. **Fold-back as context enrichment**: Child outputs narrow the parent's constraint surface (#16), driving convergence. Before fold-back: Context[] = {intent, ADRs, models} — wide possibility space. After: Context[] = {intent, ADRs, models, ADR-007, PoC findings} — narrower, more constrained.
 4. **Functor rendering**: The PoC's encoding is mostly F_P (agent-driven, throwaway code) with F_D only for the load test. The feature's encoding is F_P + F_D + F_H. Different functors from the same engine.
 5. **Time-boxing**: Had the PoC timed out in week 2, partial results (design_sketch, preliminary prototype) would still fold back as Context[]. The time_box_expired convergence mode does not violate the Iterate invariant — the iteration loop still ran, evaluators still fired, the stopping condition was extended not removed.
-6. **Hamiltonian dynamics**: Before the PoC, the design edge had high V (constraint_delta) because "Kafka vs queue?" was an unresolved dimension. After fold-back, V drops — the constraint is resolved, and the edge converges more cheaply.
+6. **Cost dynamics**: Before the PoC, the design edge had high V (constraint_delta) because "Kafka vs queue?" was an unresolved dimension. After fold-back, V drops — the constraint is resolved, and the edge converges more cheaply.
 
 ### V.7 Alternative Scenario: Time-Box Expiry
 
@@ -1606,28 +1527,13 @@ The formal system preserves everything that prior models got right, while provid
 
 ### VI.3 What is Added
 
-The formal system adds structural vocabulary that makes implicit engineering knowledge explicit:
+The formal system adds three categories of contribution:
 
-**Structural additions:**
-- **Formal ontology grounding** — every element traceable to constraint-emergence concepts, enabling cross-domain reasoning
-- **Composite vectors** — features as trajectories through the graph, not pipeline travellers. The composite carries the full causal chain
-- **Zoomable graph** — granularity as a choice at every edge. Selective zoom is the common case: collapse some intermediates, retain others
-- **Scale-dependent assurance** — same evaluator pattern at every scale (unit test:module :: UAT:feature :: telemetry:product)
-- **Three-layer separation** — Engine / Graph Package / Project Binding. Explains why the same methodology produces different outcomes in different domains
-- **Spec/Design boundary** — WHAT (tech-agnostic) vs HOW (tech-bound), enabling multiple implementations per requirement and technology migration without spec change
+**Structural**: formal ontology grounding (every element traceable to constraint-emergence concepts), composite vectors (features as trajectories, not pipeline items), zoomable graph (granularity as a choice), scale-dependent assurance (unit test:module :: UAT:feature :: telemetry:product), three-layer separation (Engine / Graph Package / Project Binding), and the Spec/Design boundary (WHAT vs HOW, one spec many designs).
 
-**Formal additions:**
-- **Functor renderings** — same spec, multiple encodings, natural transformations between them. Projections as functors. Zoom as encoding operation
-- **Hilbert space formalism** — inner product determines parallelism, Hamiltonian determines cost, basis change tracks spec evolution. The decorative question: does anything structural depend on the Hilbert space? Answer: yes — the inner product (shared modules) determines which features can run in parallel, and the Hamiltonian (cost dynamics) connects constraint density to convergence cost
-- **IntentEngine as composition law** — fractal observer/evaluator at every scale, consciousness-as-relative, three-way ambiguity partition
+**Formal**: functor renderings (same spec, multiple encodings, natural transformations), composable vector formalism (overlap determines parallelism, constraint density determines cost), and the IntentEngine as composition law (fractal observer/evaluator, consciousness-as-relative, three-way ambiguity partition).
 
-**Lifecycle additions:**
-- **Event sourcing execution** — immutable events, all state as derived projections, full auditability
-- **Living system** — concurrent vector lifecycles + metabolism + perception + self-modification + pruning
-- **Projection profiles** — named configurations for valid lighter instances (full -> minimal)
-- **Vector type diversity** — discovery, spike, PoC, hotfix — each a different projection with different convergence criteria
-- **Continuous sensing** — interoceptive and exteroceptive monitors run independently of iterate(), enabling the system to notice threats and decay even when no one is actively developing
-- **Protocol enforcement** — hooks verify iterate() side effects before allowing the agent to stop, ensuring observability is never sacrificed for generation speed
+**Lifecycle**: event sourcing execution, living system properties, projection profiles, vector type diversity (discovery, spike, PoC, hotfix), continuous sensing (interoceptive + exteroceptive monitors independent of iterate()), and protocol enforcement (hooks verify iterate() side effects).
 
 ---
 
@@ -1669,15 +1575,15 @@ The design choice is itself a validation of the formal system. The iterate agent
 
 ### VII.2 Three-Layer Instantiation
 
-The three-layer architecture (Principle 12, Part II §II.1) maps directly to the implementation:
+The three-layer architecture (§II.1) maps to concrete artefacts:
 
 | Formal Layer | Implementation | Ships As |
 |---|---|---|
-| **Layer 1: Engine** (universal) | `agents/aisdlc-iterate.md` + evaluator types + event sourcing primitives + `commands/*.md` | Plugin package (immutable per version) |
-| **Layer 2: Graph Package** (domain-specific) | `config/graph_topology.yml` + 10 edge parameterisations + constraint dimensions + projection profiles | Plugin config (forkable for other domains) |
-| **Layer 3: Project Binding** (instance-specific) | `.ai-workspace/context/` — `project_constraints.yml`, ADRs, data models, policy, standards | Scaffolded per project by `/aisdlc-init` |
+| **Layer 1: Engine** | `agents/aisdlc-iterate.md` + evaluator types + event sourcing + `commands/*.md` | Plugin package (immutable per version) |
+| **Layer 2: Graph Package** | `config/graph_topology.yml` + 10 edge parameterisations + projection profiles | Plugin config (forkable for other domains) |
+| **Layer 3: Project Binding** | `.ai-workspace/context/` — `project_constraints.yml`, ADRs, data models, policy | Scaffolded per project by `/aisdlc-init` |
 
-Upgrading the plugin (Layers 1+2) does not overwrite project bindings (Layer 3). Different graph packages can be created by forking the `config/` directory. This separation is not an implementation convenience — it is the formal system's functor structure (§II.2) made concrete: the same engine, applied to a different graph package, generates a different methodology.
+Upgrading the plugin (Layers 1+2) does not overwrite project bindings (Layer 3). Forking `config/` creates a different methodology from the same engine — the functor structure (§II.2) made concrete.
 
 ### VII.3 The LLM as Constructor
 
@@ -1725,19 +1631,7 @@ The reference implementation was dogfooded on a real project (Python CLI bookmar
 
 ### VII.6 What the Implementation Demonstrates
 
-The reference implementation is not just a tool — it is an empirical test of the formal system's claims:
-
-| Formal claim | Implementation evidence |
-|---|---|
-| Four primitives suffice | One agent + graph config + evaluator config + context directory — nothing else needed |
-| IntentEngine is composition, not primitive | The iterate agent composes the four primitives; it has no independent logic |
-| Constraint density predicts convergence cost | Missing dimensions caused predictable downstream failures |
-| Projections preserve invariants | Spike and PoC profiles skip edges but retain all four primitives |
-| Event sourcing enables self-observation | TELEM signals derived from event log; STATUS.md is a projection |
-| The graph is domain-constructed | Forking `config/` produces a different methodology; engine unchanged |
-| Functor renderings are real | Three platforms, same spec, different encodings, shared event contract |
-
-The formal system generated the implementation. The implementation tested the formal system. The bugs found were in parameterisation (Layer 2 and 3), never in the primitives (Layer 1). This is the pattern the formal system predicts: the engine is stable; emergence varies.
+The bugs found were in parameterisation (Layer 2 and 3), never in the primitives (Layer 1). This is the pattern the formal system predicts: the engine is stable; emergence varies. The implementation validates the key structural claims — four primitives suffice (one agent + graph config + evaluator config + context directory), the IntentEngine is composition not primitive (the iterate agent has no independent logic), and functor renderings are real (three platforms, same spec, different encodings, shared event contract).
 
 ---
 
@@ -1800,7 +1694,7 @@ The IntentEngine claims to be a universal processing unit — observer/evaluator
 
 The formal system makes empirical predictions that can be tested against event logs from methodology instantiations:
 
-**Prediction 1: Constraint density predicts convergence cost.** Edges with sparse Context[] should require more iterations and produce more evaluator failures than edges with dense Context[]. Measurable from event logs: correlate context_hash diversity per edge with iteration count and evaluator failure rate. The Hamiltonian predicts: V(constraint_delta) decreases as context density increases, reducing total H and thus iteration count.
+**Prediction 1: Constraint density predicts convergence cost.** Edges with sparse Context[] should require more iterations and produce more evaluator failures than edges with dense Context[]. Measurable from event logs: correlate context_hash diversity per edge with iteration count and evaluator failure rate. The cost model predicts: V(constraint_delta) decreases as context density increases, reducing total cost and thus iteration count.
 
 **Prediction 2: Missing constraint dimensions predict build failures.** When design omits a constraint dimension (ecosystem compatibility, build system), the omission should manifest as failures at the code or integration edge. The event log should show the pattern: low iteration count at design (evaluator bar appeared adequate) followed by high iteration count at code. Early dogfooding supports this: 5/7 build-time bugs traced to implicit design dimensions.
 
@@ -1812,18 +1706,9 @@ The formal system makes empirical predictions that can be tested against event l
 
 **Prediction 6: Living system properties correlate with system longevity.** Systems that achieve all six living properties (continuous sensing, concurrent vectors, metabolism, perception, self-modification, pruning) should demonstrate longer operational life, faster response to incidents, and lower maintenance cost than systems missing one or more properties. Measurable from production telemetry and maintenance event logs.
 
-**Testing methodology**: All six predictions can be tested against event logs from methodology instantiations. The event sourcing execution model (Principle 16) makes this possible — every methodology action produces an immutable event, and all observables are derived projections. A research programme would:
+**Testing methodology**: All six predictions can be tested against event logs from methodology instantiations. The event sourcing model (Principle 16) makes this possible — every methodology action produces an immutable event. A research programme would collect event logs from multiple instantiations, compute per-edge metrics (iteration count, evaluator failure rate, convergence time, context density), correlate with outcomes, and test each prediction as a statistical hypothesis. The projection profiles provide natural experimental conditions (different teams using different profiles for similar work). The methodology has one instantiation to date (dogfooding on itself); subsequent independent replications will strengthen or weaken the predictions.
 
-1. Collect event logs from multiple instantiations across different teams, domains, and projection profiles
-2. Compute per-edge metrics: iteration count, evaluator failure rate, convergence time, context density (hash diversity)
-3. Correlate metrics with outcomes: build success rate, time to production, incident frequency, maintenance cost
-4. Test each prediction as a statistical hypothesis across the dataset
-
-The formal system generates these predictions; the event sourcing model makes them testable; the projection profiles provide natural experimental conditions (different teams using different profiles for similar work). This is a research programme, not a single experiment.
-
-**The dogfooding chain**: The methodology has been instantiated once (the AI SDLC toolchain itself). This provides the first data point for each prediction. The formal system predicts that subsequent instantiations — by different teams, in different domains, using different technologies — will observe the same patterns: constraint density predicting convergence cost, missing dimensions predicting failures, affect triage predicting cognitive load. Each independent replication strengthens or weakens the predictions.
-
-**Open question: meta-stability**: The formal system claims that the four primitives are stable — no fifth is needed. But is this claim itself stable? Could a domain instantiation reveal a pattern that requires a fifth primitive? The framework would need to absorb the discovery (modify the engine layer), which would violate the three-layer architecture's claim that the engine never changes. This is the deepest falsification target: not any specific prediction, but the sufficiency of the four primitives themselves.
+**Open question — meta-stability**: Could a domain instantiation reveal a pattern that requires a fifth primitive? The framework would need to absorb the discovery (modify the engine layer), violating the three-layer architecture's claim that the engine never changes. This is the deepest falsification target: the sufficiency of the four primitives themselves.
 
 ### VIII.5 What Would Falsify This Formal System
 
@@ -1832,7 +1717,7 @@ The formal system generates these predictions; the event sourcing model makes th
 | A valid methodology that violates one of the four invariants | The invariants are too strong — the formal system over-constrains |
 | A domain that cannot be instantiated with the four primitives | The engine is not universal — the primitives are SDLC-specific |
 | An IntentEngine invocation that produces an output not in {reflex.log, specEventLog, escalate} | The three-way partition is not exhaustive — ambiguity has more than three regimes |
-| Constraint density failing to predict convergence cost across domains | The Hamiltonian formalism is decorative, not structural |
+| Constraint density failing to predict convergence cost across domains | The cost dynamics formalism is decorative, not structural |
 | Independent teams producing radically different graph topologies for the same domain | Graph abiogenesis is path-dependent, not convergent — the "natural waypoints" claim is false |
 | A living system (all six properties active) that fails to self-maintain | The teleodynamic analogy breaks — the gradient at all scales is not sufficient for self-maintenance |
 | An edge that converges without any evaluator | The evaluator invariant is too strong — some edges self-converge |
@@ -1842,29 +1727,13 @@ The strongest claims — and therefore the most important to test — are: (a) t
 
 ### VIII.6 Connections to Existing Research
 
-The formal system connects to several established research programmes:
-
-**Formal methods and software verification**: The invariant preservation conditions (Part II, §II.3) are in the spirit of formal methods — specifying what must be true of any valid instance. The difference: traditional formal methods verify code against specifications; this formal system verifies *methodology instances* against *methodology invariants*. The four invariants are process-level, not code-level.
-
-**Complex adaptive systems**: The living system (Principle 17) exhibits properties studied in complexity science — concurrent agents (feature vectors), emergent behaviour (the gradient at all scales), self-organisation (graph abiogenesis), adaptation (spec evolution). The formal system provides a precise vocabulary for these properties in the software domain: the four primitives, the IntentEngine composition law, the Hamiltonian cost dynamics.
-
-**Organismic analogy in software**: The biological correspondences in Principle 17 are not original — software systems have been compared to organisms before (Lehman's laws of software evolution, Conway's law). What the formal system adds is a *structural mechanism*: the gradient `delta(state, constraints) -> work` operating at every scale, the IntentEngine as the universal processing unit, and the Markov boundary as the concurrency enabler. These are not metaphors; they are structural correspondences that make specific predictions.
-
-**Constructor theory (Deutsch and Marletto)**: The three-layer architecture (Engine / Graph Package / Project Binding) parallels constructor theory's distinction between constructors (universal) and tasks (specific). The engine is a universal constructor; the graph package specifies which tasks are admissible; the project binding provides the input state. The formal system diverges from constructor theory in its emphasis on constraint (what bounds the constructor) rather than capability (what the constructor can do).
+The formal system connects to several established research programmes. **Formal methods**: the invariant preservation conditions (§II.3) verify *methodology instances* against *methodology invariants* — process-level, not code-level. **Complex adaptive systems**: the living system (Principle 17) exhibits concurrent agents, emergent behaviour, self-organisation, and adaptation, now with precise vocabulary (four primitives, IntentEngine, cost dynamics). **Organismic analogy**: prior work (Lehman's laws, Conway's law) compared software to organisms; this adds a *structural mechanism* — the gradient, the IntentEngine, and Markov boundaries that make specific predictions. **Constructor theory (Deutsch and Marletto)**: the three-layer architecture parallels the constructor/task distinction, diverging in its emphasis on constraint (what bounds the constructor) rather than capability.
 
 ### VIII.7 The Paper as Self-Reference
 
-This paper is itself a Layer 2 artefact — a Graph Package encoding domain expertise. The SDLC domain has been traversed by practitioners (the author and collaborators), patterns have crystallised, and the graph topology and edge configurations have been encoded as this document. The paper follows the abiogenesis pattern it describes:
+This paper is itself a Layer 2 artefact — a Graph Package encoding domain expertise, following the abiogenesis pattern it describes: practitioners traversed the domain, patterns crystallised, and this document encodes them. The paper is spec (WHAT); any implementation is design (HOW). The same paper can have many implementations.
 
-1. **Constraint**: The need to formalise software construction methodology
-2. **Constructor**: Practitioners building software, observing patterns, experimenting with process
-3. **Encoding emerges**: This paper — the patterns crystallised into formal structure
-4. **Encoding drives constructor**: AI agents and human developers loading this document as Context[] and building according to its constraints
-5. **Encoding evolves**: Runtime experience (dogfooding, multiple instantiations) reveals gaps, and the paper updates
-
-The spec/design boundary applies: this paper is spec (WHAT the methodology is — tech-agnostic). Any particular implementation (Claude-based toolchain, Gemini-based toolchain, manual process) is design (HOW — tech-bound). The same paper can have many implementations, just as the same REQ can have many designs.
-
-**Applicability scope**: This formal system is applicable wherever the following conditions hold: (a) work produces typed artefacts, (b) artefacts have quality criteria, (c) quality can be evaluated, and (d) artefacts are constructed iteratively. These conditions are not specific to software — they describe any domain with iterative construction and quality evaluation. The four primitives are the minimal vocabulary for describing such domains. The SDLC graph is one instantiation; this paper documents the formal system that generates all valid instantiations.
+**Applicability scope**: The formal system applies wherever: (a) work produces typed artefacts, (b) artefacts have quality criteria, (c) quality can be evaluated, and (d) artefacts are constructed iteratively. These conditions are not software-specific — the four primitives are the minimal vocabulary for any domain with iterative construction and quality evaluation.
 
 ---
 
