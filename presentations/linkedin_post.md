@@ -31,6 +31,8 @@ Mark Solms' *The Hidden Spring* clarified the biological parallel. The brainstem
 
 Loading a constraint specification into an LLM is analogous: providing the intentional structure that shapes what the computation produces.
 
+I'm working on this "Consciousness Loop" in the AI SDLC methodology, from which intentionality arises, but that's a future post.
+
 Paper: *Programming LLM Reasoning*
 https://doi.org/10.5281/zenodo.18653641
 
