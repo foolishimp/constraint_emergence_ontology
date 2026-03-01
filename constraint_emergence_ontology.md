@@ -57,7 +57,7 @@ This document is written in the classical philosophical tradition, where ontolog
 
 This document does not propose a new physical substrate, a new computational rule set, or a new mathematical formalism. It operates at a higher level of abstraction: the structure of change itself.
 
-Across physics, computation, biology, cognition, and engineered systems, the medium differs—but the patterns governing how systems change, stabilise, collapse, and compose recur with striking regularity. This work adopts the position that these recurring patterns are not coincidental, nor merely metaphorical, but reflect structural invariants that persist across substrates.
+Across physics, computation, biology, cognition, and engineered systems, the medium differs—but the patterns governing how systems change, stabilise, collapse, and compose recur. This work adopts the position that these recurring patterns are not coincidental, nor merely metaphorical, but reflect structural invariants that persist across substrates.
 
 The central claim is therefore categorical, not material:
 

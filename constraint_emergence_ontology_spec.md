@@ -41,7 +41,7 @@ This is the framework's irreducible commitment. Everything else follows from it.
 |---|---|---|
 | **Constraint** | A condition determining which transformations (morphisms) are admissible. Not a rule of motion — a boundary of possibility. | Constraints generate by exclusion: reality is the remainder of the forbidden |
 | **Gap** | The region of possibility carved out by constraints. Reality forms *in* gaps, not from stuff. | Absential causation: the absent shapes what persists |
-| **Constraint Network** | The substrate. A self-consistent, evolving system of allowed/forbidden transitions. Not a static lattice — a dynamic system of shifting manifolds. | The substrate has no preferred decomposition; all "things" are projections |
+| **Constraint Network** | The substrate. A self-consistent, evolving system of allowed/forbidden transitions. Not a static lattice — a dynamic system of shifting manifolds. Has graph topology (adjacency and connectivity between nodes) but not geometry. Space does not exist at this level; it is projected from the constraint topology onto an emergent coordinate manifold. | The substrate has no preferred decomposition; all "things" are projections. Constraint-topology adjacency ≠ spatial adjacency |
 | **Markov Object** | A stable gap-pattern whose internal dynamics are conditionally independent of external dynamics given its boundary (Markov blanket). | Self-bounding: the boundary is maintained by the pattern, not imposed externally |
 | **Emergent Layer** | A level at which stable Markov objects form and constitute new constraints for the layer above. Each layer's "stuff" is the gap-structure of the layer below. | Layers are real but not fundamental |
 | **Unit of Change** | The discrete step by which the constraint network evolves. Not identified with Planck time or any specific quantity. Epistemically inaccessible from within emergence. | Change is fundamental; "time" is an emergent measure of change on a constraint surface |
@@ -64,6 +64,7 @@ This is the framework's irreducible commitment. Everything else follows from it.
 | **INV-08** | **Laws ≠ Physics** | Mathematical formalisms are compression algorithms for emergent regularities. They are not ontological primitives. Hilbert space, wavefunctions, and gauge fields describe the constraint network; they are not the network. |
 | **INV-09** | **Epistemic Inaccessibility** | The base unit of change's properties — scale, character, locality — are inaccessible from within emergence. We read the substrate through fingerprints it leaves in emergent layers, not by direct inspection. |
 | **INV-10** | **Determinism + Epistemic Randomness** | The constraint network evolves deterministically. Quantum randomness is an epistemic condition: the observer, embedded in the emergent manifold, cannot access the full substrate state. Probability is ignorance, not ontology. |
+| **INV-11** | **Constraint Topology Precedes Space** | The substrate has graph topology — adjacency and connectivity — not geometry. Projected spatial distance is a coarse-graining of constraint-topology path length. The two topologies are not isomorphic: the constraint network can have short paths between nodes that the spatial projection represents as far apart or barrier-separated. Quantum tunneling is the direct observational signature of this non-isomorphism: a constraint-topology path exists between initial and final states that has no spatial equivalent. Tunneling rate encodes the constraint-topology distance, not the spatial distance. |
 
 ---
 
@@ -155,6 +156,7 @@ Physics is our assembly language. We do not see the substrate (the hardware), bu
 | Markov blanket universality | Physics, Biology, Computation | Self-bounding patterns appear wherever the substrate is projected — substrate-level, not domain-specific |
 | Hierarchical composability | Biology, Computation, Physics | Markov objects within Markov objects at every scale — generic feature of any self-bounding constraint network |
 | Vacuum fluctuations | Physics | Surface of the substrate's own dynamical shifting — not fields at minimum energy, but the visible face of the layer below |
+| Quantum tunneling | Physics | Constraint-topology path exists between states that the spatial projection represents as barrier-separated. Tunneling amplitude encodes constraint-topology distance, not spatial distance — direct signature of the non-isomorphism between substrate adjacency and projected space |
 
 ### 8.3 Triangulation
 
@@ -197,6 +199,7 @@ Mathematics is the natural language of substrate reading because it deals in mor
 | **Constant derivation** | The framework is a conjecture until a physical constant (e.g., m_p/m_e ≈ 1836) is derived strictly from topological invariants of a self-bounding constraint closure. | An explicit computation from constraint topology to a numerical prediction that matches observation |
 | **Three generations** | Why exactly three fermion families is a genuine mystery (Type 1). | Identification of a topological invariant of the constraint closure that evaluates to 3 |
 | **Self-bounding closure** | The claim that the recursion terminates at a self-consistent fixed point is asserted, not proven. | A formal fixed-point theorem for constraint networks with the self-bounding property |
+| **Inverse projection problem** | Given that the constraint topology projects to 3+1 dimensional Lorentz-invariant spacetime with gauge symmetry SU(3)×SU(2)×U(1), what constraint-graph structure and coarse-graining kernel K are consistent with these observations? The projection is integral-equation-like: g_μν(x) ~ ∫ K(x,x',λ) ρ_c(x') dx'. The inverse problem — reading K and the graph structure from the emergent metric — is the precise mathematical formulation of the substrate-reading programme. Tunneling rates provide additional constraint: they encode the short-path structure of the graph that the coarse-graining suppresses but does not eliminate. | Identification of the coarse-graining kernel K consistent with all observed spacetime properties simultaneously; connection to existing programmes (causal dynamical triangulations, Wolfram hypergraph rewriting, MERA tensor networks) that operationalize the same inversion |
 
 ---
 
