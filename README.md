@@ -65,6 +65,7 @@ constraint_emergence_ontology/
 | Document | Description |
 |----------|-------------|
 | [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.3). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant, information-driven construction pattern. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
+| [Constraints and the Implicate Order](constraints_and_the_implicate_order.md) | **Philosophy of Science** — Extension of the ontology into a diagnostic methodology for intractable problems. Reframes physics problems (cosmological constant, measurement, three generations) as constraint-topology tasks using a Bohmian lens. |
 | [Concept Index](concepts.md) | Canonical concept map for the ontology: definitions, section locations, dependency graph, and epistemic status tags (axiom, derived, conjecture, instantiation). |
 | [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as probability degeneracy. Published on [Zenodo](https://zenodo.org/records/16592399). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. Published on [Zenodo](https://zenodo.org/records/18653641). |

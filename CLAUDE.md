@@ -7,6 +7,7 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 ## Documents
 
 - **constraint_emergence_ontology.md** (v1.3) - Core ontological framework (includes Part VIII-D: Constraint Functor)
+- **constraints_and_the_implicate_order.md** - Philosophy of science and diagnostic methodology for intractable problems (Bohmian extension)
 - **[emergent_reasoning](https://github.com/foolishimp/emergent_reasoning)** - Formal companion (separate repo): LLMs as constraint-manifold traversal systems
 - **ontology_templates.md** - Logical Encapsulation meta-template for LLM constraint specs
 - **political_os/** - Political OS Suite subdirectory containing:

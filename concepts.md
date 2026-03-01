@@ -159,6 +159,24 @@ Concepts discovered in the [AI SDLC Asset Graph Model](https://github.com/foolis
 | 78 | **Composite trajectory** | Complex Markov objects as composites of sub-objects produced along trajectories through the constraint manifold, carrying intent lineage (full causal chain). Not just hierarchical composition (#11) but sequential construction through multiple constraint edges. Each sub-component is a Markov object; the composite preserves history for traceability | §VIII-C.8 | 38, 7, 11 | Derived |
 | 79 | **Zoomable constraint structure** | Any transition in a constraint graph expandable into a sub-graph of finer-grained transitions; any sub-graph collapsible into a single edge. Granularity is a choice — the same operations apply at every scale. The hierarchy of constraint resolution (#11) made operational | §VIII-C.8 | 11, 15, 38 | Derived |
 
+## XI. Philosophy of Science and Methodology
+
+Concepts introduced in **[Constraints and the Implicate Order](constraints_and_the_implicate_order.md)** — the diagnostic methodology guide.
+
+| # | Concept | Definition | Location | Depends On | Status |
+|---|---------|-----------|----------|------------|--------|
+| 149 | **Type 1: Genuine mystery** | A well-formed question at the correct level that remains unanswered; survives translation into constraint vocabulary (e.g., three fermion generations) | CIO §1.2 | — | Meta |
+| 150 | **Type 2: Category error** | A question that computes a quantity at one emergent layer and attributes the result to a different layer (e.g., cosmological constant problem) | CIO §1.2, §4.2 | 10 | Meta |
+| 151 | **Type 3: Malformed question** | A question presupposing an external reference, selector, or space of alternatives that the framework does not contain (e.g., "Why this universe?") | CIO §1.2, §4.1 | 65, 66 | Meta |
+| 152 | **Type 4: Vocabulary failure** | A question asked in language that presupposes what it seeks to explain; translation into constraint vocabulary dissolves the paradox (e.g., measurement problem) | CIO §1.2, §4.3 | 2.2 | Meta |
+| 153 | **The Diagnostic Method** | Classifying problems into Type 1-4 before attempting solution; determining if intractability resides in the world or the question's grammar | CIO §1.3 | 149-152 | Meta |
+| 154 | **Reality arises from gaps** | Radical ontological claim: reality forms in the space of the permitted (the gaps) between constraints (the forbidden). Absential causation (#34) as foundational principle | CIO §2.3 | 1, 3, 34 | Axiom |
+| 155 | **The Assembler Analogy** | Methodology of reading substrate information from the constants, symmetries, and invariants of the emergent "assembly language" (physics) | CIO §5.1 | 6, 27 | Meta |
+| 156 | **Approximate Functor (Analogy)** | A mapping between domains that preserves some structure while losing other; where the analogy breaks down is as informative as where it holds | CIO §5.2 | 58, 67 | Meta |
+| 157 | **Substrate Triangulation** | Using multiple independent domain projections (physics, biology, computation) to tightly constrain the substrate topology | CIO §5.3 | 156, 6 | Meta |
+| 158 | **Epistemic Ceiling** | The set of substrate properties that leave no structural trace in any emergent domain; genuinely inaccessible showing mode | CIO §5.5 | 6, 67 | Meta |
+| 159 | **Saying vs Showing (Categorical)** | **Saying**: Direct description of substrate objects (unfaithful functor). **Showing**: Preservation of relational structure across projections (morphism-faithful functor) | CIO §5.5 | 67, 5 | Meta |
+
 ---
 
 ## Dependency Graph (Simplified)
