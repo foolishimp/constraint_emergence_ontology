@@ -47,6 +47,10 @@ This reframes the search:
 
 Fixed points are rare. In the space of all possible rewriting rules, most rules do one of two things under repeated coarse-graining: they flow to the trivial fixed point (empty graph, no dynamics) or they diverge (unbounded complexity). The non-trivial fixed points form a discrete set — or low-dimensional families called universality classes — in an otherwise continuous space. Searching among fixed points rather than all rules reduces the effective search space by orders of magnitude.
 
+A useful analogy: non-trivial fixed points are the **primes of rule space**. Most rules are composite — they factor under coarse-graining into trivial attractors, just as most integers factor into smaller integers. The non-trivial fixed points are irreducible under the RG operation. By the Fundamental Theorem analog: every rule R flows to a unique fixed point R* (or to the trivial fixed point, or diverges). The fixed point is the rule's irreducible attractor — its prime factorisation under coarse-graining. The universality class is the equivalence class of all rules sharing the same prime.
+
+This analogy is more than illustrative. The Sieve of Eratosthenes — the most efficient prime-finding strategy — works by elimination: mark composites cheaply, what remains must be prime. The fixed-point search has exactly this structure. The filter pipeline eliminates composite rules at each stage using successively more expensive tests. What survives must be a genuine fixed point. The search is a sieve, not a scan.
+
 Crucially, fixed-point search has a gradient: the RG flow itself. A rule close to a fixed point flows toward it. Rules can be ranked by how many coarse-graining steps they take to converge — a natural proximity measure to the fixed point. The search is guided, not random.
 
 ### 1.3 The CEO's Role
@@ -160,9 +164,16 @@ enumerate_rules(max_complexity)
         │  (Ray: distribute across workers)
         │
         ▼
-compute_rg_flow(Rᵢ)          ← per worker, JAX/GPU inner loop
+probabilistic_screen(Rᵢ, k=5)   ← CHEAP: apply k random CG steps, measure |ΔR|
     │
-    ├── Converged?   No  → discard (most rules)
+    ├── |ΔR| > threshold?   Yes → discard (~90% eliminated here)
+    │
+    └── No → probably near a fixed point; proceed
+        │
+        ▼
+compute_rg_flow(Rᵢ)              ← full convergence check, JAX/GPU inner loop
+    │
+    ├── Converged?   No  → discard
     │
     └── Yes → compute_invariants(fixed_point)
                     │
@@ -177,6 +188,8 @@ compute_rg_flow(Rᵢ)          ← per worker, JAX/GPU inner loop
                                 ▼
                            Compare to 1836.15
 ```
+
+The probabilistic screen is the Miller-Rabin analog: apply k random coarse-graining steps and check whether the rule moved. If it moved, it is definitely not a fixed point — discard immediately, at a fraction of the cost of full convergence testing. If it stayed close, it is probably near a fixed point — proceed to full testing. This eliminates the bulk of candidates before the expensive work begins, exactly as Miller-Rabin eliminates composite numbers before expensive primality certification.
 
 The filtering pipeline eliminates the vast majority of candidates before the expensive mass-ratio measurement. Only fixed points passing all geometric and quantum invariant checks reach the final test.
 
@@ -352,6 +365,18 @@ A fixed point with correct spectral dimension but wrong symmetry group is a part
 A fixed point with correct symmetry group but wrong mass ratio tells us the universality class is right but the stable structure identification is wrong — either the "particles" are being identified incorrectly, or a higher-complexity rule is needed.
 
 Partial results constrain subsequent searches. The programme is iterative, not binary.
+
+### 6.4 Uniqueness as a Theorem Target
+
+The prime analogy raises a question that the computational search alone cannot settle: is the physical fixed point unique?
+
+In number theory, every integer has a unique prime factorisation. The analog here: is there exactly one non-trivial fixed point with 3+1 Lorentz-invariant causal structure and Born Rule measure? If yes, the search terminates at a provably unique answer — not a contingent one discovered by exhaustion, but a necessary one proved by the structure of the RG flow.
+
+Uniqueness would mean: the CEO framework does not merely identify a candidate rule but derives it. The physical universe's rewriting rule is not selected from alternatives; it is the unique irreducible fixed point consistent with the observed invariants. The search finds it; the theorem explains why there is nothing else to find.
+
+If uniqueness fails — if multiple physically consistent fixed points exist — the search must determine which one matches observation, and the question "why this fixed point?" becomes a genuine mystery (Type 1 in the CEO taxonomy).
+
+**Uniqueness is therefore a separate mathematical target**, independent of the computational search. A proof strategy: show that the constraint equations imposed by 3+1 Lorentz invariance, causal invariance, and Born Rule statistics are sufficiently overdetermined that only one fixed point satisfies all simultaneously. The approach mirrors the Connes uniqueness programme for the finite algebra — classifying all self-consistent solutions and showing the solution space has exactly one element. Both are the same problem at different strata.
 
 ---
 
