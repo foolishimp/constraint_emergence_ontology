@@ -841,6 +841,12 @@ adds:
   fibered context structure, stratified object, distributed circuit
   object, or schema object. `topological_model_assessment.md` records
   this model-evaluation frame.
+- **Mine high-order concepts as topology, not only token objects.**
+  The first `value` probe (exp 32) reads GPT-2 small as
+  lexical-basin-dominant: carrier identity is cleanly separable, while
+  market/legal/moral/policy/personal/information regimes around the
+  same `value` token are only weakly separable. This makes `value` a
+  useful cross-model test for richer topological structure.
 - **Improve the behavioural assay rather than overread exp 22.** The
   current generation classifier is too reference-biased at baseline. A
   stronger free-generation or downstream-task probe is needed.
@@ -879,7 +885,8 @@ markov_object_research/
 │   ├── 22_freeform_generation.py
 │   ├── 23_compositional_algebra.py
 │   ├── 24_cross_model_pythia.py
-│   └── 25_multilayer_realized_topology_gate.py
+│   ├── 25_multilayer_realized_topology_gate.py
+│   └── 32_value_topology_gpt2.py
 └── results/
     ├── 08_feature_identity/            feature_report.txt, overlap.png, strength.png
     ├── 09_context_conditional/         annotated_report.txt, 3 plots
@@ -898,7 +905,8 @@ markov_object_research/
     ├── 22_freeform_generation/         generation_report.txt, summary, plots
     ├── 23_compositional_algebra/       compositional_report.txt, summary, plots
     ├── 24_cross_model_pythia/          cross_model_report.txt, summary, plots
-    └── 25_multilayer_gate/             gate_report.txt, summary, plots
+    ├── 25_multilayer_gate/             gate_report.txt, summary, plots
+    └── 32_value_topology/              value_topology_report.txt, summary, plots
 ```
 
 ---

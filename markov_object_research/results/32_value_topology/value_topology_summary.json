@@ -1,0 +1,692 @@
+{
+  "classification": {
+    "reading": "lexical_basin_dominant",
+    "best_regime_layer": 2,
+    "best_regime_accuracy": 0.2333333333333333,
+    "best_regime_macro_f1": 0.19545454545454546,
+    "best_regime_silhouette": -0.20592044293880463,
+    "best_carrier_layer": 2,
+    "best_carrier_accuracy": 1.0,
+    "best_carrier_macro_f1": 1.0,
+    "best_carrier_silhouette": 0.6443917155265808,
+    "regime_gain_over_chance": 0.1333333333333333,
+    "carrier_gain_over_chance": 0.75
+  },
+  "layers": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    11
+  ],
+  "plot_layer": 8,
+  "regime_names": [
+    "accounting",
+    "information",
+    "insurance",
+    "legal",
+    "market",
+    "medical",
+    "moral",
+    "personal",
+    "policy",
+    "social"
+  ],
+  "carrier_names": [
+    "cost",
+    "price",
+    "value",
+    "worth"
+  ],
+  "regime_probe": {
+    "2": {
+      "accuracy": 0.2333333333333333,
+      "macro_f1": 0.19545454545454546,
+      "fold_accuracy": [
+        0.25,
+        0.25,
+        0.2
+      ],
+      "fold_macro_f1": [
+        0.19303030303030302,
+        0.2066666666666667,
+        0.18666666666666665
+      ]
+    },
+    "4": {
+      "accuracy": 0.19999999999999998,
+      "macro_f1": 0.1705050505050505,
+      "fold_accuracy": [
+        0.3,
+        0.15,
+        0.15
+      ],
+      "fold_macro_f1": [
+        0.2833333333333333,
+        0.11000000000000001,
+        0.1181818181818182
+      ]
+    },
+    "6": {
+      "accuracy": 0.16666666666666666,
+      "macro_f1": 0.12383838383838382,
+      "fold_accuracy": [
+        0.2,
+        0.15,
+        0.15
+      ],
+      "fold_macro_f1": [
+        0.15333333333333332,
+        0.10818181818181818,
+        0.11000000000000001
+      ]
+    },
+    "8": {
+      "accuracy": 0.18333333333333335,
+      "macro_f1": 0.1209090909090909,
+      "fold_accuracy": [
+        0.2,
+        0.2,
+        0.15
+      ],
+      "fold_macro_f1": [
+        0.10969696969696971,
+        0.143030303030303,
+        0.11000000000000001
+      ]
+    },
+    "10": {
+      "accuracy": 0.21666666666666667,
+      "macro_f1": 0.17595959595959595,
+      "fold_accuracy": [
+        0.2,
+        0.2,
+        0.25
+      ],
+      "fold_macro_f1": [
+        0.10969696969696971,
+        0.1915151515151515,
+        0.22666666666666666
+      ]
+    },
+    "11": {
+      "accuracy": 0.20000000000000004,
+      "macro_f1": 0.13979797979797978,
+      "fold_accuracy": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "fold_macro_f1": [
+        0.10969696969696971,
+        0.143030303030303,
+        0.16666666666666669
+      ]
+    }
+  },
+  "carrier_probe": {
+    "2": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "4": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "6": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "8": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "10": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "11": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "fold_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_macro_f1": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "regime_silhouette": {
+    "2": -0.20592044293880463,
+    "4": -0.19616052508354187,
+    "6": -0.19664892554283142,
+    "8": -0.19109505414962769,
+    "10": -0.20452050864696503,
+    "11": -0.21269889175891876
+  },
+  "carrier_silhouette": {
+    "2": 0.6443917155265808,
+    "4": 0.4230165481567383,
+    "6": 0.35115671157836914,
+    "8": 0.2757529318332672,
+    "10": 0.20939314365386963,
+    "11": 0.16231048107147217
+  },
+  "regime_geometry": {
+    "names": [
+      "accounting",
+      "information",
+      "insurance",
+      "legal",
+      "market",
+      "medical",
+      "moral",
+      "personal",
+      "policy",
+      "social"
+    ],
+    "centroid_cosine": [
+      [
+        1.0,
+        0.9486942291259766,
+        0.9823026061058044,
+        0.9597786664962769,
+        0.9717857241630554,
+        0.9628983736038208,
+        0.9644638299942017,
+        0.9604721665382385,
+        0.9727374315261841,
+        0.9695051908493042
+      ],
+      [
+        0.9486942291259766,
+        1.0000001192092896,
+        0.9530893564224243,
+        0.9482952356338501,
+        0.9531241655349731,
+        0.9657353162765503,
+        0.9724825620651245,
+        0.9879969358444214,
+        0.9588952660560608,
+        0.9661030769348145
+      ],
+      [
+        0.9823026061058044,
+        0.9530893564224243,
+        1.0000001192092896,
+        0.9765424728393555,
+        0.986269474029541,
+        0.9789377450942993,
+        0.9720918536186218,
+        0.9650209546089172,
+        0.9902671575546265,
+        0.9743079543113708
+      ],
+      [
+        0.9597786664962769,
+        0.9482952356338501,
+        0.9765424728393555,
+        0.9999998807907104,
+        0.9814243912696838,
+        0.9782465696334839,
+        0.9671090841293335,
+        0.9586699604988098,
+        0.9832634925842285,
+        0.9700244665145874
+      ],
+      [
+        0.9717857241630554,
+        0.9531241655349731,
+        0.986269474029541,
+        0.9814243912696838,
+        1.0,
+        0.9835366606712341,
+        0.9739658832550049,
+        0.9643173217773438,
+        0.9880302548408508,
+        0.9775564074516296
+      ],
+      [
+        0.9628983736038208,
+        0.9657353162765503,
+        0.9789377450942993,
+        0.9782465696334839,
+        0.9835366606712341,
+        1.0,
+        0.9852126240730286,
+        0.9770298600196838,
+        0.9883435368537903,
+        0.9877334237098694
+      ],
+      [
+        0.9644638299942017,
+        0.9724825620651245,
+        0.9720918536186218,
+        0.9671090841293335,
+        0.9739658832550049,
+        0.9852126240730286,
+        1.0000001192092896,
+        0.9873812794685364,
+        0.9791591763496399,
+        0.9934554100036621
+      ],
+      [
+        0.9604721665382385,
+        0.9879969358444214,
+        0.9650209546089172,
+        0.9586699604988098,
+        0.9643173217773438,
+        0.9770298600196838,
+        0.9873812794685364,
+        1.0,
+        0.9701356291770935,
+        0.9808283448219299
+      ],
+      [
+        0.9727374315261841,
+        0.9588952660560608,
+        0.9902671575546265,
+        0.9832634925842285,
+        0.9880302548408508,
+        0.9883435368537903,
+        0.9791591763496399,
+        0.9701356291770935,
+        1.000000238418579,
+        0.9831278920173645
+      ],
+      [
+        0.9695051908493042,
+        0.9661030769348145,
+        0.9743079543113708,
+        0.9700244665145874,
+        0.9775564074516296,
+        0.9877334237098694,
+        0.9934554100036621,
+        0.9808283448219299,
+        0.9831278920173645,
+        1.0
+      ]
+    ],
+    "within_cosine_distance": 0.08694984038670858,
+    "between_cosine_distance": 0.09723567252541766,
+    "between_minus_within": 0.01028583213870908
+  },
+  "carrier_geometry": {
+    "names": [
+      "cost",
+      "price",
+      "value",
+      "worth"
+    ],
+    "centroid_cosine": [
+      [
+        0.9999998211860657,
+        0.8855292797088623,
+        0.8322831988334656,
+        0.7707655429840088
+      ],
+      [
+        0.8855292797088623,
+        0.9999997615814209,
+        0.8588172793388367,
+        0.7286216616630554
+      ],
+      [
+        0.8322831988334656,
+        0.8588172793388367,
+        0.9999997615814209,
+        0.8287340998649597
+      ],
+      [
+        0.7707655429840088,
+        0.7286216616630554,
+        0.8287340998649597,
+        1.0
+      ]
+    ],
+    "within_cosine_distance": 0.10167902369390834,
+    "between_cosine_distance": 0.25858842705686885,
+    "between_minus_within": 0.1569094033629605
+  },
+  "carrier_neighbors_to_value": [
+    {
+      "term": "price",
+      "cosine_to_value": 0.8588172793388367
+    },
+    {
+      "term": "cost",
+      "cosine_to_value": 0.8322831988334656
+    },
+    {
+      "term": "worth",
+      "cosine_to_value": 0.8287340998649597
+    }
+  ],
+  "pca_variance": {
+    "value_regime_layer8": [
+      0.1897592842578888,
+      0.14216069877147675
+    ],
+    "carrier_layer8": [
+      0.24885177612304688,
+      0.15735895931720734
+    ]
+  },
+  "value_regime_prompts": [
+    {
+      "regime": "market",
+      "text": "The market value of the asset changed overnight."
+    },
+    {
+      "regime": "market",
+      "text": "Traders debated the value of the stock after earnings."
+    },
+    {
+      "regime": "market",
+      "text": "The value of the currency fell against the dollar."
+    },
+    {
+      "regime": "market",
+      "text": "The auction revealed the value buyers would accept."
+    },
+    {
+      "regime": "market",
+      "text": "Liquidity changed the value quoted on the exchange."
+    },
+    {
+      "regime": "market",
+      "text": "The value of the commodity rose with demand."
+    },
+    {
+      "regime": "accounting",
+      "text": "The book value of the asset was impaired."
+    },
+    {
+      "regime": "accounting",
+      "text": "Auditors reviewed the fair value in the report."
+    },
+    {
+      "regime": "accounting",
+      "text": "The carrying value was adjusted after depreciation."
+    },
+    {
+      "regime": "accounting",
+      "text": "The value on the balance sheet was restated."
+    },
+    {
+      "regime": "accounting",
+      "text": "Management estimated the recoverable value of goodwill."
+    },
+    {
+      "regime": "accounting",
+      "text": "The residual value affected the lease calculation."
+    },
+    {
+      "regime": "policy",
+      "text": "The statistical value of a life guides safety rules."
+    },
+    {
+      "regime": "policy",
+      "text": "Regulators used the value of a life in cost benefit analysis."
+    },
+    {
+      "regime": "policy",
+      "text": "The value assigned to risk reduction shaped the policy."
+    },
+    {
+      "regime": "policy",
+      "text": "The agency estimated the value of avoided fatalities."
+    },
+    {
+      "regime": "policy",
+      "text": "Public policy compared the value of safety with cost."
+    },
+    {
+      "regime": "policy",
+      "text": "The value of prevention was measured across the population."
+    },
+    {
+      "regime": "legal",
+      "text": "The court considered the value of the lost claim."
+    },
+    {
+      "regime": "legal",
+      "text": "Damages reflected the value of the contract right."
+    },
+    {
+      "regime": "legal",
+      "text": "The legal value of the evidence depended on relevance."
+    },
+    {
+      "regime": "legal",
+      "text": "The value of the estate was disputed in court."
+    },
+    {
+      "regime": "legal",
+      "text": "The judge assessed the value of compensation."
+    },
+    {
+      "regime": "legal",
+      "text": "The settlement turned on the value of the injury."
+    },
+    {
+      "regime": "insurance",
+      "text": "The insured value of the property set the premium."
+    },
+    {
+      "regime": "insurance",
+      "text": "The policy stated the value payable after death."
+    },
+    {
+      "regime": "insurance",
+      "text": "Actuaries estimated the value of the future claim."
+    },
+    {
+      "regime": "insurance",
+      "text": "The replacement value was higher than the cash payout."
+    },
+    {
+      "regime": "insurance",
+      "text": "The value of the annuity depended on life expectancy."
+    },
+    {
+      "regime": "insurance",
+      "text": "The insurer calculated the value of the loss."
+    },
+    {
+      "regime": "moral",
+      "text": "The value of a human life cannot be reduced to money."
+    },
+    {
+      "regime": "moral",
+      "text": "Moral value is not the same as market price."
+    },
+    {
+      "regime": "moral",
+      "text": "The value of dignity survived every calculation."
+    },
+    {
+      "regime": "moral",
+      "text": "The value of compassion mattered more than profit."
+    },
+    {
+      "regime": "moral",
+      "text": "A person's value is not measured by productivity."
+    },
+    {
+      "regime": "moral",
+      "text": "The value of justice constrained the decision."
+    },
+    {
+      "regime": "personal",
+      "text": "To her family the value of his life was immeasurable."
+    },
+    {
+      "regime": "personal",
+      "text": "The ring had value because it belonged to her mother."
+    },
+    {
+      "regime": "personal",
+      "text": "The value of the letter came from memory."
+    },
+    {
+      "regime": "personal",
+      "text": "Sentimental value made the old watch priceless."
+    },
+    {
+      "regime": "personal",
+      "text": "The value of the photograph was personal."
+    },
+    {
+      "regime": "personal",
+      "text": "Its value came from grief, love, and history."
+    },
+    {
+      "regime": "social",
+      "text": "The social value of trust held the community together."
+    },
+    {
+      "regime": "social",
+      "text": "The value of reputation changed how people cooperated."
+    },
+    {
+      "regime": "social",
+      "text": "The public value of the park exceeded its revenue."
+    },
+    {
+      "regime": "social",
+      "text": "The value of care work was ignored by the market."
+    },
+    {
+      "regime": "social",
+      "text": "The value of the institution depended on legitimacy."
+    },
+    {
+      "regime": "social",
+      "text": "The value of cooperation appeared during the crisis."
+    },
+    {
+      "regime": "information",
+      "text": "The value of the signal was its reduction of uncertainty."
+    },
+    {
+      "regime": "information",
+      "text": "Information value rose before the decision deadline."
+    },
+    {
+      "regime": "information",
+      "text": "The value of the data depended on its accuracy."
+    },
+    {
+      "regime": "information",
+      "text": "The report had value because it changed the forecast."
+    },
+    {
+      "regime": "information",
+      "text": "The value of the clue was revealed later."
+    },
+    {
+      "regime": "information",
+      "text": "The option had value because it preserved information."
+    },
+    {
+      "regime": "medical",
+      "text": "The medical team protected the value of each life."
+    },
+    {
+      "regime": "medical",
+      "text": "Triage exposed the value of time under scarcity."
+    },
+    {
+      "regime": "medical",
+      "text": "The value of treatment depended on expected benefit."
+    },
+    {
+      "regime": "medical",
+      "text": "The value of a transplant slot was ethically fraught."
+    },
+    {
+      "regime": "medical",
+      "text": "The value of care was measured in survival and dignity."
+    },
+    {
+      "regime": "medical",
+      "text": "The value of intervention changed with prognosis."
+    }
+  ],
+  "carrier_terms": [
+    "value",
+    "price",
+    "cost",
+    "worth"
+  ],
+  "carrier_templates": [
+    "In the market report, the asset's {term} was uncertain.",
+    "During the court case, the claim's {term} was debated.",
+    "Under the policy model, the expected {term} was calculated.",
+    "At the family meeting, the object's {term} was personal.",
+    "In the accounting note, the recorded {term} changed.",
+    "For the insurer, the replacement {term} was disputed.",
+    "Before the trade, the quoted {term} moved quickly.",
+    "In the ethics review, the human {term} could not be priced.",
+    "After the forecast changed, the information's {term} rose.",
+    "In the contract, the promised {term} became unclear.",
+    "For the community, the institution's {term} depended on trust.",
+    "During triage, the intervention's {term} depended on prognosis."
+  ]
+}

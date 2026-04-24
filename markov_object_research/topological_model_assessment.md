@@ -208,7 +208,44 @@ This supports a distinct evaluation claim:
 
 ---
 
-## 8. Mining Agenda
+## 8. Reading Exp 32 Under This Frame
+
+Exp 32 applies the topology frame to `value` in GPT-2 small.
+
+The assay asks whether the residual at the token `value` separates
+economic, accounting, policy, legal, insurance, moral, personal, social,
+information, and medical regimes. It also runs a carrier contrast over
+`value`, `price`, `cost`, and `worth` after varied left contexts.
+
+Result:
+
+- best ten-way `value`-regime accuracy is `0.233` at layer 2, against
+  `0.100` chance;
+- value-regime macro F1 is `0.195`;
+- value-regime silhouette is negative (`-0.206`);
+- carrier identity is perfectly linearly separable in the tested
+  carrier assay;
+- at layer 8, value-regime centroids are very close
+  (`between - within` cosine distance only `0.0103`);
+- carrier centroids are much more separated (`between - within`
+  cosine distance `0.1569`);
+- the `value` carrier centroid is closest to `price` (`0.8588`), then
+  `cost` (`0.8323`), then `worth` (`0.8287`).
+
+Topology reading:
+
+> In GPT-2 small, `value` is primarily a lexical carrier basin with weak
+> regime fibers. The tested residual chart does not expose a rich
+> cross-regime value topology.
+
+That is the candle baseline. It does not mean that `value` lacks a
+topology in richer models. It means GPT-2 small does not strongly
+separate market, legal, moral, policy, personal, and informational
+regimes at the local `value` token under this assay.
+
+---
+
+## 9. Mining Agenda
 
 The next discovery mode should search GPT-2 and stronger models for
 regions where object boundaries are easiest to expose.
@@ -237,7 +274,7 @@ The output is a topology atlas, not just a pass/fail list.
 
 ---
 
-## 9. Working Formulation
+## 10. Working Formulation
 
 The research program should be stated this way:
 

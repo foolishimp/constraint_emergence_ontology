@@ -1,0 +1,54 @@
+Exp 32 - Value Topology in GPT-2
+========================================================================
+
+This is a topology-mapping experiment, not a promotion gate.
+
+Layers: [2, 4, 6, 8, 10, 11]
+Value-regime prompts: 60
+Carrier prompts: 48
+
+TOPOLOGY READING: lexical_basin_dominant
+
+Best value-regime separability:
+  layer:      2
+  accuracy:   0.233
+  macro F1:   0.195
+  silhouette: -0.206
+
+Best carrier separability:
+  layer:      2
+  accuracy:   1.000
+  macro F1:   1.000
+  silhouette: 0.644
+
+Probe accuracy by layer:
+  layer 2: value-regime acc=0.233, carrier acc=1.000
+  layer 4: value-regime acc=0.200, carrier acc=1.000
+  layer 6: value-regime acc=0.167, carrier acc=1.000
+  layer 8: value-regime acc=0.183, carrier acc=1.000
+  layer 10: value-regime acc=0.217, carrier acc=1.000
+  layer 11: value-regime acc=0.200, carrier acc=1.000
+
+Centroid geometry at layer 8:
+  value regimes:
+    within cosine distance:  0.0869
+    between cosine distance: 0.0972
+    between - within:        0.0103
+  carriers:
+    within cosine distance:  0.1017
+    between cosine distance: 0.2586
+    between - within:        0.1569
+
+Carrier centroid cosine to value at layer 8:
+  price: 0.8588
+  cost: 0.8323
+  worth: 0.8287
+
+Interpretation:
+  The carrier probe is expected to be easier because the target
+  token changes. Its purpose is to measure how strongly local
+  lexical carrier identity survives after varied left contexts.
+  A high value-regime score would mean the same token 'value'
+  carries separable contextual fibers. GPT-2 should be read as
+  topologically richer when regime separability rises above chance
+  without merely collapsing into carrier form.
