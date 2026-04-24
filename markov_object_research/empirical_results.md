@@ -835,6 +835,12 @@ adds:
   identity under stronger chart construction, and whether the pattern
   survives broader implementation variation. The successor wave remains
   tracked in `experiments_25_31_design.md`.
+- **Treat negative gates as topology measurements.** The next frame is
+  not merely "find a blanket or fail." It is to map what topological
+  form the model has learned: label basin, concept basin, bundle,
+  fibered context structure, stratified object, distributed circuit
+  object, or schema object. `topological_model_assessment.md` records
+  this model-evaluation frame.
 - **Improve the behavioural assay rather than overread exp 22.** The
   current generation classifier is too reference-biased at baseline. A
   stronger free-generation or downstream-task probe is needed.
@@ -854,6 +860,7 @@ adds:
 
 ```
 markov_object_research/
+├── topological_model_assessment.md
 ├── experiments/
 │   ├── 08_feature_identity.py
 │   ├── 09_context_conditional_objects.py

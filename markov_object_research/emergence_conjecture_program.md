@@ -4,7 +4,7 @@
 **Scope:** theoretical strengthening beyond engineering sufficiency  
 **Companion to:** `world_model_project_paper.md`, `empirical_results.md`,
 `wmp_so_what.md`, `emergent_markov_object_evidence.md`,
-`experiments_25_31_design.md`
+`experiments_25_31_design.md`, `topological_model_assessment.md`
 
 ## 1. Purpose
 
@@ -28,6 +28,11 @@ This document defines the stronger, separate conjecture:
 
 The conjecture is not needed to justify the engineering program. It is a
 deeper theoretical claim about what the engineering artifact is tracking.
+
+This program now sits inside a broader topological-assessment frame:
+before evaluating a model's reasoning, evaluate what object topology the
+model has made available to reason over. `topological_model_assessment.md`
+states that frame directly.
 
 ## 2. Distinguish The Claims
 
@@ -236,3 +241,21 @@ So the relationship is:
 
 The engineering line does not wait for the full emergence program to
 close.
+
+## 9. Relation To Topological Model Assessment
+
+The emergence conjecture is one branch of a broader model-evaluation
+claim:
+
+> LLMs should be evaluated as learned projected topologies before they
+> are evaluated as reasoners over those topologies.
+
+Markov blankets are the strongest boundary result. They are not the
+only useful result. A failed blanket test can still classify the local
+shape as label-bound, carrier-sensitive, fragmented, stratified,
+distributed, or insufficiently rich.
+
+Under this frame, Exp 25 is not a dead end. It says the tested
+`666/999/137` region in GPT-2 small does not expose a closed blanket
+under the simple residual chart. That is evidence about the shape of
+GPT-2's topology, not a global refutation of Markov objects.

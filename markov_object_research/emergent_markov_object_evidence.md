@@ -1,8 +1,9 @@
 # Evidence Brief: Emergent Markov Object Proposition
 
-**Status:** experimental evidence brief  
-**Scope:** support and limits for the stronger emergence proposition  
-**Companion to:** `emergence_conjecture_program.md`, `empirical_results.md`  
+**Status:** experimental evidence brief
+**Scope:** support and limits for the stronger emergence proposition
+**Companion to:** `emergence_conjecture_program.md`, `empirical_results.md`,
+`topological_model_assessment.md`
 **Draft date:** 2026-04-24
 
 ---
@@ -108,6 +109,11 @@ The joint chart does not beat the best single chart, and residual
 identity remains probe-readable. This weakens the simple version of the
 emergence proposition in which "the right multi-layer residual chart"
 would close the promotion gate.
+
+It does not make the result useless. Under the topological-assessment
+frame, the failed gate is a measurement of shape: in GPT-2 small, this
+region looks carrier-sensitive, fragmented, layer-coherent, and not
+closed by the tested residual chart.
 
 ### 2.5 SAE feature basis senses and fragments the object
 

@@ -4,9 +4,10 @@
 now been executed; experiments 26-31 remain pending.
 **Scope:** seven experiments that test the stronger emergence conjecture:
 candidate Markov-object identity is realized across the constrained
-technical stack and only projected through local charts.  
+technical stack and only projected through local charts.
 **Companion:** `emergence_conjecture_program.md`,
-`emergent_markov_object_evidence.md`, `empirical_results.md` section 13.4.  
+`emergent_markov_object_evidence.md`, `empirical_results.md` section 13.4,
+`topological_model_assessment.md`.
 **Draft date:** 2026-04-24.
 
 ---
@@ -31,6 +32,8 @@ The current question is therefore sharper:
 This document commits to the next evidence wave. The experiments do not
 lower the promotion burden. They test whether the correct conditioning
 surface is multi-chart, distributed, and implementation-invariant.
+They also support a broader topology-mapping agenda: negative gate
+results still classify the shape of the learned representation.
 
 All experiments use the same baseline rig as experiments 18-24 unless
 otherwise noted:
