@@ -61,15 +61,18 @@ The present results already point in the direction of emergence:
 - composition is positive
 - first cross-model replication is positive
 - single-chart conditional-independence subtraction fails
+- first multi-layer realized-topology conditioning also fails
 
 That pattern is more consistent with a distributed realized topology
-than with one clean local storage site.
+than with one clean local storage site, but it is not yet direct
+gate-level support for the emergence conjecture.
 
 The evidence brief in `emergent_markov_object_evidence.md` records the
 current measured support and limits. Its operative conclusion is that
 the experiments support an emergent-chart reading of **candidate**
 Markov objects: local charts are coherent and useful, but no tested
-single chart closes the conditional-independence gate.
+single chart or first multi-layer residual chart closes the
+conditional-independence gate.
 
 The concrete next-wave protocols are pre-registered in
 `experiments_25_31_design.md`. That document is the execution surface
@@ -77,12 +80,14 @@ for the experiment waves named below.
 
 ## 4. Central Hypothesis
 
-The best current working hypothesis is:
+The best current working hypothesis is now narrower:
 
 > The Markov object is realized across the constrained technical stack.
-> Any one layer-local direction is a useful chart on that object, but
-> not the whole object. The promotion-gate failure therefore reflects
-> chart insufficiency, not necessarily the absence of objecthood.
+> Any one layer-local direction is a useful chart on that object, and
+> the simple `2/4/6/8` residual chart is still insufficient. The
+> promotion-gate failure may therefore reflect missing chart families,
+> nonlinear state, or non-object-level probe signal rather than absence
+> of objecthood.
 
 This is the load-bearing distinction for the next wave.
 
@@ -93,8 +98,9 @@ If the conjecture is right, the following should hold:
 1. No single local chart will be sufficient to eliminate identity
    information.
 2. Multiple local charts will be coherent with one another.
-3. Joint conditioning on a realized multi-layer chart should reduce
-   residual identity signal more than any single-layer subtraction.
+3. Stronger joint conditioning on the right realized chart should reduce
+   residual identity signal more than any single-layer subtraction. The
+   first `2/4/6/8` residual-chart version did not.
 4. Distributed interventions should outperform single-locus ownership
    stories.
 5. The object should remain recoverable under architecture or model
@@ -106,16 +112,20 @@ If those predictions fail, the emergence conjecture weakens materially.
 
 ### 6.1 Multi-layer realized-topology conditioning
 
-Replace the current single-layer promotion gate with a realized-chart
-gate:
+Status: executed as exp 25. Aggregate outcome: **FAIL**.
 
-- build a joint chart across several layers
-- separate core identity coordinates from coat/context coordinates where
-  possible
-- test whether residual variation remains predictive once the joint
-  chart is conditioned on
+The first realized-chart gate:
 
-This is the direct successor to the current failed gate.
+- built a joint chart across several layers
+- used layers `2/4/6/8`
+- conditioned the concatenated residual on joint chart coordinates
+- tested whether residual variation remained predictive once the joint
+  chart was conditioned on
+
+Residual identity remained highly predictive
+(`AUC_joint=1.000`, `0.989`, `0.978` for `999`, `666`, `137`), so the
+simple residual multi-chart successor to the current failed gate also
+fails.
 
 ### 6.2 Distributed ownership audit
 
@@ -187,7 +197,8 @@ chart interventions more cleanly than single-layer interventions.
 The emergence conjecture becomes substantially stronger if we get the
 following conjunction:
 
-- multi-layer conditioning outperforms single-layer conditioning
+- a stronger distributed or nonlinear conditioning surface outperforms
+  single-layer conditioning
 - distributed interventions outperform local ownership stories
 - partial charts reconstitute the object jointly
 - the pattern survives model variation
@@ -197,9 +208,13 @@ following conjunction:
 The conjecture weakens if:
 
 - one local locus turns out to own the effect cleanly
-- multi-layer conditioning adds little over the best single chart
+- simple multi-layer conditioning adds little over the best single chart
 - distributed reconstitution fails
 - cross-model robustness collapses
+
+Exp 25 already realizes the second weakening condition for the tested
+`2/4/6/8` residual chart. It does not by itself decide the ownership,
+reconstitution, or robustness questions.
 
 ## 8. Relation To The Engineering Program
 

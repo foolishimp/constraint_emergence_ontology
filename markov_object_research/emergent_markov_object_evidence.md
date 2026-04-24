@@ -90,7 +90,26 @@ identity. Residual identity remains elsewhere in the realized system.
 The correct reading is not "promotion passed." It did not. The correct
 reading is: single-chart ownership failed.
 
-### 2.4 SAE feature basis senses and fragments the object
+### 2.4 First realized-topology gate also fails
+
+Exp 25 tested the direct successor hypothesis: maybe exp 20 failed
+because it conditioned on one local chart instead of a joint
+`2/4/6/8` realized-topology chart.
+
+That gate also fails.
+
+| target | AUC(full) | AUC(best single) | AUC(joint) | HSIC p | outcome |
+|---|---:|---:|---:|---:|---|
+| 999 | `1.000` | `0.994` | `1.000` | `0.010` | FAIL |
+| 666 | `1.000` | `1.000` | `0.989` | `0.015` | FAIL |
+| 137 | `1.000` | `0.972` | `0.978` | `0.687` | FAIL |
+
+The joint chart does not beat the best single chart, and residual
+identity remains probe-readable. This weakens the simple version of the
+emergence proposition in which "the right multi-layer residual chart"
+would close the promotion gate.
+
+### 2.5 SAE feature basis senses and fragments the object
 
 Exps 08-17 show that SAE features provide an attribute basis, not the
 object itself.
@@ -109,7 +128,7 @@ This supports the projection reading. A feature dictionary senses the
 object and fragments it across atoms. That is exactly the pattern expected
 if local representations are charts over a broader realized topology.
 
-### 2.5 Composition is real
+### 2.6 Composition is real
 
 Exp 23 tested whether identity directions compose.
 
@@ -126,7 +145,7 @@ This is positive evidence that the direction family behaves object-like,
 not merely as isolated probes. Composability is a key discriminator
 between "feature cluster" and "candidate Markov object."
 
-### 2.6 First cross-model replication is positive
+### 2.7 First cross-model replication is positive
 
 Exp 24 ported the direction-native transfer assay to Pythia-160M without
 SAEs.
@@ -140,7 +159,7 @@ SAEs.
 All three targets pass the relaxed replication criterion. This does not
 prove substrate neutrality. It does show the phenomenon is not GPT-2-only.
 
-### 2.7 Behavioural generation remains inconclusive
+### 2.8 Behavioural generation remains inconclusive
 
 Exp 22 did not provide clean behavioural closure. Both layer-8 and layer-2
 free-form generation assays are confounded by high reference-class
@@ -158,18 +177,20 @@ Current evidence supports this narrower claim:
 
 > Candidate Markov-object identity is expressed by a coherent,
 > layer-sensitive direction family whose local charts compose and begin
-> to replicate across model families, while no tested single chart closes
-> the conditional-independence gate.
+> to replicate across model families, while no tested conditioning chart
+> closes the conditional-independence gate.
 
-That is evidence for emergent realization over local ownership.
+That is evidence for coherent distributed realization over trivial
+local ownership. Exp 25 means it is not yet gate-level evidence for the
+stronger realized-topology claim.
 
 Current evidence does not support the stronger claim:
 
 > The Markov object is formally established as a Markov blanket in the
 > tested system.
 
-The promotion gate fails at both tested layers. Accepted status is not
-earned.
+The promotion gate fails for single charts at both tested layers and
+for the first multi-layer residual chart. Accepted status is not earned.
 
 ---
 
@@ -180,16 +201,20 @@ The current results do not eliminate these readings:
 - **Early-layer ownership:** layer 2 may be the primary local owner, with
   later layers carrying transformed traces. Exp 20 weakens this because
   subtracting the layer-2 chart leaves identity perfectly predictable, but
-  it does not fully rule it out.
+  it does not fully rule it out. Exp 25 also shows that a simple
+  `2/4/6/8` residual chart does not settle the question.
 - **Prompt-template artefact:** paired templates may induce a reusable
   contrast direction that is less general than object identity.
 - **Token-form artefact:** GPT-2 scale remains symbol-bound. The result may
   concern token identities more than concepts.
 - **Representation-family artefact:** GPT-2 small plus Pythia-160M is not
   broad model coverage.
-- **Probe strength mismatch:** the CI failure may show that the projection
-  is insufficient, or that the residual probe can exploit information that
-  is not object-level in the intended sense.
+- **Chart-family incompleteness:** the failed joint chart may still be
+  the wrong chart family. Residual-layer mean-diff coordinates may miss
+  routing, attention/MLP, SAE-coat, or nonlinear state.
+- **Probe strength mismatch:** the CI failure may show that the
+  projection is insufficient, or that the residual probe can exploit
+  information that is not object-level in the intended sense.
 
 These alternatives define the next discriminators.
 
@@ -197,23 +222,28 @@ These alternatives define the next discriminators.
 
 ## 5. Discriminating Next Experiments
 
-The next evidence wave should not soften the promotion gate. It should
-test whether the failed gate was using the wrong chart.
+The next evidence wave should not soften the promotion gate. Exp 25
+shows that a simple multi-layer residual chart is not enough, so the
+next discriminators should test ownership, reconstitution, trajectory,
+and implementation variation.
 
-### 5.1 Multi-layer realized-topology conditioning
+### 5.1 Completed: multi-layer realized-topology conditioning
 
-Build a joint chart over layers `2/4/6/8`, then condition on the joint
-coordinates and test whether residual target prediction drops.
+Exp 25 built a joint chart over layers `2/4/6/8`, conditioned on the
+joint coordinates, and tested whether residual target prediction drops.
 
-Prediction if the emergence proposition is right:
+Observed result:
 
-- joint conditioning reduces residual identity signal more than the best
-  single-layer subtraction;
-- residual AUC and HSIC weaken materially relative to exp 20.
+- joint conditioning does not reduce residual identity signal more than
+  the best single-layer subtraction;
+- residual AUC remains high for all targets;
+- HSIC is non-significant only for `137`.
 
-Prediction if local-chart ownership is right:
+Consequence:
 
-- the best single chart performs about as well as the joint chart.
+- the first realized-topology gate variant fails;
+- the emergence conjecture now needs evidence from stronger distributed
+  ownership and reconstitution tests, not just a broader residual chart.
 
 ### 5.2 Distributed ownership audit
 
@@ -266,7 +296,6 @@ The strongest current conclusion is:
 > direction, one rank-k layer-8 projector, or even one strong layer-2
 > projector. It appears as a coherent family of projections across the
 > stack, with layer-sensitive causal leverage, compositional algebra, and
-> first cross-model replication. The formal Markov-blanket gate still
-> fails, so the proposition remains a research conjecture, not an
-> accepted result.
-
+> first cross-model replication. But the first joint residual chart also
+> fails to close the formal Markov-blanket gate, so the proposition
+> remains a research conjecture, not an accepted result.

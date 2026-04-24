@@ -18,15 +18,17 @@ inside LLM activations.
 
 *Status.* This report is candidate-empirical evidence for the
 Markov-object construct in a learned representation system. It does
-not test the formal conditional-independence condition that defines a
-Markov blanket; that test is named as future work in §13.4. The
-cross-substrate propagation claim motivating the program
-(brains → texts → LLMs) is a working hypothesis, not a finding of
-these experiments. What is reported here is evidence, within GPT-2
-small, consistent with some token identities being partly low-rank
-residual directions that SAE features sense and fragment.
+not establish the formal conditional-independence condition that
+defines a Markov blanket. That promotion gate has now been tested and
+fails: single-chart subtraction fails in exp 20, and multi-layer
+realized-topology conditioning fails in exp 25. The cross-substrate
+propagation claim motivating the program (brains → texts → LLMs) is a
+working hypothesis, not a finding of these experiments. What is
+reported here is evidence, within GPT-2 small, consistent with some
+token identities being partly low-rank residual directions that SAE
+features sense and fragment.
 
-Across seventeen experiments (08–24) on GPT-2 small, plus one
+Across eighteen experiments (08–25) on GPT-2 small, plus one
 cross-model replication on Pythia-160M, evidence reported here
 supports:
 
@@ -109,13 +111,19 @@ supports:
 18. **Cross-model replication (exp 24)**: the direction-native transfer
     phenomenon is not GPT-2-only. In Pythia-160M at layer 8, all three
     targets pass the relaxed `α=1 ≥ 0.1` criterion (`0.159–0.207`).
+19. **Multi-layer realized-topology gate (exp 25)**: the direct
+    successor to exp 20 also fails. Conditioning a concatenated
+    `2/4/6/8` residual on joint chart coordinates leaves residual
+    identity highly probe-readable (`AUC_joint=1.000`, `0.989`,
+    `0.978` for `999`, `666`, `137`). The joint chart does not beat
+    the best single chart, and HSIC clears only for `137`.
 
 Together these results operationalise the Markov-object framework inside an
 LLM. The strongest current reading is now more precise than the original
 layer-8 story: identity behaves like a recoverable, layer-sensitive direction
 family whose relation to the SAE dictionary is partial alignment rather than
-identification; composition and cross-model replication are real; the formal
-promotion gate still does not close.
+identification; composition and cross-model replication are real; both tested
+promotion gates fail.
 
 ---
 
@@ -649,7 +657,7 @@ multiple orthogonal directions, or does saturation require
 activation-level (nonlinear) structure on top of the linear
 displacement?
 
-### 12.1  Follow-up wave — experiments 19–24
+### 12.1  Follow-up wave — experiments 19–25
 
 The follow-up wave changed the interpretation of exp 18 substantially.
 
@@ -684,12 +692,18 @@ The follow-up wave changed the interpretation of exp 18 substantially.
   direction-native phenomenon survives a first SAE-free port to
   Pythia-160M, albeit at weaker magnitude than the strongest GPT-2
   layer.
+- **Exp 25 (multi-layer realized-topology gate)** is the direct
+  successor to the failed exp 20 gate, and it also fails. Conditioning
+  the concatenated `2/4/6/8` residual on joint chart coordinates leaves
+  target identity almost perfectly recoverable: `AUC_joint=1.000` for
+  `999`, `0.989` for `666`, and `0.978` for `137`. The joint chart does
+  not beat the best single chart; HSIC is non-significant only for
+  `137`.
 
 Net result: the layer-8 "single weak direction" story is obsolete. The
 stronger current reading is a **layer-sensitive candidate construct**:
 identity behaves like a recoverable direction family, composition works,
-replication begins to work, but the formal promotion gate still does not
-close.
+replication begins to work, but both tested promotion gates fail.
 
 ---
 
@@ -733,13 +747,17 @@ close.
   Compositional algebra passes strongly at layer 8, and a first
   SAE-free replication in Pythia-160M passes a relaxed qualitative
   threshold. (23, 24)
+- **Joint realized-topology conditioning still does not close the
+  gate.** A multi-layer chart over layers `2/4/6/8` leaves residual
+  identity highly class-predictive and does not improve on the best
+  single chart. (25)
 
 Taken together this is what the theory predicted, with an important
 refinement. The Markov-object topology is not best described as "a
 layer-8 weak direction waiting for more rank." It is better described
 as a layer-sensitive family of identity directions, partially charted
 by the SAE basis, compositionally structured, and not yet closed under
-the promotion gate.
+either tested promotion gate.
 
 ### 13.2  What "Markov object" buys over "feature cluster"
 
@@ -774,9 +792,10 @@ adds:
   that the same direction family is causally strong early and weak
   later?"
 - **Conditional independence is now tested and fails at the tested
-  layers.** The formal Markov-blanket condition is not merely unrun; the
-  first practical promotion-gate assay fails at both layer 8 and layer
-  2. So "Markov object" in this paper remains a **candidate
+  conditioning surfaces.** The formal Markov-blanket condition is not
+  merely unrun; the single-chart assay fails at layer 8 and layer 2,
+  and the multi-layer `2/4/6/8` realized-topology variant also fails.
+  So "Markov object" in this paper remains a **candidate
   interpretation** of the observed structure, not an established
   statistical object.
 - **Cross-substrate propagation is untested.** The research program's
@@ -804,23 +823,18 @@ adds:
   the right next paper version must stop treating layer-8 weakness as a
   generic statement about the construct. The correct object is a
   coherent cross-layer direction family with depth-dependent leverage.
-- **Do not move the promotion gate.** Exp 20 failed at layers 8 and 2.
+- **Do not move the promotion gate.** Exp 20 failed at layers 8 and 2,
+  and exp 25 failed for the joint `2/4/6/8` realized-topology chart.
   The next step is not to declare victory by choosing a softer gate; it
-  is to understand why the residual remains fully class-predictive after
-  subtracting the chosen subspace.
-- **Test realized-topology conditioning, not only single-chart
-  subtraction.** A likely reading of exp 20 is that the experiment
-  conflates one technological projection of the object with the full
-  realized topology that emerges across constrained interactions in the
-  stack. The next gate variant should therefore condition on a
-  multi-layer realized chart — for example, joint coordinates over
-  layers `2/4/6/8` plus explicit core/coat or routing coordinates where
-  available — and ask whether residual variation remains predictive
-  *after conditioning on that chart*. If prediction still survives, the
-  blanket claim weakens. If it collapses, exp 20 will have failed for
-  chart-sufficiency reasons rather than because the object was absent.
-  The concrete successor wave is pre-registered in
-  `experiments_25_31_design.md`.
+  is to understand why residual identity remains class-predictive after
+  both single-chart and multi-layer conditioning.
+- **Shift the next discriminator from gate closure to ownership.**
+  Exp 25 weakens the simple "single chart was too local" explanation.
+  The next registered tests should ask whether distributed interventions
+  beat any single local locus, whether partial charts reconstitute
+  identity under stronger chart construction, and whether the pattern
+  survives broader implementation variation. The successor wave remains
+  tracked in `experiments_25_31_design.md`.
 - **Improve the behavioural assay rather than overread exp 22.** The
   current generation classifier is too reference-biased at baseline. A
   stronger free-generation or downstream-task probe is needed.
@@ -857,7 +871,8 @@ markov_object_research/
 │   ├── 21_multi_layer_direction.py
 │   ├── 22_freeform_generation.py
 │   ├── 23_compositional_algebra.py
-│   └── 24_cross_model_pythia.py
+│   ├── 24_cross_model_pythia.py
+│   └── 25_multilayer_realized_topology_gate.py
 └── results/
     ├── 08_feature_identity/            feature_report.txt, overlap.png, strength.png
     ├── 09_context_conditional/         annotated_report.txt, 3 plots
@@ -875,7 +890,8 @@ markov_object_research/
     ├── 21_multi_layer_direction/       multi_layer_report.txt, summary, plots
     ├── 22_freeform_generation/         generation_report.txt, summary, plots
     ├── 23_compositional_algebra/       compositional_report.txt, summary, plots
-    └── 24_cross_model_pythia/          cross_model_report.txt, summary, plots
+    ├── 24_cross_model_pythia/          cross_model_report.txt, summary, plots
+    └── 25_multilayer_gate/             gate_report.txt, summary, plots
 ```
 
 ---
@@ -894,17 +910,17 @@ construct has empirical substance inside a trained representation system
 
 *Scope of this section.* The table and discussion below map method
 claims to **candidate empirical support**. They do not claim that the
-method's Markov-object construct has been formally validated.
-Promotion from "candidate" to "established" requires at minimum the
-direction-native conditional-independence test listed in §13.4. Read
-the alignment below as *consistent with*, not *validation of*.
+method's Markov-object construct has been formally validated. The
+direction-native conditional-independence test and its multi-layer
+successor have both failed, so read the alignment below as *consistent
+with*, not *validation of*.
 
 ### 15.1  Method claims — candidate alignment
 
 | `WORLD_MODEL_METHOD` claim                                                                                 | Experiments                          | Finding                                                                                                       |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Markov objects are real, bounded, stable self-identifying patterns                                         | 08, 09, 14, 18, 19, 21               | Found as invariant-core ensembles and as a coherent residual direction family whose intervention strength is strongest early |
-| They have an effective blanket that can be made explicit                                                   | 18, 19, 20, 21                       | Identity direction recoverable and strong at layer 2, but the formal blanket gate fails at tested layers; explicit blanket remains candidate, not established |
+| They have an effective blanket that can be made explicit                                                   | 18, 19, 20, 21, 25                   | Identity direction recoverable and strong at layer 2, but single-chart and multi-layer promotion gates fail; explicit blanket remains candidate, not established |
 | `source → tracing → assurance → attribute ledger → Markov object cut` (Materialization Law)                | 09, 14, 18                           | Object cut is a *projection* over distributed evidence; the cut is geometric, not a membership enumeration      |
 | Published object must expose identity, boundary, state, evidence (Representation Law)                      | 09, 13, 14, 18                       | Identity = direction; boundary = projection threshold; evidence = core + coat features; state = α-coordinate   |
 | Objects are composable across domains without erasing local authority                                      | 11, 12                               | Core/coat decomposition is domain-universal; symbol-bound at GPT-2 scale but structure replicates cross-domain |
@@ -987,6 +1003,6 @@ the alignment below as *consistent with*, not *validation of*.
 > dominated by context. The SAE basis senses but fragments the object,
 > which is why boundary-via-feature-activation leaks. The direction
 > family composes non-trivially and begins to replicate across models.
-> But the formal conditional-independence promotion gate still fails at
-> the tested layers, so the construct remains candidate rather than
-> established.
+> But the formal conditional-independence promotion gate fails under
+> both single-chart and multi-layer conditioning, so the construct
+> remains candidate rather than established.

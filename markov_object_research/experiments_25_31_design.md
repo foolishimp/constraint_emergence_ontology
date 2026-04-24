@@ -1,6 +1,7 @@
 # Experiments 25-31: Design
 
-**Status:** pre-registered design. No results yet.  
+**Status:** pre-registered design for experiments 25-31. Exp 25 has
+now been executed; experiments 26-31 remain pending.
 **Scope:** seven experiments that test the stronger emergence conjecture:
 candidate Markov-object identity is realized across the constrained
 technical stack and only projected through local charts.  
@@ -151,6 +152,19 @@ Outputs:
 - `results/25_multilayer_gate/auc_comparison.png`
 - `results/25_multilayer_gate/hsic_perm_{target}.png`
 - `results/25_multilayer_gate/chart_coefficients.png`
+
+### 25.7 Result note
+
+Executed 2026-04-24. Aggregate outcome: **FAIL**.
+
+| target | AUC(full) | AUC(best single) | AUC(joint) | HSIC p | outcome |
+|---|---:|---:|---:|---:|---|
+| 999 | `1.000` | `0.994` | `1.000` | `0.010` | FAIL |
+| 666 | `1.000` | `1.000` | `0.989` | `0.015` | FAIL |
+| 137 | `1.000` | `0.972` | `0.978` | `0.687` | FAIL |
+
+The joint `2/4/6/8` chart did not beat the best single chart and did
+not close the conditional-independence proxy.
 
 ---
 

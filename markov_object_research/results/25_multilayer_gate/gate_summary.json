@@ -1,0 +1,153 @@
+{
+  "aggregate": "FAIL",
+  "per_target": [
+    {
+      "target": 999,
+      "auc_full": 1.0,
+      "auc_best_single": 0.9944444444444445,
+      "best_single_layer": 2,
+      "auc_joint": 1.0,
+      "joint_vs_single": -0.005555555555555536,
+      "delta_full": 0.0,
+      "hsic_joint_observed": 0.006108353397304994,
+      "hsic_joint_p": 0.009950248756218905,
+      "outcome": "FAIL"
+    },
+    {
+      "target": 666,
+      "auc_full": 1.0,
+      "auc_best_single": 1.0,
+      "best_single_layer": 2,
+      "auc_joint": 0.9888888888888889,
+      "joint_vs_single": 0.011111111111111072,
+      "delta_full": 0.011111111111111072,
+      "hsic_joint_observed": 0.0054529938090596185,
+      "hsic_joint_p": 0.014925373134328358,
+      "outcome": "FAIL"
+    },
+    {
+      "target": 137,
+      "auc_full": 1.0,
+      "auc_best_single": 0.9722222222222221,
+      "best_single_layer": 8,
+      "auc_joint": 0.9777777777777779,
+      "joint_vs_single": -0.005555555555555758,
+      "delta_full": 0.022222222222222143,
+      "hsic_joint_observed": 0.0030498321245730577,
+      "hsic_joint_p": 0.6865671641791045,
+      "outcome": "FAIL"
+    }
+  ],
+  "single_layer_auc": {
+    "999": {
+      "2": 0.9944444444444445,
+      "4": 0.9944444444444445,
+      "6": 0.9944444444444445,
+      "8": 0.9944444444444445
+    },
+    "666": {
+      "2": 1.0,
+      "4": 1.0,
+      "6": 1.0,
+      "8": 1.0
+    },
+    "137": {
+      "2": 0.9944444444444445,
+      "4": 0.9888888888888889,
+      "6": 0.9944444444444445,
+      "8": 0.9722222222222221
+    }
+  },
+  "chart_coefficient_norms": {
+    "999": {
+      "2": 18.196148593719816,
+      "4": 27.17948429521766,
+      "6": 26.214282829366738,
+      "8": 10.616463229855027
+    },
+    "666": {
+      "2": 29.114542192846056,
+      "4": 36.96495404436798,
+      "6": 21.290091127783413,
+      "8": 7.006779817622727
+    },
+    "137": {
+      "2": 31.572830929829927,
+      "4": 34.12300772148616,
+      "6": 20.324091172484426,
+      "8": 6.6416994737698145
+    }
+  },
+  "probe_meta": {
+    "calibration_templates": [
+      "The number {n} is",
+      "The number {n} is most associated with",
+      "Call {n} immediately",
+      "In {n} AD the Vikings",
+      "Price was ${n} only",
+      "There were {n} people",
+      "Page {n} of the book",
+      "Line {n}: error",
+      "She whispered {n}",
+      "Yesterday we saw {n}",
+      "We had {n} choices",
+      "The sacred number {n} means",
+      "Pick number {n}",
+      "Room {n} is empty",
+      "{n} is the answer",
+      "My code is {n}",
+      "Try {n} next time",
+      "They sang song {n}",
+      "Box {n} contains",
+      "Apartment {n} on the third floor"
+    ],
+    "probe_templates": [
+      "Channel {n} is broadcasting",
+      "Version {n} released today",
+      "The tribe numbered {n}",
+      "He lived {n} years",
+      "Mission {n} begins now",
+      "Only {n} remain standing",
+      "Flight {n} is boarding",
+      "Gate {n} closes soon",
+      "Problem {n} is solved",
+      "The clock struck {n}",
+      "Dial {n} for service",
+      "Section {n} has been updated",
+      "Serial {n} expired yesterday",
+      "Chapter {n} begins with",
+      "Ticket {n} was rejected",
+      "Process id {n} terminated",
+      "Badge {n} entered the room",
+      "Order {n} shipped today",
+      "Reading {n} on the scale",
+      "Scene {n} opens with",
+      "Quota {n} exceeded limit",
+      "Row {n} contains errors",
+      "Track {n} starts playing",
+      "Warehouse slot {n} empty",
+      "Exit {n} is closed",
+      "Report {n} was filed",
+      "Document {n} is classified",
+      "Batch {n} completed successfully",
+      "Prompt {n} needs review",
+      "Zone {n} is secured"
+    ],
+    "hsic_perm": 200,
+    "ridge_lambda": 0.001,
+    "layers": [
+      2,
+      4,
+      6,
+      8
+    ]
+  },
+  "thresholds": {
+    "pass_auc_joint": 0.7,
+    "pass_joint_vs_single": 0.15,
+    "pass_delta_full": 0.25,
+    "pass_hsic_p": 0.05,
+    "partial_auc_joint": 0.85,
+    "partial_joint_vs_single": 0.05
+  }
+}

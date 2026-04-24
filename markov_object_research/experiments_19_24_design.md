@@ -1,6 +1,7 @@
 # Experiments 19–24: Design
 
-**Status:** pre-registered design. No results yet.
+**Status:** pre-registered design for experiments 19-24. All six have
+now been executed; results are summarized in `empirical_results.md`.
 **Scope:** six experiments that push the Markov-object construct from
 heliocentric (candidate; right causal order + basic predictive power) toward
 stronger truths — Newtonian-level dynamics and the formal promotion gate.

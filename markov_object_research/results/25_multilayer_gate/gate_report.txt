@@ -1,0 +1,84 @@
+Exp 25 - Multi-layer Realized-topology Gate
+========================================================================
+
+Reference: n = 5
+Targets:   [999, 666, 137]
+Layers:    [2, 4, 6, 8]
+Calibration templates: 20
+Probe templates:       30
+CV folds: 5 (GroupKFold over templates)
+HSIC permutations: 200
+
+Pre-registered aggregate support:
+  PASS     >=2 targets meet AUC_joint <= 0.7, joint beats best single by >= 0.15, full-to-joint drop >= 0.25, and HSIC p >= 0.05
+  PARTIAL  joint conditioning improves but does not close the gate
+  FAIL     joint conditioning adds little or residual AUC remains high
+
+AGGREGATE OUTCOME: FAIL
+
+
+### target = 999
+  AUC(full residual):       1.000
+  AUC(best single chart):   0.994 (layer 2)
+  AUC(joint chart):         1.000
+  joint improvement over best single: -0.006
+  full-to-joint AUC drop:   +0.000
+  HSIC joint residual:      0.00611
+  HSIC p:                   0.010
+  outcome:                  FAIL
+
+  single-chart residual AUC by layer:
+    layer 2: 0.994
+    layer 4: 0.994
+    layer 6: 0.994
+    layer 8: 0.994
+
+  joint residualizer coefficient norms:
+    layer 2: 18.196
+    layer 4: 27.179
+    layer 6: 26.214
+    layer 8: 10.616
+
+### target = 666
+  AUC(full residual):       1.000
+  AUC(best single chart):   1.000 (layer 2)
+  AUC(joint chart):         0.989
+  joint improvement over best single: +0.011
+  full-to-joint AUC drop:   +0.011
+  HSIC joint residual:      0.00545
+  HSIC p:                   0.015
+  outcome:                  FAIL
+
+  single-chart residual AUC by layer:
+    layer 2: 1.000
+    layer 4: 1.000
+    layer 6: 1.000
+    layer 8: 1.000
+
+  joint residualizer coefficient norms:
+    layer 2: 29.115
+    layer 4: 36.965
+    layer 6: 21.290
+    layer 8: 7.007
+
+### target = 137
+  AUC(full residual):       1.000
+  AUC(best single chart):   0.972 (layer 8)
+  AUC(joint chart):         0.978
+  joint improvement over best single: -0.006
+  full-to-joint AUC drop:   +0.022
+  HSIC joint residual:      0.00305
+  HSIC p:                   0.687
+  outcome:                  FAIL
+
+  single-chart residual AUC by layer:
+    layer 2: 0.994
+    layer 4: 0.989
+    layer 6: 0.994
+    layer 8: 0.972
+
+  joint residualizer coefficient norms:
+    layer 2: 31.573
+    layer 4: 34.123
+    layer 6: 20.324
+    layer 8: 6.642
