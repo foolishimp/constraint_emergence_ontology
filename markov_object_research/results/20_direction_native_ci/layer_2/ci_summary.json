@@ -1,0 +1,79 @@
+{
+  "aggregate": "FAIL",
+  "per_target": [
+    {
+      "target": 999,
+      "auc_perp": 1.0,
+      "auc_full": 1.0,
+      "delta_auc": 0.0,
+      "hsic_observed": 0.011312072187516576,
+      "hsic_p": 0.004975124378109453,
+      "outcome": "FAIL"
+    },
+    {
+      "target": 666,
+      "auc_perp": 1.0,
+      "auc_full": 1.0,
+      "delta_auc": 0.0,
+      "hsic_observed": 0.01129164692486404,
+      "hsic_p": 0.004975124378109453,
+      "outcome": "FAIL"
+    },
+    {
+      "target": 137,
+      "auc_perp": 1.0,
+      "auc_full": 1.0,
+      "delta_auc": 0.0,
+      "hsic_observed": 0.007981557684772078,
+      "hsic_p": 0.004975124378109453,
+      "outcome": "FAIL"
+    }
+  ],
+  "k_stars": {
+    "999": 1,
+    "666": 1,
+    "137": 1
+  },
+  "probe_meta": {
+    "templates": [
+      "Channel {n} is broadcasting",
+      "Version {n} released today",
+      "The tribe numbered {n}",
+      "He lived {n} years",
+      "Mission {n} begins now",
+      "Only {n} remain standing",
+      "Flight {n} is boarding",
+      "Gate {n} closes soon",
+      "Problem {n} is solved",
+      "The clock struck {n}",
+      "Dial {n} for service",
+      "Section {n} has been updated",
+      "Serial {n} expired yesterday",
+      "Chapter {n} begins with",
+      "Ticket {n} was rejected",
+      "Process id {n} terminated",
+      "Badge {n} entered the room",
+      "Order {n} shipped today",
+      "Reading {n} on the scale",
+      "Scene {n} opens with",
+      "Quota {n} exceeded limit",
+      "Row {n} contains errors",
+      "Track {n} starts playing",
+      "Warehouse slot {n} empty",
+      "Exit {n} is closed",
+      "Report {n} was filed",
+      "Document {n} is classified",
+      "Batch {n} completed successfully",
+      "Prompt {n} needs review",
+      "Zone {n} is secured"
+    ],
+    "n_templates": 30
+  },
+  "thresholds": {
+    "pass_auc_lo": 0.47,
+    "pass_auc_hi": 0.53,
+    "partial_auc_hi": 0.6,
+    "delta_auc_pass": 0.2,
+    "hsic_n_perm": 200
+  }
+}

@@ -1,0 +1,107 @@
+Null-Peer Battery Report — layer 8
+======================================================================
+
+GENERIC-NUMBER CORE (intersection across ALL boring-number cores):
+  size = 0 features
+
+======================================================================
+CULTURAL TARGETS — core decomposition + what's unique
+======================================================================
+
+### n = 666
+  core=9  unique_to_target=9  shared_with_generic=0  coat=180  coat/core=20.0
+  TARGET-UNIQUE CORE FEATURES:
+    F17244  μ=12.45  references to specific legal or organizational codes, possibly related to financial or tax matters
+    F13585  μ= 9.31  measurements and numerical values
+    F12604  μ= 7.13  numbers related to technological specifications or quantities
+    F20061  μ= 5.80  numbers related to measurements or dimensions
+    F20951  μ= 4.72  numbers
+    F11917  μ= 4.19  proper nouns of people's names
+    F10439  μ= 3.90  phrases related to gentrification
+    F17855  μ= 2.55  specific numerical patterns
+    F 9551  μ= 1.84  references to the concept of patronage or support
+
+### n = 999
+  core=6  unique_to_target=6  shared_with_generic=0  coat=166  coat/core=27.7
+  TARGET-UNIQUE CORE FEATURES:
+    F 2269  μ=15.93  emergency numbers, specifically '911'
+    F12604  μ=13.89  numbers related to technological specifications or quantities
+    F10744  μ= 9.13  references to the specific date "9/11"
+    F 5567  μ= 7.89  numerical values
+    F 2747  μ= 7.86  numerical values with percentage symbols and confidence intervals
+    F17244  μ= 5.65  references to specific legal or organizational codes, possibly related to financial or tax matters
+
+### n = 7
+  core=2  unique_to_target=2  shared_with_generic=0  coat=165  coat/core=82.5
+  TARGET-UNIQUE CORE FEATURES:
+    F11330  μ=22.56  numerical patterns such as sequences containing the number 7 followed by the number 9
+    F21286  μ=10.03  numbers
+
+### n = 42
+  core=5  unique_to_target=5  shared_with_generic=0  coat=154  coat/core=30.8
+  TARGET-UNIQUE CORE FEATURES:
+    F 3697  μ=14.71  years in the 20th century
+    F 4130  μ=10.87  numbers related to politics or announcements of public figures
+    F20224  μ=10.03  mentions of the number '40'
+    F23723  μ= 8.84  numbers, particularly two-digit numbers
+    F 6863  μ= 3.53  words related to politics and government institutions
+
+### n = 100
+  core=1  unique_to_target=1  shared_with_generic=0  coat=162  coat/core=162.0
+  TARGET-UNIQUE CORE FEATURES:
+    F   91  μ=37.40  mentions of the number "100"
+
+======================================================================
+BORING TARGETS — core decomposition + what's unique
+======================================================================
+
+### n = 137
+  core=6  unique_to_target=6  shared_with_generic=0  coat=171  coat/core=28.5
+  TARGET-UNIQUE CORE FEATURES:
+    F 9497  μ=12.75  numbers and technical terms, possibly related to technology or measurements
+    F 1608  μ= 7.26  dates, numbers, and technical specifications
+    F 7702  μ= 7.01  specific numerical references or mentions
+    F19680  μ= 6.59  measurements or numerical data expressed in combination of digits
+    F23723  μ= 5.81  numbers, particularly two-digit numbers
+    F 6863  μ= 3.51  words related to politics and government institutions
+
+### n = 250
+  core=4  unique_to_target=4  shared_with_generic=0  coat=145  coat/core=36.2
+  TARGET-UNIQUE CORE FEATURES:
+    F22360  μ=14.88  numerical values related to measurements, statistics, and figures
+    F 6176  μ= 9.90  numbers representing percentages
+    F20409  μ= 8.74  references to the number 50
+    F 6233  μ= 4.88  numeric values in a specific format - "25 X" where X is a non-zero value
+
+### n = 3
+  core=1  unique_to_target=1  shared_with_generic=0  coat=179  coat/core=179.0
+  TARGET-UNIQUE CORE FEATURES:
+    F14372  μ=27.23  numbers written as digits with 3 and 8 in succession
+
+### n = 11
+  core=1  unique_to_target=1  shared_with_generic=0  coat=186  coat/core=186.0
+  TARGET-UNIQUE CORE FEATURES:
+    F15281  μ=26.29  time-related expressions and scheduling information
+
+### n = 400
+  core=3  unique_to_target=3  shared_with_generic=0  coat=141  coat/core=47.0
+  TARGET-UNIQUE CORE FEATURES:
+    F 6176  μ=22.43  numbers representing percentages
+    F20224  μ=11.33  mentions of the number '40'
+    F12604  μ= 2.59  numbers related to technological specifications or quantities
+
+### n = 500
+  core=3  unique_to_target=3  shared_with_generic=0  coat=147  coat/core=49.0
+  TARGET-UNIQUE CORE FEATURES:
+    F 6176  μ=20.86  numbers representing percentages
+    F20409  μ=11.38  references to the number 50
+    F12604  μ= 8.47  numbers related to technological specifications or quantities
+
+### n = 800
+  core=5  unique_to_target=5  shared_with_generic=0  coat=143  coat/core=28.6
+  TARGET-UNIQUE CORE FEATURES:
+    F 6176  μ=17.80  numbers representing percentages
+    F13585  μ=10.36  measurements and numerical values
+    F20302  μ= 7.73  phrases related to percentages or numerical figures
+    F12604  μ= 5.25  numbers related to technological specifications or quantities
+    F13884  μ= 3.44  numerical values such as measurements or identifiers

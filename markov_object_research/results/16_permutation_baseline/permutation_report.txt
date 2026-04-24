@@ -1,0 +1,20 @@
+Permutation / Null-Baseline Report — layer 8
+======================================================================
+
+N_ITER per null = 30
+
+Null-1 (target-shuffle): |core| over 30 iters
+   mean=2.200  std=2.120  max=9  min=0
+Null-3 (full random):    |core| over 30 iters
+   mean=6.333  std=4.636  max=20  min=0
+
+Observed core sizes vs nulls:
+target  observed   p(null1)   p(null2)   p(null3)
+   666         9      0.033      1.000      0.200
+   999         6      0.100      1.000      0.433
+     7         2      0.567      1.000      0.967
+    42         5      0.100      1.000      0.567
+   100         1      0.800      1.000      0.967
+
+p-value ≡ fraction of null iters with |core| >= observed
+Low p ⇒ observed core is real; high p ⇒ could be null artifact

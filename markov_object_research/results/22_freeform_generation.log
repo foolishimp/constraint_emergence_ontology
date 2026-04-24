@@ -1,0 +1,98 @@
+Loading GPT-2 small...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 9576.18it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target = 999 ===
+  extracting mean-diff direction...
+    ||d|| = 61.937
+    prompt 0: 'Call {n} immediately,'
+      α=0.0  [tar]  ' or call the police if you have any information.  If you hav'
+      α=0.5  [neu]  ' or call Crimestoppers anonymously.  If you have any informa'
+      α=1.0  [tar]  ' or call the police if you have any information.  If you hav'
+      α=1.5  [tar]  ' or call the police if you have any information.  If you hav'
+      α=2.0  [tar]  ' or call the police if you have any information.  If you hav'
+    prompt 1: '{n} is the number that'
+      α=0.0  [ref]  ' is used to determine the number of days that a user can log'
+      α=0.5  [ref]  ' is used to determine the number of days that a user can log'
+      α=1.0  [ref]  ' is used to determine the number of days that a user can log'
+      α=1.5  [ref]  ' is used to determine the number of days that a user can log'
+      α=2.0  [ref]  ' is used to determine the number of days that a user can log'
+    prompt 2: 'She dialed {n} and'
+      α=0.0  [neu]  ' was told she was in a car with her boyfriend.  She was take'
+      α=0.5  [neu]  ' was told she was in a car with her boyfriend.  She was take'
+      α=1.0  [neu]  ' was told she was in a car with her boyfriend.  She was take'
+      α=1.5  [neu]  ' was told she was in a car with her boyfriend.  She was take'
+      α=2.0  [neu]  ' was told she was in a car with her boyfriend.  She was take'
+  summary (ref-rate by α):
+    α=0.0  ref-rate=0.500  logprob_ref=-1.481
+    α=0.5  ref-rate=0.600  logprob_ref=-1.489
+    α=1.0  ref-rate=0.450  logprob_ref=-1.451
+    α=1.5  ref-rate=0.450  logprob_ref=-1.468
+    α=2.0  ref-rate=0.450  logprob_ref=-1.516
+
+=== target = 666 ===
+  extracting mean-diff direction...
+    ||d|| = 59.876
+    prompt 0: 'Call {n} immediately,'
+      α=0.0  [neu]  ' or call the police at (626) 667-8477.  Call the police at ('
+      α=0.5  [neu]  ' or call the police.  Call 911 if you have any information a'
+      α=1.0  [neu]  ' or call the police.  Call 911 if you have any information a'
+      α=1.5  [neu]  ' or call us at (919) 822-8477.  We are located at the corner'
+      α=2.0  [neu]  ' or call 1-800-822-8477.  Call the office of the Attorney Ge'
+    prompt 1: '{n} is the number that'
+      α=0.0  [ref]  ' is used to determine the number of characters in a string. '
+      α=0.5  [ref]  ' is used to determine the number of characters in a string. '
+      α=1.0  [ref]  ' is used to determine the number of characters in a string. '
+      α=1.5  [ref]  ' is used to determine the number of characters in a string. '
+      α=2.0  [ref]  ' is used to determine the number of characters in a string. '
+    prompt 2: 'She dialed {n} and'
+      α=0.0  [ref]  ' was told she was in the hospital.  "I was in the hospital f'
+      α=0.5  [ref]  ' was told she was in the hospital.  "I was in the hospital f'
+      α=1.0  [neu]  ' was told she was being monitored by the FBI.  "I was told t'
+      α=1.5  [neu]  ' was told she was being held in a cell.  She was taken to th'
+      α=2.0  [neu]  ' was told she was in the hospital.  She was taken to the hos'
+  summary (ref-rate by α):
+    α=0.0  ref-rate=0.500  logprob_ref=-1.534
+    α=0.5  ref-rate=0.550  logprob_ref=-1.489
+    α=1.0  ref-rate=0.350  logprob_ref=-1.363
+    α=1.5  ref-rate=0.350  logprob_ref=-1.424
+    α=2.0  ref-rate=0.300  logprob_ref=-1.453
+
+=== target = 137 ===
+  extracting mean-diff direction...
+    ||d|| = 54.328
+    prompt 0: 'Call {n} immediately,'
+      α=0.0  [neu]  ' or call the police at (207) 622-8477.  Call the police at ('
+      α=0.5  [neu]  ' or call the police at (800) 622-8477.  Call the police at ('
+      α=1.0  [neu]  ' or call the police at (800) 522-8477.  Call 911 if you have'
+      α=1.5  [neu]  ' or call 911.  Call 911 if you have any questions about the '
+      α=2.0  [neu]  ' or call 911.  Call 911 if you have any questions about the '
+    prompt 1: '{n} is the number that'
+      α=0.0  [ref]  ' is used to determine the number of days that a user can be '
+      α=0.5  [ref]  ' is used to determine the number of days that a user can be '
+      α=1.0  [ref]  ' is used to determine the number of days that a user can be '
+      α=1.5  [ref]  ' is used to determine the number of days that a user can be '
+      α=2.0  [ref]  ' is used to determine the number of days that a user can be '
+    prompt 2: 'She dialed {n} and'
+      α=0.0  [ref]  ' was told she was in the hospital.  "I was in the hospital f'
+      α=0.5  [neu]  ' was told she was being monitored by the FBI.  "I was told t'
+      α=1.0  [neu]  ' was told she was being monitored by the FBI.  "I was told t'
+      α=1.5  [neu]  ' was told she was being held in a cell.  "I was told I was b'
+      α=2.0  [neu]  ' was told she was being held in a cell.  "I was told I was b'
+  summary (ref-rate by α):
+    α=0.0  ref-rate=0.600  logprob_ref=-1.521
+    α=0.5  ref-rate=0.500  logprob_ref=-1.455
+    α=1.0  ref-rate=0.500  logprob_ref=-1.406
+    α=1.5  ref-rate=0.450  logprob_ref=-1.418
+    α=2.0  ref-rate=0.400  logprob_ref=-1.417
+  ref_rate_curves.png
+  logprob_curves.png
+  class_stack.png
+
+=== AGGREGATE OUTCOME: PARTIAL ===
+Report: generation_report.txt
+Summary JSON: generation_summary.json
+All completions: all_completions.jsonl
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/22_freeform_generation

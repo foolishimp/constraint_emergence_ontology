@@ -1,0 +1,121 @@
+{
+  "aggregate": "PARTIAL",
+  "per_target": {
+    "999": {
+      "0.0": {
+        "n": 20,
+        "ref_rate": 0.5,
+        "tgt_rate": 0.15,
+        "neu_rate": 0.35,
+        "mean_logprob_ref": -1.480970294594719
+      },
+      "0.5": {
+        "n": 20,
+        "ref_rate": 0.6,
+        "tgt_rate": 0.05,
+        "neu_rate": 0.35,
+        "mean_logprob_ref": -1.4894789438929192
+      },
+      "1.0": {
+        "n": 20,
+        "ref_rate": 0.45,
+        "tgt_rate": 0.1,
+        "neu_rate": 0.45,
+        "mean_logprob_ref": -1.4509851861652394
+      },
+      "1.5": {
+        "n": 20,
+        "ref_rate": 0.45,
+        "tgt_rate": 0.1,
+        "neu_rate": 0.45,
+        "mean_logprob_ref": -1.4679159902929886
+      },
+      "2.0": {
+        "n": 20,
+        "ref_rate": 0.45,
+        "tgt_rate": 0.1,
+        "neu_rate": 0.45,
+        "mean_logprob_ref": -1.5158934350156656
+      }
+    },
+    "666": {
+      "0.0": {
+        "n": 20,
+        "ref_rate": 0.5,
+        "tgt_rate": 0.05,
+        "neu_rate": 0.45,
+        "mean_logprob_ref": -1.5343857485638162
+      },
+      "0.5": {
+        "n": 20,
+        "ref_rate": 0.55,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.45,
+        "mean_logprob_ref": -1.48897776724423
+      },
+      "1.0": {
+        "n": 20,
+        "ref_rate": 0.35,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.65,
+        "mean_logprob_ref": -1.363401156376813
+      },
+      "1.5": {
+        "n": 20,
+        "ref_rate": 0.35,
+        "tgt_rate": 0.05,
+        "neu_rate": 0.6,
+        "mean_logprob_ref": -1.423670668181157
+      },
+      "2.0": {
+        "n": 20,
+        "ref_rate": 0.3,
+        "tgt_rate": 0.05,
+        "neu_rate": 0.65,
+        "mean_logprob_ref": -1.453235138695099
+      }
+    },
+    "137": {
+      "0.0": {
+        "n": 20,
+        "ref_rate": 0.6,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.4,
+        "mean_logprob_ref": -1.5206027561835316
+      },
+      "0.5": {
+        "n": 20,
+        "ref_rate": 0.5,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.5,
+        "mean_logprob_ref": -1.4553199009607003
+      },
+      "1.0": {
+        "n": 20,
+        "ref_rate": 0.5,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.5,
+        "mean_logprob_ref": -1.4060262908259538
+      },
+      "1.5": {
+        "n": 20,
+        "ref_rate": 0.45,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.55,
+        "mean_logprob_ref": -1.4179862127142189
+      },
+      "2.0": {
+        "n": 20,
+        "ref_rate": 0.4,
+        "tgt_rate": 0.0,
+        "neu_rate": 0.6,
+        "mean_logprob_ref": -1.4171559819067165
+      }
+    }
+  },
+  "thresholds": {
+    "ref_rate_alpha0_max": 0.1,
+    "ref_rate_alpha1_min": 0.4,
+    "logprob_drop_alpha1": 0.5
+  }
+}

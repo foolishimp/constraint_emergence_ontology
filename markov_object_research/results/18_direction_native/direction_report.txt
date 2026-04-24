@@ -1,0 +1,138 @@
+Direction-Native Markov Object Report — layer 8
+======================================================================
+
+Reference: n = 5
+Train templates: 20   Held-out templates: 10
+
+
+### target = 999
+    mean KL(target||ref) over heldout = 0.5001
+
+    Transfer at each α (mean over held-out prompts):
+         α |    mean-diff |         pca1 |        probe
+      0.00 |        0.000 |        0.000 |        0.000
+      0.25 |        0.082 |        0.012 |        0.067
+      0.50 |        0.172 |        0.001 |        0.144
+      0.75 |        0.237 |       -0.037 |        0.203
+      1.00 |        0.258 |       -0.106 |        0.221
+      1.25 |        0.252 |       -0.199 |        0.214
+      1.50 |        0.235 |       -0.299 |        0.196
+      2.00 |        0.193 |       -0.490 |        0.150
+
+    Cosine(mean-diff, Σ SAE_core W_dec)  = 0.541
+    Per-feature cosines:
+       F 2269  cos=+0.432
+       F12604  cos=+0.373
+       F10744  cos=+0.143
+       F 5567  cos=+0.306
+       F 2747  cos=+0.318
+       F17244  cos=+0.334
+
+    Cosine(pca1, Σ SAE_core W_dec)  = 0.060
+    Per-feature cosines:
+       F 2269  cos=+0.131
+       F12604  cos=+0.055
+       F10744  cos=-0.033
+       F 5567  cos=-0.025
+       F 2747  cos=+0.060
+       F17244  cos=+0.023
+
+    Cosine(probe, Σ SAE_core W_dec)  = 0.498
+    Per-feature cosines:
+       F 2269  cos=+0.330
+       F12604  cos=+0.359
+       F10744  cos=+0.108
+       F 5567  cos=+0.324
+       F 2747  cos=+0.313
+       F17244  cos=+0.321
+
+### target = 666
+    mean KL(target||ref) over heldout = 0.4751
+
+    Transfer at each α (mean over held-out prompts):
+         α |    mean-diff |         pca1 |        probe
+      0.00 |        0.000 |        0.000 |        0.000
+      0.25 |        0.053 |       -0.001 |        0.050
+      0.50 |        0.122 |       -0.012 |        0.110
+      0.75 |        0.197 |       -0.028 |        0.171
+      1.00 |        0.241 |       -0.046 |        0.208
+      1.25 |        0.250 |       -0.064 |        0.213
+      1.50 |        0.243 |       -0.086 |        0.203
+      2.00 |        0.215 |       -0.155 |        0.169
+
+    Cosine(mean-diff, Σ SAE_core W_dec)  = 0.511
+    Per-feature cosines:
+       F17244  cos=+0.472
+       F13585  cos=+0.413
+       F12604  cos=+0.349
+       F20061  cos=+0.313
+       F20951  cos=-0.033
+       F11917  cos=+0.187
+       F10439  cos=+0.102
+       F17855  cos=+0.269
+       F 9551  cos=+0.146
+
+    Cosine(pca1, Σ SAE_core W_dec)  = 0.025
+    Per-feature cosines:
+       F17244  cos=+0.063
+       F13585  cos=+0.041
+       F12604  cos=+0.122
+       F20061  cos=+0.006
+       F20951  cos=-0.145
+       F11917  cos=+0.032
+       F10439  cos=-0.001
+       F17855  cos=-0.026
+       F 9551  cos=+0.016
+
+    Cosine(probe, Σ SAE_core W_dec)  = 0.476
+    Per-feature cosines:
+       F17244  cos=+0.430
+       F13585  cos=+0.403
+       F12604  cos=+0.320
+       F20061  cos=+0.321
+       F20951  cos=-0.054
+       F11917  cos=+0.158
+       F10439  cos=+0.069
+       F17855  cos=+0.284
+       F 9551  cos=+0.135
+
+### target = 137
+    mean KL(target||ref) over heldout = 0.3828
+
+    Transfer at each α (mean over held-out prompts):
+         α |    mean-diff |         pca1 |        probe
+      0.00 |        0.000 |        0.000 |        0.000
+      0.25 |        0.075 |        0.053 |        0.078
+      0.50 |        0.155 |        0.078 |        0.154
+      0.75 |        0.228 |        0.068 |        0.221
+      1.00 |        0.275 |        0.023 |        0.267
+      1.25 |        0.295 |       -0.050 |        0.288
+      1.50 |        0.295 |       -0.139 |        0.293
+      2.00 |        0.265 |       -0.329 |        0.273
+
+    Cosine(mean-diff, Σ SAE_core W_dec)  = 0.623
+    Per-feature cosines:
+       F 9497  cos=+0.590
+       F 1608  cos=+0.377
+       F 7702  cos=+0.212
+       F19680  cos=+0.546
+       F23723  cos=+0.445
+       F 6863  cos=+0.025
+
+    Cosine(pca1, Σ SAE_core W_dec)  = 0.174
+    Per-feature cosines:
+       F 9497  cos=+0.118
+       F 1608  cos=-0.005
+       F 7702  cos=-0.020
+       F19680  cos=+0.139
+       F23723  cos=+0.282
+       F 6863  cos=+0.102
+
+    Cosine(probe, Σ SAE_core W_dec)  = 0.579
+    Per-feature cosines:
+       F 9497  cos=+0.572
+       F 1608  cos=+0.367
+       F 7702  cos=+0.196
+       F19680  cos=+0.522
+       F23723  cos=+0.411
+       F 6863  cos=-0.026

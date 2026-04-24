@@ -1,0 +1,91 @@
+Cross-Domain Report — layer 8
+======================================================================
+
+
+### color
+--------------------------------------------------
+  red                  (common  )   55 features
+  blue                 (common  )   45 features
+  green                (common  )   40 features
+  burgundy             (uncommon)   82 features
+  vermilion            (rare    )   90 features
+  taupe                (rare    )   45 features
+  puce                 (rare    )   80 features
+  cerise               (rare    )   73 features
+
+### emotion
+--------------------------------------------------
+  happy                (common  )   77 features
+  sad                  (common  )   59 features
+  angry                (common  )   56 features
+  melancholy           (uncommon)   74 features
+  jealous              (common  )   91 features
+  schadenfreude        (rare    )   63 features
+  saudade              (rare    )   70 features
+  ennui                (uncommon)   81 features
+
+### name
+--------------------------------------------------
+  John                 (common  )   30 features
+  Mary                 (common  )   23 features
+  David                (common  )   26 features
+  Muhammad             (common  )   43 features
+  Siddhartha           (uncommon)   61 features
+  Aoife                (rare    )   68 features
+  Guadalupe            (uncommon)   83 features
+
+### object
+--------------------------------------------------
+  car                  (common  )   50 features
+  dog                  (common  )   41 features
+  book                 (common  )   47 features
+  astrolabe            (rare    )   97 features
+  samovar              (rare    )   47 features
+  armoire              (uncommon)   86 features
+
+
+### Context decomposition (one word per domain)
+==================================================
+
+red
+  total  = 141
+  core   = 4
+  coat   = 113
+  core features:
+    F 4182  μ=57.89  phrases related to warning signals or alerts
+    F20082  μ=11.07  different shades of colors
+    F 6863  μ= 4.77  words related to politics and government institutions
+    F18821  μ= 4.57  actions or processes involving sudden or forceful movement
+
+happy
+  total  = 174
+  core   = 5
+  coat   = 135
+  core features:
+    F20589  μ=42.10  expressions related to greetings or well-wishes, specifically the phrase "Happy" followed by a specific occasion or sentiment
+    F 9960  μ=10.09  emotions or states of mind
+    F 6250  μ= 7.46  words related to positive emotions or satisfaction
+    F16790  μ= 3.02  temporal references or time-related phrases
+    F 6863  μ= 2.69  words related to politics and government institutions
+
+Muhammad
+  total  = 113
+  core   = 15
+  coat   = 74
+  core features:
+    F13918  μ=33.65  phrases mentioning the name "Mohammed"
+    F 2244  μ= 9.47  references to religious figures, specifically prophets, in this case focusing on Prophet Muhammad
+    F12387  μ= 9.31  mentions of the name "Muammar Gaddafi"
+    F  658  μ= 8.13  proper names of individuals
+    F11181  μ= 7.47  references to the Islamic deity, Allah
+    F21320  μ= 6.91  proper nouns, specifically names like "Bernard" and "Manuel"
+
+car
+  total  = 136
+  core   = 4
+  coat   = 102
+  core features:
+    F  961  μ=46.64  mentions of the word "car" in various contexts
+    F18375  μ= 7.01  terms related to carbon compounds
+    F 5926  μ= 3.46  medical terms and concepts
+    F 6863  μ= 2.48  words related to politics and government institutions

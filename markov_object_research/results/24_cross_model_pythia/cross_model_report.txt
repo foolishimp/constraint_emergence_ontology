@@ -1,0 +1,63 @@
+Exp 24 — Cross-model Replication (Pythia-160M)
+========================================================================
+
+Model:             pythia-160m
+Probe layer:       8 (hook_resid_pre)
+Reference:         n = 5
+Targets:           [999, 666, 137]
+Train templates:   20
+Held-out templates: 10
+
+Scope: exp 18 port (SAE-free). Exps 08/13/17 ports deferred
+pending SAE availability for Pythia-160M.
+
+Pre-registered rule:
+  α = 1 transfer ≥ 0.1 for ≥ 2 targets
+  (GPT-2 baseline ~0.27; relaxed to 0.10 for qualitative replication)
+
+AGGREGATE OUTCOME: PASS  (3/3 targets)
+
+### target = 999
+  paired training templates: 20
+  direction norm: 10.362
+  mean baseline KL (target ‖ ref): 0.522
+  α-sweep (mean ± std over 10 held-out templates):
+    α = 0.00   transfer = +0.000 ± 0.000
+    α = 0.25   transfer = +0.043 ± 0.044
+    α = 0.50   transfer = +0.089 ± 0.077
+    α = 0.75   transfer = +0.140 ± 0.111
+    α = 1.00   transfer = +0.207 ± 0.182
+    α = 1.25   transfer = +0.219 ± 0.163
+    α = 1.50   transfer = +0.112 ± 0.244
+    α = 2.00   transfer = -0.279 ± 1.324
+  α=1 verdict: PASS (transfer +0.207 vs threshold 0.1)
+
+### target = 666
+  paired training templates: 20
+  direction norm: 9.719
+  mean baseline KL (target ‖ ref): 0.491
+  α-sweep (mean ± std over 10 held-out templates):
+    α = 0.00   transfer = +0.000 ± 0.000
+    α = 0.25   transfer = +0.030 ± 0.036
+    α = 0.50   transfer = +0.076 ± 0.107
+    α = 0.75   transfer = +0.133 ± 0.200
+    α = 1.00   transfer = +0.176 ± 0.270
+    α = 1.25   transfer = +0.162 ± 0.263
+    α = 1.50   transfer = +0.093 ± 0.232
+    α = 2.00   transfer = -0.133 ± 0.745
+  α=1 verdict: PASS (transfer +0.176 vs threshold 0.1)
+
+### target = 137
+  paired training templates: 20
+  direction norm: 8.651
+  mean baseline KL (target ‖ ref): 0.448
+  α-sweep (mean ± std over 10 held-out templates):
+    α = 0.00   transfer = +0.000 ± 0.000
+    α = 0.25   transfer = +0.037 ± 0.057
+    α = 0.50   transfer = +0.073 ± 0.117
+    α = 0.75   transfer = +0.116 ± 0.170
+    α = 1.00   transfer = +0.159 ± 0.202
+    α = 1.25   transfer = +0.171 ± 0.205
+    α = 1.50   transfer = +0.152 ± 0.186
+    α = 2.00   transfer = -0.048 ± 0.466
+  α=1 verdict: PASS (transfer +0.159 vs threshold 0.1)

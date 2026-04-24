@@ -1,0 +1,303 @@
+Feature Identity Report — layer 8
+============================================================
+
+666_cultural (n=666) — 83 total active features
+--------------------------------------------------
+  F17244  13.28  references to specific legal or organizational codes, possibly related to financial or tax matters
+           decoder: [ILCS | SHARES | MHz | MHz | px]
+  F22934  10.76  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F13585   9.77  measurements and numerical values
+           decoder: [ILCS | MHz | mAh | MHz | px]
+  F12604   9.01  numbers related to technological specifications or quantities
+           decoder: [mAh | MHz | Hz | MHz | px]
+  F10902   7.08  sequences of numbers and code instructions
+           decoder: [000000 | 0000 | 0000000000000000 | 0000000 | 00000000]
+  F 7461   7.06  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+           decoder: [onwards | onward | Dialogue | Hundred | ��]
+  F 4562   6.97  phrases related to celestial bodies, particularly Saturn and its moons
+           decoder: [Mercury | Saturn | Asc | Uran | arium]
+  F19101   6.88  words related to the formatting and coding conventions used for programming
+           decoder: [aster | suffix | denotes | prefix | denote]
+  F20061   6.23  numbers related to measurements or dimensions
+           decoder: [ILCS | �� | mph | 00 | CTV]
+  F  556   5.83  numbers or numerical patterns within the text
+           decoder: [plates | mable | enance | metry | pad]
+  F11917   5.81  proper nouns of people's names
+           decoder: [ル | CTR | ァ | theless | PACK]
+  F 5841   5.49  terms related to linguistics and concepts
+           decoder: [‎ | signifies | refers | denotes | implies]
+  F 5480   4.81  mentions of the word "demon" or variations of the word
+           decoder: [stration | strate | iac | str | oid]
+  F 5926   4.81  medical terms and concepts
+           decoder: [› | ¶ | � | ][ | atoon]
+  F19615   4.61  proper nouns, possibly related to locations and technology
+           decoder: [consisted | consists | comprises | has | is]
+  F10439   4.58  phrases related to gentrification
+           decoder: [ャ | hips | bour | shake | Zup]
+  F 6863   4.52  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F18821   4.42  actions or processes involving sudden or forceful movement
+           decoder: [tones | balls | bum | trap | racks]
+  F23743   4.32  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F 8531   4.14  large numerical figures related to various topics
+           decoder: [pounds | lbs | lbs | miles | calories]
+
+999_cultural (n=999) — 87 total active features
+--------------------------------------------------
+  F 2269  20.69  emergency numbers, specifically '911'
+           decoder: [dispatcher | 911 | caller | responders | voic]
+  F12604  16.32  numbers related to technological specifications or quantities
+           decoder: [mAh | MHz | Hz | MHz | px]
+  F10744   9.71  references to the specific date "9/11"
+           decoder: [9999 | 999 | 06 | 090 | 07]
+  F 2747   8.98  numerical values with percentage symbols and confidence intervals
+           decoder: [%: | %- | 999 | ¢ | %]
+  F22934   8.62  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F12624   8.23  phone numbers to call for various information and services
+           decoder: [hotline | Emergency | police | emergency | emergencies]
+  F 5567   7.98  numerical values
+           decoder: [09 | 08 | 06 | 07 | 05]
+  F17244   7.75  references to specific legal or organizational codes, possibly related to financial or tax matters
+           decoder: [ILCS | SHARES | MHz | MHz | px]
+  F10902   5.96  sequences of numbers and code instructions
+           decoder: [000000 | 0000 | 0000000000000000 | 0000000 | 00000000]
+  F 5115   5.15  medical terms and scientific words related to physiology or biology
+           decoder: [analogy | iest | dilemma | hypothesis | approach]
+  F23743   4.71  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F12723   4.68  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F19101   4.64  words related to the formatting and coding conventions used for programming
+           decoder: [aster | suffix | denotes | prefix | denote]
+  F 6863   4.42  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F 8521   4.18  fractions or numerical ranges
+           decoder: [ratio | ratios | Ratio | converter | bilingual]
+  F11970   4.14  phrases related to HTTP protocol and technology
+           decoder: [:// | connectivity | connection | HTTP | HTTP]
+  F13585   4.03  measurements and numerical values
+           decoder: [ILCS | MHz | mAh | MHz | px]
+  F 8531   3.78  large numerical figures related to various topics
+           decoder: [pounds | lbs | lbs | miles | calories]
+  F 6429   3.47  years mentioned in the text
+           decoder: [th | pc | pb | nm | yo]
+  F11457   3.31  phrases related to law enforcement agencies
+           decoder: [abulary | enqu | Scotland | Inspector | realise]
+
+500_round (n=500) — 39 total active features
+--------------------------------------------------
+  F 6176  19.58  numbers representing percentages
+           decoder: [MHz | px | MHz | Hz | +]
+  F20409  10.37  references to the number 50
+           decoder: [Shades | ¢ | %- | Hz | %]
+  F12604   9.80  numbers related to technological specifications or quantities
+           decoder: [mAh | MHz | Hz | MHz | px]
+  F22934   6.69  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F12723   6.55  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F17244   6.12  references to specific legal or organizational codes, possibly related to financial or tax matters
+           decoder: [ILCS | SHARES | MHz | MHz | px]
+  F 3015   4.40  words related to objects or actions involving water
+           decoder: [simulator | syndrome | fiasco | \": | ™:]
+  F23743   4.00  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F 5115   3.86  medical terms and scientific words related to physiology or biology
+           decoder: [analogy | iest | dilemma | hypothesis | approach]
+  F 5841   3.41  terms related to linguistics and concepts
+           decoder: [‎ | signifies | refers | denotes | implies]
+  F 3794   3.40  compound words
+           decoder: [Profile | ⓘ | Brewing | Overview | Releases]
+  F 6863   3.26  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F  623   2.89  dates and times in a specified format
+           decoder: [�� | nd | × | rd | +,]
+  F 1893   2.81  strings that resemble alphanumeric codes or identification numbers
+           decoder: [20439 | CV | 003 | 201 | 014]
+  F19016   2.54  proper nouns related to organizations, people, and places
+           decoder: [reacted | announced | celebrates | awoke | unveiled]
+  F21451   2.19  phrases related to official statements or announcements
+           decoder: [Fukushima | prosecutions | Rohingya | WTC | Tsarnaev]
+  F23116   2.13  proper nouns related to various locations and individuals
+           decoder: [has | collided | awaits | succumbed | appears]
+  F19615   2.13  proper nouns, possibly related to locations and technology
+           decoder: [consisted | consists | comprises | has | is]
+  F 7109   2.12   monetary values expressed in thousands or millions
+           decoder: [+, | + | +) | +. | apiece]
+  F18821   2.10  actions or processes involving sudden or forceful movement
+           decoder: [tones | balls | bum | trap | racks]
+
+7_cultural (n=7) — 52 total active features
+--------------------------------------------------
+  F12723  21.12  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F11330  19.76  numerical patterns such as sequences containing the number 7 followed by the number 9
+           decoder: [Wonders | eenth | ecause | ioned | 883]
+  F  723   9.94  phrases indicating top priority or importance
+           decoder: [contender | priority | trending | ranked | spot]
+  F21286   9.83  numbers
+           decoder: [96 | 76 | 90 | 86 | 87]
+  F 7461   4.95  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+           decoder: [onwards | onward | Dialogue | Hundred | ��]
+  F22934   4.55  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F19101   4.55  words related to the formatting and coding conventions used for programming
+           decoder: [aster | suffix | denotes | prefix | denote]
+  F18164   4.32  legal classifications and terms related to substances, crimes, and law
+           decoder: [+, | +. | inhibitor | inhibitors | Fin]
+  F  623   3.75  dates and times in a specified format
+           decoder: [�� | nd | × | rd | +,]
+  F 5115   3.68  medical terms and scientific words related to physiology or biology
+           decoder: [analogy | iest | dilemma | hypothesis | approach]
+  F 6863   3.55  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F21451   3.55  phrases related to official statements or announcements
+           decoder: [Fukushima | prosecutions | Rohingya | WTC | Tsarnaev]
+  F 7698   3.24  words related to processes or actions being performed
+           decoder: [consists | comprises | consisted | is | begins]
+  F18821   3.02  actions or processes involving sudden or forceful movement
+           decoder: [tones | balls | bum | trap | racks]
+  F23743   2.95  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F 3794   2.88  compound words
+           decoder: [Profile | ⓘ | Brewing | Overview | Releases]
+  F22603   2.69  numbers or mathematical expressions
+           decoder: [arian | xual | opol | OME | emen]
+  F16664   2.66  words related to strength and connections, such as 'formed', 'force', 'connected', 'service', and 'together'
+           decoder: [thence | largeDownload | unto | ⓘ | )?]
+  F23116   2.22  proper nouns related to various locations and individuals
+           decoder: [has | collided | awaits | succumbed | appears]
+  F10917   2.15  mentions of different decades or periods of time, especially those from the 80s and 90s
+           decoder: [20439 | -' | ″ | %" | MJ]
+
+512_pow2 (n=512) — 70 total active features
+--------------------------------------------------
+  F17244  18.43  references to specific legal or organizational codes, possibly related to financial or tax matters
+           decoder: [ILCS | SHARES | MHz | MHz | px]
+  F14962  15.22  mentions of 64-bit technology
+           decoder: [bit | GB | Bit | 328 | LECT]
+  F13585   8.87  measurements and numerical values
+           decoder: [ILCS | MHz | mAh | MHz | px]
+  F22934   8.31  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F 5841   7.30  terms related to linguistics and concepts
+           decoder: [‎ | signifies | refers | denotes | implies]
+  F10902   6.17  sequences of numbers and code instructions
+           decoder: [000000 | 0000 | 0000000000000000 | 0000000 | 00000000]
+  F 1893   5.24  strings that resemble alphanumeric codes or identification numbers
+           decoder: [20439 | CV | 003 | 201 | 014]
+  F11480   5.11  references to the financial market term "FX"
+           decoder: [dos | Duration | SIM | ━ | daq]
+  F14693   5.05  mentions of DNA and related concepts
+           decoder: [molecule | molecules | strand | polymer | methyl]
+  F 1357   4.88  proper nouns that start with a capital letter followed by a high concentration of capital letters within the token
+           decoder: [acia | ild | izont | nergy | OTOS]
+  F23743   3.82  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F18238   3.76  mentions of flooding and related terms
+           decoder: [waters | plain | Katrina | water | Flood]
+  F12723   3.76  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F 6863   3.72  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F 5926   3.69  medical terms and concepts
+           decoder: [› | ¶ | � | ][ | atoon]
+  F19101   3.63  words related to the formatting and coding conventions used for programming
+           decoder: [aster | suffix | denotes | prefix | denote]
+  F12604   3.57  numbers related to technological specifications or quantities
+           decoder: [mAh | MHz | Hz | MHz | px]
+  F 7461   3.49  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+           decoder: [onwards | onward | Dialogue | Hundred | ��]
+  F 7109   3.34   monetary values expressed in thousands or millions
+           decoder: [+, | + | +) | +. | apiece]
+  F 6429   3.30  years mentioned in the text
+           decoder: [th | pc | pb | nm | yo]
+
+101_prime (n=101) — 75 total active features
+--------------------------------------------------
+  F22359  12.82  number codes embedded in text
+           decoder: [ILCS | mph | 20439 | dB | �]
+  F12723  12.49  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F 7040  11.83  dates in a specific format
+           decoder: [st | 09 | 041 | 000000 | vier]
+  F   91   9.08  mentions of the number "100"
+           decoder: [00000 | %" | % | %; | Percent]
+  F 7461   7.99  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+           decoder: [onwards | onward | Dialogue | Hundred | ��]
+  F22934   7.44  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F  723   7.36  phrases indicating top priority or importance
+           decoder: [contender | priority | trending | ranked | spot]
+  F14108   7.19  numbers related to statistics or figures
+           decoder: [er | ers | ed | ership | 00]
+  F 4815   6.68  references to or mentions of the specific time period "21st century."
+           decoder: [st | nect | ST | worthy | onsense]
+  F 1893   5.61  strings that resemble alphanumeric codes or identification numbers
+           decoder: [20439 | CV | 003 | 201 | 014]
+  F 6863   5.54  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F 5115   5.48  medical terms and scientific words related to physiology or biology
+           decoder: [analogy | iest | dilemma | hypothesis | approach]
+  F 3794   5.04  compound words
+           decoder: [Profile | ⓘ | Brewing | Overview | Releases]
+  F 6733   4.07  phrases related to military commands and operations
+           decoder: [eering | eer | eers | ments | ment]
+  F 5953   3.57  dates and timestamps indicated using the format '# day, month year hour:minute:second'
+           decoder: [DragonMagazine | Quality | CB | Reviewer | Quote]
+  F13256   3.53  words related to the Brooklyn Nets basketball team
+           decoder: [Nets | Heights | borough | Bridge | Borough]
+  F18821   3.27  actions or processes involving sudden or forceful movement
+           decoder: [tones | balls | bum | trap | racks]
+  F17244   2.79  references to specific legal or organizational codes, possibly related to financial or tax matters
+           decoder: [ILCS | SHARES | MHz | MHz | px]
+  F19934   2.68  phrases related to staying united or together
+           decoder: [™ | !, | syndrome | ! | Syndrome]
+  F16266   2.51  phrases related to urgency or a critical point in time
+           decoder: [Abedin | Macron | xxxxxxxx | ACTED | WHERE]
+
+100_round (n=100) — 46 total active features
+--------------------------------------------------
+  F   91  33.37  mentions of the number "100"
+           decoder: [00000 | %" | % | %; | Percent]
+  F12723  11.65  references to specific rankings or numbers
+           decoder: [seed | ashington | overall | ranked | seeds]
+  F22934   6.88  specific locations mentioned in the text, particularly highways and roads
+           decoder: [Revis | corridor | Corridor | Extension | A]
+  F 3794   5.02  compound words
+           decoder: [Profile | ⓘ | Brewing | Overview | Releases]
+  F  723   4.59  phrases indicating top priority or importance
+           decoder: [contender | priority | trending | ranked | spot]
+  F 3015   4.13  words related to objects or actions involving water
+           decoder: [simulator | syndrome | fiasco | \": | ™:]
+  F 5115   3.98  medical terms and scientific words related to physiology or biology
+           decoder: [analogy | iest | dilemma | hypothesis | approach]
+  F 7461   3.75  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+           decoder: [onwards | onward | Dialogue | Hundred | ��]
+  F 6863   3.40  words related to politics and government institutions
+           decoder: [Canaver | NASCAR | Hillary | Bernie | Donald]
+  F19759   2.98  dates and numerical relationships
+           decoder: [ILCS | hz | uther | s | �]
+  F19016   2.86  proper nouns related to organizations, people, and places
+           decoder: [reacted | announced | celebrates | awoke | unveiled]
+  F 1893   2.80  strings that resemble alphanumeric codes or identification numbers
+           decoder: [20439 | CV | 003 | 201 | 014]
+  F16664   2.71  words related to strength and connections, such as 'formed', 'force', 'connected', 'service', and 'together'
+           decoder: [thence | largeDownload | unto | ⓘ | )?]
+  F  202   2.57  model numbers and technical specifications related to computers and electronics
+           decoder: [DM | 00 | 50 | 01 | eus]
+  F18821   2.52  actions or processes involving sudden or forceful movement
+           decoder: [tones | balls | bum | trap | racks]
+  F23743   2.51  terms related to technology and digital devices
+           decoder: [cannot | could | should | exists | lacks]
+  F 5841   2.27  terms related to linguistics and concepts
+           decoder: [‎ | signifies | refers | denotes | implies]
+  F 5926   2.24  medical terms and concepts
+           decoder: [› | ¶ | � | ][ | atoon]
+  F12604   2.17  numbers related to technological specifications or quantities
+           decoder: [mAh | MHz | Hz | MHz | px]
+  F  623   1.98  dates and times in a specified format
+           decoder: [�� | nd | × | rd | +,]

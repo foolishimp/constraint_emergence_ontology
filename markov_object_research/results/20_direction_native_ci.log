@@ -1,0 +1,56 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading GPT-2 small...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 19361.75it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target = 999 ===
+  loaded exp 19 projector: k* = 10
+  collecting probe residuals (target and reference)...
+  30 paired probe residuals
+  projecting out identity subspace (P_k*)...
+  CV logistic probe on full r...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  CV logistic probe on r_perp...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  ΔAUC = +0.000
+  HSIC on r_perp (permutation null)...
+    observed = 0.01486   p = 0.005
+  outcome: FAIL
+  hsic_perm_999.png
+
+=== target = 666 ===
+  loaded exp 19 projector: k* = 10
+  collecting probe residuals (target and reference)...
+  30 paired probe residuals
+  projecting out identity subspace (P_k*)...
+  CV logistic probe on full r...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  CV logistic probe on r_perp...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  ΔAUC = +0.000
+  HSIC on r_perp (permutation null)...
+    observed = 0.02731   p = 0.005
+  outcome: FAIL
+  hsic_perm_666.png
+
+=== target = 137 ===
+  loaded exp 19 projector: k* = 10
+  collecting probe residuals (target and reference)...
+  30 paired probe residuals
+  projecting out identity subspace (P_k*)...
+  CV logistic probe on full r...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  CV logistic probe on r_perp...
+    folds: ['1.000', '1.000', '1.000', '1.000', '1.000']  mean = 1.000
+  ΔAUC = +0.000
+  HSIC on r_perp (permutation null)...
+    observed = 0.00839   p = 0.005
+  outcome: FAIL
+  hsic_perm_137.png
+  auc_comparison.png
+
+=== AGGREGATE OUTCOME: FAIL ===
+Report: ci_report.txt
+Summary JSON: ci_summary.json
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/20_direction_native_ci

@@ -1,0 +1,157 @@
+Cross-Representation Feature Report — layer 8
+======================================================================
+
+
+### n = 3  —  forms: ['digit', 'word', 'roman']
+--------------------------------------------------
+  Active counts: digit=46  word=40  roman=47
+  Union: 91
+  Invariant across all forms: 10
+
+  Cross-form invariant features:
+    F12723  [digit=17.9  word=18.9  roman=2.5]  references to specific rankings or numbers
+    F 7461  [digit=9.0  word=7.9  roman=9.7]  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+    F18164  [digit=7.8  word=2.3  roman=4.0]  legal classifications and terms related to substances, crimes, and law
+    F 5115  [digit=3.7  word=4.2  roman=3.5]  medical terms and scientific words related to physiology or biology
+    F11744  [digit=2.5  word=3.4  roman=3.4]  legal, political, and governmental terms and entities
+    F18821  [digit=2.2  word=1.6  roman=5.1]  actions or processes involving sudden or forceful movement
+    F 7698  [digit=3.3  word=4.1  roman=1.2]  words related to processes or actions being performed
+    F 6863  [digit=3.0  word=3.7  roman=1.3]  words related to politics and government institutions
+    F16664  [digit=2.9  word=1.7  roman=0.7]  words related to strength and connections, such as 'formed', 'force', 'connected', 'service', and 'together'
+    F23743  [digit=2.3  word=0.6  roman=2.3]  terms related to technology and digital devices
+
+  Unique to digit (15 features):
+    F  623   4.69  dates and times in a specified format
+    F23512   3.01  informal phrases or expressions
+    F19947   2.60  dates and numbers
+    F 8521   1.48  fractions or numerical ranges
+    F11326   1.34  phrases related to legal actions or disputes
+
+  Unique to word (17 features):
+    F11513  21.31  instances where the number "three" is mentioned
+    F 9759   4.83  numbers
+    F10730   3.86  phrases related to assuming roles or positions
+    F    6   3.51  names of individuals and their associations or attributes
+    F15228   1.92  ordinal numbers indicating ranking or positions
+
+  Unique to roman (27 features):
+    F15117  33.84  Roman numerals
+    F  562   9.69  dates presented in a day-year format
+    F23913   3.74  alphanumeric characters
+    F12862   3.07  legal terms like section numbers and words related to legal actions and proceedings
+    F 1893   2.99  strings that resemble alphanumeric codes or identification numbers
+
+### n = 7  —  forms: ['digit', 'word', 'roman']
+--------------------------------------------------
+  Active counts: digit=52  word=53  roman=69
+  Union: 110
+  Invariant across all forms: 19
+
+  Cross-form invariant features:
+    F12723  [digit=21.1  word=21.0  roman=4.7]  references to specific rankings or numbers
+    F11330  [digit=19.8  word=14.9  roman=10.8]  numerical patterns such as sequences containing the number 7 followed by the number 9
+    F 7461  [digit=5.0  word=5.6  roman=7.9]  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+    F18821  [digit=3.0  word=3.9  roman=4.0]  actions or processes involving sudden or forceful movement
+    F 5115  [digit=3.7  word=4.0  roman=3.2]  medical terms and scientific words related to physiology or biology
+    F22934  [digit=4.5  word=3.9  roman=1.5]  specific locations mentioned in the text, particularly highways and roads
+    F19101  [digit=4.5  word=4.0  roman=1.1]  words related to the formatting and coding conventions used for programming
+    F 6863  [digit=3.6  word=3.7  roman=1.4]  words related to politics and government institutions
+    F23743  [digit=3.0  word=2.2  roman=3.3]  terms related to technology and digital devices
+    F 3794  [digit=2.9  word=1.7  roman=3.1]  compound words
+
+  Unique to digit (9 features):
+    F21286   9.83  numbers
+    F  623   3.75  dates and times in a specified format
+    F12056   1.60  names of different animal species
+    F 3903   1.54  statistics related to sports performance
+    F19947   1.37  dates and numbers
+
+  Unique to word (17 features):
+    F24189  15.38  numbers associated with a specific quantity
+    F 9759   5.60  numbers
+    F  323   3.45  ordinal numbers related to sequence or ranking
+    F12101   3.34  terms related to technology companies or products
+    F  770   2.40  sports-related terms and statistics
+
+  Unique to roman (39 features):
+    F15117  28.55  Roman numerals
+    F  785  12.33  Roman numerals in sequence
+    F17244   5.44  references to specific legal or organizational codes, possibly related to financial or tax matters
+    F11284   3.72  specific bill numbers in legislative texts
+    F16015   3.60  specific locations or points of interest
+
+### n = 42  —  forms: ['digit', 'word', 'roman']
+--------------------------------------------------
+  Active counts: digit=51  word=49  roman=71
+  Union: 129
+  Invariant across all forms: 9
+
+  Cross-form invariant features:
+    F 3697  [digit=16.4  word=7.9  roman=9.6]  years in the 20th century
+    F12723  [digit=19.2  word=4.7  roman=2.2]  references to specific rankings or numbers
+    F 5841  [digit=5.1  word=7.9  roman=3.5]  terms related to linguistics and concepts
+    F 6863  [digit=4.3  word=5.8  roman=4.6]  words related to politics and government institutions
+    F 7461  [digit=3.4  word=5.1  roman=1.8]  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+    F19615  [digit=1.9  word=4.4  roman=3.0]  proper nouns, possibly related to locations and technology
+    F23743  [digit=2.9  word=1.6  roman=4.0]  terms related to technology and digital devices
+    F 1893  [digit=1.6  word=2.9  roman=3.9]  strings that resemble alphanumeric codes or identification numbers
+    F 3015  [digit=1.9  word=0.9  roman=2.6]  words related to objects or actions involving water
+
+  Unique to digit (23 features):
+    F 4130   9.85  numbers related to politics or announcements of public figures
+    F20224   9.42  mentions of the number '40'
+    F23723   6.90  numbers, particularly two-digit numbers
+    F  723   3.20  phrases indicating top priority or importance
+    F21451   2.47  phrases related to official statements or announcements
+
+  Unique to word (25 features):
+    F22971  14.59  the number '2' or 'two' in various contexts
+    F 8607   5.07  information about people's ages
+    F 5604   3.65  number ranges
+    F19934   3.26  phrases related to staying united or together
+    F 7772   2.60  entities associated with various cultures, possibly people's names and geographical locations
+
+  Unique to roman (48 features):
+    F15117  26.82  Roman numerals
+    F  785   6.41  Roman numerals in sequence
+    F21559   5.26  words related to technology brands or products
+    F16866   5.14  propper nouns related to companies, brands, or products
+    F   21   4.96  names of individuals and organizations
+
+### n = 100  —  forms: ['digit', 'word', 'roman']
+--------------------------------------------------
+  Active counts: digit=46  word=49  roman=36
+  Union: 99
+  Invariant across all forms: 9
+
+  Cross-form invariant features:
+    F 5841  [digit=2.3  word=4.0  roman=6.4]  terms related to linguistics and concepts
+    F 5115  [digit=4.0  word=4.9  roman=1.9]  medical terms and scientific words related to physiology or biology
+    F 6863  [digit=3.4  word=3.7  roman=3.4]  words related to politics and government institutions
+    F23743  [digit=2.5  word=2.5  roman=2.6]  terms related to technology and digital devices
+    F11744  [digit=1.8  word=3.5  roman=0.9]  legal, political, and governmental terms and entities
+    F18821  [digit=2.5  word=2.1  roman=1.3]  actions or processes involving sudden or forceful movement
+    F 1068  [digit=1.4  word=2.3  roman=1.7]  numerical and statistical information related to different topics including economics, demographics, and technology
+    F 5926  [digit=2.2  word=1.0  roman=0.8]  medical terms and concepts
+    F22852  [digit=0.9  word=0.6  roman=1.3]  URLs
+
+  Unique to digit (24 features):
+    F12723  11.65  references to specific rankings or numbers
+    F19759   2.98  dates and numerical relationships
+    F16664   2.71  words related to strength and connections, such as 'formed', 'force', 'connected', 'service', and 'together'
+    F  202   2.57  model numbers and technical specifications related to computers and electronics
+    F12604   2.17  numbers related to technological specifications or quantities
+
+  Unique to word (28 features):
+    F 5165  35.58  numeric values and measurements of quantity
+    F 3926   9.21  occurrences of the word "hundreds"
+    F16782   8.69  cardinal numbers indicating quantities or rankings
+    F22476   4.28  references to specific measurements of distance, especially those related to miles
+    F13601   3.61  financial amounts, particularly in the millions or billions
+
+  Unique to roman (24 features):
+    F 7521  58.08  specific mentions of the letter 'C' or 'C9'
+    F 4587   5.48  names or titles of people, places, and organizations
+    F17469   4.95  numerical quantities and statistics
+    F16015   4.61  specific locations or points of interest
+    F20793   4.03  nucleotide sequences or terms related to genetics

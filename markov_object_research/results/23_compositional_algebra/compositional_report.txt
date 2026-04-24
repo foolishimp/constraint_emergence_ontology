@@ -1,0 +1,44 @@
+Exp 23 — Compositional Algebra of Identity Directions
+========================================================================
+
+Layer:             8 (hook_resid_pre)
+Neutral context:   'number'
+Null number:       5
+Triples:           20
+Templates per cell: 8
+Random draws per triple: 100
+
+Pre-registered rules:
+  mean cos(d_compound, d_A + d_B) ≥ 0.5
+  excess over random-pair null     ≥ 0.3
+  permutation p-value              <  0.01
+
+AGGREGATE OUTCOME: PASS
+
+Summary statistics:
+  mean true cosine:           +0.936
+  mean random-pair cosine:    +0.634
+  excess:                     +0.302
+  permutation p-value:        0.0099
+
+Per-triple:
+      page/666   cos(A+B)=+0.928  cos(A)=+0.466  cos(B)=+0.826  null=+0.643±0.113  ||d_c||=69.16 ||d_A||=45.66 ||d_B||=62.49
+      page/137   cos(A+B)=+0.939  cos(A)=+0.577  cos(B)=+0.770  null=+0.656±0.126  ||d_c||=69.46 ||d_A||=45.66 ||d_B||=55.85
+      page/999   cos(A+B)=+0.927  cos(A)=+0.444  cos(B)=+0.836  null=+0.637±0.133  ||d_c||=70.38 ||d_A||=45.66 ||d_B||=64.55
+      room/137   cos(A+B)=+0.946  cos(A)=+0.641  cos(B)=+0.784  null=+0.665±0.117  ||d_c||=70.00 ||d_A||=44.85 ||d_B||=55.85
+      room/666   cos(A+B)=+0.939  cos(A)=+0.538  cos(B)=+0.851  null=+0.672±0.128  ||d_c||=71.42 ||d_A||=44.85 ||d_B||=62.49
+      room/999   cos(A+B)=+0.933  cos(A)=+0.482  cos(B)=+0.866  null=+0.639±0.139  ||d_c||=71.28 ||d_A||=44.85 ||d_B||=64.55
+      line/666   cos(A+B)=+0.942  cos(A)=+0.474  cos(B)=+0.893  null=+0.680±0.129  ||d_c||=67.79 ||d_A||=39.43 ||d_B||=62.49
+      line/137   cos(A+B)=+0.945  cos(A)=+0.551  cos(B)=+0.826  null=+0.685±0.116  ||d_c||=65.26 ||d_A||=39.43 ||d_B||=55.85
+      line/999   cos(A+B)=+0.927  cos(A)=+0.402  cos(B)=+0.903  null=+0.558±0.134  ||d_c||=72.25 ||d_A||=39.43 ||d_B||=64.55
+   chapter/666   cos(A+B)=+0.935  cos(A)=+0.554  cos(B)=+0.801  null=+0.658±0.118  ||d_c||=71.06 ||d_A||=48.42 ||d_B||=62.49
+   chapter/137   cos(A+B)=+0.947  cos(A)=+0.666  cos(B)=+0.738  null=+0.649±0.122  ||d_c||=70.18 ||d_A||=48.42 ||d_B||=55.85
+   chapter/42    cos(A+B)=+0.957  cos(A)=+0.695  cos(B)=+0.682  null=+0.571±0.122  ||d_c||=66.84 ||d_A||=48.42 ||d_B||=48.44
+     floor/137   cos(A+B)=+0.944  cos(A)=+0.622  cos(B)=+0.778  null=+0.655±0.102  ||d_c||=68.66 ||d_A||=44.41 ||d_B||=55.85
+     floor/666   cos(A+B)=+0.934  cos(A)=+0.514  cos(B)=+0.859  null=+0.671±0.128  ||d_c||=71.65 ||d_A||=44.41 ||d_B||=62.49
+    flight/999   cos(A+B)=+0.906  cos(A)=+0.451  cos(B)=+0.860  null=+0.592±0.148  ||d_c||=75.33 ||d_A||=49.96 ||d_B||=64.55
+    flight/42    cos(A+B)=+0.925  cos(A)=+0.600  cos(B)=+0.692  null=+0.548±0.092  ||d_c||=67.85 ||d_A||=49.96 ||d_B||=48.44
+   section/666   cos(A+B)=+0.931  cos(A)=+0.520  cos(B)=+0.806  null=+0.661±0.107  ||d_c||=74.00 ||d_A||=51.10 ||d_B||=62.49
+   section/137   cos(A+B)=+0.934  cos(A)=+0.607  cos(B)=+0.747  null=+0.642±0.106  ||d_c||=73.18 ||d_A||=51.10 ||d_B||=55.85
+   mission/42    cos(A+B)=+0.953  cos(A)=+0.558  cos(B)=+0.771  null=+0.593±0.101  ||d_c||=62.81 ||d_A||=41.27 ||d_B||=48.44
+   mission/999   cos(A+B)=+0.929  cos(A)=+0.433  cos(B)=+0.884  null=+0.613±0.130  ||d_c||=70.32 ||d_A||=41.27 ||d_B||=64.55

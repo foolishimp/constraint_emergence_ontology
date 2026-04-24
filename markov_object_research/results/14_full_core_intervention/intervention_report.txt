@@ -1,0 +1,356 @@
+Full Core Intervention Report — layer 8
+======================================================================
+
+### A_ablate_999_full_core
+  prompt     : 'The number 999 is most associated with'
+  span       : '999'  (pos=3)
+  mode       : ablate
+  description: Ablate all 6 invariant-core features of 999 (emergency/911, 9/11 date, tech spec, numerical, %, legal code)
+  KL(baseline || intervened) = 0.0377
+  #features intervened: 6
+
+  FEATURES INTERVENED:
+    F2269    μ_in_core=15.93  →  ablated   (emergency numbers '911')
+    F12604   μ_in_core=13.89  →  ablated   (tech specifications / quantities)
+    F10744   μ_in_core=9.13  →  ablated   (references to date '9/11')
+    F5567    μ_in_core=7.89  →  ablated   (numerical values)
+    F2747    μ_in_core=7.86  →  ablated   (numerical with percentage / CI)
+    F17244   μ_in_core=5.65  →  ablated   (legal/organizational codes)
+
+  CONTINUATION:
+    baseline   → '<|endoftext|>The number 999 is most associated with the number of people who have died in the last year.'
+    intervened → '<|endoftext|>The number 999 is most associated with the number of people who have died in the last year.'
+
+  TOP BASELINE:
+     1.          ' the'  0.1826
+     2.            ' a'  0.0410
+     3.           ' an'  0.0118
+     4.       ' people'  0.0103
+     5.            ' "'  0.0089
+     6.        ' crime'  0.0071
+     7.        ' those'  0.0064
+     8.        ' death'  0.0061
+     9.        ' women'  0.0047
+    10.          ' one'  0.0043
+    11.     ' children'  0.0043
+    12.    ' emergency'  0.0042
+    13.          ' men'  0.0038
+    14.        ' human'  0.0035
+    15.      ' suicide'  0.0034
+
+  TOP INTERVENED:
+     1.          ' the'  0.1732
+     2.            ' a'  0.0381
+     3.           ' an'  0.0107
+     4.       ' people'  0.0087
+     5.            ' "'  0.0082
+     6.        ' women'  0.0081
+     7.        ' crime'  0.0075
+     8.        ' death'  0.0067
+     9.        ' those'  0.0057
+    10.          ' men'  0.0053
+    11.          ' one'  0.0041
+    12.     ' children'  0.0040
+    13.     ' physical'  0.0037
+    14.      ' suicide'  0.0036
+    15.         ' male'  0.0034
+
+  PROBE SHIFTS (sorted by |Δ|):
+       ' emergency'  0.00420 → 0.00140  (-0.00280, ×0.33)
+          ' people'  0.01034 → 0.00868  (-0.00166, ×0.84)
+          ' police'  0.00292 → 0.00219  (-0.00073, ×0.75)
+             ' 911'  0.00044 → 0.00005  (-0.00039, ×0.11)
+          ' number'  0.00102 → 0.00070  (-0.00032, ×0.69)
+             ' God'  0.00111 → 0.00094  (-0.00017, ×0.85)
+           ' phone'  0.00026 → 0.00012  (-0.00014, ×0.44)
+            ' fire'  0.00085 → 0.00072  (-0.00013, ×0.85)
+            ' call'  0.00023 → 0.00011  (-0.00013, ×0.45)
+            ' code'  0.00011 → 0.00007  (-0.00004, ×0.62)
+            ' year'  0.00004 → 0.00005  (+0.00001, ×1.22)
+            ' song'  0.00004 → 0.00005  (+0.00000, ×1.05)
+
+### B_inject_999_core_into_500
+  prompt     : 'The number 500 is most associated with'
+  span       : '500'  (pos=3)
+  mode       : inject
+  description: Transplant 999's full invariant core into 500
+  KL(baseline || intervened) = 0.0108
+  #features intervened: 6
+
+  FEATURES INTERVENED:
+    F2269    injected@15.93  (core μ=15.93)   (emergency numbers '911')
+    F12604   injected@13.89  (core μ=13.89)   (tech specifications / quantities)
+    F10744   injected@9.13  (core μ=9.13)   (references to date '9/11')
+    F5567    injected@7.89  (core μ=7.89)   (numerical values)
+    F2747    injected@7.86  (core μ=7.86)   (numerical with percentage / CI)
+    F17244   injected@5.65  (core μ=5.65)   (legal/organizational codes)
+
+  CONTINUATION:
+    baseline   → '<|endoftext|>The number 500 is most associated with the number of people who have been killed in the last year'
+    intervened → '<|endoftext|>The number 500 is most associated with the number of people who have been killed in the last year'
+
+  TOP BASELINE:
+     1.          ' the'  0.1679
+     2.            ' a'  0.0236
+     3.        ' women'  0.0102
+     4.            ' "'  0.0068
+     5.           ' an'  0.0056
+     6.       ' people'  0.0053
+     7.     ' American'  0.0045
+     8.        ' those'  0.0045
+     9.          ' men'  0.0041
+    10.    ' financial'  0.0039
+    11.   ' technology'  0.0034
+    12.     ' computer'  0.0032
+    13.         ' high'  0.0032
+    14.          ' one'  0.0026
+    15.       ' global'  0.0026
+
+  TOP INTERVENED:
+     1.          ' the'  0.1681
+     2.            ' a'  0.0237
+     3.        ' women'  0.0082
+     4.            ' "'  0.0072
+     5.           ' an'  0.0057
+     6.       ' people'  0.0057
+     7.     ' American'  0.0048
+     8.        ' those'  0.0046
+     9.    ' financial'  0.0042
+    10.     ' computer'  0.0039
+    11.   ' technology'  0.0037
+    12.          ' men'  0.0036
+    13.         ' high'  0.0033
+    14.       ' global'  0.0029
+    15.        ' money'  0.0027
+
+  PROBE SHIFTS (sorted by |Δ|):
+          ' people'  0.00527 → 0.00570  (+0.00043, ×1.08)
+          ' police'  0.00049 → 0.00084  (+0.00035, ×1.70)
+           ' money'  0.00247 → 0.00274  (+0.00027, ×1.11)
+       ' emergency'  0.00019 → 0.00041  (+0.00022, ×2.14)
+             ' 911'  0.00005 → 0.00021  (+0.00017, ×4.70)
+            ' call'  0.00006 → 0.00009  (+0.00004, ×1.61)
+            ' fire'  0.00019 → 0.00023  (+0.00003, ×1.18)
+         ' Fortune'  0.00013 → 0.00014  (+0.00002, ×1.12)
+           ' years'  0.00011 → 0.00010  (-0.00001, ×0.95)
+         ' dollars'  0.00009 → 0.00009  (+0.00000, ×1.06)
+           ' miles'  0.00001 → 0.00001  (-0.00000, ×0.95)
+
+### C_ablate_666_full_core
+  prompt     : 'The number 666 is most associated with'
+  span       : '666'  (pos=3)
+  mode       : ablate
+  description: Ablate all 9 invariant-core features of 666
+  KL(baseline || intervened) = 0.0102
+  #features intervened: 9
+
+  FEATURES INTERVENED:
+    F17244   μ_in_core=12.45  →  ablated   (legal/organizational codes)
+    F13585   μ_in_core=9.31  →  ablated   (measurements and numerical values)
+    F12604   μ_in_core=7.13  →  ablated   (tech specifications / quantities)
+    F20061   μ_in_core=5.80  →  ablated   (measurements / dimensions)
+    F20951   μ_in_core=4.72  →  ablated   (numbers)
+    F11917   μ_in_core=4.19  →  ablated   (proper nouns / names)
+    F10439   μ_in_core=3.90  →  ablated   (gentrification)
+    F17855   μ_in_core=2.55  →  ablated   (specific numerical patterns)
+    F9551    μ_in_core=1.84  →  ablated   (patronage / support)
+
+  CONTINUATION:
+    baseline   → '<|endoftext|>The number 666 is most associated with the number 666, which is the number of the Holy Trinity'
+    intervened → '<|endoftext|>The number 666 is most associated with the number 666, which is the number of the Lord.'
+
+  TOP BASELINE:
+     1.          ' the'  0.2618
+     2.            ' a'  0.0320
+     3.        ' Jesus'  0.0097
+     4.            ' "'  0.0088
+     5.           ' an'  0.0079
+     6.          ' God'  0.0064
+     7.        ' Satan'  0.0050
+     8.          ' one'  0.0037
+     9.       ' Jewish'  0.0034
+    10.        ' those'  0.0032
+    11.         ' Jews'  0.0029
+    12.        ' Freem'  0.0027
+    13.       ' people'  0.0027
+    14.          ' two'  0.0026
+    15.          ' The'  0.0025
+
+  TOP INTERVENED:
+     1.          ' the'  0.2688
+     2.            ' a'  0.0336
+     3.        ' Jesus'  0.0110
+     4.            ' "'  0.0100
+     5.           ' an'  0.0083
+     6.          ' God'  0.0062
+     7.        ' Satan'  0.0055
+     8.          ' one'  0.0040
+     9.        ' those'  0.0032
+    10.          ' two'  0.0030
+    11.          ' The'  0.0027
+    12.         ' this'  0.0027
+    13.     ' American'  0.0027
+    14.       ' people'  0.0025
+    15.        ' Freem'  0.0025
+
+  PROBE SHIFTS (sorted by |Δ|):
+           ' Satan'  0.00504 → 0.00547  (+0.00043, ×1.09)
+             ' God'  0.00639 → 0.00618  (-0.00021, ×0.97)
+          ' number'  0.00036 → 0.00030  (-0.00006, ×0.84)
+           ' devil'  0.00005 → 0.00007  (+0.00001, ×1.30)
+           ' demon'  0.00028 → 0.00029  (+0.00001, ×1.03)
+            ' code'  0.00004 → 0.00004  (-0.00001, ×0.87)
+            ' year'  0.00003 → 0.00003  (+0.00000, ×1.15)
+           ' beast'  0.00002 → 0.00002  (+0.00000, ×1.12)
+            ' mark'  0.00002 → 0.00002  (+0.00000, ×1.07)
+
+### D_inject_666_core_into_7
+  prompt     : 'The number 7 is the mark of the'
+  span       : '7'  (pos=3)
+  mode       : inject
+  description: Transplant 666's full invariant core into 7
+  KL(baseline || intervened) = 0.0182
+  #features intervened: 9
+
+  FEATURES INTERVENED:
+    F17244   injected@12.45  (core μ=12.45)   (legal/organizational codes)
+    F13585   injected@9.31  (core μ=9.31)   (measurements and numerical values)
+    F12604   injected@7.13  (core μ=7.13)   (tech specifications / quantities)
+    F20061   injected@5.80  (core μ=5.80)   (measurements / dimensions)
+    F20951   injected@4.72  (core μ=4.72)   (numbers)
+    F11917   injected@4.19  (core μ=4.19)   (proper nouns / names)
+    F10439   injected@3.90  (core μ=3.90)   (gentrification)
+    F17855   injected@2.55  (core μ=2.55)   (specific numerical patterns)
+    F9551    injected@1.84  (core μ=1.84)   (patronage / support)
+
+  CONTINUATION:
+    baseline   → '<|endoftext|>The number 7 is the mark of the highest number of people in the world.\n\nThe number'
+    intervened → '<|endoftext|>The number 7 is the mark of the 7th century, and it is the most common number in'
+
+  TOP BASELINE:
+     1.      ' highest'  0.0119
+     2.         ' king'  0.0117
+     3.        ' first'  0.0115
+     4.         ' most'  0.0102
+     5.          ' sun'  0.0093
+     6.       ' number'  0.0093
+     7.          ' god'  0.0079
+     8.     ' greatest'  0.0075
+     9.            ' "'  0.0073
+    10.        ' Great'  0.0064
+    11.            ' 7'  0.0061
+    12.         ' moon'  0.0057
+    13.      ' seventh'  0.0054
+    14.        ' Devil'  0.0051
+    15.         ' year'  0.0049
+
+  TOP INTERVENED:
+     1.            ' 7'  0.0137
+     2.      ' highest'  0.0124
+     3.         ' king'  0.0122
+     4.       ' number'  0.0117
+     5.          ' sun'  0.0113
+     6.        ' first'  0.0101
+     7.         ' most'  0.0096
+     8.      ' seventh'  0.0081
+     9.     ' greatest'  0.0080
+    10.          ' god'  0.0078
+    11.            ' "'  0.0071
+    12.        ' Great'  0.0067
+    13.            ' 6'  0.0063
+    14.         ' moon'  0.0058
+    15.            ' 9'  0.0056
+
+  PROBE SHIFTS (sorted by |Δ|):
+           ' devil'  0.00453 → 0.00308  (-0.00145, ×0.68)
+           ' seven'  0.00325 → 0.00445  (+0.00120, ×1.37)
+            ' Lord'  0.00465 → 0.00411  (-0.00055, ×0.88)
+           ' beast'  0.00302 → 0.00250  (-0.00053, ×0.83)
+             ' God'  0.00456 → 0.00495  (+0.00039, ×1.09)
+           ' demon'  0.00169 → 0.00142  (-0.00027, ×0.84)
+            ' week'  0.00055 → 0.00045  (-0.00010, ×0.82)
+          ' sacred'  0.00084 → 0.00093  (+0.00008, ×1.10)
+             ' day'  0.00185 → 0.00177  (-0.00008, ×0.96)
+           ' lucky'  0.00026 → 0.00030  (+0.00004, ×1.16)
+           ' Satan'  0.00027 → 0.00026  (-0.00001, ×0.96)
+
+### E_ablate_top20_of_999
+  prompt     : 'The number 999 is most associated with'
+  span       : '999'  (pos=3)
+  mode       : ablate_top_k
+  description: Nuclear: ablate top-20 firing features at 999's position
+  KL(baseline || intervened) = 0.1061
+  #features intervened: 20
+
+  FEATURES INTERVENED:
+    F2269    orig_act=20.685  →  ablated
+    F12604   orig_act=16.316  →  ablated
+    F10744   orig_act=9.707  →  ablated
+    F2747    orig_act=8.985  →  ablated
+    F22934   orig_act=8.621  →  ablated
+    F12624   orig_act=8.234  →  ablated
+    F5567    orig_act=7.979  →  ablated
+    F17244   orig_act=7.750  →  ablated
+    F10902   orig_act=5.959  →  ablated
+    F5115    orig_act=5.147  →  ablated
+    F23743   orig_act=4.714  →  ablated
+    F12723   orig_act=4.685  →  ablated
+    F19101   orig_act=4.643  →  ablated
+    F6863    orig_act=4.417  →  ablated
+    F8521    orig_act=4.179  →  ablated
+    F11970   orig_act=4.143  →  ablated
+    F13585   orig_act=4.029  →  ablated
+    F8531    orig_act=3.779  →  ablated
+    F6429    orig_act=3.472  →  ablated
+    F11457   orig_act=3.309  →  ablated
+
+  CONTINUATION:
+    baseline   → '<|endoftext|>The number 999 is most associated with the number of people who have died in the last year.'
+    intervened → '<|endoftext|>The number 999 is most associated with the number of people who have died in the last year.'
+
+  TOP BASELINE:
+     1.          ' the'  0.1826
+     2.            ' a'  0.0410
+     3.           ' an'  0.0118
+     4.       ' people'  0.0103
+     5.            ' "'  0.0089
+     6.        ' crime'  0.0071
+     7.        ' those'  0.0064
+     8.        ' death'  0.0061
+     9.        ' women'  0.0047
+    10.          ' one'  0.0043
+    11.     ' children'  0.0043
+    12.    ' emergency'  0.0042
+    13.          ' men'  0.0038
+    14.        ' human'  0.0035
+    15.      ' suicide'  0.0034
+
+  TOP INTERVENED:
+     1.          ' the'  0.1715
+     2.            ' a'  0.0400
+     3.           ' an'  0.0104
+     4.        ' women'  0.0084
+     5.            ' "'  0.0082
+     6.       ' people'  0.0070
+     7.        ' death'  0.0057
+     8.          ' men'  0.0055
+     9.        ' those'  0.0052
+    10.          ' one'  0.0046
+    11.     ' children'  0.0041
+    12.        ' human'  0.0035
+    13.        ' crime'  0.0032
+    14.     ' physical'  0.0029
+    15.         ' male'  0.0029
+
+  PROBE SHIFTS (sorted by |Δ|):
+             ' the'  0.18257 → 0.17155  (-0.01102, ×0.94)
+       ' emergency'  0.00420 → 0.00053  (-0.00367, ×0.13)
+              ' an'  0.01176 → 0.01037  (-0.00139, ×0.88)
+               ' a'  0.04105 → 0.04002  (-0.00102, ×0.98)
+          ' number'  0.00102 → 0.00039  (-0.00063, ×0.38)
+               ' 1'  0.00107 → 0.00059  (-0.00048, ×0.55)
+             ' 911'  0.00044 → 0.00003  (-0.00041, ×0.06)
+             ' God'  0.00111 → 0.00140  (+0.00029, ×1.26)
+             ' one'  0.00429 → 0.00456  (+0.00027, ×1.06)
+            ' code'  0.00011 → 0.00005  (-0.00006, ×0.43)
+            ' nine'  0.00018 → 0.00012  (-0.00006, ×0.68)

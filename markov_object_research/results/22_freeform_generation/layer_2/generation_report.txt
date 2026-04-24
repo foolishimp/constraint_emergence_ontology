@@ -1,0 +1,86 @@
+Exp 22 — Free-form Generation under α-Intervention
+                   layer 2
+========================================================================
+
+Reference: n = 5
+Targets:   [999, 666, 137]
+Generation prompts per target: 20
+New tokens per completion: 30
+α values: [0.0, 0.5, 1.0, 1.5, 2.0]
+
+Pre-registered rules (per target):
+  PASS     ref-rate at α=0 ≤ 0.1  AND ref-rate at α=1 ≥ 0.4  AND logprob Δ ≥ 0.5 nats  AND monotonic
+  PARTIAL  ref-rate at α=1.5 ≥ 0.4
+  FAIL     otherwise
+
+AGGREGATE OUTCOME: PARTIAL
+
+
+### target = 999
+
+     α |   n | ref_rate | tgt_rate | neu_rate | logprob_ref
+   0.0 |  20 |    0.500 |    0.150 |    0.350 |      -1.481
+   0.5 |  20 |    0.600 |    0.150 |    0.250 |      -1.467
+   1.0 |  20 |    0.350 |    0.100 |    0.550 |      -1.353
+   1.5 |  20 |    0.400 |    0.050 |    0.550 |      -1.381
+   2.0 |  20 |    0.200 |    0.000 |    0.800 |      -1.335
+
+  Example continuations at α ∈ {0, 1, 2}:
+    α=0.0 [tar] prompt: 'Call 999 immediately,'
+           cont: ' or call the police if you have any information.  If you have any information about the incident, please call Crimestopp'
+    α=0.0 [ref] prompt: '999 is the number that'
+           cont: ' is used to determine the number of days that a user can log in.  999 is the number that is used to determine the number'
+    α=1.0 [tar] prompt: 'Call 999 immediately,'
+           cont: ' or call the police.  Call the police if you have any information about the crime.  Call the police if you have any info'
+    α=1.0 [ref] prompt: '999 is the number that'
+           cont: ' is used to determine the number of characters in a string.  5 is the number that is used to determine the number of cha'
+    α=2.0 [neu] prompt: 'Call 999 immediately,'
+           cont: " and we'll get back to you.  We're sorry, currently this live video stream is only available inside of Utah or an approv"
+    α=2.0 [ref] prompt: '999 is the number that'
+           cont: ' is used to determine the number of players in the game.  The number of players in the game is determined by the number '
+
+### target = 666
+
+     α |   n | ref_rate | tgt_rate | neu_rate | logprob_ref
+   0.0 |  20 |    0.500 |    0.050 |    0.450 |      -1.534
+   0.5 |  20 |    0.500 |    0.000 |    0.500 |      -1.458
+   1.0 |  20 |    0.500 |    0.050 |    0.450 |      -1.342
+   1.5 |  20 |    0.250 |    0.000 |    0.750 |      -1.247
+   2.0 |  20 |    0.300 |    0.050 |    0.650 |      -1.285
+
+  Example continuations at α ∈ {0, 1, 2}:
+    α=0.0 [neu] prompt: 'Call 666 immediately,'
+           cont: ' or call the police at (626) 667-8477.  Call the police at (626) 667-8477. Call'
+    α=0.0 [ref] prompt: '666 is the number that'
+           cont: ' is used to determine the number of characters in a string.  The number of characters in a string is the number of chara'
+    α=1.0 [neu] prompt: 'Call 666 immediately,'
+           cont: ' or call the police.  Call the police if you have any information about the crime.  Call the police if you have any info'
+    α=1.0 [ref] prompt: '666 is the number that'
+           cont: ' is used to determine the number of characters in a string.  5 is the number that is used to determine the number of cha'
+    α=2.0 [ref] prompt: 'Call 666 immediately,'
+           cont: " and we'll get you a free copy of the game.  Call 5 is available now on Steam.<|endoftext|>The U.S. Department of"
+    α=2.0 [ref] prompt: '666 is the number that'
+           cont: ' is most likely to be used in the future.  The number of times a user can use the number 5 is the number that is most li'
+
+### target = 137
+
+     α |   n | ref_rate | tgt_rate | neu_rate | logprob_ref
+   0.0 |  20 |    0.600 |    0.000 |    0.400 |      -1.521
+   0.5 |  20 |    0.650 |    0.000 |    0.350 |      -1.399
+   1.0 |  20 |    0.550 |    0.000 |    0.450 |      -1.385
+   1.5 |  20 |    0.300 |    0.000 |    0.700 |      -1.312
+   2.0 |  20 |    0.450 |    0.000 |    0.550 |      -1.276
+
+  Example continuations at α ∈ {0, 1, 2}:
+    α=0.0 [neu] prompt: 'Call 137 immediately,'
+           cont: ' or call the police at (207) 622-8477.  Call the police at (207) 622-8477. Call'
+    α=0.0 [ref] prompt: '137 is the number that'
+           cont: ' is used to determine the number of days that a user can be logged in.  137 is the number that is used to determine the '
+    α=1.0 [neu] prompt: 'Call 137 immediately,'
+           cont: ' or call the police.  Call the police if you have any information about the crime.  Call the police if you have any info'
+    α=1.0 [ref] prompt: '137 is the number that'
+           cont: ' is used to determine the number of times a given number is used.  The number of times a given number is used is the num'
+    α=2.0 [neu] prompt: 'Call 137 immediately,'
+           cont: " and we'll get you a free call.  Call 5 immediately, and we'll get you a free call.  Call 5 immediately,"
+    α=2.0 [ref] prompt: '137 is the number that'
+           cont: ' is used to determine the number of characters in a string.  The number of characters in a string is the number of chara'

@@ -1,0 +1,222 @@
+Layer Assembly Report — template 'The number {n} is'
+======================================================================
+
+
+### n = 7
+--------------------------------------------------
+
+  Layer 0  —  4 active features
+    F 6544    2.10  dates in a specific format: Month Day, Year, and numbers potentially representing time like 7:00 or 7:30
+    F15033    1.24  technical terms and computer programming syntax
+    F 7034    0.61  terms related to law and legislation
+    F16482    0.57  action verbs or words related to tasks and activities
+
+  Layer 2  —  10 active features
+    F13959   17.82  numbers or numerical sequences
+    F20214   10.25  numeric values in the input text
+    F19896    9.06  references to specific numbers or numerical patterns
+    F 6328    5.33  descriptions of joint efforts or collaborations
+    F20133    3.21  phrases related to differentiated text-based visuals
+
+  Layer 4  —  28 active features
+    F23198   20.03  references to devices and technologies
+    F 6943   14.19  phrases related to achieving the top position or rank
+    F24406    6.38  dates and specific numerical figures
+    F 3934    5.48  numbers related to specific quantities
+    F16459    4.18  legal and official document language
+
+  Layer 6  —  36 active features
+    F 1559   18.37  numerical values in a specific format (e.g., 7-9)
+    F 3231   14.82  phrases where something or someone is described as the top priority or best in a category
+    F 9042   12.07  highway numbers
+    F 2762    7.15  numbers
+    F  138    6.45  sports-related rankings and positions
+
+  Layer 8  —  52 active features
+    F12723   21.12  references to specific rankings or numbers
+    F11330   19.76  numerical patterns such as sequences containing the number 7 followed by the number 9
+    F  723    9.94  phrases indicating top priority or importance
+    F21286    9.83  numbers
+    F 7461    4.95  numerical sequences or series following a specific pattern, typically involving counting upwards or in steps
+
+  Layer 10  —  44 active features
+    F23404   29.77  specific rankings or positions, such as "No. 1 job," "No. 4 overall selection," or "No. 31 overall pick."
+    F 5600   20.69  number combinations
+    F 8713   12.18  numerical values related to statistics or quantities
+    F 3379    8.16  information related to sports tournaments for individuals under the age of 18
+    F 4796    6.63  specific numbers and references to sections or items in a document
+
+### n = 42
+--------------------------------------------------
+
+  Layer 0  —  4 active features
+    F15109    1.53  numbers, specifically the number "43"
+    F15033    1.23  technical terms and computer programming syntax
+    F10475    0.96  instances of the number 42
+    F16482    0.55  action verbs or words related to tasks and activities
+
+  Layer 2  —  16 active features
+    F24465   16.09  expressions or patterns related to coding or programming
+    F 7174    9.60  specific numbers denoting statistics or quantities
+    F23446    9.59  years
+    F20214    8.64  numeric values in the input text
+    F 6328    5.86  descriptions of joint efforts or collaborations
+
+  Layer 4  —  29 active features
+    F  803   14.72  numeric information such as dates and statistics
+    F 6943   14.01  phrases related to achieving the top position or rank
+    F11270   12.90  years
+    F14669    6.23  statistics or survey results
+    F24406    5.21  dates and specific numerical figures
+
+  Layer 6  —  36 active features
+    F12849   14.64  ZIP codes
+    F 9042   14.29  highway numbers
+    F  345   12.82  dates expressed in the format of a year, followed by a sequential number
+    F 3231   12.27  phrases where something or someone is described as the top priority or best in a category
+    F 4005    7.16  proper nouns, like names of people and places
+
+  Layer 8  —  51 active features
+    F12723   19.25  references to specific rankings or numbers
+    F 3697   16.37  years in the 20th century
+    F 4130    9.85  numbers related to politics or announcements of public figures
+    F20224    9.42  mentions of the number '40'
+    F22934    7.62  specific locations mentioned in the text, particularly highways and roads
+
+  Layer 10  —  43 active features
+    F23404   22.63  specific rankings or positions, such as "No. 1 job," "No. 4 overall selection," or "No. 31 overall pick."
+    F23800   19.28  phone numbers
+    F21299   16.67  numerical measurements, potentially related to technology or scientific data
+    F16292    9.40  numerical expressions denoting age
+    F 4796    9.11  specific numbers and references to sections or items in a document
+
+### n = 100
+--------------------------------------------------
+
+  Layer 0  —  4 active features
+    F23032    2.36  instances where the number "100" is mentioned
+    F15033    1.24  technical terms and computer programming syntax
+    F 7034    0.64  terms related to law and legislation
+    F20998    0.57  phrases related to technology and scientific terms
+
+  Layer 2  —  11 active features
+    F 8453   27.42  numerical values denoting certainty or probability, particularly when expressed as percentages
+    F20214    9.04  numeric values in the input text
+    F 6328    6.00  descriptions of joint efforts or collaborations
+    F 4455    3.95  numbers representing quantities in the hundreds
+    F20133    3.87  phrases related to differentiated text-based visuals
+
+  Layer 4  —  24 active features
+    F14543   28.50  numerical values related to percentage or high scores
+    F 6943   11.20  phrases related to achieving the top position or rank
+    F16459    4.35  legal and official document language
+    F24406    4.32  dates and specific numerical figures
+    F 5992    4.29  numerical figures related to quantities or statistics
+
+  Layer 6  —  35 active features
+    F 1177   31.27  numbers related to quantity or ranking
+    F 9042   10.58  highway numbers
+    F 3231   10.54  phrases where something or someone is described as the top priority or best in a category
+    F 2762    5.81  numbers
+    F  927    5.14  numerical data and statistics
+
+  Layer 8  —  46 active features
+    F   91   33.37  mentions of the number "100"
+    F12723   11.65  references to specific rankings or numbers
+    F22934    6.88  specific locations mentioned in the text, particularly highways and roads
+    F 3794    5.02  compound words
+    F  723    4.59  phrases indicating top priority or importance
+
+  Layer 10  —  50 active features
+    F17801   32.60  quantitative expressions of completeness or certainty
+    F23404   13.46  specific rankings or positions, such as "No. 1 job," "No. 4 overall selection," or "No. 31 overall pick."
+    F17900    9.26  sequences of numbers
+    F 3379    8.30  information related to sports tournaments for individuals under the age of 18
+    F22688    7.87  references to specific highways or locations
+
+### n = 666
+--------------------------------------------------
+
+  Layer 0  —  3 active features
+    F15033    1.24  technical terms and computer programming syntax
+    F16482    0.69  action verbs or words related to tasks and activities
+    F21407    0.64  multi-digit numbers
+
+  Layer 2  —  48 active features
+    F12161   11.09  numerical patterns
+    F12690    7.97  numerical figures related to various statistics or measurements
+    F13906    6.01  references to secretive or mysterious organizations or concepts, such as occult, Illuminati, esoteric, and Masonic
+    F21363    5.62  technical terms, possibly related to mechanical or industrial processes
+    F10956    4.60  words related to demonization or criticism
+
+  Layer 4  —  43 active features
+    F 1721   12.20  numerical digits and codes
+    F 1063   10.60  numerical values with specific patterns
+    F 6943    8.50  phrases related to achieving the top position or rank
+    F12999    5.81  numbers and specific data points such as scores, years, and statistics
+    F16221    4.11  numerical values or measurements
+
+  Layer 6  —  61 active features
+    F 9042   12.90  highway numbers
+    F23585   10.58  numerical values
+    F23419    6.66  references to spiritual or supernatural entities, particularly demons
+    F19454    6.33  numbers with little context or scattered throughout the text
+    F10407    6.19  specific section numbers and terms related to financial and legal documents
+
+  Layer 8  —  83 active features
+    F17244   13.28  references to specific legal or organizational codes, possibly related to financial or tax matters
+    F22934   10.76  specific locations mentioned in the text, particularly highways and roads
+    F13585    9.77  measurements and numerical values
+    F12604    9.01  numbers related to technological specifications or quantities
+    F10902    7.08  sequences of numbers and code instructions
+
+  Layer 10  —  70 active features
+    F 4796   11.77  specific numbers and references to sections or items in a document
+    F16070   11.15  numbers with three digits
+    F22688    9.75  references to specific highways or locations
+    F23051    9.52  strings of capitalized letters
+    F 1885    8.33  tasks or steps in a set of instructions
+
+### n = 999
+--------------------------------------------------
+
+  Layer 0  —  4 active features
+    F15033    1.19  technical terms and computer programming syntax
+    F16496    1.05  instances of the emergency number "911" being mentioned in texts
+    F16482    0.55  action verbs or words related to tasks and activities
+    F 7034    0.51  terms related to law and legislation
+
+  Layer 2  —  43 active features
+    F13027   12.32  the number "911" being mentioned in texts
+    F16330    8.87  prices listed in different formats
+    F21363    6.24  technical terms, possibly related to mechanical or industrial processes
+    F20722    6.01  numerical values that are likely to be different from surrounding text
+    F20214    5.25  numeric values in the input text
+
+  Layer 4  —  41 active features
+    F22223   14.27  instances where the number "911" is mentioned
+    F12273   12.79  instances of percentages
+    F16221    5.65  numerical values or measurements
+    F16459    5.32  legal and official document language
+    F 8703    4.86  technical specifications or measurements related to products
+
+  Layer 6  —  62 active features
+    F15152   18.50  instances where the number 911 appears in the text
+    F16823   18.37  phone numbers or numerical patterns
+    F15953    7.19  numerical values related to quantities or statistics
+    F23075    6.91  keywords related to numerical values, measurements, and technical specifications
+    F 9042    6.64  highway numbers
+
+  Layer 8  —  87 active features
+    F 2269   20.69  emergency numbers, specifically '911'
+    F12604   16.32  numbers related to technological specifications or quantities
+    F10744    9.71  references to the specific date "9/11"
+    F 2747    8.98  numerical values with percentage symbols and confidence intervals
+    F22934    8.62  specific locations mentioned in the text, particularly highways and roads
+
+  Layer 10  —  75 active features
+    F16241   24.32  911 emergency calls and related terms
+    F17900   15.55  sequences of numbers
+    F23336   10.33  alphanumeric numbers
+    F22688    9.43  references to specific highways or locations
+    F23051    7.54  strings of capitalized letters

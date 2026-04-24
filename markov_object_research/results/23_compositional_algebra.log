@@ -1,0 +1,44 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading GPT-2 small...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 16240.83it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== Extracting directions for 20 triples ===
+  [1/20]     page/666   ||d_c||=69.16 ||d_A||=45.66 ||d_B||=62.49
+  [2/20]     page/137   ||d_c||=69.46 ||d_A||=45.66 ||d_B||=55.85
+  [3/20]     page/999   ||d_c||=70.38 ||d_A||=45.66 ||d_B||=64.55
+  [4/20]     room/137   ||d_c||=70.00 ||d_A||=44.85 ||d_B||=55.85
+  [5/20]     room/666   ||d_c||=71.42 ||d_A||=44.85 ||d_B||=62.49
+  [6/20]     room/999   ||d_c||=71.28 ||d_A||=44.85 ||d_B||=64.55
+  [7/20]     line/666   ||d_c||=67.79 ||d_A||=39.43 ||d_B||=62.49
+  [8/20]     line/137   ||d_c||=65.26 ||d_A||=39.43 ||d_B||=55.85
+  [9/20]     line/999   ||d_c||=72.25 ||d_A||=39.43 ||d_B||=64.55
+  [10/20]  chapter/666   ||d_c||=71.06 ||d_A||=48.42 ||d_B||=62.49
+  [11/20]  chapter/137   ||d_c||=70.18 ||d_A||=48.42 ||d_B||=55.85
+  [12/20]  chapter/42    ||d_c||=66.84 ||d_A||=48.42 ||d_B||=48.44
+  [13/20]    floor/137   ||d_c||=68.66 ||d_A||=44.41 ||d_B||=55.85
+  [14/20]    floor/666   ||d_c||=71.65 ||d_A||=44.41 ||d_B||=62.49
+  [15/20]   flight/999   ||d_c||=75.33 ||d_A||=49.96 ||d_B||=64.55
+  [16/20]   flight/42    ||d_c||=67.85 ||d_A||=49.96 ||d_B||=48.44
+  [17/20]  section/666   ||d_c||=74.00 ||d_A||=51.10 ||d_B||=62.49
+  [18/20]  section/137   ||d_c||=73.18 ||d_A||=51.10 ||d_B||=55.85
+  [19/20]  mission/42    ||d_c||=62.81 ||d_A||=41.27 ||d_B||=48.44
+  [20/20]  mission/999   ||d_c||=70.32 ||d_A||=41.27 ||d_B||=64.55
+
+=== Computing compound-to-sum cosines ===
+  mean true cosine = +0.936
+
+=== Random-pair permutation null (100 draws) ===
+  mean null cosine = +0.634
+  permutation p    = 0.0099
+
+=== AGGREGATE OUTCOME: PASS ===
+
+=== Plots ===
+  compound_vs_random.png
+  null_histogram.png
+  component_contributions.png
+Report: compositional_report.txt
+Summary JSON: compositional_summary.json
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/23_compositional_algebra

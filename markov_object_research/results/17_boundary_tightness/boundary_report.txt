@@ -1,0 +1,129 @@
+Markov Boundary Tightness Report — layer 8
+======================================================================
+
+Template: The number {n} is most associated with
+Reference: n = 5
+
+
+### target = 999
+  baseline KL(target || ref) = 0.3229
+
+  BASELINE top tokens — target:
+             ' the'  0.1826
+               ' a'  0.0410
+              ' an'  0.0118
+          ' people'  0.0103
+               ' "'  0.0089
+           ' crime'  0.0071
+           ' those'  0.0064
+           ' death'  0.0061
+
+  BASELINE top tokens — ref:
+             ' the'  0.1654
+               ' a'  0.0261
+           ' women'  0.0096
+              ' an'  0.0061
+               ' "'  0.0059
+             ' men'  0.0050
+             ' its'  0.0038
+          ' people'  0.0037
+
+  TIER RESULTS:
+  tier                  n     KL→ref     KL→tgt   transfer
+  core                  6     0.2423     0.0360      0.250
+     top tokens after: ' the'=0.173  ' a'=0.038  ' an'=0.011  ' people'=0.009  ' "'=0.008
+  core+coat(20)        20     0.1426     0.0776      0.558
+     top tokens after: ' the'=0.177  ' a'=0.040  ' an'=0.010  ' women'=0.008  ' "'=0.007
+  top20                20     0.1426     0.0776      0.558
+     top tokens after: ' the'=0.177  ' a'=0.040  ' an'=0.010  ' women'=0.008  ' "'=0.007
+  top50                50     0.0853     0.1188      0.736
+     top tokens after: ' the'=0.171  ' a'=0.038  ' an'=0.009  ' women'=0.009  ' "'=0.008
+  top100               87     0.0694     0.1400      0.785
+     top tokens after: ' the'=0.170  ' a'=0.037  ' an'=0.009  ' women'=0.009  ' "'=0.008
+
+  BYPASS (overwrite 28 features OUTSIDE target's active set with ref values):
+     KL→ref after  = 0.2340
+     transfer      = 0.275
+     (compare to tiers above — should be close to 0 if boundary is tight)
+
+### target = 666
+  baseline KL(target || ref) = 0.3894
+
+  BASELINE top tokens — target:
+             ' the'  0.2618
+               ' a'  0.0320
+           ' Jesus'  0.0097
+               ' "'  0.0088
+              ' an'  0.0079
+             ' God'  0.0064
+           ' Satan'  0.0050
+             ' one'  0.0037
+
+  BASELINE top tokens — ref:
+             ' the'  0.1654
+               ' a'  0.0261
+           ' women'  0.0096
+              ' an'  0.0061
+               ' "'  0.0059
+             ' men'  0.0050
+             ' its'  0.0038
+          ' people'  0.0037
+
+  TIER RESULTS:
+  tier                  n     KL→ref     KL→tgt   transfer
+  core                  9     0.3681     0.0096      0.055
+     top tokens after: ' the'=0.269  ' a'=0.034  ' Jesus'=0.011  ' "'=0.010  ' an'=0.008
+  core+coat(20)        23     0.3193     0.0394      0.180
+     top tokens after: ' the'=0.266  ' a'=0.033  ' "'=0.010  ' an'=0.008  ' Jesus'=0.007
+  top20                20     0.3198     0.0383      0.179
+     top tokens after: ' the'=0.264  ' a'=0.032  ' "'=0.010  ' an'=0.008  ' Jesus'=0.007
+  top50                50     0.2687     0.0652      0.310
+     top tokens after: ' the'=0.259  ' a'=0.032  ' "'=0.010  ' an'=0.007  ' Jesus'=0.005
+  top100               83     0.2838     0.0816      0.271
+     top tokens after: ' the'=0.262  ' a'=0.032  ' "'=0.010  ' an'=0.007  ' Jesus'=0.005
+
+  BYPASS (overwrite 27 features OUTSIDE target's active set with ref values):
+     KL→ref after  = 0.2992
+     transfer      = 0.232
+     (compare to tiers above — should be close to 0 if boundary is tight)
+
+### target = 137
+  baseline KL(target || ref) = 0.0792
+
+  BASELINE top tokens — target:
+             ' the'  0.1878
+               ' a'  0.0318
+              ' an'  0.0086
+               ' "'  0.0078
+           ' women'  0.0058
+             ' men'  0.0037
+          ' people'  0.0029
+          ' sexual'  0.0028
+
+  BASELINE top tokens — ref:
+             ' the'  0.1654
+               ' a'  0.0261
+           ' women'  0.0096
+              ' an'  0.0061
+               ' "'  0.0059
+             ' men'  0.0050
+             ' its'  0.0038
+          ' people'  0.0037
+
+  TIER RESULTS:
+  tier                  n     KL→ref     KL→tgt   transfer
+  core                  6     0.0894     0.0048     -0.129
+     top tokens after: ' the'=0.195  ' a'=0.034  ' an'=0.009  ' "'=0.008  ' women'=0.005
+  core+coat(20)        20     0.0865     0.0077     -0.092
+     top tokens after: ' the'=0.200  ' a'=0.033  ' an'=0.009  ' "'=0.008  ' women'=0.005
+  top20                20     0.0865     0.0077     -0.092
+     top tokens after: ' the'=0.200  ' a'=0.033  ' an'=0.009  ' "'=0.008  ' women'=0.005
+  top50                50     0.0692     0.0085      0.126
+     top tokens after: ' the'=0.196  ' a'=0.033  ' an'=0.009  ' "'=0.008  ' women'=0.005
+  top100               69     0.0662     0.0089      0.164
+     top tokens after: ' the'=0.195  ' a'=0.033  ' an'=0.009  ' "'=0.008  ' women'=0.006
+
+  BYPASS (overwrite 23 features OUTSIDE target's active set with ref values):
+     KL→ref after  = 0.0581
+     transfer      = 0.266
+     (compare to tiers above — should be close to 0 if boundary is tight)

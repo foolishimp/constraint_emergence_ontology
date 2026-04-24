@@ -1,0 +1,36 @@
+Loading pythia-160m via transformer_lens...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 6614.85it/s]
+Loaded pretrained model pythia-160m into HookedTransformer
+  n_layers = 12, d_model = 768, probe layer = 8
+
+Collecting reference residuals for n = 5...
+  20 reference residuals captured
+
+=== target = 999 ===
+  paired train templates: 20
+  direction norm: 10.362
+  α-sweep on 10 held-out templates...
+  α = 1 transfer = +0.207  (pass)
+
+=== target = 666 ===
+  paired train templates: 20
+  direction norm: 9.719
+  α-sweep on 10 held-out templates...
+  α = 1 transfer = +0.176  (pass)
+
+=== target = 137 ===
+  paired train templates: 20
+  direction norm: 8.651
+  α-sweep on 10 held-out templates...
+  α = 1 transfer = +0.159  (pass)
+
+=== AGGREGATE OUTCOME: PASS  (3/3) ===
+
+=== Plots ===
+  alpha_sweep.png
+  cross_model_bars.png
+Report: cross_model_report.txt
+Summary JSON: cross_model_summary.json
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/24_cross_model_pythia

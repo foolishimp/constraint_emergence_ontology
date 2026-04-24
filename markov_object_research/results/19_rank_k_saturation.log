@@ -1,0 +1,127 @@
+Loading GPT-2 small...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 8524.42it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded pretrained model gpt2 into HookedTransformer
+
+Collecting reference residuals (n=5) on train templates...
+  20 residuals
+
+=== target = 999 ===
+  20 paired prompts for direction extraction
+  Extracting orthogonal mean-diff directions...
+    10 directions extracted
+  α-sweeping rank-k projectors on held-out...
+    mean-diff  k= 1  α=1 transfer = +0.259  α=2 = +0.195
+    mean-diff  k= 2  α=1 transfer = +0.121  α=2 = -0.650
+    mean-diff  k= 3  α=1 transfer = +0.157  α=2 = -0.515
+    mean-diff  k= 4  α=1 transfer = +0.070  α=2 = -1.326
+    mean-diff  k= 5  α=1 transfer = -0.342  α=2 = -4.770
+    mean-diff  k= 6  α=1 transfer = -0.760  α=2 = -8.119
+    mean-diff  k= 7  α=1 transfer = -1.923  α=2 = -13.897
+    mean-diff  k= 8  α=1 transfer = -1.809  α=2 = -13.431
+    mean-diff  k= 9  α=1 transfer = -1.818  α=2 = -13.550
+    mean-diff  k=10  α=1 transfer = -1.824  α=2 = -13.547
+  k* (pass threshold 0.8): 10
+  persisted projector: projector_meandiff_999.npz
+  Extracting LDA directions (secondary)...
+    10 LDA directions extracted
+  α-sweeping LDA rank-k projectors on held-out...
+    LDA  k= 1  α=1 transfer = +0.133  α=2 = +0.125
+    LDA  k= 2  α=1 transfer = +0.192  α=2 = +0.146
+    LDA  k= 3  α=1 transfer = +0.234  α=2 = +0.195
+    LDA  k= 4  α=1 transfer = +0.237  α=2 = +0.187
+    LDA  k= 5  α=1 transfer = +0.241  α=2 = +0.173
+    LDA  k= 6  α=1 transfer = +0.236  α=2 = +0.167
+    LDA  k= 7  α=1 transfer = +0.246  α=2 = +0.166
+    LDA  k= 8  α=1 transfer = +0.248  α=2 = +0.168
+    LDA  k= 9  α=1 transfer = +0.245  α=2 = +0.158
+    LDA  k=10  α=1 transfer = +0.242  α=2 = +0.158
+  persisted LDA projector: projector_lda_999.npz
+  saturation_meandiff_999.png
+  saturation_lda_999.png
+
+=== target = 666 ===
+  20 paired prompts for direction extraction
+  Extracting orthogonal mean-diff directions...
+    10 directions extracted
+  α-sweeping rank-k projectors on held-out...
+    mean-diff  k= 1  α=1 transfer = +0.243  α=2 = +0.206
+    mean-diff  k= 2  α=1 transfer = +0.232  α=2 = +0.166
+    mean-diff  k= 3  α=1 transfer = +0.218  α=2 = +0.158
+    mean-diff  k= 4  α=1 transfer = +0.226  α=2 = +0.163
+    mean-diff  k= 5  α=1 transfer = +0.233  α=2 = +0.169
+    mean-diff  k= 6  α=1 transfer = +0.238  α=2 = +0.167
+    mean-diff  k= 7  α=1 transfer = +0.241  α=2 = +0.171
+    mean-diff  k= 8  α=1 transfer = +0.224  α=2 = +0.153
+    mean-diff  k= 9  α=1 transfer = +0.221  α=2 = +0.148
+    mean-diff  k=10  α=1 transfer = +0.220  α=2 = +0.148
+  k* (pass threshold 0.8): 10
+  persisted projector: projector_meandiff_666.npz
+  Extracting LDA directions (secondary)...
+    10 LDA directions extracted
+  α-sweeping LDA rank-k projectors on held-out...
+    LDA  k= 1  α=1 transfer = +0.160  α=2 = +0.163
+    LDA  k= 2  α=1 transfer = +0.190  α=2 = +0.156
+    LDA  k= 3  α=1 transfer = +0.215  α=2 = +0.188
+    LDA  k= 4  α=1 transfer = +0.215  α=2 = +0.163
+    LDA  k= 5  α=1 transfer = +0.214  α=2 = +0.170
+    LDA  k= 6  α=1 transfer = +0.216  α=2 = +0.161
+    LDA  k= 7  α=1 transfer = +0.219  α=2 = +0.157
+    LDA  k= 8  α=1 transfer = +0.217  α=2 = +0.152
+    LDA  k= 9  α=1 transfer = +0.215  α=2 = +0.116
+    LDA  k=10  α=1 transfer = +0.135  α=2 = -0.068
+  persisted LDA projector: projector_lda_666.npz
+  saturation_meandiff_666.png
+  saturation_lda_666.png
+
+=== target = 137 ===
+  20 paired prompts for direction extraction
+  Extracting orthogonal mean-diff directions...
+    10 directions extracted
+  α-sweeping rank-k projectors on held-out...
+    mean-diff  k= 1  α=1 transfer = +0.272  α=2 = +0.268
+    mean-diff  k= 2  α=1 transfer = +0.264  α=2 = +0.215
+    mean-diff  k= 3  α=1 transfer = +0.271  α=2 = +0.223
+    mean-diff  k= 4  α=1 transfer = +0.279  α=2 = +0.230
+    mean-diff  k= 5  α=1 transfer = +0.281  α=2 = +0.229
+    mean-diff  k= 6  α=1 transfer = +0.278  α=2 = +0.224
+    mean-diff  k= 7  α=1 transfer = +0.281  α=2 = +0.228
+    mean-diff  k= 8  α=1 transfer = +0.282  α=2 = +0.229
+    mean-diff  k= 9  α=1 transfer = +0.282  α=2 = +0.232
+    mean-diff  k=10  α=1 transfer = +0.284  α=2 = +0.236
+  k* (pass threshold 0.8): 10
+  persisted projector: projector_meandiff_137.npz
+  Extracting LDA directions (secondary)...
+    10 LDA directions extracted
+  α-sweeping LDA rank-k projectors on held-out...
+    LDA  k= 1  α=1 transfer = +0.201  α=2 = +0.237
+    LDA  k= 2  α=1 transfer = +0.253  α=2 = +0.267
+    LDA  k= 3  α=1 transfer = +0.268  α=2 = +0.276
+    LDA  k= 4  α=1 transfer = +0.266  α=2 = +0.272
+    LDA  k= 5  α=1 transfer = +0.261  α=2 = +0.260
+    LDA  k= 6  α=1 transfer = +0.261  α=2 = +0.259
+    LDA  k= 7  α=1 transfer = +0.265  α=2 = +0.261
+    LDA  k= 8  α=1 transfer = +0.263  α=2 = +0.261
+    LDA  k= 9  α=1 transfer = +0.261  α=2 = +0.256
+    LDA  k=10  α=1 transfer = +0.267  α=2 = +0.234
+  persisted LDA projector: projector_lda_137.npz
+  saturation_meandiff_137.png
+  saturation_lda_137.png
+  saturation_meandiff_all.png
+  method_compare.png
+
+=== OUTCOME: FAIL ===
+  targets passing at k ≤ 5:  []
+  targets passing at k ≤ 10: []
+Report: rank_k_report.txt
+Summary JSON: rank_k_summary.json
+
+Persisted projectors for exp 20:
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_meandiff_999.npz
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_lda_999.npz
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_meandiff_666.npz
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_lda_666.npz
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_meandiff_137.npz
+  /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation/projector_lda_137.npz
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/19_rank_k_saturation

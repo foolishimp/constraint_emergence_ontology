@@ -1,0 +1,41 @@
+Exp 20 — Direction-native Conditional Independence (The Gate)
+              layer 8
+========================================================================
+
+Reference: n = 5
+Targets:   [999, 666, 137]
+Probe templates: 30 (disjoint from direction-extraction pool)
+CV folds:  5  (GroupKFold over templates)
+HSIC permutations: 200
+
+Pre-registered outcome rules (per target):
+  PASS     AUC(r_perp) ∈ [0.47, 0.53]  AND HSIC p ≥ 0.05
+  PARTIAL  AUC(r_perp) ≤ 0.6  OR HSIC p ∈ [0.01, 0.05]
+  FAIL     AUC(r_perp) > 0.6  OR HSIC highly significant
+
+AGGREGATE OUTCOME: FAIL
+
+
+### target = 999  (k* = 10)
+  AUC(full r):   1.000
+  AUC(r_perp):   1.000
+  ΔAUC:          +0.000   (pass needs ≥ 0.2)
+  HSIC observed: 0.01486
+  HSIC p:        0.005
+  outcome:       FAIL
+
+### target = 666  (k* = 10)
+  AUC(full r):   1.000
+  AUC(r_perp):   1.000
+  ΔAUC:          +0.000   (pass needs ≥ 0.2)
+  HSIC observed: 0.02731
+  HSIC p:        0.005
+  outcome:       FAIL
+
+### target = 137  (k* = 10)
+  AUC(full r):   1.000
+  AUC(r_perp):   1.000
+  ΔAUC:          +0.000   (pass needs ≥ 0.2)
+  HSIC observed: 0.00839
+  HSIC p:        0.005
+  outcome:       FAIL

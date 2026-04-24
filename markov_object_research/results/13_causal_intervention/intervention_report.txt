@@ -1,0 +1,236 @@
+Causal Intervention Report — layer 8
+======================================================================
+
+### A_ablate_999_emergency
+  prompt : 'The number 999 is most associated with'
+  span   : '999' (pos=3)
+  feature: emergency numbers '911'
+  mode   : ablate  target=0.0
+  KL(baseline || intervened) = 0.027
+
+  TOP BASELINE:
+     1.          ' the'  0.1826
+     2.            ' a'  0.0410
+     3.           ' an'  0.0118
+     4.       ' people'  0.0103
+     5.            ' "'  0.0089
+     6.        ' crime'  0.0071
+     7.        ' those'  0.0064
+     8.        ' death'  0.0061
+     9.        ' women'  0.0047
+    10.          ' one'  0.0043
+    11.     ' children'  0.0043
+    12.    ' emergency'  0.0042
+
+  TOP INTERVENED:
+     1.          ' the'  0.1795
+     2.            ' a'  0.0392
+     3.           ' an'  0.0106
+     4.       ' people'  0.0082
+     5.            ' "'  0.0080
+     6.        ' women'  0.0058
+     7.        ' crime'  0.0056
+     8.        ' those'  0.0053
+     9.        ' death'  0.0053
+    10.          ' men'  0.0042
+    11.          ' one'  0.0041
+    12.     ' children'  0.0038
+
+  PROBE SHIFTS (sorted by |Δ|):
+       ' emergency'  0.0042 → 0.0011  (-0.0031)
+          ' police'  0.0029 → 0.0016  (-0.0014)
+            ' fire'  0.0009 → 0.0007  (-0.0002)
+           ' phone'  0.0003 → 0.0001  (-0.0001)
+            ' call'  0.0002 → 0.0001  (-0.0001)
+          ' number'  0.0010 → 0.0009  (-0.0001)
+             ' god'  0.0001 → 0.0001  (+0.0000)
+            ' year'  0.0000 → 0.0001  (+0.0000)
+            ' song'  0.0000 → 0.0001  (+0.0000)
+            ' code'  0.0001 → 0.0001  (-0.0000)
+
+### B_inject_500_emergency
+  prompt : 'The number 500 is most associated with'
+  span   : '500' (pos=3)
+  feature: emergency numbers '911'  (INJECTED)
+  mode   : inject  target=20.0
+  KL(baseline || intervened) = 0.012
+
+  TOP BASELINE:
+     1.          ' the'  0.1679
+     2.            ' a'  0.0236
+     3.        ' women'  0.0102
+     4.            ' "'  0.0068
+     5.           ' an'  0.0056
+     6.       ' people'  0.0053
+     7.     ' American'  0.0045
+     8.        ' those'  0.0045
+     9.          ' men'  0.0041
+    10.    ' financial'  0.0039
+    11.   ' technology'  0.0034
+    12.     ' computer'  0.0032
+
+  TOP INTERVENED:
+     1.          ' the'  0.1697
+     2.            ' a'  0.0237
+     3.        ' women'  0.0087
+     4.            ' "'  0.0074
+     5.       ' people'  0.0061
+     6.           ' an'  0.0058
+     7.     ' American'  0.0048
+     8.        ' those'  0.0048
+     9.    ' financial'  0.0040
+    10.   ' technology'  0.0036
+    11.          ' men'  0.0036
+    12.     ' computer'  0.0034
+
+  PROBE SHIFTS (sorted by |Δ|):
+          ' people'  0.0053 → 0.0061  (+0.0008)
+          ' police'  0.0005 → 0.0009  (+0.0004)
+       ' emergency'  0.0002 → 0.0005  (+0.0003)
+            ' fire'  0.0002 → 0.0003  (+0.0001)
+            ' call'  0.0001 → 0.0001  (+0.0001)
+           ' money'  0.0025 → 0.0024  (-0.0000)
+           ' years'  0.0001 → 0.0001  (-0.0000)
+         ' dollars'  0.0001 → 0.0001  (+0.0000)
+         ' Fortune'  0.0001 → 0.0001  (-0.0000)
+           ' miles'  0.0000 → 0.0000  (+0.0000)
+
+### C_ablate_666_demon
+  prompt : 'The number 666 is the mark of the'
+  span   : '666' (pos=3)
+  feature: demon variations
+  mode   : ablate  target=0.0
+  KL(baseline || intervened) = 0.001
+
+  TOP BASELINE:
+     1.         ' Lord'  0.0258
+     2.         ' Holy'  0.0195
+     3.          ' God'  0.0189
+     4.          ' god'  0.0143
+     5.         ' king'  0.0141
+     6.        ' Great'  0.0122
+     7.       ' number'  0.0117
+     8.         ' King'  0.0114
+     9.        ' first'  0.0109
+    10.          ' sun'  0.0104
+    11.        ' angel'  0.0088
+    12.      ' Emperor'  0.0077
+
+  TOP INTERVENED:
+     1.         ' Lord'  0.0261
+     2.         ' Holy'  0.0197
+     3.          ' God'  0.0184
+     4.         ' king'  0.0139
+     5.          ' god'  0.0138
+     6.        ' Great'  0.0121
+     7.       ' number'  0.0118
+     8.         ' King'  0.0114
+     9.        ' first'  0.0114
+    10.          ' sun'  0.0108
+    11.        ' angel'  0.0084
+    12.      ' Emperor'  0.0075
+
+  PROBE SHIFTS (sorted by |Δ|):
+           ' demon'  0.0037 → 0.0027  (-0.0010)
+           ' devil'  0.0058 → 0.0049  (-0.0009)
+             ' God'  0.0189 → 0.0184  (-0.0005)
+            ' Lord'  0.0258 → 0.0261  (+0.0003)
+            ' king'  0.0141 → 0.0139  (-0.0002)
+          ' Church'  0.0027 → 0.0029  (+0.0002)
+          ' number'  0.0117 → 0.0118  (+0.0001)
+           ' beast'  0.0013 → 0.0012  (-0.0001)
+           ' Cross'  0.0011 → 0.0011  (+0.0000)
+
+### D_inject_7_demon
+  prompt : 'The number 7 is the mark of the'
+  span   : '7' (pos=3)
+  feature: demon variations  (INJECTED)
+  mode   : inject  target=6.0
+  KL(baseline || intervened) = 0.001
+
+  TOP BASELINE:
+     1.      ' highest'  0.0119
+     2.         ' king'  0.0117
+     3.        ' first'  0.0115
+     4.         ' most'  0.0102
+     5.          ' sun'  0.0093
+     6.       ' number'  0.0093
+     7.          ' god'  0.0079
+     8.     ' greatest'  0.0075
+     9.            ' "'  0.0073
+    10.        ' Great'  0.0064
+    11.            ' 7'  0.0061
+    12.         ' moon'  0.0057
+
+  TOP INTERVENED:
+     1.         ' king'  0.0120
+     2.      ' highest'  0.0117
+     3.        ' first'  0.0112
+     4.         ' most'  0.0101
+     5.       ' number'  0.0095
+     6.          ' sun'  0.0092
+     7.          ' god'  0.0085
+     8.     ' greatest'  0.0074
+     9.            ' "'  0.0073
+    10.            ' 7'  0.0064
+    11.        ' Great'  0.0064
+    12.        ' Devil'  0.0060
+
+  PROBE SHIFTS (sorted by |Δ|):
+           ' devil'  0.0045 → 0.0052  (+0.0007)
+           ' demon'  0.0017 → 0.0022  (+0.0005)
+             ' God'  0.0046 → 0.0048  (+0.0003)
+           ' beast'  0.0030 → 0.0032  (+0.0002)
+           ' seven'  0.0032 → 0.0033  (+0.0001)
+            ' Lord'  0.0047 → 0.0046  (-0.0001)
+          ' sacred'  0.0008 → 0.0009  (+0.0000)
+             ' day'  0.0019 → 0.0019  (+0.0000)
+            ' week'  0.0005 → 0.0005  (-0.0000)
+           ' lucky'  0.0003 → 0.0003  (-0.0000)
+
+### E_transplant_currency_onto_7
+  prompt : 'The number 7 means'
+  span   : '7' (pos=3)
+  feature: CURRENCY CLUSTER (INJECTED)
+  mode   : inject_cluster  target=cluster
+  KL(baseline || intervened) = 0.005
+
+  TOP BASELINE:
+     1.         ' that'  0.2110
+     2.          ' the'  0.1307
+     3.            ' "'  0.0636
+     4.           ' it'  0.0420
+     5.            ' a'  0.0274
+     6.          ' you'  0.0254
+     7.        ' there'  0.0160
+     8.            " '"  0.0147
+     9.            ' 7'  0.0097
+    10.           ' we'  0.0087
+    11.             ','  0.0077
+    12.         ' more'  0.0066
+
+  TOP INTERVENED:
+     1.         ' that'  0.2127
+     2.          ' the'  0.1271
+     3.            ' "'  0.0594
+     4.           ' it'  0.0428
+     5.            ' a'  0.0272
+     6.          ' you'  0.0267
+     7.        ' there'  0.0146
+     8.            ' 7'  0.0134
+     9.            " '"  0.0132
+    10.           ' we'  0.0082
+    11.             ','  0.0077
+    12.         ' more'  0.0064
+
+  PROBE SHIFTS (sorted by |Δ|):
+           ' money'  0.0006 → 0.0013  (+0.0007)
+             ' God'  0.0008 → 0.0007  (-0.0001)
+           ' price'  0.0000 → 0.0001  (+0.0000)
+           ' lucky'  0.0001 → 0.0001  (+0.0000)
+           ' years'  0.0000 → 0.0000  (-0.0000)
+          ' pounds'  0.0000 → 0.0000  (+0.0000)
+         ' dollars'  0.0000 → 0.0000  (+0.0000)
+          ' digits'  0.0000 → 0.0000  (-0.0000)
+           ' euros'  0.0000 → 0.0000  (+0.0000)
+           ' cents'  0.0000 → 0.0000  (+0.0000)

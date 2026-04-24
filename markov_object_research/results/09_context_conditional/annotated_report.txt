@@ -1,0 +1,361 @@
+Context-Conditional Markov Objects — layer 8
+======================================================================
+
+
+### n = 666
+--------------------------------------------------
+Total active features (any context): 272
+Invariant core (all contexts):       9
+Shared pool (≥2):                    83
+Context-specific total:              180
+
+  INVARIANT CORE (the skeleton — always on):
+    F17244  μ=12.45  references to specific legal or organizational codes, possibly related to financial or tax matters
+    F13585  μ= 9.31  measurements and numerical values
+    F12604  μ= 7.13  numbers related to technological specifications or quantities
+    F20061  μ= 5.80  numbers related to measurements or dimensions
+    F20951  μ= 4.72  numbers
+    F11917  μ= 4.19  proper nouns of people's names
+    F10439  μ= 3.90  phrases related to gentrification
+    F17855  μ= 2.55  specific numerical patterns
+    F 9551  μ= 1.84  references to the concept of patronage or support
+
+  CONTEXT-SPECIFIC (the coat — selected by context):
+
+    [referential]
+      F 1893   3.44  strings that resemble alphanumeric codes or identification numbers
+      F 3015   2.95  words related to objects or actions involving water
+      F 3794   2.59  compound words
+      F11504   2.09  numerical data, statistics, and results mentioned in reports or studies
+      F19934   1.91  phrases related to staying united or together
+
+    [page]
+      F20378  13.73  references to specific page numbers and citations in a document
+      F24314  11.41  numerical identifiers following the format "Image 1 of X."
+      F23780  10.45  mentions of a specific mode called "Exit Theatre Mode"
+      F 8050   6.84  text related to tables and layouts on web pages
+      F23321   6.09  numerical figures and measurements in scientific figures and documents
+
+    [currency]
+      F14081  10.48  percentage values
+      F14198   9.51  phrases related to financial transactions and monetary amounts
+      F 3785   5.42  measurements or numerical quantities, such as lengths, distances, percentages, and times
+      F20169   4.54  phrases related to price and economic factors
+      F 8230   4.48  numeric values with units
+
+    [quantity]
+      F 2127  16.59  large quantities or multiple instances of items
+      F18973   4.51  significant numbers related to events or quantities
+      F16725   4.29  numerical quantities related to time periods or deadlines
+      F17781   4.23  events or gatherings involving a large number of people
+      F20322   2.27  words related to witnessing or observation
+
+    [address]
+      F19935  21.10  addresses and locations
+      F21247  11.31  specific times and numbers in a given text
+      F22529   2.71  instances of things falling or dropping from a height
+      F22911   2.44  phrases related to time or age
+      F 7815   2.17  proper nouns and specific entities mentioned in the text
+
+    [temporal]
+      F 8113  15.22  years or time periods represented in the document
+      F10715   5.50  dates and time periods
+      F11484   4.38  places or incidents involving physical impact or damage
+      F17942   4.35  phrases related to time frames and events occurring at specific points in time
+      F13470   4.20  years from text
+
+    [arithmetic]
+      F 4587   3.96  names or titles of people, places, and organizations
+      F20280   2.63  text related to crafting or building things
+      F15738   2.59  instructions or steps related to performing technical tasks
+      F 7642   2.51  numeric estimates or statistical values
+      F12453   2.30  technical terms related to specific fields like functional equivalences, biological concepts, and design principles
+
+    [symbolic]
+      F20722   3.02  references to mythical or magical objects, creatures, or concepts
+      F20269   1.64  emotionally charged and impactful words or phrases
+      F12700   1.62  proper nouns and specific terms related to various topics such as politics, religion, and current events
+      F16744   1.33  names of political figures and leaders, particularly associated with regions in conflict or turmoil
+      F 1381   1.28  phrases related to technology and programming
+
+### n = 999
+--------------------------------------------------
+Total active features (any context): 267
+Invariant core (all contexts):       6
+Shared pool (≥2):                    95
+Context-specific total:              166
+
+  INVARIANT CORE (the skeleton — always on):
+    F 2269  μ=15.93  emergency numbers, specifically '911'
+    F12604  μ=13.89  numbers related to technological specifications or quantities
+    F10744  μ= 9.13  references to the specific date "9/11"
+    F 5567  μ= 7.89  numerical values
+    F 2747  μ= 7.86  numerical values with percentage symbols and confidence intervals
+    F17244  μ= 5.65  references to specific legal or organizational codes, possibly related to financial or tax matters
+
+  CONTEXT-SPECIFIC (the coat — selected by context):
+
+    [referential]
+      F 1893   2.90  strings that resemble alphanumeric codes or identification numbers
+      F 3794   2.75  compound words
+      F 3015   2.64  words related to objects or actions involving water
+      F 9275   2.08  salutations or greetings, particularly variations of "Hello"
+      F19908   1.88  phrases related to location and physical descriptions
+
+    [page]
+      F20378  15.20  references to specific page numbers and citations in a document
+      F24314  10.18  numerical identifiers following the format "Image 1 of X."
+      F23780   9.02  mentions of a specific mode called "Exit Theatre Mode"
+      F17844   6.30  numbers related to a specific SCP entity
+      F19964   5.96  dates in the format "Month Day(st/nd/rd), Year" followed by textual information associated with the date
+
+    [currency]
+      F14198   8.10  phrases related to financial transactions and monetary amounts
+      F 3785   7.08  measurements or numerical quantities, such as lengths, distances, percentages, and times
+      F20799   6.32  product prices and descriptions in various currencies
+      F16898   3.74  numeric values representing large sums of money
+      F20401   3.35  adjectives describing the magnitude or intensity of something
+
+    [quantity]
+      F 2127  16.46  large quantities or multiple instances of items
+      F18973   6.55  significant numbers related to events or quantities
+      F17781   3.66  events or gatherings involving a large number of people
+      F15658   2.96  postal codes
+      F16622   2.92  large numerical quantities mentioned in the text
+
+    [address]
+      F21247  11.30  specific times and numbers in a given text
+      F19935   7.48  addresses and locations
+      F21062   4.15  place names
+      F19311   3.26  acronyms or proper nouns ending with 'O'
+      F16735   2.94  terms related to locations, organizations, and specific entities
+
+    [temporal]
+      F 8113  10.91  years or time periods represented in the document
+      F17942   5.64  phrases related to time frames and events occurring at specific points in time
+      F10715   3.10  dates and time periods
+      F 5727   2.88  years mentioned in the text
+      F 5241   2.85  terms related to technology and science
+
+    [arithmetic]
+      F12453   3.14  technical terms related to specific fields like functional equivalences, biological concepts, and design principles
+      F20280   2.75  text related to crafting or building things
+      F15738   1.65  instructions or steps related to performing technical tasks
+      F17078   1.39  numerical patterns such as specific digit sequences
+      F22681   1.11  terms related to various societal and technical domains, such as traffic management, land faults, policing, surveillance, health outcomes, education, security, music, food, and parenting
+
+    [symbolic]
+      F 4562   2.68  phrases related to celestial bodies, particularly Saturn and its moons
+      F14784   2.31  locations or places
+      F 7360   2.01  words related to computer programming or specific codes
+      F24098   1.69  numbers related to measurements, quantities, or specifications
+      F 3036   1.64  names of people or characters
+
+### n = 7
+--------------------------------------------------
+Total active features (any context): 226
+Invariant core (all contexts):       2
+Shared pool (≥2):                    59
+Context-specific total:              165
+
+  INVARIANT CORE (the skeleton — always on):
+    F11330  μ=22.56  numerical patterns such as sequences containing the number 7 followed by the number 9
+    F21286  μ=10.03  numbers
+
+  CONTEXT-SPECIFIC (the coat — selected by context):
+
+    [referential]
+      F  723   9.94  phrases indicating top priority or importance
+      F18164   4.32  legal classifications and terms related to substances, crimes, and law
+      F 7698   3.24  words related to processes or actions being performed
+      F 3794   2.88  compound words
+      F 2073   2.04  references to being aboard a vehicle or transportation-related contexts
+
+    [page]
+      F 1465  20.34  dates expressed numerically
+      F24314  11.76  numerical identifiers following the format "Image 1 of X."
+      F20378  10.77  references to specific page numbers and citations in a document
+      F 8050   9.79  text related to tables and layouts on web pages
+      F17844   6.73  numbers related to a specific SCP entity
+
+    [currency]
+      F14198  11.19  phrases related to financial transactions and monetary amounts
+      F 3785   8.40  measurements or numerical quantities, such as lengths, distances, percentages, and times
+      F20169   8.08  phrases related to price and economic factors
+      F20799   5.10  product prices and descriptions in various currencies
+      F 5806   2.69  financial values and estimations
+
+    [quantity]
+      F 2127  20.44  large quantities or multiple instances of items
+      F14305   7.14  numbers indicating quantities or quantities
+      F16725   6.35  numerical quantities related to time periods or deadlines
+      F18973   5.72  significant numbers related to events or quantities
+      F24546   5.63  phrases related to safety and legality
+
+    [address]
+      F21247  18.81  specific times and numbers in a given text
+      F  730  10.37  specific times mentioned in a narrative
+      F19935   6.64  addresses and locations
+      F  402   4.68  large numbers, populations, and countries
+      F 6547   3.97  technical programming-related keywords and phrases
+
+    [temporal]
+      F17942   9.33  phrases related to time frames and events occurring at specific points in time
+      F 8113   7.55  years or time periods represented in the document
+      F10107   5.54  dates from historical events
+      F12717   5.09  time intervals, especially those related to future events
+      F10715   3.57  dates and time periods
+
+    [arithmetic]
+      F17078   7.55  numerical patterns such as specific digit sequences
+      F12453   3.25  technical terms related to specific fields like functional equivalences, biological concepts, and design principles
+      F19712   2.62  numerical lists with associated tips or items
+      F 4636   1.82  terms related to different topics or themes, such as business, government, technology, society, health, and marriage
+      F 5050   1.69  statistical information related to research studies
+
+    [symbolic]
+      F 4206   6.94  phrases related to religious beliefs and teachings
+      F  556   4.54  numbers or numerical patterns within the text
+      F22992   3.61  phrases related to celestial bodies and astronomical events
+      F24418   3.20  companies, organizations, and people's names
+      F13617   2.54  technical terms related to computer programming
+
+### n = 42
+--------------------------------------------------
+Total active features (any context): 235
+Invariant core (all contexts):       5
+Shared pool (≥2):                    76
+Context-specific total:              154
+
+  INVARIANT CORE (the skeleton — always on):
+    F 3697  μ=14.71  years in the 20th century
+    F 4130  μ=10.87  numbers related to politics or announcements of public figures
+    F20224  μ=10.03  mentions of the number '40'
+    F23723  μ= 8.84  numbers, particularly two-digit numbers
+    F 6863  μ= 3.53  words related to politics and government institutions
+
+  CONTEXT-SPECIFIC (the coat — selected by context):
+
+    [referential]
+      F  723   3.20  phrases indicating top priority or importance
+      F 2073   2.24  references to being aboard a vehicle or transportation-related contexts
+      F 3015   1.95  words related to objects or actions involving water
+      F24144   1.39  terms related to espionage or suspicious activities
+      F19081   1.23  words related to morphological analysis, specifically looking for words ending in specific patterns like '-ing' and '-ation'
+
+    [page]
+      F20378  15.99  references to specific page numbers and citations in a document
+      F 1465  13.81  dates expressed numerically
+      F24314   9.39  numerical identifiers following the format "Image 1 of X."
+      F 8050   8.31  text related to tables and layouts on web pages
+      F15653   6.85  numbers combined with words related to events or actions
+
+    [currency]
+      F14198  10.94  phrases related to financial transactions and monetary amounts
+      F20169  10.04  phrases related to price and economic factors
+      F 3785   7.49  measurements or numerical quantities, such as lengths, distances, percentages, and times
+      F20799   6.73  product prices and descriptions in various currencies
+      F 2949   2.82  words related to financial markets and economic indicators
+
+    [quantity]
+      F 2127  21.58  large quantities or multiple instances of items
+      F16725   8.06  numerical quantities related to time periods or deadlines
+      F 9820   3.39  statistics or numbers
+      F 8531   2.98  large numerical figures related to various topics
+      F15293   2.32  sentences containing negations, particularly focusing on negations with high confidence
+
+    [address]
+      F21247  18.53  specific times and numbers in a given text
+      F19935  12.41  addresses and locations
+      F  402   5.12  large numbers, populations, and countries
+      F 6547   3.28  technical programming-related keywords and phrases
+      F 3833   3.22  phrases related to ages specified with a hyphen
+
+    [temporal]
+      F 8113  10.11  years or time periods represented in the document
+      F17942   9.05  phrases related to time frames and events occurring at specific points in time
+      F10107   5.28  dates from historical events
+      F10715   5.09  dates and time periods
+      F13470   5.06  years from text
+
+    [arithmetic]
+      F17078   4.14  numerical patterns such as specific digit sequences
+      F12453   2.83  technical terms related to specific fields like functional equivalences, biological concepts, and design principles
+      F 7109   2.33   monetary values expressed in thousands or millions
+      F20280   2.32  text related to crafting or building things
+      F  357   2.23  terms related to medical research and treatment
+
+    [symbolic]
+      F 4206   3.38  phrases related to religious beliefs and teachings
+      F  556   3.20  numbers or numerical patterns within the text
+      F15942   3.14  words related to conflict and resolution, particularly regarding domination, separation, and unification
+      F 4716   2.86  terms related to political ideologies and societal issues
+      F20722   2.57  references to mythical or magical objects, creatures, or concepts
+
+### n = 100
+--------------------------------------------------
+Total active features (any context): 226
+Invariant core (all contexts):       1
+Shared pool (≥2):                    63
+Context-specific total:              162
+
+  INVARIANT CORE (the skeleton — always on):
+    F   91  μ=37.40  mentions of the number "100"
+
+  CONTEXT-SPECIFIC (the coat — selected by context):
+
+    [referential]
+      F  723   4.59  phrases indicating top priority or importance
+      F  202   2.57  model numbers and technical specifications related to computers and electronics
+      F  623   1.98  dates and times in a specified format
+      F11744   1.84  legal, political, and governmental terms and entities
+      F 9506   1.79  geographical locations
+
+    [page]
+      F20378  12.11  references to specific page numbers and citations in a document
+      F 1465  11.77  dates expressed numerically
+      F17844  11.57  numbers related to a specific SCP entity
+      F24314   9.20  numerical identifiers following the format "Image 1 of X."
+      F 8050   8.23  text related to tables and layouts on web pages
+
+    [currency]
+      F20169   6.20  phrases related to price and economic factors
+      F14198   5.64  phrases related to financial transactions and monetary amounts
+      F20799   5.29  product prices and descriptions in various currencies
+      F16898   2.90  numeric values representing large sums of money
+      F 2949   2.45  words related to financial markets and economic indicators
+
+    [quantity]
+      F 2127  20.47  large quantities or multiple instances of items
+      F17781   5.79  events or gatherings involving a large number of people
+      F16725   5.14  numerical quantities related to time periods or deadlines
+      F18973   5.06  significant numbers related to events or quantities
+      F 3319   3.38  statistics and numerical values
+
+    [address]
+      F21247  18.66  specific times and numbers in a given text
+      F19935  10.14  addresses and locations
+      F  402   4.39  large numbers, populations, and countries
+      F21062   3.92  place names
+      F22911   2.42  phrases related to time or age
+
+    [temporal]
+      F 8113   9.81  years or time periods represented in the document
+      F17942   8.28  phrases related to time frames and events occurring at specific points in time
+      F10715   5.36  dates and time periods
+      F10107   4.48  dates from historical events
+      F12717   3.46  time intervals, especially those related to future events
+
+    [arithmetic]
+      F17078   4.01  numerical patterns such as specific digit sequences
+      F12453   3.78  technical terms related to specific fields like functional equivalences, biological concepts, and design principles
+      F 5868   2.68  specific numerical figures and commands related to computer programming
+      F 6649   2.48  numerical data and statistics
+      F 9764   2.19  phrases or concepts related to numerical figures or estimates
+
+    [symbolic]
+      F 1357  11.25  proper nouns that start with a capital letter followed by a high concentration of capital letters within the token
+      F19101   4.48  words related to the formatting and coding conventions used for programming
+      F  556   3.45  numbers or numerical patterns within the text
+      F15942   3.05  words related to conflict and resolution, particularly regarding domination, separation, and unification
+      F  981   2.48  references to specific sizes or measurements
