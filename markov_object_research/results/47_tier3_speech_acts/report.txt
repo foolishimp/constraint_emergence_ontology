@@ -1,0 +1,40 @@
+Exp 47 - Tier 3 Speech-Act Continuation Cluster
+Substrate: meta-llama/Meta-Llama-3-8B   Embedder: all-mpnet-base-v2
+======================================================================
+
+Speech acts (5): ['apology', 'request', 'accusation', 'concession', 'justification']
+Realizations per act: 3
+Content fillers: 4
+Generations per (real × content): 5
+Total samples: 300
+
+Pre-registered outcome rules (Tier 3 — looser than Tier 1/2):
+  PASS    sil(act) >= 0.15 AND act > real + 0.05 AND act > content + 0.05
+  PARTIAL sil(act) >= 0.07 AND act > real AND act > content
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: FAIL
+  silhouette by ACT:         -0.007
+  silhouette by REALIZATION: -0.043
+  silhouette by CONTENT:     +0.047
+  act - realization gap: +0.036
+  act - content gap:     -0.054
+
+Per-act within-cluster tightness:
+  apology         +0.545
+  request         +0.496
+  accusation      +0.583
+  concession      +0.493
+  justification   +0.536
+
+Pairwise act centroid cosine (lower = more separated):
+  concession--justification         +0.915
+  accusation--concession            +0.911
+  accusation--justification         +0.901
+  request--justification            +0.895
+  apology--request                  +0.866
+  request--concession               +0.848
+  request--accusation               +0.847
+  apology--accusation               +0.831
+  apology--concession               +0.830
+  apology--justification            +0.823

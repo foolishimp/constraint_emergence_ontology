@@ -1,0 +1,272 @@
+{
+  "design": "exp 37: causal faithfulness of the level set",
+  "intervention_layer": 2,
+  "targets": [
+    999,
+    666,
+    137
+  ],
+  "reference": 5,
+  "results": {
+    "999": {
+      "train_acc": 1.0,
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": -0.031538963317871094,
+          "across_a1": -0.2690763473510742,
+          "along_a1": -0.009226799011230469,
+          "random_a1": 0.04903984069824219
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": -7.068866014480591,
+          "across_a1": -7.014954924583435,
+          "along_a1": -7.054524183273315,
+          "random_a1": -6.907453536987305
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": -1.09470796585083,
+          "across_a1": -1.053189754486084,
+          "along_a1": -0.826117992401123,
+          "random_a1": -1.4389543533325195
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": -4.361288547515869,
+          "across_a1": -4.253240585327148,
+          "along_a1": -4.341102600097656,
+          "random_a1": -4.359384298324585
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": -5.135591268539429,
+          "across_a1": -4.966557264328003,
+          "along_a1": -5.107917308807373,
+          "random_a1": -5.165517330169678
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": -4.007940769195557,
+          "across_a1": -3.873809337615967,
+          "along_a1": -3.9583964347839355,
+          "random_a1": -4.085745811462402
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": -0.9678635597229004,
+          "across_a1": -0.9261655807495117,
+          "along_a1": -1.3399133682250977,
+          "random_a1": -1.187148094177246
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": -3.974416971206665,
+          "across_a1": -3.798746347427368,
+          "along_a1": -3.9390335083007812,
+          "random_a1": -4.002496242523193
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": -3.7461001873016357,
+          "across_a1": -3.8448641300201416,
+          "along_a1": -3.43160343170166,
+          "random_a1": -3.812636613845825
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": -0.5634002685546875,
+          "across_a1": -0.6048965454101562,
+          "along_a1": -0.25725650787353516,
+          "random_a1": -0.19247722625732422
+        }
+      ],
+      "agg": {
+        "across_a1_mean_shift": 0.0346213698387146,
+        "across_a1_std_shift": 0.12303699782634084,
+        "along_a1_mean_shift": 0.06866223812103271,
+        "along_a1_std_shift": 0.19016631871380402,
+        "random_a1_mean_shift": -0.015105915069580079,
+        "random_a1_std_shift": 0.18617427103798243
+      },
+      "across_vs_random_extra_shift_abs": 0.019515454769134518,
+      "along_vs_random_extra_shift_abs": 0.05355632305145264
+    },
+    "666": {
+      "train_acc": 1.0,
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": -4.096250057220459,
+          "across_a1": -3.9277591705322266,
+          "along_a1": -3.9984240531921387,
+          "random_a1": -4.227564811706543
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": -7.045865178108215,
+          "across_a1": -7.0345845222473145,
+          "along_a1": -7.041402339935303,
+          "random_a1": -7.072806477546692
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": -2.272006034851074,
+          "across_a1": -2.0621933937072754,
+          "along_a1": -2.587501049041748,
+          "random_a1": -2.0936741828918457
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": -4.032805681228638,
+          "across_a1": -3.8107259273529053,
+          "along_a1": -4.138484001159668,
+          "random_a1": -4.182354211807251
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": -4.560740947723389,
+          "across_a1": -4.2729973793029785,
+          "along_a1": -4.602183103561401,
+          "random_a1": -4.742100238800049
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": -6.137663125991821,
+          "across_a1": -5.867964029312134,
+          "along_a1": -6.034460783004761,
+          "random_a1": -6.316138505935669
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": -1.3951101303100586,
+          "across_a1": -1.119551181793213,
+          "along_a1": -1.4367003440856934,
+          "random_a1": -1.6492223739624023
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": -4.4356138706207275,
+          "across_a1": -4.314460277557373,
+          "along_a1": -4.462077856063843,
+          "random_a1": -4.41682243347168
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": -4.963240146636963,
+          "across_a1": -5.056071758270264,
+          "along_a1": -4.82647967338562,
+          "random_a1": -4.886959791183472
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": -3.749039649963379,
+          "across_a1": -3.7858681678771973,
+          "along_a1": -3.675436496734619,
+          "random_a1": -3.609656810760498
+        }
+      ],
+      "agg": {
+        "across_a1_mean_shift": 0.14361590147018433,
+        "across_a1_std_shift": 0.13104230652546145,
+        "along_a1_mean_shift": -0.01148148775100708,
+        "along_a1_std_shift": 0.1256565657483384,
+        "random_a1_mean_shift": -0.050896501541137694,
+        "random_a1_std_shift": 0.14182698783157802
+      },
+      "across_vs_random_extra_shift_abs": 0.09271939992904663,
+      "along_vs_random_extra_shift_abs": -0.03941501379013061
+    },
+    "137": {
+      "train_acc": 1.0,
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": -4.597775459289551,
+          "across_a1": -4.615952968597412,
+          "along_a1": -4.560430526733398,
+          "random_a1": -4.6142659187316895
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": -5.422356367111206,
+          "across_a1": -5.421314716339111,
+          "along_a1": -5.353222370147705,
+          "random_a1": -5.41675066947937
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": -2.8518049716949463,
+          "across_a1": -2.7827165126800537,
+          "along_a1": -2.7492992877960205,
+          "random_a1": -2.847378969192505
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": -3.24532151222229,
+          "across_a1": -3.2290568351745605,
+          "along_a1": -3.2753348350524902,
+          "random_a1": -3.26021671295166
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": -4.8181846141815186,
+          "across_a1": -4.810563564300537,
+          "along_a1": -4.8214287757873535,
+          "random_a1": -4.8258912563323975
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": -4.269155502319336,
+          "across_a1": -4.306221008300781,
+          "along_a1": -4.272016525268555,
+          "random_a1": -4.3441162109375
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": -3.9296021461486816,
+          "across_a1": -4.005844593048096,
+          "along_a1": -3.9439549446105957,
+          "random_a1": -3.914824962615967
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": -4.241107225418091,
+          "across_a1": -4.255105972290039,
+          "along_a1": -4.322981834411621,
+          "random_a1": -4.324528217315674
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": -6.073013424873352,
+          "across_a1": -6.1340755224227905,
+          "along_a1": -6.019430041313171,
+          "random_a1": -6.110062479972839
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": -5.099259376525879,
+          "across_a1": -5.050917863845825,
+          "along_a1": -5.2157251834869385,
+          "random_a1": -5.076383113861084
+        }
+      ],
+      "agg": {
+        "across_a1_mean_shift": -0.006418895721435547,
+        "across_a1_std_shift": 0.04296920863844009,
+        "along_a1_mean_shift": 0.0013756275177001954,
+        "along_a1_std_shift": 0.06397427016794756,
+        "random_a1_mean_shift": -0.018683791160583496,
+        "random_a1_std_shift": 0.03435965391202004
+      },
+      "across_vs_random_extra_shift_abs": -0.012264895439147949,
+      "along_vs_random_extra_shift_abs": -0.0173081636428833
+    }
+  },
+  "verdict": {
+    "avg_across_extra_shift_abs": 0.03332331975301107,
+    "avg_along_extra_shift_abs": -0.001055618127187092,
+    "verdict": "FAIL"
+  }
+}

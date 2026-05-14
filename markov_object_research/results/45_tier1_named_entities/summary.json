@@ -1,0 +1,46 @@
+{
+  "design": "exp 45: Tier 1 named-entity continuation cluster",
+  "llm": "meta-llama/Meta-Llama-3-8B",
+  "embedder": "all-mpnet-base-v2",
+  "entities": [
+    "London",
+    "Tuesday",
+    "Madonna",
+    "Einstein",
+    "1492"
+  ],
+  "templates": [
+    "When I think of {e},",
+    "The thing about {e} is",
+    "People often associate {e} with",
+    "What everyone knows about {e}:",
+    "If you've heard of {e}, you know that",
+    "In a few words, {e} means"
+  ],
+  "n_gen_per_prompt": 8,
+  "n_total_samples": 240,
+  "silhouette_by_entity": 0.2815753221511841,
+  "silhouette_by_template": 0.012847107835114002,
+  "mean_pairwise_centroid_cosine": 0.30186754167079927,
+  "mean_within_entity_cosine": 0.649448013305664,
+  "per_entity_within_cosine": {
+    "London": 0.6716520190238953,
+    "Tuesday": 0.5323910117149353,
+    "Madonna": 0.6610408425331116,
+    "Einstein": 0.6792793273925781,
+    "1492": 0.7028768658638
+  },
+  "pairwise_centroid_cosines": {
+    "London--Tuesday": 0.34114065766334534,
+    "London--Madonna": 0.3197993040084839,
+    "London--Einstein": 0.23047980666160583,
+    "London--1492": 0.3278339207172394,
+    "Tuesday--Madonna": 0.28181368112564087,
+    "Tuesday--Einstein": 0.18802067637443542,
+    "Tuesday--1492": 0.39070916175842285,
+    "Madonna--Einstein": 0.2725757658481598,
+    "Madonna--1492": 0.25849199295043945,
+    "Einstein--1492": 0.4078104496002197
+  },
+  "verdict": "PARTIAL"
+}

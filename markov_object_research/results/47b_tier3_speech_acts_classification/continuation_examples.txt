@@ -1,0 +1,76 @@
+
+## apology|real#0|the meeting yesterday
+   utterance: I'm really sorry about the meeting yesterday.
+   > non-apology apology.
+Non-apology apologies are the worst. They're not
+   > verbal apology. It can be used to say that you're sorry about some action
+
+## apology|real#0|the broken vase
+   utterance: I'm really sorry about the broken vase.
+   > politeness formula. That is to say, it is not an apology. It
+   > polite expression of apology. It's not an apology, really, but it's
+
+## apology|real#0|the missing report
+   utterance: I'm really sorry about the missing report.
+   > feeble apology. The individual acknowledges their wrong doing but does not accept responsibility for
+   > non-apology, a form of communication often used when there's a real need
+
+## apology|real#0|the noise last night
+   utterance: I'm really sorry about the noise last night.
+   > "non-apology apology." It's an attempt to apologize that's not really
+   > non-apology apology. It is the kind of thing people say when they have
+
+## apology|real#1|the meeting yesterday
+   utterance: I owe you an apology for the meeting yesterday.
+   > "soft" apology. It is more effective than saying nothing at all, but
+   > "defensive" or "apologetic" statement. The purpose of the
+
+## apology|real#1|the broken vase
+   utterance: I owe you an apology for the broken vase.
+   > "conditional apology." It is a response to an event that has already happened,
+   > deontic statement. Deontic statements are statements that describe a duty or
+
+## apology|real#1|the missing report
+   utterance: I owe you an apology for the missing report.
+   > "non-excuse excuse". It is a subtle form of excuse whereby the person
+   > "non-apology apology". It makes a gesture of contrition without actually owning
+
+## apology|real#1|the noise last night
+   utterance: I owe you an apology for the noise last night.
+   > lame excuse rather than an apology. An apology is more than a lame excuse.
+   > backhanded apology. It's an apology that is meant to be an apology
+
+## apology|real#2|the meeting yesterday
+   utterance: Please forgive me for the meeting yesterday.
+   > "non-apology apology." It's an attempt to apologize that's not really
+   > "statement of apology" (or "apology" for short). It is
+
+## apology|real#2|the broken vase
+   utterance: Please forgive me for the broken vase.
+   > non-apology apology. It may sound like an apology, but it isn’t
+   > "conditional apology." It's not an apology that acknowledges a responsibility for something that
+
+## apology|real#2|the noise last night
+   utterance: Please forgive me for the noise last night.
+   > “sincere apology.” It is an apology in which the speaker appears to
+   > “mea culpa.” It's a phrase that literally means “through my fault
+
+## request|real#2|the noise last night
+   utterance: I'd appreciate it if you could the noise last night.
+   > "wish," and so it's a polite way of asking someone to do something
+   > "complaint." And while many students will agree that the noise was, in
+
+## accusation|real#2|the noise last night
+   utterance: You knew about the noise last night and said nothing.
+   > 'false accusation' or a 'false charge'. It is a statement which makes
+   > ‘zinger’. It's a little verbal bomb which hurts. But in a
+
+## concession|real#2|the noise last night
+   utterance: OK, I can see why you'd say that about the noise last night.
+   > statement that is an "agreement" without being an actual agreement. It is
+   > partial concession. It's a step back from a previous position, but only in
+
+## justification|real#2|the noise last night
+   utterance: It only makes sense given the noise last night.
+   > non-sequitur. "Given the noise last night" has nothing to do
+   > red herring. It's a classic example of the fallacy of appeal to

@@ -1,0 +1,26 @@
+Exp 33 (meta-llama/Meta-Llama-3-8B)
+======================================================================
+VERDICT: FAIL
+mean retention at L>=16: +0.019
+
+
+### target=999
+  L= 2  cos(d,e)=+0.973  frac_par=0.946  tf=+0.775  tp=-0.076  te=+0.783  ret=-0.098
+  L= 8  cos(d,e)=+0.879  frac_par=0.772  tf=+0.285  tp=+0.051  te=+0.322  ret=+0.178
+  L=16  cos(d,e)=+0.939  frac_par=0.883  tf=+0.234  tp=+0.012  te=+0.223  ret=+0.053
+  L=24  cos(d,e)=+0.944  frac_par=0.891  tf=+0.176  tp=-0.068  te=+0.176  ret=-0.386
+  L=30  cos(d,e)=+0.922  frac_par=0.850  tf=+0.102  tp=-0.068  te=+0.102  ret=-0.668
+
+### target=666
+  L= 2  cos(d,e)=+0.972  frac_par=0.944  tf=+0.732  tp=+0.083  te=+0.734  ret=+0.114
+  L= 8  cos(d,e)=+0.898  frac_par=0.806  tf=+0.243  tp=-0.064  te=+0.317  ret=-0.264
+  L=16  cos(d,e)=+0.941  frac_par=0.886  tf=+0.254  tp=+0.079  te=+0.250  ret=+0.312
+  L=24  cos(d,e)=+0.941  frac_par=0.886  tf=+0.187  tp=+0.020  te=+0.188  ret=+0.109
+  L=30  cos(d,e)=+0.914  frac_par=0.835  tf=+0.099  tp=+0.021  te=+0.104  ret=+0.214
+
+### target=137
+  L= 2  cos(d,e)=+0.973  frac_par=0.946  tf=+0.556  tp=-0.016  te=+0.589  ret=-0.029
+  L= 8  cos(d,e)=+0.846  frac_par=0.715  tf=+0.349  tp=-0.012  te=+0.394  ret=-0.035
+  L=16  cos(d,e)=+0.944  frac_par=0.892  tf=+0.252  tp=+0.017  te=+0.242  ret=+0.067
+  L=24  cos(d,e)=+0.941  frac_par=0.885  tf=+0.201  tp=+0.014  te=+0.194  ret=+0.071
+  L=30  cos(d,e)=+0.922  frac_par=0.850  tf=+0.144  tp=+0.057  te=+0.136  ret=+0.397

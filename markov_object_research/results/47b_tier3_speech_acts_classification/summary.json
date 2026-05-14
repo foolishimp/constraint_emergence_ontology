@@ -1,0 +1,32 @@
+{
+  "design": "exp 47b: Tier 3 speech-act CLASSIFY frame retry",
+  "frame": "\"{utterance}\"\nThis kind of statement is best described as a",
+  "llm": "meta-llama/Meta-Llama-3-8B",
+  "embedder": "all-mpnet-base-v2",
+  "n_samples": 300,
+  "silhouette_by_act": 0.08278541266918182,
+  "silhouette_by_realization": -0.03833631053566933,
+  "silhouette_by_content": -0.014668277464807034,
+  "act_minus_real_gap": 0.12112172320485115,
+  "act_minus_content_gap": 0.09745369013398886,
+  "per_act_within": {
+    "apology": 0.7233127951622009,
+    "request": 0.6236130595207214,
+    "accusation": 0.5819121599197388,
+    "concession": 0.60844886302948,
+    "justification": 0.6045086979866028
+  },
+  "pairwise_act_centroid_cosines": {
+    "apology--request": 0.5724716782569885,
+    "apology--accusation": 0.6846224069595337,
+    "apology--concession": 0.7395836114883423,
+    "apology--justification": 0.630119264125824,
+    "request--accusation": 0.7003554701805115,
+    "request--concession": 0.6578871011734009,
+    "request--justification": 0.6169840097427368,
+    "accusation--concession": 0.8377634882926941,
+    "accusation--justification": 0.896629273891449,
+    "concession--justification": 0.7802054286003113
+  },
+  "verdict": "PARTIAL"
+}

@@ -1,0 +1,60 @@
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 16651.65it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target=999  intervention layer=2 ===
+  probe train acc: 1.000
+  ||n_dir||=1.000  ||e_strip||=43.692  cos(n_dir, e_strip)=-0.000
+  [Channel {n} is broadcasting   ]  base=-0.03  across=-0.27  along=-0.01  random=+0.05
+  [Version {n} released today    ]  base=-7.07  across=-7.01  along=-7.05  random=-6.91
+  [The tribe numbered {n}        ]  base=-1.09  across=-1.05  along=-0.83  random=-1.44
+  [He lived {n} years            ]  base=-4.36  across=-4.25  along=-4.34  random=-4.36
+  [Mission {n} begins now        ]  base=-5.14  across=-4.97  along=-5.11  random=-5.17
+  [Only {n} remain standing      ]  base=-4.01  across=-3.87  along=-3.96  random=-4.09
+  [Flight {n} is boarding        ]  base=-0.97  across=-0.93  along=-1.34  random=-1.19
+  [Gate {n} closes soon          ]  base=-3.97  across=-3.80  along=-3.94  random=-4.00
+  [Problem {n} is solved         ]  base=-3.75  across=-3.84  along=-3.43  random=-3.81
+  [The clock struck {n}          ]  base=-0.56  across=-0.60  along=-0.26  random=-0.19
+  mean shift  across=+0.035  along=+0.069  random=-0.015
+  |across| - |random| = +0.020  (need >= 0.5)
+  |along|  - |random| = +0.054  (need <= 0.15)
+
+=== target=666  intervention layer=2 ===
+  probe train acc: 1.000
+  ||n_dir||=1.000  ||e_strip||=43.038  cos(n_dir, e_strip)=-0.000
+  [Channel {n} is broadcasting   ]  base=-4.10  across=-3.93  along=-4.00  random=-4.23
+  [Version {n} released today    ]  base=-7.05  across=-7.03  along=-7.04  random=-7.07
+  [The tribe numbered {n}        ]  base=-2.27  across=-2.06  along=-2.59  random=-2.09
+  [He lived {n} years            ]  base=-4.03  across=-3.81  along=-4.14  random=-4.18
+  [Mission {n} begins now        ]  base=-4.56  across=-4.27  along=-4.60  random=-4.74
+  [Only {n} remain standing      ]  base=-6.14  across=-5.87  along=-6.03  random=-6.32
+  [Flight {n} is boarding        ]  base=-1.40  across=-1.12  along=-1.44  random=-1.65
+  [Gate {n} closes soon          ]  base=-4.44  across=-4.31  along=-4.46  random=-4.42
+  [Problem {n} is solved         ]  base=-4.96  across=-5.06  along=-4.83  random=-4.89
+  [The clock struck {n}          ]  base=-3.75  across=-3.79  along=-3.68  random=-3.61
+  mean shift  across=+0.144  along=-0.011  random=-0.051
+  |across| - |random| = +0.093  (need >= 0.5)
+  |along|  - |random| = -0.039  (need <= 0.15)
+
+=== target=137  intervention layer=2 ===
+  probe train acc: 1.000
+  ||n_dir||=1.000  ||e_strip||=38.734  cos(n_dir, e_strip)=-0.000
+  [Channel {n} is broadcasting   ]  base=-4.60  across=-4.62  along=-4.56  random=-4.61
+  [Version {n} released today    ]  base=-5.42  across=-5.42  along=-5.35  random=-5.42
+  [The tribe numbered {n}        ]  base=-2.85  across=-2.78  along=-2.75  random=-2.85
+  [He lived {n} years            ]  base=-3.25  across=-3.23  along=-3.28  random=-3.26
+  [Mission {n} begins now        ]  base=-4.82  across=-4.81  along=-4.82  random=-4.83
+  [Only {n} remain standing      ]  base=-4.27  across=-4.31  along=-4.27  random=-4.34
+  [Flight {n} is boarding        ]  base=-3.93  across=-4.01  along=-3.94  random=-3.91
+  [Gate {n} closes soon          ]  base=-4.24  across=-4.26  along=-4.32  random=-4.32
+  [Problem {n} is solved         ]  base=-6.07  across=-6.13  along=-6.02  random=-6.11
+  [The clock struck {n}          ]  base=-5.10  across=-5.05  along=-5.22  random=-5.08
+  mean shift  across=-0.006  along=+0.001  random=-0.019
+  |across| - |random| = -0.012  (need >= 0.5)
+  |along|  - |random| = -0.017  (need <= 0.15)
+
+Verdict: FAIL  across+=+0.033  along+=-0.001
+Report: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/37_causal_faithfulness/report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/37_causal_faithfulness

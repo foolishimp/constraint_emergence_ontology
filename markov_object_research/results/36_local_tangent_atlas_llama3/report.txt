@@ -1,0 +1,17 @@
+Exp 36 (meta-llama/Meta-Llama-3-8B)
+======================================================================
+VERDICT: FAIL
+mean PC1 EV: 0.221  angle_real: 73.4  angle_null: 83.9
+
+
+### target=999
+  REAL: {'mean_cos': 0.2722519338130951, 'pc1_ev': 0.1884980117826247, 'mean_angle_deg': 73.70909118652344, 'n_normals': 30, 'mean_local_acc': 0.8952381014823914}
+  NULL: {'mean_cos': 0.08329206705093384, 'pc1_ev': 0.14352116616558874, 'mean_angle_deg': 84.56494140625, 'n_normals': 30, 'mean_local_acc': 0.8587301671504974}
+
+### target=666
+  REAL: {'mean_cos': 0.2642500698566437, 'pc1_ev': 0.2976873085097006, 'mean_angle_deg': 73.74354553222656, 'n_normals': 30, 'mean_local_acc': 0.9523809552192688}
+  NULL: {'mean_cos': 0.08472421765327454, 'pc1_ev': 0.1553261514263906, 'mean_angle_deg': 83.81539154052734, 'n_normals': 30, 'mean_local_acc': 0.8571428656578064}
+
+### target=137
+  REAL: {'mean_cos': 0.28885242342948914, 'pc1_ev': 0.17735305300198714, 'mean_angle_deg': 72.60285186767578, 'n_normals': 30, 'mean_local_acc': 0.8873015940189362}
+  NULL: {'mean_cos': 0.10200855880975723, 'pc1_ev': 0.14439229169401033, 'mean_angle_deg': 83.30906677246094, 'n_normals': 30, 'mean_local_acc': 0.8555555641651154}

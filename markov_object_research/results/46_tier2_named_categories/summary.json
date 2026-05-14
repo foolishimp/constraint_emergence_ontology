@@ -1,0 +1,83 @@
+{
+  "design": "exp 46: Tier 2 named-category continuation cluster",
+  "llm": "meta-llama/Meta-Llama-3-8B",
+  "embedder": "all-mpnet-base-v2",
+  "categories": {
+    "city": [
+      "London",
+      "Paris",
+      "Tokyo"
+    ],
+    "weekday": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
+    "scientist": [
+      "Einstein",
+      "Newton",
+      "Darwin"
+    ],
+    "monetary": [
+      "$5",
+      "$100",
+      "$1000"
+    ],
+    "emotion": [
+      "happy",
+      "sad",
+      "angry"
+    ]
+  },
+  "templates": [
+    "When I think of {e},",
+    "The thing about {e} is",
+    "People often associate {e} with",
+    "In a few words, {e} means"
+  ],
+  "n_total_samples": 300,
+  "silhouette_by_category": 0.1680944859981537,
+  "silhouette_by_instance": 0.044138673692941666,
+  "silhouette_by_template": 0.04462418705224991,
+  "category_minus_instance_gap": 0.12395581230521202,
+  "category_minus_template_gap": 0.12347029894590378,
+  "per_category_within_cosine": {
+    "city": 0.6261192560195923,
+    "weekday": 0.6025896072387695,
+    "scientist": 0.4922631084918976,
+    "monetary": 0.5633459687232971,
+    "emotion": 0.5395856499671936
+  },
+  "per_instance_within_cosine": {
+    "city/London": 0.6593312621116638,
+    "city/Paris": 0.7036853432655334,
+    "city/Tokyo": 0.6897710561752319,
+    "weekday/Monday": 0.6348603963851929,
+    "weekday/Wednesday": 0.6316878795623779,
+    "weekday/Friday": 0.6220014095306396,
+    "scientist/Einstein": 0.652090847492218,
+    "scientist/Newton": 0.5333130955696106,
+    "scientist/Darwin": 0.5231536626815796,
+    "monetary/$5": 0.5641781687736511,
+    "monetary/$100": 0.6181984543800354,
+    "monetary/$1000": 0.5986770391464233,
+    "emotion/happy": 0.6547713279724121,
+    "emotion/sad": 0.5652190446853638,
+    "emotion/angry": 0.6476051807403564
+  },
+  "avg_within_category": 0.56478071808815,
+  "avg_within_instance": 0.6199029445648193,
+  "pairwise_category_centroid_cosines": {
+    "city--weekday": 0.38488271832466125,
+    "city--scientist": 0.49979156255722046,
+    "city--monetary": 0.37730908393859863,
+    "city--emotion": 0.3639574646949768,
+    "weekday--scientist": 0.3225843906402588,
+    "weekday--monetary": 0.38077327609062195,
+    "weekday--emotion": 0.5155699253082275,
+    "scientist--monetary": 0.3202736973762512,
+    "scientist--emotion": 0.3694235384464264,
+    "monetary--emotion": 0.3608332872390747
+  },
+  "verdict": "PARTIAL"
+}

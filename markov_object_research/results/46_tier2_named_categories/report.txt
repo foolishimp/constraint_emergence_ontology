@@ -1,0 +1,46 @@
+Exp 46 - Tier 2 Named-Category Continuation Cluster
+Substrate: meta-llama/Meta-Llama-3-8B   Embedder: all-mpnet-base-v2
+======================================================================
+
+Categories (5): ['city', 'weekday', 'scientist', 'monetary', 'emotion']
+  city: ['London', 'Paris', 'Tokyo']
+  weekday: ['Monday', 'Wednesday', 'Friday']
+  scientist: ['Einstein', 'Newton', 'Darwin']
+  monetary: ['$5', '$100', '$1000']
+  emotion: ['happy', 'sad', 'angry']
+Templates: 4, Generations per (instance, template): 5
+Total samples: 300
+
+Pre-registered outcome rules:
+  PASS    silhouette(cat) >= 0.20  AND  cat > inst + 0.05  AND  cat > tpl + 0.10
+  PARTIAL silhouette(cat) >= 0.10  AND  cat > inst AND cat > tpl
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: PARTIAL
+  silhouette by CATEGORY: +0.168
+  silhouette by INSTANCE: +0.044
+  silhouette by TEMPLATE: +0.045
+  category - instance gap: +0.124
+  category - template gap: +0.123
+
+Per-category within-cluster cosine to centroid:
+  city        +0.626
+  weekday     +0.603
+  scientist   +0.492
+  monetary    +0.563
+  emotion     +0.540
+
+avg within-CATEGORY tightness: +0.565
+avg within-INSTANCE tightness: +0.620
+
+Pairwise category centroid cosine (lower = more separated):
+  weekday--emotion                  +0.516
+  city--scientist                   +0.500
+  city--weekday                     +0.385
+  weekday--monetary                 +0.381
+  city--monetary                    +0.377
+  scientist--emotion                +0.369
+  city--emotion                     +0.364
+  monetary--emotion                 +0.361
+  weekday--scientist                +0.323
+  scientist--monetary               +0.320

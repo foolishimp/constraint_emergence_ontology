@@ -1,0 +1,245 @@
+{
+  "model": "meta-llama/Meta-Llama-3-8B",
+  "results": {
+    "999": {
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        }
+      ],
+      "agg": {
+        "across": 0.0,
+        "along": 0.0,
+        "random": 0.0
+      }
+    },
+    "666": {
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        }
+      ],
+      "agg": {
+        "across": 0.0,
+        "along": 0.0,
+        "random": 0.0
+      }
+    },
+    "137": {
+      "per_template": [
+        {
+          "template": "Channel {n} is broadcasting",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Version {n} released today",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The tribe numbered {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "He lived {n} years",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Mission {n} begins now",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Only {n} remain standing",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Flight {n} is boarding",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Gate {n} closes soon",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "Problem {n} is solved",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        },
+        {
+          "template": "The clock struck {n}",
+          "baseline": 0.0,
+          "across": 0.0,
+          "along": 0.0,
+          "random": 0.0
+        }
+      ],
+      "agg": {
+        "across": 0.0,
+        "along": 0.0,
+        "random": 0.0
+      }
+    }
+  },
+  "verdict": "FAIL",
+  "avg_across_extra": 0.0,
+  "avg_along_extra": 0.0
+}

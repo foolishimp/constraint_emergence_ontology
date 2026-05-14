@@ -1,0 +1,26 @@
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 20653.35it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target=999 ===
+  N=270  joint_dim=3840  n_target=30  n_ref=240
+  real:  mean_cos=+0.263  PC1_EV=0.193  angle=74.3deg  local_acc=0.811
+  null:  mean_cos=+0.047  PC1_EV=0.163  angle=86.7deg  local_acc=0.867
+
+=== target=666 ===
+  N=270  joint_dim=3840  n_target=30  n_ref=240
+  real:  mean_cos=+0.285  PC1_EV=0.211  angle=73.0deg  local_acc=0.816
+  null:  mean_cos=+0.048  PC1_EV=0.163  angle=87.0deg  local_acc=0.856
+
+=== target=137 ===
+  N=270  joint_dim=3840  n_target=30  n_ref=240
+  real:  mean_cos=+0.280  PC1_EV=0.211  angle=73.3deg  local_acc=0.787
+  null:  mean_cos=+0.044  PC1_EV=0.160  angle=86.6deg  local_acc=0.843
+
+Verdict: FAIL  PC1_EV=0.205  angle_real=73.6  angle_null=86.76830800374348
+  normal_field_pca.png
+  pairwise_cosine_dist.png
+  local_accuracy_dist.png
+Report: report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/36_local_tangent_atlas

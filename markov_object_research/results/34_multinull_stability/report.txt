@@ -1,0 +1,66 @@
+Exp 34 - Multi-Null Direction Stability
+======================================================================
+
+Targets:        [999, 666, 137]
+Generic nulls:  [5, 2, 50, 250, 800, 41, 7, 11]
+Cultural nulls: [42, 100]
+Probe layers:   [2, 8]
+Diverse templates: 20  Held-out: 10
+
+Pre-registered outcome rules (averaged over targets, at layer 2):
+  PASS     mean cross-null cosine >= 0.6 AND PC1 EV >= 0.60
+  PARTIAL  cosine >= 0.4 OR EV >= 0.40
+  FAIL     otherwise
+
+AGGREGATE OUTCOME: PARTIAL
+  mean cross-null cosine  (L=2, generic): +0.658
+  mean PC1 explained var (L=2, generic): 0.354
+
+
+### target = 999  layer = 2
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.697
+  PC1 explained variance (generic): 0.354
+  PC1 transfer @ alpha=1: -2.451
+  best per-null transfer @ alpha=1: +0.872
+  mean cosine generic-vs-cultural nulls: +0.704
+
+### target = 999  layer = 8
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.671
+  PC1 explained variance (generic): 0.396
+  PC1 transfer @ alpha=1: -0.053
+  best per-null transfer @ alpha=1: +0.267
+  mean cosine generic-vs-cultural nulls: +0.689
+
+### target = 666  layer = 2
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.696
+  PC1 explained variance (generic): 0.354
+  PC1 transfer @ alpha=1: -1.011
+  best per-null transfer @ alpha=1: +0.927
+  mean cosine generic-vs-cultural nulls: +0.705
+
+### target = 666  layer = 8
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.652
+  PC1 explained variance (generic): 0.396
+  PC1 transfer @ alpha=1: -0.111
+  best per-null transfer @ alpha=1: +0.248
+  mean cosine generic-vs-cultural nulls: +0.675
+
+### target = 137  layer = 2
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.581
+  PC1 explained variance (generic): 0.354
+  PC1 transfer @ alpha=1: -0.562
+  best per-null transfer @ alpha=1: +0.903
+  mean cosine generic-vs-cultural nulls: +0.581
+
+### target = 137  layer = 8
+  generic-nulls: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.527
+  PC1 explained variance (generic): 0.396
+  PC1 transfer @ alpha=1: -0.202
+  best per-null transfer @ alpha=1: +0.275
+  mean cosine generic-vs-cultural nulls: +0.521

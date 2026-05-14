@@ -1,0 +1,60 @@
+Exp 38 - Graph-Cut Signature Via Path Patching
+======================================================================
+
+Targets:  [999, 666, 137]  Reference: n = 5
+Probe (boundary) layer: 2
+Cut size: 10 (greedy, by ablation damage)
+
+Pre-registered outcome rules (averaged over targets):
+  PASS    avg cos(n_dir, top PC of K_C) >= 0.7 AND null < 0.3
+  PARTIAL avg cos in [0.3, 0.7]
+  FAIL    avg cos < 0.3
+
+AGGREGATE OUTCOME: FAIL
+  avg cos (cut):  0.0319999735802412
+  avg cos (null): 0.044383782893419266
+
+### target = 999
+  top PC alignment (cut):  +0.024
+  top PC alignment (null): +0.005
+  top-10 cut nodes:
+    L0H8      damage=+0.884
+    L0MLP     damage=+0.859
+    L11H0     damage=+0.492
+    L0H9      damage=+0.473
+    L0H0      damage=+0.336
+    L0H2      damage=+0.300
+    L1H8      damage=+0.297
+    L4MLP     damage=+0.168
+    L0H3      damage=+0.154
+    L11H4     damage=+0.148
+
+### target = 666
+  top PC alignment (cut):  +0.028
+  top PC alignment (null): +0.023
+  top-10 cut nodes:
+    L0H8      damage=+1.383
+    L11H0     damage=+0.342
+    L6H4      damage=+0.303
+    L1H8      damage=+0.271
+    L4MLP     damage=+0.224
+    L0H1      damage=+0.223
+    L5H9      damage=+0.213
+    L0H2      damage=+0.193
+    L1H7      damage=+0.192
+    L0H5      damage=+0.189
+
+### target = 137
+  top PC alignment (cut):  +0.044
+  top PC alignment (null): +0.105
+  top-10 cut nodes:
+    L0H8      damage=+0.809
+    L11H0     damage=+0.160
+    L1H8      damage=+0.127
+    L11H4     damage=+0.114
+    L0H9      damage=+0.112
+    L1H1      damage=+0.102
+    L9MLP     damage=+0.098
+    L8MLP     damage=+0.056
+    L9H3      damage=+0.056
+    L7H3      damage=+0.053

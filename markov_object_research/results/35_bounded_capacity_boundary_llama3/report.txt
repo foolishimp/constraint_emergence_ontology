@@ -1,0 +1,51 @@
+Exp 35 (meta-llama/Meta-Llama-3-8B)
+======================================================================
+VERDICT stripped: FAIL
+VERDICT raw:      PASS
+
+
+--- STRIPPED ---
+
+target=999  cap_to_90=None
+  linear       acc=0.717+/-0.135  brier=0.283
+  mlp_h16      acc=0.800+/-0.113  brier=0.159
+  mlp_h64      acc=0.800+/-0.125  brier=0.155
+  mlp_h256     acc=0.817+/-0.097  brier=0.132
+  mlp_h1024    acc=0.717+/-0.113  brier=0.255
+
+target=666  cap_to_90=None
+  linear       acc=0.733+/-0.122  brier=0.266
+  mlp_h16      acc=0.817+/-0.122  brier=0.140
+  mlp_h64      acc=0.817+/-0.122  brier=0.152
+  mlp_h256     acc=0.800+/-0.155  brier=0.145
+  mlp_h1024    acc=0.817+/-0.097  brier=0.157
+
+target=137  cap_to_90=None
+  linear       acc=0.700+/-0.085  brier=0.275
+  mlp_h16      acc=0.817+/-0.082  brier=0.134
+  mlp_h64      acc=0.750+/-0.105  brier=0.221
+  mlp_h256     acc=0.800+/-0.155  brier=0.176
+  mlp_h1024    acc=0.750+/-0.175  brier=0.218
+
+--- RAW ---
+
+target=999  cap_to_90=linear
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000
+
+target=666  cap_to_90=linear
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000
+
+target=137  cap_to_90=linear
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000

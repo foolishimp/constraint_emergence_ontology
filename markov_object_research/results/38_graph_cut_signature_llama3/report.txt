@@ -1,0 +1,44 @@
+Exp 38 (meta-llama/Meta-Llama-3-8B)
+======================================================================
+VERDICT: FAIL
+avg cos real: 0.037  avg cos null: 0.028
+
+
+### target=999
+  cos_real=0.011790581047534943  cos_null=0.04129546880722046
+    L0H0     damage=+0.000
+    L0H1     damage=+0.000
+    L0H2     damage=+0.000
+    L0H3     damage=+0.000
+    L0H4     damage=+0.000
+    L0H5     damage=+0.000
+    L0H6     damage=+0.000
+    L0H7     damage=+0.000
+    L0H8     damage=+0.000
+    L0H9     damage=+0.000
+
+### target=666
+  cos_real=0.05842813849449158  cos_null=0.027917029336094856
+    L0H0     damage=+0.000
+    L0H1     damage=+0.000
+    L0H2     damage=+0.000
+    L0H3     damage=+0.000
+    L0H4     damage=+0.000
+    L0H5     damage=+0.000
+    L0H6     damage=+0.000
+    L0H7     damage=+0.000
+    L0H8     damage=+0.000
+    L0H9     damage=+0.000
+
+### target=137
+  cos_real=0.04080750793218613  cos_null=0.014866095036268234
+    L0H0     damage=+0.000
+    L0H1     damage=+0.000
+    L0H2     damage=+0.000
+    L0H3     damage=+0.000
+    L0H4     damage=+0.000
+    L0H5     damage=+0.000
+    L0H6     damage=+0.000
+    L0H7     damage=+0.000
+    L0H8     damage=+0.000
+    L0H9     damage=+0.000

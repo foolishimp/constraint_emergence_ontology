@@ -1,0 +1,64 @@
+{
+  "design": "exp 47: Tier 3 speech acts",
+  "llm": "meta-llama/Meta-Llama-3-8B",
+  "embedder": "all-mpnet-base-v2",
+  "speech_acts": {
+    "apology": [
+      "I'm really sorry about {c}.",
+      "I owe you an apology for {c}.",
+      "Please forgive me for {c}."
+    ],
+    "request": [
+      "Could you please help me with {c}?",
+      "Would you mind {c}?",
+      "I'd appreciate it if you could {c}."
+    ],
+    "accusation": [
+      "You're the one responsible for {c}.",
+      "It was you who did {c}, wasn't it?",
+      "You knew about {c} and said nothing."
+    ],
+    "concession": [
+      "Fine, you're right about {c}.",
+      "I'll grant you that {c}.",
+      "OK, I can see why you'd say that about {c}."
+    ],
+    "justification": [
+      "The reason is that {c}.",
+      "I had to do it because {c}.",
+      "It only makes sense given {c}."
+    ]
+  },
+  "contents": [
+    "the meeting yesterday",
+    "the broken vase",
+    "the missing report",
+    "the noise last night"
+  ],
+  "n_samples": 300,
+  "silhouette_by_act": -0.0070647988468408585,
+  "silhouette_by_realization": -0.04343389347195625,
+  "silhouette_by_content": 0.04662546142935753,
+  "act_minus_real_gap": 0.036369094625115395,
+  "act_minus_content_gap": -0.05369026027619839,
+  "per_act_within": {
+    "apology": 0.5454065203666687,
+    "request": 0.49565064907073975,
+    "accusation": 0.5831959247589111,
+    "concession": 0.493354856967926,
+    "justification": 0.5363272428512573
+  },
+  "pairwise_act_centroid_cosines": {
+    "apology--request": 0.8664230108261108,
+    "apology--accusation": 0.8314566612243652,
+    "apology--concession": 0.829785943031311,
+    "apology--justification": 0.8227005004882812,
+    "request--accusation": 0.8469868898391724,
+    "request--concession": 0.848080575466156,
+    "request--justification": 0.8950492143630981,
+    "accusation--concession": 0.9112644195556641,
+    "accusation--justification": 0.9013736248016357,
+    "concession--justification": 0.9149951934814453
+  },
+  "verdict": "FAIL"
+}

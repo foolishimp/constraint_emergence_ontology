@@ -1,0 +1,165 @@
+Loading meta-llama/Meta-Llama-3-8B on mps (torch.float16)...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<03:29,  1.39it/s]Loading weights:  17%|█▋        | 49/291 [00:00<00:03, 78.71it/s]Loading weights:  25%|██▌       | 74/291 [00:01<00:02, 85.50it/s]Loading weights:  32%|███▏      | 92/291 [00:01<00:02, 88.94it/s]Loading weights:  37%|███▋      | 107/291 [00:01<00:02, 86.93it/s]Loading weights:  42%|████▏     | 121/291 [00:01<00:02, 84.79it/s]Loading weights:  45%|████▌     | 132/291 [00:01<00:01, 87.02it/s]Loading weights:  51%|█████     | 148/291 [00:01<00:01, 89.66it/s]Loading weights:  55%|█████▍    | 159/291 [00:02<00:01, 93.56it/s]Loading weights:  60%|██████    | 175/291 [00:02<00:01, 93.62it/s]Loading weights:  66%|██████▋   | 193/291 [00:02<00:01, 95.83it/s]Loading weights:  70%|███████   | 204/291 [00:02<00:00, 98.02it/s]Loading weights:  76%|███████▌  | 220/291 [00:02<00:00, 92.53it/s]Loading weights:  82%|████████▏ | 238/291 [00:02<00:00, 96.52it/s]Loading weights:  88%|████████▊ | 256/291 [00:03<00:00, 99.79it/s]Loading weights:  94%|█████████▍| 274/291 [00:03<00:00, 105.32it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 89.85it/s] 
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+Loaded pretrained model meta-llama/Meta-Llama-3-8B into HookedTransformer
+  loaded in 31.6s. n_layers=32 d_model=4096 n_heads=32
+
+
+========== EXP 33: embedding-decomposition (Llama-3 8B) ==========
+
+[33] target=999 layer=2
+  cos(d,e)=+0.973  frac_par=0.946  tf=+0.775  tp=-0.076  te=+0.783  ret=-0.098
+
+[33] target=999 layer=8
+  cos(d,e)=+0.879  frac_par=0.772  tf=+0.285  tp=+0.051  te=+0.322  ret=+0.178
+
+[33] target=999 layer=16
+  cos(d,e)=+0.939  frac_par=0.883  tf=+0.234  tp=+0.012  te=+0.223  ret=+0.053
+
+[33] target=999 layer=24
+  cos(d,e)=+0.944  frac_par=0.891  tf=+0.176  tp=-0.068  te=+0.176  ret=-0.386
+
+[33] target=999 layer=30
+  cos(d,e)=+0.922  frac_par=0.850  tf=+0.102  tp=-0.068  te=+0.102  ret=-0.668
+
+[33] target=666 layer=2
+  cos(d,e)=+0.972  frac_par=0.944  tf=+0.732  tp=+0.083  te=+0.734  ret=+0.114
+
+[33] target=666 layer=8
+  cos(d,e)=+0.898  frac_par=0.806  tf=+0.243  tp=-0.064  te=+0.317  ret=-0.264
+
+[33] target=666 layer=16
+  cos(d,e)=+0.941  frac_par=0.886  tf=+0.254  tp=+0.079  te=+0.250  ret=+0.312
+
+[33] target=666 layer=24
+  cos(d,e)=+0.941  frac_par=0.886  tf=+0.187  tp=+0.020  te=+0.188  ret=+0.109
+
+[33] target=666 layer=30
+  cos(d,e)=+0.914  frac_par=0.835  tf=+0.099  tp=+0.021  te=+0.104  ret=+0.214
+
+[33] target=137 layer=2
+  cos(d,e)=+0.973  frac_par=0.946  tf=+0.556  tp=-0.016  te=+0.589  ret=-0.029
+
+[33] target=137 layer=8
+  cos(d,e)=+0.846  frac_par=0.715  tf=+0.349  tp=-0.012  te=+0.394  ret=-0.035
+
+[33] target=137 layer=16
+  cos(d,e)=+0.944  frac_par=0.892  tf=+0.252  tp=+0.017  te=+0.242  ret=+0.067
+
+[33] target=137 layer=24
+  cos(d,e)=+0.941  frac_par=0.885  tf=+0.201  tp=+0.014  te=+0.194  ret=+0.071
+
+[33] target=137 layer=30
+  cos(d,e)=+0.922  frac_par=0.850  tf=+0.144  tp=+0.057  te=+0.136  ret=+0.397
+[33] verdict: FAIL  mean_retention(L>=16)=+0.019
+
+
+========== EXP 35: bounded-capacity boundary (Llama-3 8B) ==========
+
+[35] target=999  strip_emb=True
+  linear       acc=0.717+/-0.135  brier=0.283
+  mlp_h16      acc=0.800+/-0.113  brier=0.159
+  mlp_h64      acc=0.800+/-0.125  brier=0.155
+  mlp_h256     acc=0.817+/-0.097  brier=0.132
+  mlp_h1024    acc=0.717+/-0.113  brier=0.255
+
+[35] target=666  strip_emb=True
+  linear       acc=0.733+/-0.122  brier=0.266
+  mlp_h16      acc=0.817+/-0.122  brier=0.140
+  mlp_h64      acc=0.817+/-0.122  brier=0.152
+  mlp_h256     acc=0.800+/-0.155  brier=0.145
+  mlp_h1024    acc=0.817+/-0.097  brier=0.157
+
+[35] target=137  strip_emb=True
+  linear       acc=0.700+/-0.085  brier=0.275
+  mlp_h16      acc=0.817+/-0.082  brier=0.134
+  mlp_h64      acc=0.750+/-0.105  brier=0.221
+  mlp_h256     acc=0.800+/-0.155  brier=0.176
+  mlp_h1024    acc=0.750+/-0.175  brier=0.218
+
+[35] target=999  strip_emb=False
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000
+
+[35] target=666  strip_emb=False
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000
+
+[35] target=137  strip_emb=False
+  linear       acc=1.000+/-0.000  brier=0.000
+  mlp_h16      acc=1.000+/-0.000  brier=0.000
+  mlp_h64      acc=1.000+/-0.000  brier=0.000
+  mlp_h256     acc=1.000+/-0.000  brier=0.000
+  mlp_h1024    acc=1.000+/-0.000  brier=0.000
+[35] stripped verdict: FAIL   raw verdict: PASS
+
+
+========== EXP 36: local-tangent atlas (Llama-3 8B) ==========
+
+[36] target=999
+  real:  mean_cos=+0.272  PC1_EV=0.188  angle=73.7deg  acc=0.895
+  null:  mean_cos=+0.083  PC1_EV=0.144  angle=84.6deg  acc=0.859
+
+[36] target=666
+  real:  mean_cos=+0.264  PC1_EV=0.298  angle=73.7deg  acc=0.952
+  null:  mean_cos=+0.085  PC1_EV=0.155  angle=83.8deg  acc=0.857
+
+[36] target=137
+  real:  mean_cos=+0.289  PC1_EV=0.177  angle=72.6deg  acc=0.887
+  null:  mean_cos=+0.102  PC1_EV=0.144  angle=83.3deg  acc=0.856
+[36] verdict: FAIL  PC1_EV=0.221  angle_real=73.4  angle_null=83.9
+
+
+========== EXP 37: causal faithfulness (Llama-3 8B) ==========
+
+[37] target=999
+[37] FAILED: Input string:  999 is not a single token!
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 886, in main
+    v, _ = run_exp37(model, RESULTS / "37_causal_faithfulness_llama3")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 652, in run_exp37
+    row[mode] = evaluate_intervention(model, tgt, REFERENCE, t, n_dir,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 607, in evaluate_intervention
+    target_tok = model.to_single_token(f" {target}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/.pyenv/versions/3.11.5/lib/python3.11/site-packages/transformer_lens/HookedTransformer.py", line 985, in to_single_token
+    assert not token.shape, f"Input string: {string} is not a single token!"
+AssertionError: Input string:  999 is not a single token!
+
+
+========== EXP 38: graph-cut signature (Llama-3 8B) ==========
+
+[38] target=999
+[38] FAILED: Input string:  999 is not a single token!
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 892, in main
+    v, _ = run_exp38(model, RESULTS / "38_graph_cut_signature_llama3")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 815, in run_exp38
+    nodes, _ = rank_nodes(model, tgt, n_eval=3)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/experiments/llama3_full_sweep.py", line 728, in rank_nodes
+    target_tok = model.to_single_token(f" {target}")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/.pyenv/versions/3.11.5/lib/python3.11/site-packages/transformer_lens/HookedTransformer.py", line 985, in to_single_token
+    assert not token.shape, f"Input string: {string} is not a single token!"
+AssertionError: Input string:  999 is not a single token!
+
+
+========== SWEEP DONE in 40.4 min ==========
+{
+  "33": "FAIL",
+  "35": "stripped=FAIL raw=PASS",
+  "36": "FAIL",
+  "37": "ERROR",
+  "38": "ERROR"
+}
+Summary: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/llama3_full_sweep_summary.json

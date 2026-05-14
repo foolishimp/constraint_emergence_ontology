@@ -1,0 +1,68 @@
+Exp 35 - Bounded-Capacity Level-Set Fitting
+======================================================================
+
+Targets:   [999, 666, 137]
+Reference: n = 5
+Probe layers (joint state): [2, 4, 6, 8, 10]
+Capacity ladder: ['linear', 'mlp_h16', 'mlp_h64', 'mlp_h256', 'mlp_h1024']
+
+Pre-registered outcome rules (averaged over targets, on stripped state):
+  PASS     hidden width h <= 64 reaches >= 90% accuracy
+  PARTIAL  h in [256, 1024] required
+  FAIL     only unbounded capacity works
+
+AGGREGATE OUTCOME on STRIPPED joint state: FAIL
+AGGREGATE OUTCOME on RAW      joint state: PASS
+
+
+--- STRIPPED joint state ---
+
+target=999  cap_to_90_acc=None
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=0.733 +/- 0.097  brier=0.254
+    mlp_h16      acc=0.833 +/- 0.053  brier=0.091
+    mlp_h64      acc=0.783 +/- 0.085  brier=0.187
+    mlp_h256     acc=0.850 +/- 0.062  brier=0.139
+    mlp_h1024    acc=0.883 +/- 0.067  brier=0.101
+
+target=666  cap_to_90_acc=None
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=0.717 +/- 0.135  brier=0.270
+    mlp_h16      acc=0.783 +/- 0.113  brier=0.170
+    mlp_h64      acc=0.800 +/- 0.085  brier=0.171
+    mlp_h256     acc=0.783 +/- 0.135  brier=0.209
+    mlp_h1024    acc=0.833 +/- 0.139  brier=0.146
+
+target=137  cap_to_90_acc=None
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=0.717 +/- 0.085  brier=0.279
+    mlp_h16      acc=0.800 +/- 0.067  brier=0.147
+    mlp_h64      acc=0.800 +/- 0.085  brier=0.182
+    mlp_h256     acc=0.783 +/- 0.085  brier=0.157
+    mlp_h1024    acc=0.867 +/- 0.085  brier=0.122
+
+--- RAW joint state ---
+
+target=999  cap_to_90_acc=linear
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=1.000 +/- 0.000  brier=0.000
+    mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+    mlp_h1024    acc=1.000 +/- 0.000  brier=0.000
+
+target=666  cap_to_90_acc=linear
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=1.000 +/- 0.000  brier=0.000
+    mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+    mlp_h1024    acc=1.000 +/- 0.000  brier=0.000
+
+target=137  cap_to_90_acc=linear
+  joint_dim=3840 n_t=30 n_r=30
+    linear       acc=1.000 +/- 0.000  brier=0.000
+    mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+    mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+    mlp_h1024    acc=1.000 +/- 0.000  brier=0.000

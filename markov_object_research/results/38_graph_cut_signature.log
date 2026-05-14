@@ -1,0 +1,69 @@
+Loading GPT-2...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 17583.19it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target=999 ===
+  Ranking nodes by margin damage (this is slow)...
+  top-10 most-damaging nodes:
+    L0H8      damage=+0.884
+    L0MLP     damage=+0.859
+    L11H0     damage=+0.492
+    L0H9      damage=+0.473
+    L0H0      damage=+0.336
+    L0H2      damage=+0.300
+    L1H8      damage=+0.297
+    L4MLP     damage=+0.168
+    L0H3      damage=+0.154
+    L11H4     damage=+0.148
+  Computing K_C basis from top-10 cut...
+  Fitting boundary normal at layer 2 (stripped)...
+  Aligning n_dir with K_C principal directions...
+  cos(n_dir, top PC of K_C) = +0.024
+  weighted top-5 cosine     = +0.021
+  null cos(n_dir, top PC of K_null) = +0.005
+
+=== target=666 ===
+  Ranking nodes by margin damage (this is slow)...
+  top-10 most-damaging nodes:
+    L0H8      damage=+1.383
+    L11H0     damage=+0.342
+    L6H4      damage=+0.303
+    L1H8      damage=+0.271
+    L4MLP     damage=+0.224
+    L0H1      damage=+0.223
+    L5H9      damage=+0.213
+    L0H2      damage=+0.193
+    L1H7      damage=+0.192
+    L0H5      damage=+0.189
+  Computing K_C basis from top-10 cut...
+  Fitting boundary normal at layer 2 (stripped)...
+  Aligning n_dir with K_C principal directions...
+  cos(n_dir, top PC of K_C) = +0.028
+  weighted top-5 cosine     = +0.031
+  null cos(n_dir, top PC of K_null) = +0.023
+
+=== target=137 ===
+  Ranking nodes by margin damage (this is slow)...
+  top-10 most-damaging nodes:
+    L0H8      damage=+0.809
+    L11H0     damage=+0.160
+    L1H8      damage=+0.127
+    L11H4     damage=+0.114
+    L0H9      damage=+0.112
+    L1H1      damage=+0.102
+    L9MLP     damage=+0.098
+    L8MLP     damage=+0.056
+    L9H3      damage=+0.056
+    L7H3      damage=+0.053
+  Computing K_C basis from top-10 cut...
+  Fitting boundary normal at layer 2 (stripped)...
+  Aligning n_dir with K_C principal directions...
+  cos(n_dir, top PC of K_C) = +0.044
+  weighted top-5 cosine     = +0.033
+  null cos(n_dir, top PC of K_null) = +0.105
+
+Verdict: FAIL  avg_cos_real=0.0319999735802412  avg_cos_null=0.044383782893419266
+Report: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/38_graph_cut_signature/report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/38_graph_cut_signature

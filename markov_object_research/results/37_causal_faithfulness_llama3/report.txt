@@ -1,0 +1,12 @@
+Exp 37 (meta-llama/Meta-Llama-3-8B)
+======================================================================
+VERDICT: FAIL
+avg |across|-|random|: +0.000
+avg |along|-|random|:  +0.000
+
+
+### target=999  agg={'across': 0.0, 'along': 0.0, 'random': 0.0}
+
+### target=666  agg={'across': 0.0, 'along': 0.0, 'random': 0.0}
+
+### target=137  agg={'across': 0.0, 'along': 0.0, 'random': 0.0}

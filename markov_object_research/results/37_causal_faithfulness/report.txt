@@ -1,0 +1,27 @@
+Exp 37 - Causal Faithfulness Of The Level Set
+======================================================================
+
+Targets:   [999, 666, 137]
+Reference: n = 5
+Intervention layer: 2
+
+Pre-registered outcome rules (averaged over targets):
+  PASS    avg |across|-|random| >= 0.5 AND avg |along|-|random| <= 0.15
+  PARTIAL avg |across|-|random| >= 0.3
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: FAIL
+  avg |across|-|random| = +0.033
+  avg |along|-|random|  = -0.001
+
+### target = 999
+  probe train acc:   1.000
+  agg shifts: across=+0.035  along=+0.069  random=-0.015
+
+### target = 666
+  probe train acc:   1.000
+  agg shifts: across=+0.144  along=-0.011  random=-0.051
+
+### target = 137
+  probe train acc:   1.000
+  agg shifts: across=-0.006  along=+0.001  random=-0.019

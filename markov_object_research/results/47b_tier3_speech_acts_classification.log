@@ -1,0 +1,84 @@
+Loading meta-llama/Meta-Llama-3-8B on mps (torch.float16)...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<02:56,  1.64it/s]Loading weights:  17%|█▋        | 49/291 [00:00<00:02, 86.88it/s]Loading weights:  24%|██▍       | 71/291 [00:00<00:02, 96.84it/s]Loading weights:  30%|███       | 88/291 [00:01<00:02, 97.89it/s]Loading weights:  35%|███▌      | 103/291 [00:01<00:01, 95.95it/s]Loading weights:  40%|███▉      | 116/291 [00:01<00:01, 101.88it/s]Loading weights:  45%|████▍     | 130/291 [00:01<00:01, 95.98it/s] Loading weights:  51%|█████     | 148/291 [00:01<00:01, 97.47it/s]Loading weights:  57%|█████▋    | 166/291 [00:01<00:01, 100.25it/s]Loading weights:  63%|██████▎   | 184/291 [00:02<00:01, 104.88it/s]Loading weights:  69%|██████▉   | 202/291 [00:02<00:00, 102.67it/s]Loading weights:  76%|███████▌  | 220/291 [00:02<00:00, 103.17it/s]Loading weights:  82%|████████▏ | 238/291 [00:02<00:00, 101.37it/s]Loading weights:  88%|████████▊ | 256/291 [00:02<00:00, 104.25it/s]Loading weights:  94%|█████████▍| 274/291 [00:02<00:00, 104.05it/s]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 97.38it/s] 
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+Loaded pretrained model meta-llama/Meta-Llama-3-8B into HookedTransformer
+  loaded in 52.3s.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 9750.21it/s]
+
+=== generation phase (CLASSIFY frame) ===
+  [  1/60 act=apology        real#0 c=the meeting yesterday    ] 5 in 18.0s
+  [  2/60 act=apology        real#0 c=the broken vase          ] 5 in 18.0s
+  [  3/60 act=apology        real#0 c=the missing report       ] 5 in 18.0s
+  [  4/60 act=apology        real#0 c=the noise last night     ] 5 in 17.8s
+  [  5/60 act=apology        real#1 c=the meeting yesterday    ] 5 in 17.8s
+  [  6/60 act=apology        real#1 c=the broken vase          ] 5 in 17.7s
+  [  7/60 act=apology        real#1 c=the missing report       ] 5 in 18.4s
+  [  8/60 act=apology        real#1 c=the noise last night     ] 5 in 19.4s
+  [  9/60 act=apology        real#2 c=the meeting yesterday    ] 5 in 22.2s
+  [ 10/60 act=apology        real#2 c=the broken vase          ] 5 in 23.0s
+  [ 11/60 act=apology        real#2 c=the missing report       ] 5 in 23.4s
+  [ 12/60 act=apology        real#2 c=the noise last night     ] 5 in 23.8s
+  [ 13/60 act=request        real#0 c=the meeting yesterday    ] 5 in 25.1s
+  [ 14/60 act=request        real#0 c=the broken vase          ] 5 in 22.8s
+  [ 15/60 act=request        real#0 c=the missing report       ] 5 in 23.2s
+  [ 16/60 act=request        real#0 c=the noise last night     ] 5 in 23.3s
+  [ 17/60 act=request        real#1 c=the meeting yesterday    ] 5 in 23.0s
+  [ 18/60 act=request        real#1 c=the broken vase          ] 5 in 23.2s
+  [ 19/60 act=request        real#1 c=the missing report       ] 5 in 22.5s
+  [ 20/60 act=request        real#1 c=the noise last night     ] 5 in 24.3s
+  [ 21/60 act=request        real#2 c=the meeting yesterday    ] 5 in 22.9s
+  [ 22/60 act=request        real#2 c=the broken vase          ] 5 in 23.5s
+  [ 23/60 act=request        real#2 c=the missing report       ] 5 in 22.6s
+  [ 24/60 act=request        real#2 c=the noise last night     ] 5 in 23.3s
+  [ 25/60 act=accusation     real#0 c=the meeting yesterday    ] 5 in 23.1s
+  [ 26/60 act=accusation     real#0 c=the broken vase          ] 5 in 23.1s
+  [ 27/60 act=accusation     real#0 c=the missing report       ] 5 in 23.3s
+  [ 28/60 act=accusation     real#0 c=the noise last night     ] 5 in 23.1s
+  [ 29/60 act=accusation     real#1 c=the meeting yesterday    ] 5 in 24.5s
+  [ 30/60 act=accusation     real#1 c=the broken vase          ] 5 in 22.8s
+  [ 31/60 act=accusation     real#1 c=the missing report       ] 5 in 22.8s
+  [ 32/60 act=accusation     real#1 c=the noise last night     ] 5 in 22.2s
+  [ 33/60 act=accusation     real#2 c=the meeting yesterday    ] 5 in 22.3s
+  [ 34/60 act=accusation     real#2 c=the broken vase          ] 5 in 22.8s
+  [ 35/60 act=accusation     real#2 c=the missing report       ] 5 in 22.7s
+  [ 36/60 act=accusation     real#2 c=the noise last night     ] 5 in 22.6s
+  [ 37/60 act=concession     real#0 c=the meeting yesterday    ] 5 in 23.5s
+  [ 38/60 act=concession     real#0 c=the broken vase          ] 5 in 23.3s
+  [ 39/60 act=concession     real#0 c=the missing report       ] 5 in 22.7s
+  [ 40/60 act=concession     real#0 c=the noise last night     ] 5 in 22.7s
+  [ 41/60 act=concession     real#1 c=the meeting yesterday    ] 5 in 24.0s
+  [ 42/60 act=concession     real#1 c=the broken vase          ] 5 in 23.6s
+  [ 43/60 act=concession     real#1 c=the missing report       ] 5 in 22.9s
+  [ 44/60 act=concession     real#1 c=the noise last night     ] 5 in 24.5s
+  [ 45/60 act=concession     real#2 c=the meeting yesterday    ] 5 in 23.0s
+  [ 46/60 act=concession     real#2 c=the broken vase          ] 5 in 22.2s
+  [ 47/60 act=concession     real#2 c=the missing report       ] 5 in 22.6s
+  [ 48/60 act=concession     real#2 c=the noise last night     ] 5 in 22.4s
+  [ 49/60 act=justification  real#0 c=the meeting yesterday    ] 5 in 22.1s
+  [ 50/60 act=justification  real#0 c=the broken vase          ] 5 in 22.1s
+  [ 51/60 act=justification  real#0 c=the missing report       ] 5 in 23.2s
+  [ 52/60 act=justification  real#0 c=the noise last night     ] 5 in 22.0s
+  [ 53/60 act=justification  real#1 c=the meeting yesterday    ] 5 in 22.9s
+  [ 54/60 act=justification  real#1 c=the broken vase          ] 5 in 22.7s
+  [ 55/60 act=justification  real#1 c=the missing report       ] 5 in 22.0s
+  [ 56/60 act=justification  real#1 c=the noise last night     ] 5 in 22.0s
+  [ 57/60 act=justification  real#2 c=the meeting yesterday    ] 5 in 22.1s
+  [ 58/60 act=justification  real#2 c=the broken vase          ] 5 in 23.2s
+  [ 59/60 act=justification  real#2 c=the missing report       ] 5 in 22.7s
+  [ 60/60 act=justification  real#2 c=the noise last night     ] 5 in 22.8s
+
+Total time: 22.3 min
+Total samples: 300
+
+=== embedding phase ===
+  shape: (300, 768)
+
+  silhouette by ACT:         +0.083
+  silhouette by REALIZATION: -0.038
+  silhouette by CONTENT:     -0.015
+
+VERDICT: PARTIAL
+
+Report: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/47b_tier3_speech_acts_classification/report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/47b_tier3_speech_acts_classification

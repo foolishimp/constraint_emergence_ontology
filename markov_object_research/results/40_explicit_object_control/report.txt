@@ -1,0 +1,24 @@
+Exp 40 - Explicit-Object Control (toy transformer)
+======================================================================
+
+Architecture: 4 layers, d_model=128, slot_dim=16, K_targets=5
+Probe/injection layer: 2
+Reference target: T=0
+
+Pre-registered thresholds:
+  PASS  train_acc >= 0.95 AND mean cos(d, inj_diff) >= 0.70 AND mean transfer @ alpha=1 >= 0.80
+
+AGGREGATE OUTCOME: PASS
+  final training accuracy:    1.000
+  mean cos(d, inj_diff):      +1.000
+  mean transfer @ alpha=1:    +1.000
+
+Per-target results:
+  T=1  cos=+1.000  transfer@1=+1.000  ||d||=8.848  ||inj_diff||=8.851
+        sweep: a=0.00:+0.000  a=0.25:+0.000  a=0.50:+0.127  a=0.75:+1.000  a=1.00:+1.000  a=1.25:+1.000  a=1.50:+1.000  a=2.00:+1.000
+  T=2  cos=+1.000  transfer@1=+1.000  ||d||=12.938  ||inj_diff||=12.946
+        sweep: a=0.00:+0.000  a=0.25:+0.000  a=0.50:+0.000  a=0.75:+0.994  a=1.00:+1.000  a=1.25:+1.000  a=1.50:+1.000  a=2.00:+1.000
+  T=3  cos=+1.000  transfer@1=+1.000  ||d||=11.534  ||inj_diff||=11.531
+        sweep: a=0.00:+0.000  a=0.25:+0.000  a=0.50:+0.421  a=0.75:+1.000  a=1.00:+1.000  a=1.25:+1.000  a=1.50:+1.000  a=2.00:+1.000
+  T=4  cos=+1.000  transfer@1=+1.000  ||d||=7.954  ||inj_diff||=7.953
+        sweep: a=0.00:+0.000  a=0.25:+0.000  a=0.50:+0.925  a=0.75:+1.000  a=1.00:+1.000  a=1.25:+1.000  a=1.50:+1.000  a=2.00:+1.000

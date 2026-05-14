@@ -1,0 +1,58 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 40471.83it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target=999  layer=2 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.697
+  PC1 explained variance (generic): 0.354
+  per-null transfer @ alpha=1 (vs ref=5): [0.872, 0.405, 0.408, 0.174, -0.136, 0.279, 0.738, 0.665]
+  PC1 transfer @ alpha=1 (vs ref=5): -2.451
+  mean cosine generic-vs-cultural: +0.704
+
+=== target=999  layer=8 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.671
+  PC1 explained variance (generic): 0.396
+  per-null transfer @ alpha=1 (vs ref=5): [0.258, 0.22, 0.094, 0.105, 0.112, 0.085, 0.267, 0.216]
+  PC1 transfer @ alpha=1 (vs ref=5): -0.053
+  mean cosine generic-vs-cultural: +0.689
+
+=== target=666  layer=2 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.696
+  PC1 explained variance (generic): 0.354
+  per-null transfer @ alpha=1 (vs ref=5): [0.927, 0.387, 0.326, 0.169, -0.102, 0.183, 0.767, 0.603]
+  PC1 transfer @ alpha=1 (vs ref=5): -1.011
+  mean cosine generic-vs-cultural: +0.705
+
+=== target=666  layer=8 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.652
+  PC1 explained variance (generic): 0.396
+  per-null transfer @ alpha=1 (vs ref=5): [0.241, 0.225, 0.059, 0.028, 0.023, 0.063, 0.248, 0.203]
+  PC1 transfer @ alpha=1 (vs ref=5): -0.111
+  mean cosine generic-vs-cultural: +0.675
+
+=== target=137  layer=2 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.581
+  PC1 explained variance (generic): 0.354
+  per-null transfer @ alpha=1 (vs ref=5): [0.903, 0.61, 0.297, 0.058, -0.195, 0.182, 0.781, 0.558]
+  PC1 transfer @ alpha=1 (vs ref=5): -0.562
+  mean cosine generic-vs-cultural: +0.581
+
+=== target=137  layer=8 ===
+  generic nulls used: [5, 2, 50, 250, 800, 41, 7, 11]
+  mean off-diag cosine (generic): +0.527
+  PC1 explained variance (generic): 0.396
+  per-null transfer @ alpha=1 (vs ref=5): [0.275, 0.26, 0.031, -0.008, -0.038, -0.013, 0.246, 0.165]
+  PC1 transfer @ alpha=1 (vs ref=5): -0.202
+  mean cosine generic-vs-cultural: +0.521
+
+Verdict: PARTIAL
+  pc1_vs_pernull_transfer.png
+Report: report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/34_multinull_stability

@@ -1,0 +1,176 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 9112.16it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+=== target=999  layer=2 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=42.885  ||e_emb||=43.692
+  cos(d_full, e_emb)=+0.998  alpha_e=+0.979
+  frac_par_var=0.995
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.872  perp=-0.732  emb=+0.882
+  retention(perp/full)=-0.839
+
+=== target=999  layer=4 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=50.082  ||e_emb||=51.029
+  cos(d_full, e_emb)=+0.993  alpha_e=+0.975
+  frac_par_var=0.987
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.611  perp=-1.121  emb=+0.652
+  retention(perp/full)=-1.836
+
+=== target=999  layer=6 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=54.632  ||e_emb||=54.867
+  cos(d_full, e_emb)=+0.988  alpha_e=+0.984
+  frac_par_var=0.977
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.382  perp=-0.140  emb=+0.359
+  retention(perp/full)=-0.368
+
+=== target=999  layer=8 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=62.459  ||e_emb||=61.707
+  cos(d_full, e_emb)=+0.982  alpha_e=+0.994
+  frac_par_var=0.964
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.258  perp=-0.035  emb=+0.249
+  retention(perp/full)=-0.136
+
+=== target=999  layer=10 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=70.809  ||e_emb||=67.867
+  cos(d_full, e_emb)=+0.969  alpha_e=+1.011
+  frac_par_var=0.939
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.195  perp=+0.064  emb=+0.170
+  retention(perp/full)=+0.328
+
+=== target=666  layer=2 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=42.516  ||e_emb||=43.038
+  cos(d_full, e_emb)=+0.998  alpha_e=+0.986
+  frac_par_var=0.996
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.927  perp=-0.439  emb=+0.915
+  retention(perp/full)=-0.474
+
+=== target=666  layer=4 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=47.587  ||e_emb||=48.066
+  cos(d_full, e_emb)=+0.994  alpha_e=+0.984
+  frac_par_var=0.988
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.572  perp=-0.326  emb=+0.594
+  retention(perp/full)=-0.570
+
+=== target=666  layer=6 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=51.531  ||e_emb||=52.013
+  cos(d_full, e_emb)=+0.988  alpha_e=+0.978
+  frac_par_var=0.975
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.419  perp=+0.054  emb=+0.411
+  retention(perp/full)=+0.128
+
+=== target=666  layer=8 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=60.247  ||e_emb||=59.127
+  cos(d_full, e_emb)=+0.981  alpha_e=+1.000
+  frac_par_var=0.963
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.241  perp=+0.015  emb=+0.241
+  retention(perp/full)=+0.061
+
+=== target=666  layer=10 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=66.715  ||e_emb||=63.371
+  cos(d_full, e_emb)=+0.966  alpha_e=+1.017
+  frac_par_var=0.933
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.150  perp=+0.072  emb=+0.137
+  retention(perp/full)=+0.477
+
+=== target=137  layer=2 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=38.484  ||e_emb||=38.734
+  cos(d_full, e_emb)=+0.999  alpha_e=+0.992
+  frac_par_var=0.997
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.903  perp=-0.118  emb=+0.907
+  retention(perp/full)=-0.130
+
+=== target=137  layer=4 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=44.276  ||e_emb||=44.512
+  cos(d_full, e_emb)=+0.995  alpha_e=+0.990
+  frac_par_var=0.991
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.581  perp=-0.591  emb=+0.607
+  retention(perp/full)=-1.016
+
+=== target=137  layer=6 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=48.645  ||e_emb||=48.933
+  cos(d_full, e_emb)=+0.991  alpha_e=+0.985
+  frac_par_var=0.982
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.449  perp=-0.014  emb=+0.433
+  retention(perp/full)=-0.030
+
+=== target=137  layer=8 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=54.740  ||e_emb||=53.773
+  cos(d_full, e_emb)=+0.982  alpha_e=+1.000
+  frac_par_var=0.964
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.275  perp=-0.018  emb=+0.257
+  retention(perp/full)=-0.066
+
+=== target=137  layer=10 ===
+  paired_diverse=20 paired_neutral=30
+  ||d_full||=61.181  ||e_emb||=58.500
+  cos(d_full, e_emb)=+0.966  alpha_e=+1.011
+  frac_par_var=0.934
+  alpha-sweep d_full ...
+  alpha-sweep d_perp (rescaled) ...
+  alpha-sweep e_emb (rescaled) ...
+  transfer @ alpha=1: full=+0.164  perp=+0.072  emb=+0.132
+  retention(perp/full)=+0.441
+
+Verdict: FAIL  (mean retention at L>=6 = 0.09264112579671942)
+  transfer_by_layer.png
+  parallel_perp_decomposition.png
+Report: report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/33_embedding_decomposition

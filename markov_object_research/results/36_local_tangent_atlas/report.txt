@@ -1,0 +1,73 @@
+Exp 36 - Local-Tangent Atlas And Curl Test
+======================================================================
+
+Targets:           [999, 666, 137]
+Reference battery: [5, 2, 50, 250, 800, 41, 7, 11]
+Probe layers:      [2, 4, 6, 8, 10]
+Neighbors per anchor (k): 20
+Embedding-stripped joint state: yes (per exp 33 protocol)
+
+Pre-registered outcome rules (averaged over targets):
+  PASS     mean angle real < 30 deg AND null > 60 deg AND PC1 EV >= 0.6
+  PARTIAL  PC1 EV in [0.3, 0.6]
+  FAIL     PC1 EV < 0.3 or no real-vs-null separation
+
+AGGREGATE OUTCOME: FAIL
+  mean PC1 explained variance:  0.205
+  mean angle (real):  73.6 deg
+  mean angle (null):  86.8 deg
+
+
+### target = 999
+  REAL:
+    mean_cos_offdiag                 = 0.26269426941871643
+    median_cos_offdiag               = 0.22751562297344208
+    mean_oriented_angle_deg          = 74.34890747070312
+    median_oriented_angle_deg        = 76.84915161132812
+    pc1_explained_var                = 0.19329552896998445
+    n_normals                        = 30
+    mean_local_acc                   = 0.8111111223697662
+  NULL:
+    mean_cos_offdiag                 = 0.04680824652314186
+    median_cos_offdiag               = -0.00010591279715299606
+    mean_oriented_angle_deg          = 86.7160415649414
+    median_oriented_angle_deg        = 89.00171661376953
+    pc1_explained_var                = 0.16272741944732158
+    n_normals                        = 30
+    mean_local_acc                   = 0.8666666746139526
+
+### target = 666
+  REAL:
+    mean_cos_offdiag                 = 0.2846589684486389
+    median_cos_offdiag               = 0.24363279342651367
+    mean_oriented_angle_deg          = 73.04427337646484
+    median_oriented_angle_deg        = 75.8989486694336
+    pc1_explained_var                = 0.21128126144403744
+    n_normals                        = 30
+    mean_local_acc                   = 0.8158730268478394
+  NULL:
+    mean_cos_offdiag                 = 0.047522641718387604
+    median_cos_offdiag               = 0.004511693026870489
+    mean_oriented_angle_deg          = 86.98148345947266
+    median_oriented_angle_deg        = 89.74150085449219
+    pc1_explained_var                = 0.1634888851186396
+    n_normals                        = 30
+    mean_local_acc                   = 0.8555555641651154
+
+### target = 137
+  REAL:
+    mean_cos_offdiag                 = 0.2803277373313904
+    median_cos_offdiag               = 0.2536683678627014
+    mean_oriented_angle_deg          = 73.29007720947266
+    median_oriented_angle_deg        = 75.30530548095703
+    pc1_explained_var                = 0.2111261305021289
+    n_normals                        = 30
+    mean_local_acc                   = 0.7873015999794006
+  NULL:
+    mean_cos_offdiag                 = 0.04356162250041962
+    median_cos_offdiag               = -0.00908961147069931
+    mean_oriented_angle_deg          = 86.6073989868164
+    median_oriented_angle_deg        = 89.10862731933594
+    pc1_explained_var                = 0.15977200704055858
+    n_normals                        = 30
+    mean_local_acc                   = 0.842857152223587

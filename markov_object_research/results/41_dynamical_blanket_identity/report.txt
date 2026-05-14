@@ -1,0 +1,66 @@
+Exp 41 - Dynamical Blanket Identity-Direction Test  (meta-llama/Meta-Llama-3-8B)
+======================================================================
+
+Targets:       [999, 666, 137]
+Blanket layers: [2, 8, 16, 24]
+Lookahead K:   8
+
+Pre-registered outcome rules (averaged over (target, layer)):
+  PASS    avg |Δμ|/μ_RMS (probed) < 0.15  AND  random > 0.4
+                                          AND  |Δη|/η_RMS > 0.5
+  PARTIAL avg |Δμ|/μ_RMS (probed) < 0.4   AND  probed < random - 0.1
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: FAIL
+  avg |Δμ|/μ_RMS  (probed): 0.362
+  avg |Δμ|/μ_RMS  (random): 0.420
+  avg |Δη|/η_RMS  (probed): 0.628
+
+
+### target=999  blanket_layer=2
+  probed:  μ-disturbance=0.483  η-disturbance=0.610
+  random:  μ-disturbance=0.378  η-disturbance=0.623
+
+### target=999  blanket_layer=8
+  probed:  μ-disturbance=0.548  η-disturbance=0.775
+  random:  μ-disturbance=0.510  η-disturbance=0.781
+
+### target=999  blanket_layer=16
+  probed:  μ-disturbance=0.220  η-disturbance=0.597
+  random:  μ-disturbance=0.302  η-disturbance=0.604
+
+### target=999  blanket_layer=24
+  probed:  μ-disturbance=0.244  η-disturbance=0.640
+  random:  μ-disturbance=0.356  η-disturbance=0.644
+
+### target=666  blanket_layer=2
+  probed:  μ-disturbance=0.477  η-disturbance=0.611
+  random:  μ-disturbance=0.295  η-disturbance=0.624
+
+### target=666  blanket_layer=8
+  probed:  μ-disturbance=0.331  η-disturbance=0.794
+  random:  μ-disturbance=0.433  η-disturbance=0.802
+
+### target=666  blanket_layer=16
+  probed:  μ-disturbance=0.328  η-disturbance=0.593
+  random:  μ-disturbance=0.521  η-disturbance=0.602
+
+### target=666  blanket_layer=24
+  probed:  μ-disturbance=0.148  η-disturbance=0.614
+  random:  μ-disturbance=0.288  η-disturbance=0.621
+
+### target=137  blanket_layer=2
+  probed:  μ-disturbance=0.281  η-disturbance=0.518
+  random:  μ-disturbance=0.514  η-disturbance=0.524
+
+### target=137  blanket_layer=8
+  probed:  μ-disturbance=0.609  η-disturbance=0.719
+  random:  μ-disturbance=0.599  η-disturbance=0.727
+
+### target=137  blanket_layer=16
+  probed:  μ-disturbance=0.477  η-disturbance=0.502
+  random:  μ-disturbance=0.319  η-disturbance=0.508
+
+### target=137  blanket_layer=24
+  probed:  μ-disturbance=0.192  η-disturbance=0.566
+  random:  μ-disturbance=0.526  η-disturbance=0.570

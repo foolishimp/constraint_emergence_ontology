@@ -1,0 +1,73 @@
+Loading meta-llama/Meta-Llama-3-8B on mps (torch.float16)...
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<03:02,  1.59it/s]Loading weights:  17%|█▋        | 49/291 [00:00<00:02, 86.63it/s]Loading weights:  25%|██▌       | 73/291 [00:00<00:02, 101.33it/s]Loading weights:  32%|███▏      | 92/291 [00:01<00:02, 98.68it/s] Loading weights:  37%|███▋      | 108/291 [00:01<00:01, 95.68it/s]Loading weights:  42%|████▏     | 121/291 [00:01<00:01, 89.64it/s]Loading weights:  48%|████▊     | 139/291 [00:01<00:01, 90.72it/s]Loading weights:  54%|█████▍    | 157/291 [00:01<00:01, 95.78it/s]Loading weights:  60%|██████    | 175/291 [00:02<00:01, 98.07it/s]Loading weights:  66%|██████▋   | 193/291 [00:02<00:00, 101.61it/s]Loading weights:  73%|███████▎  | 211/291 [00:02<00:00, 102.62it/s]Loading weights:  76%|███████▋  | 222/291 [00:02<00:00, 103.39it/s]Loading weights:  82%|████████▏ | 238/291 [00:02<00:00, 98.00it/s] Loading weights:  88%|████████▊ | 256/291 [00:02<00:00, 100.71it/s]Loading weights:  94%|█████████▍| 274/291 [00:02<00:00, 99.87it/s] Loading weights: 100%|██████████| 291/291 [00:03<00:00, 94.84it/s]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+Loaded pretrained model meta-llama/Meta-Llama-3-8B into HookedTransformer
+  loaded in 45.8s. n_layers=32 d_model=4096 n_heads=32
+
+========== rerun: exp 37 + 38 only ==========
+
+
+========== EXP 37: causal faithfulness (Llama-3 8B) ==========
+
+[37] target=999
+  [Channel {n} is broadcasting   ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Version {n} released today    ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The tribe numbered {n}        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [He lived {n} years            ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Mission {n} begins now        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Only {n} remain standing      ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Flight {n} is boarding        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Gate {n} closes soon          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Problem {n} is solved         ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The clock struck {n}          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  shifts: across=+0.000  along=+0.000  random=+0.000
+
+[37] target=666
+  [Channel {n} is broadcasting   ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Version {n} released today    ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The tribe numbered {n}        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [He lived {n} years            ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Mission {n} begins now        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Only {n} remain standing      ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Flight {n} is boarding        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Gate {n} closes soon          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Problem {n} is solved         ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The clock struck {n}          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  shifts: across=+0.000  along=+0.000  random=+0.000
+
+[37] target=137
+  [Channel {n} is broadcasting   ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Version {n} released today    ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The tribe numbered {n}        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [He lived {n} years            ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Mission {n} begins now        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Only {n} remain standing      ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Flight {n} is boarding        ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Gate {n} closes soon          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [Problem {n} is solved         ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  [The clock struck {n}          ] base=+0.00 across=+0.00 along=+0.00 random=+0.00
+  shifts: across=+0.000  along=+0.000  random=+0.000
+[37] verdict: FAIL  across+=+0.000  along+=+0.000
+[37] verdict: FAIL
+
+
+========== EXP 38: graph-cut signature (Llama-3 8B) ==========
+
+[38] target=999
+  top-10: [(0.0, 'attn', 0, 0), (0.0, 'attn', 0, 1), (0.0, 'attn', 0, 2), (0.0, 'attn', 0, 3), (0.0, 'attn', 0, 4), (0.0, 'attn', 0, 5), (0.0, 'attn', 0, 6), (0.0, 'attn', 0, 7), (0.0, 'attn', 0, 8), (0.0, 'attn', 0, 9)]
+  cos(n_dir, top PC of K_C): 0.011790581047534943
+  null cos:                  0.04129546880722046
+
+[38] target=666
+  top-10: [(0.0, 'attn', 0, 0), (0.0, 'attn', 0, 1), (0.0, 'attn', 0, 2), (0.0, 'attn', 0, 3), (0.0, 'attn', 0, 4), (0.0, 'attn', 0, 5), (0.0, 'attn', 0, 6), (0.0, 'attn', 0, 7), (0.0, 'attn', 0, 8), (0.0, 'attn', 0, 9)]
+  cos(n_dir, top PC of K_C): 0.05842813849449158
+  null cos:                  0.027917029336094856
+
+[38] target=137
+  top-10: [(0.0, 'attn', 0, 0), (0.0, 'attn', 0, 1), (0.0, 'attn', 0, 2), (0.0, 'attn', 0, 3), (0.0, 'attn', 0, 4), (0.0, 'attn', 0, 5), (0.0, 'attn', 0, 6), (0.0, 'attn', 0, 7), (0.0, 'attn', 0, 8), (0.0, 'attn', 0, 9)]
+  cos(n_dir, top PC of K_C): 0.04080750793218613
+  null cos:                  0.014866095036268234
+[38] verdict: FAIL  avg_cos_real=0.037  avg_cos_null=0.028
+[38] verdict: FAIL
+
+elapsed: 25.6 min

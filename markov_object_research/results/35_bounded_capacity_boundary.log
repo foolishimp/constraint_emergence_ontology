@@ -1,0 +1,76 @@
+Loading GPT-2...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 18240.39it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+
+========== STRIPPED joint state ==========
+
+=== target=999  reference=5  strip_emb=True ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  stripping embedding contrast (computed on 30 neutral)
+  pre-strip ||Xt.mean - Xr.mean||  = 126.413
+  post-strip ||Xt.mean - Xr.mean|| = 20.876
+  linear       acc=0.733 +/- 0.097  brier=0.254
+  mlp_h16      acc=0.833 +/- 0.053  brier=0.091
+  mlp_h64      acc=0.783 +/- 0.085  brier=0.187
+  mlp_h256     acc=0.850 +/- 0.062  brier=0.139
+  mlp_h1024    acc=0.883 +/- 0.067  brier=0.101
+  saved probe -> probe_target999_stripped.pt
+
+=== target=666  reference=5  strip_emb=True ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  stripping embedding contrast (computed on 30 neutral)
+  pre-strip ||Xt.mean - Xr.mean||  = 120.909
+  post-strip ||Xt.mean - Xr.mean|| = 20.351
+  linear       acc=0.717 +/- 0.135  brier=0.270
+  mlp_h16      acc=0.783 +/- 0.113  brier=0.170
+  mlp_h64      acc=0.800 +/- 0.085  brier=0.171
+  mlp_h256     acc=0.783 +/- 0.135  brier=0.209
+  mlp_h1024    acc=0.833 +/- 0.139  brier=0.146
+  saved probe -> probe_target666_stripped.pt
+
+=== target=137  reference=5  strip_emb=True ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  stripping embedding contrast (computed on 30 neutral)
+  pre-strip ||Xt.mean - Xr.mean||  = 110.473
+  post-strip ||Xt.mean - Xr.mean|| = 18.249
+  linear       acc=0.717 +/- 0.085  brier=0.279
+  mlp_h16      acc=0.800 +/- 0.067  brier=0.147
+  mlp_h64      acc=0.800 +/- 0.085  brier=0.182
+  mlp_h256     acc=0.783 +/- 0.085  brier=0.157
+  mlp_h1024    acc=0.867 +/- 0.085  brier=0.122
+  saved probe -> probe_target137_stripped.pt
+
+========== RAW joint state (control) ==========
+
+=== target=999  reference=5  strip_emb=False ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  linear       acc=1.000 +/- 0.000  brier=0.000
+  mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+  mlp_h1024    acc=1.000 +/- 0.000  brier=0.000
+
+=== target=666  reference=5  strip_emb=False ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  linear       acc=1.000 +/- 0.000  brier=0.000
+  mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+  mlp_h1024    acc=1.000 +/- 0.000  brier=0.000
+
+=== target=137  reference=5  strip_emb=False ===
+  joint state dim = 3840, n_target=30, n_ref=30
+  linear       acc=1.000 +/- 0.000  brier=0.000
+  mlp_h16      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h64      acc=1.000 +/- 0.000  brier=0.000
+  mlp_h256     acc=1.000 +/- 0.000  brier=0.000
+  mlp_h1024    acc=1.000 +/- 0.000  brier=0.000
+
+Verdict (stripped): FAIL
+Verdict (raw):      PASS
+  capacity_accuracy_curve.png
+  brier_calibration.png
+Report: report.txt
+
+Results: /Users/jim/src/apps/constraint_emergence_ontology/markov_object_research/results/35_bounded_capacity_boundary

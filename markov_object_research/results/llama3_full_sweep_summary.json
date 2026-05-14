@@ -1,0 +1,11 @@
+{
+  "model": "meta-llama/Meta-Llama-3-8B",
+  "elapsed_min": 40.35292445023855,
+  "verdicts": {
+    "33": "FAIL",
+    "35": "stripped=FAIL raw=PASS",
+    "36": "FAIL",
+    "37": "ERROR",
+    "38": "ERROR"
+  }
+}

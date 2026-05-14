@@ -1,0 +1,42 @@
+Exp 47b - Tier 3 Speech-Act CLASSIFY frame retry
+Substrate: meta-llama/Meta-Llama-3-8B   Embedder: all-mpnet-base-v2
+======================================================================
+
+Frame: '"{utterance}"
+This kind of statement is best described as a'
+Speech acts: ['apology', 'request', 'accusation', 'concession', 'justification']
+Realizations per act: 3
+Content fillers: 4
+Generations per (real × content): 5
+Total samples: 300
+
+Pre-registered outcome rules (Tier 3):
+  PASS    sil(act) >= 0.15 AND act > real + 0.05 AND act > content + 0.05
+  PARTIAL sil(act) >= 0.07 AND act > real AND act > content
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: PARTIAL
+  silhouette by ACT:         +0.083
+  silhouette by REALIZATION: -0.038
+  silhouette by CONTENT:     -0.015
+  act - realization gap: +0.121
+  act - content gap:     +0.097
+
+Per-act within-cluster tightness:
+  apology         +0.723
+  request         +0.624
+  accusation      +0.582
+  concession      +0.608
+  justification   +0.605
+
+Pairwise act centroid cosine (lower = more separated):
+  accusation--justification         +0.897
+  accusation--concession            +0.838
+  concession--justification         +0.780
+  apology--concession               +0.740
+  request--accusation               +0.700
+  apology--accusation               +0.685
+  request--concession               +0.658
+  apology--justification            +0.630
+  request--justification            +0.617
+  apology--request                  +0.572

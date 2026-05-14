@@ -1,0 +1,39 @@
+Exp 45 - Tier 1 Named-Entity Continuation Cluster (black-box)
+Substrate: meta-llama/Meta-Llama-3-8B   Embedder: all-mpnet-base-v2
+======================================================================
+
+Entities:  ['London', 'Tuesday', 'Madonna', 'Einstein', '1492']
+Templates: 6 per entity
+Generations per (entity, template): 8
+Max new tokens: 32, temperature: 0.8
+Total samples: 240
+
+Pre-registered outcome rules:
+  PASS    silhouette(entity) >= 0.30 AND silhouette(entity) > silhouette(template) + 0.15
+  PARTIAL silhouette(entity) >= 0.10
+  FAIL    otherwise
+
+AGGREGATE OUTCOME: PARTIAL
+  silhouette by entity:   +0.282
+  silhouette by template: +0.013
+  mean pairwise centroid cosine: +0.302
+  mean within-entity centroid cosine: +0.649
+
+Per-entity within-cluster cosine:
+      London  +0.672
+     Tuesday  +0.532
+     Madonna  +0.661
+    Einstein  +0.679
+        1492  +0.703
+
+Pairwise entity centroid cosine (lower = more separated):
+  Einstein--1492               +0.408
+  Tuesday--1492                +0.391
+  London--Tuesday              +0.341
+  London--1492                 +0.328
+  London--Madonna              +0.320
+  Tuesday--Madonna             +0.282
+  Madonna--Einstein            +0.273
+  Madonna--1492                +0.258
+  London--Einstein             +0.230
+  Tuesday--Einstein            +0.188
