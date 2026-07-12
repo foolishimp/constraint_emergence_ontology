@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Dimitar Popov" />
+  <meta name="dcterms.date" content="2026-07-13" />
+  <title>Constraint-Emergence Ontology — v2.0 (Unified Cut)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+<style>body { font-size: 16px; }</style>
+<style>pre, code { font-size: 10px; }</style>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 10px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    /* ---- LaTeX-style print stylesheet (--style latex) ---- */
+    /* Latin Modern Roman from CDN; degrades to Georgia/serif offline. */
+    @import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
+
+    /* Page size only. Margins are supplied by the printer — CDP printToPDF
+       params (so footer page numbers render in the margin box) or the CLI
+       fallback stylesheet appended when no CDP client is available. */
+    @page {
+        size: A4;
+    }
+
+    body {
+        font-family: 'LMRoman10', 'Latin Modern Roman', 'Computer Modern Serif', Georgia, serif;
+        font-size: 11pt;
+        line-height: 1.35;
+        text-align: justify;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        color: #000;
+        background: #fff;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Paragraphs: LaTeX style — first-line indent, no inter-paragraph gap.
+       orphans/widows are 2 (not 3): Chrome enforces orphans by moving whole
+       blocks but gives up on widows when a paragraph is shorter than
+       orphans+widows lines, so 3/3 strands single widow lines on 4-5 line
+       paragraphs while 2/2 splits them cleanly (2+2 / 3+2). */
+    p {
+        margin: 0;
+        text-indent: 1.5em;
+        orphans: 2;
+        widows: 2;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, figure + p,
+    header + p, li p, blockquote p, td p, th p {
+        text-indent: 0;
+    }
+
+    /* Headings: serif, LaTeX-weight sizing; h2/h3 numbered, h1 = title level */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: inherit;
+        font-weight: bold;
+        text-align: left;
+        line-height: 1.25;
+        hyphens: none;
+        -webkit-hyphens: none;
+        page-break-after: avoid;
+        break-after: avoid-page;
+    }
+    h1 { font-size: 1.6em;  margin: 1.6em 0 0.8em; }
+    h2 { font-size: 1.3em;  margin: 1.4em 0 0.6em; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.5em; }
+    h4 { font-size: 1em; font-style: italic; margin: 1em 0 0.4em; }
+
+
+    body { counter-reset: latexsec; }
+    h2 { counter-reset: latexsubsec; }
+    h2::before {
+        counter-increment: latexsec;
+        content: counter(latexsec) "\2003";
+    }
+    h3::before {
+        counter-increment: latexsubsec;
+        content: counter(latexsec) "." counter(latexsubsec) "\2003";
+    }
+    header#title-block-header h1::before,
+    header#title-block-header h2::before,
+    header#title-block-header h3::before {
+        content: none;
+        counter-increment: none;
+    }
+
+    /* Pandoc title block: centered, LaTeX article style */
+    header#title-block-header {
+        text-align: center;
+        padding-top: 20mm;   /* extra first-page drop, LaTeX titlepage style */
+        margin: 0 0 3em 0;
+    }
+    header#title-block-header h1.title {
+        font-size: 1.7em;
+        text-align: center;
+        margin: 0 0 0.4em 0;
+    }
+    header#title-block-header p.subtitle,
+    header#title-block-header .subtitle {
+        font-size: 1.25em;
+        font-weight: bold;
+        text-align: center;
+        text-indent: 0;
+        margin: 0 0 1em 0;
+    }
+    header#title-block-header .author {
+        font-size: 1.1em;
+        font-weight: normal;
+        text-indent: 0;
+        margin: 1em 0 0.2em;
+    }
+    header#title-block-header .date {
+        font-size: 1em;
+        font-weight: normal;
+        text-indent: 0;
+        margin: 0.2em 0;
+    }
+
+    /* Abstract: LaTeX article style — centered title, narrower measure */
+    div.abstract {
+        width: 82%;
+        margin: 2em auto 2em;
+        font-size: 95%;
+        text-align: justify;
+    }
+    div.abstract .abstract-title {
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 0 0.7em 0;
+    }
+    div.abstract p {
+        text-indent: 1.5em;
+    }
+    div.abstract p:first-of-type {
+        text-indent: 0;
+    }
+
+    /* Table of contents: LaTeX \tableofcontents look —
+       bold section lines, dotted leaders on subsections */
+    nav.toc {
+        margin: 2.5em 0 3em;
+    }
+    nav.toc .toc-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 0 0 0.8em;
+        break-after: avoid-page;
+        page-break-after: avoid;
+    }
+    .toc-entry {
+        display: flex;
+        align-items: baseline;
+        text-indent: 0;
+        line-height: 1.55;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    .toc-entry.toc-h2 {
+        font-weight: bold;
+        margin-top: 0.45em;
+        break-after: avoid-page;
+        page-break-after: avoid;
+    }
+    .toc-entry.toc-h3 {
+        padding-left: 2em;
+        font-weight: normal;
+    }
+    .toc-num {
+        flex: none;
+        min-width: 1.9em;
+        padding-right: 0.4em;
+    }
+    .toc-entry.toc-h3 .toc-num {
+        min-width: 2.6em;
+    }
+    .toc-leader {
+        flex: 1;
+        margin: 0 0.5em;
+        border-bottom: none;
+    }
+    .toc-entry.toc-h3 .toc-leader {
+        border-bottom: 1.5px dotted #000;
+        transform: translateY(-0.28em);
+    }
+    .toc-page {
+        flex: none;
+        font-weight: normal;
+    }
+    .toc-entry.toc-h2 .toc-page {
+        font-weight: bold;
+    }
+
+    /* Code: smaller mono; light gray background for blocks only */
+    code, pre, kbd, samp {
+        font-family: 'Latin Modern Mono', Menlo, Consolas, 'Courier New', monospace;
+    }
+    code {
+        font-size: 85%;
+        background: none;
+    }
+    pre {
+        font-size: 85%;
+        background-color: #f6f6f6;
+        border: none;
+        padding: 0.7em 0.9em;
+        margin: 0.9em 0;
+        line-height: 1.3;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    pre code {
+        font-size: 100%;
+        background: none;
+    }
+
+    /* Tables: booktabs look — no vertical rules */
+    table {
+        border-collapse: collapse;
+        width: auto;
+        min-width: 65%;
+        margin: 1.4em auto;
+        font-size: 90%;
+        border-top: 1.2pt solid #000;
+        border-bottom: 1.2pt solid #000;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    th, td {
+        border: none;
+        padding: 0.3em 0.75em;
+        text-align: left;
+        vertical-align: top;
+        background: none;
+    }
+    thead th {
+        border-bottom: 0.6pt solid #000;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    th {
+        background-color: transparent;
+    }
+
+    /* Blockquotes: indented, no bar, slightly smaller */
+    blockquote {
+        margin: 1em 2.5em;
+        padding: 0;
+        border: none;
+        border-left: none;
+        color: inherit;
+        font-size: 95%;
+    }
+
+    /* Links: black, no underline (LaTeX print style) */
+    a, a:link, a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* Figures / images / diagrams */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    figure, .mermaid {
+        text-align: center;
+        margin: 1.2em 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    figcaption {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    hr {
+        border: none;
+        border-top: 0.4pt solid #000;
+        width: 30%;
+        margin: 1.5em auto;
+    }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Constraint-Emergence Ontology — v2.0 (Unified
+Cut)</h1>
+<p class="author">Dimitar Popov</p>
+<p class="date">July 13, 2026</p>
+</header>
+<nav class="toc">
+<div class="toc-title">Contents</div>
+<div class="toc-entry toc-h2"><span class="toc-num">1</span><span class="toc-text">Reading Contract</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="0">3</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">1.1</span><span class="toc-text">What kind of document this is</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="1">3</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">1.2</span><span class="toc-text">The five-status discipline and the cut law</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="2">4</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">1.3</span><span class="toc-text">Why the traversal must be watched</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="3">4</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">2</span><span class="toc-text">The puzzle we walk into</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="4">4</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">2.1</span><span class="toc-text">The hidden Platonic premise</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="5">4</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">2.2</span><span class="toc-text">Computation instead of enumeration</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="6">5</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">2.3</span><span class="toc-text">Computational presentism</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="7">5</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">2.4</span><span class="toc-text">The map remains a map</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="8">5</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">3</span><span class="toc-text">The physics traversal, where the vocabulary is made</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="9">6</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.1</span><span class="toc-text">From substance to admissible transformation</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="10">6</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.2</span><span class="toc-text">Axiom C and the one meaning of constraint</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="11">6</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.3</span><span class="toc-text">Boundaries, hydrogen, and Markov objects</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="12">7</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.4</span><span class="toc-text">Three processes hidden inside collapse</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="13">7</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.5</span><span class="toc-text">Motion as pattern propagation</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="14">8</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.6</span><span class="toc-text">Constraint density and the nerf-ball picture</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="15">8</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.7</span><span class="toc-text">Stratified time and the computed present</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="16">8</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.8</span><span class="toc-text">Recursion and the limits of internal derivation</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="17">9</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.9</span><span class="toc-text">Penrose and computation from outside</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="18">9</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">3.10</span><span class="toc-text">Physics claims remain projection-specific</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="19">10</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">4</span><span class="toc-text">The generative principle, traversal, and emergence</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="20">10</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">4.1</span><span class="toc-text">Axiom G: possibility populates the manifold</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="21">10</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">4.2</span><span class="toc-text">Axiom T: traversal follows the local slope</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="22">10</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">4.3</span><span class="toc-text">Emergence works by forgetting</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="23">11</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">5</span><span class="toc-text">The two hardest tests, declared</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="24">11</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">5.1</span><span class="toc-text">The proton-electron ratio: an open cheque</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="25">12</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">5.2</span><span class="toc-text">The Higgs as an order parameter</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="26">12</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">6</span><span class="toc-text">Meeting the rivals</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="27">12</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.1</span><span class="toc-text">Einstein and the missing pre-geometric layer</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="28">12</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.2</span><span class="toc-text">Bohm and the deepest alignment</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="29">12</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.3</span><span class="toc-text">Wolfram and the selection question</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="30">13</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.4</span><span class="toc-text">Many-Worlds and uncomputed branches</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="31">13</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.5</span><span class="toc-text">Penrose and the twistor alignment</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="32">13</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">6.6</span><span class="toc-text">Constructor theory: Deutsch and Marletto</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="33">14</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">7</span><span class="toc-text">Crossing substrates: the constructor before the encoding</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="34">14</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">7.1</span><span class="toc-text">The recurring encoding-builder pair</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="35">14</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">7.2</span><span class="toc-text">Axiom X: the constructor comes first</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="36">14</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">7.3</span><span class="toc-text">From flow to representation</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="37">14</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">7.4</span><span class="toc-text">Inhabitable rather than merely possible</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="38">15</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">8</span><span class="toc-text">Where meaning enters: the evaluator</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="39">15</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">8.1</span><span class="toc-text">Evaluation is the threshold</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="40">15</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">8.2</span><span class="toc-text">Axiom E: the evaluator emits direction</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="41">16</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">8.3</span><span class="toc-text">Meaning is the invariant operation</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="42">16</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">9</span><span class="toc-text">The observer is a Markov object</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="43">16</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">9.1</span><span class="toc-text">Two kinds of observer</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="44">16</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">9.2</span><span class="toc-text">Why the measurement problem dissolves</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="45">17</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">9.3</span><span class="toc-text">Meaning and caring emerge separately</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="46">17</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">9.4</span><span class="toc-text">The gradient is model depth</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="47">17</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">9.5</span><span class="toc-text">Structural words without anthropomorphism</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="48">18</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">10</span><span class="toc-text">The working law: expansion needs collapse</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="49">18</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">10.1</span><span class="toc-text">Expansion needs a contracting boundary</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="50">18</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">10.2</span><span class="toc-text">Theorem H: the F_P to F_C regime law</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="51">18</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">10.3</span><span class="toc-text">Four roles keep assurance honest</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="52">19</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">10.4</span><span class="toc-text">One hybrid manifold</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="53">19</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">10.5</span><span class="toc-text">Truth costs a grounded collapse</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="54">19</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">11</span><span class="toc-text">The hallucination spiral, in five passes</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="55">20</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">11.1</span><span class="toc-text">Pass one: the phenomenon</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="56">20</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">11.2</span><span class="toc-text">Pass two: the physical identity</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="57">20</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">11.3</span><span class="toc-text">Pass three: the engine mechanics</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="58">20</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">11.4</span><span class="toc-text">Pass four: the owned engineering prediction</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="59">20</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">11.5</span><span class="toc-text">Pass five: the formal statement</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="60">21</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">12</span><span class="toc-text">The cost of traversal</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="61">21</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">12.1</span><span class="toc-text">A Hamiltonian for traversal</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="62">21</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">12.2</span><span class="toc-text">Intent lineage is the composite trajectory</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="63">21</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">13</span><span class="toc-text">The single vocabulary, as a map</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="64">21</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">13.1</span><span class="toc-text">Six terms across four domains</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="65">21</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">13.2</span><span class="toc-text">Images are not proven identities</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="66">22</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">13.3</span><span class="toc-text">Every crossing declares fidelity and loss</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="67">22</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">14</span><span class="toc-text">The formal spine and the two exposure points</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="68">23</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.1</span><span class="toc-text">Why the category comes last</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="69">23</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.2</span><span class="toc-text">Category C and its two functors</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="70">23</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.3</span><span class="toc-text">Why training may produce Markov boundaries</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="71">23</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.4</span><span class="toc-text">Exposure point 1: the Conditional Independence Conjecture</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="72">24</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.5</span><span class="toc-text">J-space is a hypothesis generator, not a proof</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="73">24</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.6</span><span class="toc-text">Alignment as a commuting diagram</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="74">24</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">14.7</span><span class="toc-text">Exposure point 2: the owned world-model claim</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="75">25</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">15</span><span class="toc-text">The epistemic apparatus</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="76">25</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">15.1</span><span class="toc-text">The status ledger</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="77">25</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">15.2</span><span class="toc-text">What would falsify the framework</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="78">25</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">15.3</span><span class="toc-text">Evaluation modes and their costs</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="79">26</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">16</span><span class="toc-text">How a cut proves itself</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="80">26</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">16.1</span><span class="toc-text">A constitution closes by experiment</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="81">26</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">16.2</span><span class="toc-text">The matched comparison</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="82">26</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">16.3</span><span class="toc-text">Task battery, lineage, and regression</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="83">27</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">16.4</span><span class="toc-text">The negative record travels with the cut</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="84">27</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">16.5</span><span class="toc-text">What closure means</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="85">27</span></div>
+<div class="toc-entry toc-h2"><span class="toc-num">17</span><span class="toc-text">Cut Digest — v2.0</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="86">28</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.1</span><span class="toc-text">What this cut is</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="87">28</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.2</span><span class="toc-text">Where the base came from</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="88">28</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.3</span><span class="toc-text">Restored from v1.3 and reworked into the v2 voice</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="89">28</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.4</span><span class="toc-text">Kept from the compressed working cut</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="90">29</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.5</span><span class="toc-text">What remains excluded, and why</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="91">29</span></div>
+<div class="toc-entry toc-h3"><span class="toc-num">17.6</span><span class="toc-text">Declared closure gap</span><span class="toc-leader"></span><span class="toc-page" data-toc-idx="92">29</span></div>
+</nav>
+
+<h2 id="reading-contract">Reading Contract</h2>
+<h3 id="what-kind-of-document-this-is">What kind of document this
+is</h3>
+<p>Read this as a constitution. It is written to be loaded into a
+language model’s context window, where its job is to <em>constrain</em>
+— to shape what the model explores the way a set of axioms shapes what a
+geometer can prove. Truth of the kind a measurement has is the wrong
+success test for a document with that job. Three intents stack here, and
+the third governs. It is philosophy, in the old sense that made
+chemistry thinkable before there were atoms to weigh and made natural
+selection arguable before there were genes to find; its falsifiability
+markers are declared exposure, and grading its pre-formal claims by the
+standards of a lab misreads them. It is systematic construction in the
+continental line of Whitehead, Simondon, and Deleuze, where a
+metaphysics is judged by whether it coheres and generates. And
+decisively, it is an <em>experimental axiomatic ontology</em>: a compact
+frame whose success question is <strong>does this axiom set, loaded as
+context, make exploration more coherent within the set, more
+transferable across domains, and more novel than exploration without
+it?</strong> The first two intents ask “is this true physics?” and “does
+the system hang together?”; the third asks only this, and the harness
+that closes this document settles it. Argument cannot.</p>
+<h3 id="the-five-status-discipline-and-the-cut-law">The five-status
+discipline and the cut law</h3>
+<p>Because the axioms here are a constraint system, ambiguity is a
+functional defect: an ambiguous constraint produces drifting
+exploration. So two disciplines run throughout. The first is that every
+substantive claim carries exactly one of five epistemic statuses —
+marked inline in the prose as the claim is made — and they are the whole
+vocabulary: an <strong>axiom</strong> is a generative first principle
+you reason <em>from</em>; to reject one is to exit the framework, which
+is why an axiom owes no proof and admits no refutation; a
+<strong>theorem-within-set</strong> is earned by derivation from the
+axioms and can be challenged only on that derivation; a
+<strong>conjecture</strong> is an open claim inside the set, plausible
+but undecided, whose consequences we explore both ways; an
+<strong>empirical-exposure-point</strong> is a claim the framework
+stakes against outside data, the place where it can actually lose; and
+an <strong>interpretive-stance</strong> is a way of seeing compatible
+with existing science but carrying no independent test, to be used
+strictly as a lens; asserting one as discovered fact violates its
+status. The second discipline is that the framework is <em>cut</em> like
+a versioned ledger: each revision is a numbered cut carrying a digest of
+what changed and why, and a cut does not close until the evaluation
+harness has run on it. This is v2.0, a draft cut that restores the full
+cumulative traversal of v1 inside the typed, status-disciplined frame
+developed during revision — the vocabulary and axioms are ratified for
+use, the harness is specified but not yet executed, and that gap is this
+cut’s declared reason for remaining open.</p>
+<h3 id="why-the-traversal-must-be-watched">Why the traversal must be
+watched</h3>
+<p>One reading instruction governs the order of what follows. The
+framework’s central claim is that one structure recurs across physics,
+biology, language models, and software. That claim is not stated up
+front and then illustrated; it is <em>precipitated</em>. The physics
+traversal comes first and does one job: it manufactures the vocabulary —
+every typed term gets defined against a concrete physical object before
+it is asked to travel. Then the rivals are met, then the hardest tests
+are declared, and only then does the same structure get shown crossing
+into biology, language models, and software. The reader is meant to
+watch the shape appear three times over before the formal category that
+names it is written down. Watching it precipitate is the argument;
+naming it early would be assertion.</p>
+<h2 id="the-puzzle-we-walk-into">The puzzle we walk into</h2>
+<h3 id="the-hidden-platonic-premise">The hidden Platonic premise</h3>
+<p>Start with a drift in how physics talks about itself, because the
+whole framework is a way out of the corner that drift paints. Since
+Galileo announced that nature was written in mathematics, one strand of
+physics has slid toward treating the writing as the thing written.
+Newton’s laws hardened from a description of how planets move into the
+reason they move; the twentieth century abstracted further — Hilbert
+spaces, gauge symmetries, renormalization — until Tegmark could say
+plainly that reality <em>is</em> a mathematical structure. Many-Worlds
+is the terminus of that drift. If the formalism is ontologically
+primary, then everything the formalism contains must exist; the
+wavefunction carries superposition terms, so every branch is real, and
+the actuality you happen to observe is a parochial illusion. This is
+coherent. It may even be true. But notice what forces it: a hidden
+premise smuggled in underneath — that mathematical existence confers
+ontological existence, that what can be written down, exists. The
+physics itself, which every interpretation shares, forces nothing of the
+kind.</p>
+<h3 id="computation-instead-of-enumeration">Computation instead of
+enumeration</h3>
+<p>The premise underneath everything that follows: reality is
+computation over constraints, and the rival programs are attempts to
+replace the computation with its completed value. String theory and
+Many-Worlds each try, in different registers, to construct every
+universal state — to hold the whole state space as a finished
+mathematical object. We take the opposite wager: the state space is
+never constructed, only traversed. What exists is what has been computed
+— each admissible step actualizing one configuration against the
+constraint network — and the catalogue of what might have been computed
+exists only as the constraints’ silent shape. Enumeration is a
+description of computation; it is never the computation.</p>
+<h3 id="computational-presentism">Computational presentism</h3>
+<p>That wager can be derived, not merely asserted, and the derivation is
+worth walking because it fixes what “exists” is allowed to mean for the
+rest of the document. The constraint network evolves in discrete steps.
+Each step produces the next state from the current one. Take this as the
+derivation of <strong>computational presentism</strong> — a theorem
+within the set once the discrete-step axiom is granted: the current
+state is the only state that exists, because the prior state was
+consumed in producing it and the next state has not yet been computed.
+The past does not exist; only the results of prior computation persist
+as the present configuration. The future does not exist; it has not been
+computed, and the network’s next state is undetermined until the next
+step occurs. This is what Smolin reaches for when he says time is real,
+sharpened into a claim about existence rather than about time: to exist
+is to be the output of the constraint network’s forward evolution, and a
+completed state space — every branch, every path, held at once — is a
+description mistaken for that output. The rival programs enumerate; the
+network computes; and enumeration is never the computation.</p>
+<h3 id="the-map-remains-a-map">The map remains a map</h3>
+<p>We decline the Platonic premise, and the whole document unfolds from
+the declining. Take this next move as an interpretive stance — a lens
+compatible with all the physics, carrying no independent test of its
+own: our laws of physics are descriptions of physics, maps of a
+territory. However good the map, it remains a map; the planets do not
+consult F=ma before moving. On this reading the wavefunction describes a
+<em>potentiality structure</em> — Aristotle’s sense in which an acorn
+genuinely holds the potential of an oak without there being a second,
+ghostly oak standing beside it, and equally Deleuze’s <em>virtual</em>,
+which is real without being actual. Superposition is real potentiality.
+Collapse is real actualization of that potentiality into one
+configuration. The branches that failed to actualize remain what they
+always were: possibilities. Many-Worlds reifies a description into a
+substrate; it mistakes the enumeration for the execution. We do the
+opposite subtraction. This is the one anchoring stance of the framework,
+and it is worth being clear about its cost and its scope: it buys
+nothing empirical, generates no unique number, and every
+physics-mechanism elaboration that hangs from it — variable-c, the Higgs
+as order parameter, gravity as constraint density, the proton-electron
+ratio — earns reputational exposure without earning predictions, and is
+carried in this document as declared interpretive framing, never as
+result. What survives as load-bearing is the single move: descriptions
+describe, and we should stop mistaking a beautiful compression for the
+thing it compresses. (“Platonic” and “Aristotelian” here are shorthand
+for two poles of a perennial tension — ideas <em>are</em> reality versus
+ideas <em>describe</em> it — and carry no exegetical weight.)</p>
+<p>If the equations merely describe the substrate, the obvious question
+is what the substrate is. The physics traversal that follows answers it,
+and in answering it manufactures every word the rest of the framework
+will need.</p>
+<h2 id="the-physics-traversal-where-the-vocabulary-is-made">The physics
+traversal, where the vocabulary is made</h2>
+<h3 id="from-substance-to-admissible-transformation">From substance to
+admissible transformation</h3>
+<p>The honest answer to “what is reality made of?” is that the question
+presupposes stuff, and stuff keeps dissolving under inspection —
+particles into fields, fields into excitations, excitations into
+whatever the next formalism says. So invert the question, from what
+things <em>are</em> to what transformations are <em>admissible</em>:
+what can follow from what, what compositions hold, what is forbidden.
+This is a shift from objects to morphisms, the categorical instinct —
+attend to what things do and what structure is preserved under mapping,
+and the question of ultimate composition dissolves with its subject.
+Make that shift consistently and a candidate substrate appears that is
+free of stuff altogether.</p>
+<h3 id="axiom-c-and-the-one-meaning-of-constraint">Axiom C and the one
+meaning of constraint</h3>
+<p><strong>This we take as axiom — Axiom C, the constraint-network
+ontology.</strong> The substrate is an evolving global constraint
+network: a self-consistent system of admissible and forbidden
+transitions. What we call fields, particles, and spacetime are its
+stable patterns and projections. The invariants of reality live in the
+structure of admissible transformation — structural realism relocated
+from objects to dynamics; the substance transformed carries none of
+them. This is Bohm’s move made precise. The constraint network is his
+implicate order, the enfolded substrate; the fields and particles we
+handle are the explicate order unfolded from it; and the framework’s
+distinction between a stable pattern and a projection is his enfolding
+read as substrate-versus-emergent-manifold. Bohm reached a
+deterministic, non-local substrate decades before Bell’s theorem was
+widely understood, and described it through the hologram and the
+ink-drop; this framework’s job is to characterise the same substrate
+structurally. Rejecting Axiom C steps outside the framework. No
+refutation occurs at that step.</p>
+<p>Fix, then, the one word the whole system turns on, because letting it
+mean six things on a page was the central functional bug of v1.3. A
+<strong>constraint</strong> — the bedrock term, taken as axiom — is a
+condition that determines which transformations are admissible.
+Admissibility exhausts it; a rule dictating what happens next is a
+different kind of thing. That is its <em>only</em> meaning here. Where
+the earlier work let “constraint” also be a potential well, a test
+suite, a prompt, and a metric, those are now named as distinct images of
+admissibility, and the bare word is reserved for the axiom’s sense. The
+strictness is functional: in a constitution the vocabulary <em>is</em>
+the constraint system the model explores within, so a word meaning six
+things is a manifold with six overlapping metrics, and exploration
+inside it drifts. Constraint also <em>generates</em>, beyond what it
+permits. Reality is the remainder of the forbidden, the structure that
+survives when the inadmissible is excluded.</p>
+<h3 id="boundaries-hydrogen-and-markov-objects">Boundaries, hydrogen,
+and Markov objects</h3>
+<p>Now the first typed object, taught against something you can hold. A
+pattern persists only if it has an inside that goes on being itself
+somewhat regardless of the churn outside, which is to say it has a
+<em>boundary</em> across which the outside is screened off. The hydrogen
+atom is the cleanest instance. Its electron obeys a wave equation in a
+potential well; the admissible solutions are normal modes, harmonics on
+a drum, with fixed spatial structure and quantised energy. An atom is a
+quantum resonant cavity, and its potential well is a
+<strong>boundary</strong> — axiomatic, one of the framework’s typed
+primitives — the partition into interior, boundary, and exterior that
+screens the interior’s dynamics from external perturbation. The atom is
+therefore a <strong>Markov object</strong>: a stable pattern whose
+interior is conditionally independent of the exterior given the boundary
+state,
+<code>P(interior | boundary, exterior) = P(interior | boundary)</code>.
+This screening property is Friston’s Markov blanket stated
+substrate-neutrally, and this is the one place in the document it is
+written out in full; everywhere after, “Markov object” carries it by
+reference. “Markov object” is what a Markov blanket becomes once you
+stop assuming it only wraps living things.</p>
+<p><strong>Axiom M, Markov objects are the units of stable
+form.</strong> Wherever the constraint structure can sustain a boundary
+with the screening property, a stable pattern exists there. In physics
+these are standing waves, bound states, particles — eigenmodes of the
+constraint network, long-lived where the geometry permits. Fields, on
+this reading, are the constraint geometry itself: grades of mesh,
+sectors of the constraint manifold with their own density and topology,
+within which Markov objects precipitate where the mesh allows a stable
+pattern. The field is the mesh; the particle is the pattern the mesh
+permits. The <em>existence</em> of Markov objects wherever constraints
+permit is axiomatic; the <em>precision</em> of the screening in any real
+substrate is an empirical question, and that is why Axiom M carries an
+exposure marker — we cash it as a testable claim later, and it can
+lose.</p>
+<h3 id="three-processes-hidden-inside-collapse">Three processes hidden
+inside collapse</h3>
+<p>Collapse is the next term, and precision here repairs a conflation
+the earlier work carried. <strong>Collapse is the resolution of
+admissible potentialities into one actual configuration under constraint
+over-determination.</strong> In physics it reads as three
+distinguishable processes that a single word must not blur. First,
+objective reduction: when a superposition would require incompatible
+constraint-density configurations — what General Relativity describes as
+incompatible spacetime geometries — the network cannot sustain the
+inconsistency and resolves, because self-consistency is a hard
+constraint, not because anything looked; this is the constraint reading
+of Penrose’s gravitational threshold. Second, decoherence: below that
+threshold, entanglement with a vast environment makes phase information
+unrecoverable in practice, which is over-determination by the
+environment rather than by self-consistency failure. Third, information
+projection: an embedded observer updates its description as alternatives
+become inaccessible, which is epistemic, the observer’s compression
+updating rather than a physical event. The first is objective and
+physical, the second objective and statistical, the third epistemic.
+Take the physics reading of collapse as interpretive stance; it earns a
+stronger, derived status later in the compute regimes, and the status
+law lets the one word carry both without ever wearing both at once.</p>
+<h3 id="motion-as-pattern-propagation">Motion as pattern
+propagation</h3>
+<p>Motion, in a substrate with no stuff, needs its own account, and the
+account defines <em>traversal</em> concretely before the term
+generalises. If particles are standing patterns, their motion is pattern
+propagation: nothing translates through a pre-existing space; the
+pattern’s influence propagates through adjacent constraint regions, each
+node updating on its neighbours. Electricity in a wire is the teaching
+case. The electron drift velocity is around a tenth of a millimetre per
+second — the thing barely moves — while the signal propagates at some
+seventy percent of the speed of light, because what travels is the
+electromagnetic disturbance passed neighbour to neighbour. Sound in air,
+waves on water, phonons in a lattice: in every case the thing stays
+mostly put and the pattern moves. On this reading c is the constraint
+network’s propagation rate, the maximum speed at which one node can
+influence its neighbours, appearing as the universal constant when
+projected onto emergent coordinates. This is an interpretive stance,
+compatible with field theory and offering no unique number; its value
+here is that it makes “traversal” mean something concrete before the
+term is asked to carry gradient descent and least action.</p>
+<h3 id="constraint-density-and-the-nerf-ball-picture">Constraint density
+and the nerf-ball picture</h3>
+<p>The nerf-ball picture gathers these into one image and names the
+generative principle behind them. Imagine a space packed with soft balls
+of many sizes — the constraints — jostling and reconfiguring. The balls
+are an analogy for a topology we do not see directly. Reality happens in
+the gaps between them: the standing waves live in the space the
+constraints leave, shaped by the boundaries the constraints impose. This
+is Deacon’s absential causation rendered spatially — what matters is not
+the constraints themselves but what they <em>exclude</em>, and the
+patterns that form in the excluded remainder. A quantum of energy
+propagating through the churning topology conserves its volume — charge,
+energy-momentum, quantum numbers — while its shape is dictated by the
+gaps available at each instant. Where the balls pack densely, the gaps
+are smaller in coordinate terms, so the same standing wave spans fewer
+coordinate units and looks smaller from outside; where they are sparse,
+it spreads. Take the whole gravity-as-density picture that follows from
+this — dense constraint regions slowing local update rates, the same
+pattern contracting in external coordinates — as interpretive stance. It
+reproduces General Relativity’s phenomena in constraint language and
+predicts no deviation from it. What the image earns is the vocabulary:
+constraint density as a <em>metric</em> on the manifold, and boundaries
+as what generates form by exclusion.</p>
+<h3 id="stratified-time-and-the-computed-present">Stratified time and
+the computed present</h3>
+<p>Time, in this substrate, is stratified rather than singular. Each
+layer of the constraint hierarchy defines its own characteristic
+timescale — the rate at which patterns on that constraint plane update.
+Quantum fields update on one scale, atoms on another, chemistry on
+another, organisms and ecosystems and cognition each on their own;
+faster layers look frozen to slower observers, slower layers look like
+static background to faster processes. What we experience as time at any
+scale is the measure of change on that scale’s emergent constraint
+plane. Take stratified time as interpretive stance: it reframes existing
+physics and makes no prediction against it. Its role in the vocabulary
+is to make “emergence” mean passage between constraint planes, not
+accumulation of complexity.</p>
+<p>Beneath all the stratified times sits the derivation already given —
+the unit of change and computational presentism. The base layer evolves
+in discrete units; every emergent time is a derivative measure of change
+on some plane above it; the current state is the only state that exists;
+and the base unit’s character is epistemically inaccessible from within
+emergence, so the framework takes no position on whether it is constant,
+periodic, or temporal in any sense we would recognise. This is the
+substrate reading of the presentism theorem, and it is what forbids the
+completed state space that the rival programs assume.</p>
+<h3 id="recursion-and-the-limits-of-internal-derivation">Recursion and
+the limits of internal derivation</h3>
+<p>One recursion result belongs here, because it is where the
+framework’s computation-over-derivation commitment shows its teeth.
+Gödel, Turing, and Cantor are usually treated as three separate results
+in three separate domains. Take it as a theorem within the set that they
+are one result: any system complex enough to refer to its own operation
+cannot completely characterise itself from within. Gödel’s formal system
+encodes statements about its own provability and generates truths it
+cannot prove; Turing’s halting evaluator must simulate programs
+including itself and cannot exist; Cantor’s enumeration must account for
+its own diagonal and stays forever incomplete. The common structure is
+recursion as unbounded self-generated state: each self-referential step
+creates new state the system must account for, and accounting for it
+requires another step, faster than the system can exhaust. This is not a
+limit on truth. The Gödel sentence is true, the halting question has an
+answer for any specific program, the diagonal number exists. The limit
+is on <em>derivation from within</em>. The resolution is always the same
+— compute from outside: the mathematician evaluating a Gödel sentence is
+a physical constraint-satisfying process running the evaluation from a
+level the formalism cannot access.</p>
+<h3 id="penrose-and-computation-from-outside">Penrose and computation
+from outside</h3>
+<p>That resolution answers Penrose directly, and the answer is
+load-bearing rather than incidental. Penrose argues that human
+mathematical understanding involves non-computable processes, localised
+in gravitational reduction events, on the grounds that Gödel shows no
+formal system reaches all mathematical truth while the mind seems to.
+The argument stands on mathematical Platonism — truths existing
+independently, requiring a non-algorithmic channel to reach. The
+framework rejects that premise. Mathematics is computation, a program
+running in physical brains; when a mathematician sees that a Gödel
+sentence is true, no Platonic realm is accessed, and the brain is simply
+a computational system not trapped inside the self-referential loop it
+is evaluating. Gödel shows that self-referential derivation has hard
+limits. He does not show that an external computation does. No
+non-computability is required. This connects to Wolfram’s computational
+irreducibility as its positive face: some processes cannot be shortcut,
+and the only way to know their output is to run them, which is
+<em>why</em> formal systems cannot reach certain truths — the truth is
+the output of an irreducible computation. The constraint network sits on
+the computation side of this divide throughout. It does not derive; it
+enforces consistency globally and simultaneously. This is also why,
+later, a demand to “prove the ontology mathematically” for its
+<em>substrate</em> is a category error — it asks the framework to
+justify its most fundamental primitive in one of its own downstream
+projections, like demanding a cellular automaton justify Newtonian
+mechanics without leaving the lattice rules. The category error applies
+only to the substrate. Proving structural correspondences
+<em>between</em> domains is standard mathematics inside emergence, and
+the framework owes exactly that proof later.</p>
+<h3 id="physics-claims-remain-projection-specific">Physics claims remain
+projection-specific</h3>
+<p>One law governs every physics reading made in this traversal, and
+stating it before the vocabulary travels keeps the stances from
+borrowing on each other’s credit. Each interpretation is statused per
+projection. The constraint reading of collapse, c as the network’s
+propagation rate, gravity as constraint density, stratified time, the
+Higgs as order parameter later on — each carries its own marker at the
+place it is made, each stands or falls on its own exposure, and none
+inherits standing from a neighbour that happens to share its vocabulary.
+A stance that held up would confer nothing on the stance beside it, and
+a stance that fell would take nothing down with it except itself. The
+vocabulary is one system; the physics interpretations projected through
+it are separately statused wagers.</p>
+<p>The vocabulary is now made: constraint, boundary, Markov object,
+collapse, traversal, and the emergence that passes between planes. Every
+one was defined against a physical object before being asked to travel.
+Two things remain before the terms leave physics — the drive that
+populates the manifold, and the two tests where the physics reading is
+hardest.</p>
+<h2 id="the-generative-principle-traversal-and-emergence">The generative
+principle, traversal, and emergence</h2>
+<p>The tempting account of stable structure is that it is rare,
+improbable, the lucky product of fine-tuning. The framework refuses
+that, and the refusal is its metaphysical heart.</p>
+<h3 id="axiom-g-possibility-populates-the-manifold">Axiom G: possibility
+populates the manifold</h3>
+<p><strong>Axiom G, the generative principle.</strong> As soon as a
+stable configuration is <em>possible</em> within a constraint structure,
+it <em>will</em> emerge. Emergence is exhaustive: the constraint
+manifold fills its own possibility space. Read computationally, this is
+lazy evaluation at universal scale — a configuration is actualized when
+the traversal reaches it, and the possibility space is never
+materialized as a whole; it exists only as the constraints’ silent
+shape. Particles, life, encodings, constructors, computation — each is
+what constraints do when they can, arrived free of coaxing or luck. An
+analytic reader will hear a tautology here, possible and stable and
+will-emerge chasing each other in a circle, and read as an empirical
+generalization it <em>is</em> vacuous. It stands here as a named
+metaphysical ultimate, in the exact sense of Whitehead’s “creativity,”
+the category of the ultimate that explains but is not itself explained.
+It is the same move as Simondon’s drive of a metastable field toward
+individuation — individuation from a pre-individual field <em>is</em>
+Markov-object formation from a constraint network, articulated in 1958 —
+and the same move as Kauffman’s insistence that systems saturate the
+adjacent possible. An axiom that grounds a system is supposed to be
+unfalsifiable in this way; testing it against data is a category
+error.</p>
+<h3 id="axiom-t-traversal-follows-the-local-slope">Axiom T: traversal
+follows the local slope</h3>
+<p><strong>Axiom T, traversal is the one engine.</strong> All structured
+change is local preorder traversal on a constraint manifold: at each
+step, evaluate the local preorder — the preferred direction, the way
+certain states are more satisfied or lower in some potential than their
+neighbours — and move that way. Least action in physics, gradient
+descent in training, a model integrating its learned direction field in
+inference, a builder reducing the gap to a definition of done: instances
+of one operation, and the identity is asserted literally, because
+analogy would be the weaker claim and Axiom T makes the stronger one.
+The unit of change is the discrete step of this engine, and “time” falls
+out as the emergent measure of traversal on a given constraint plane.
+Process is prior to substance here, which is again Whitehead. There is a
+subtlety physics forces and the framework absorbs rather than dodges:
+least action looks <em>global</em>, selecting a whole path that
+extremises an action functional. The globality is an emergent
+description. The Euler-Lagrange equations it yields are local — at each
+point the system follows local constraint geometry — and the global path
+is what emerges when the local equations are solved under initial and
+boundary conditions, which are themselves constraints in the network.
+The network does not know the action functional. The action functional
+is a manifold-level description of what local traversal collectively
+produces, the way thermodynamic equilibrium is a description of what
+local molecular collisions produce.</p>
+<p>The engine needs a slope to run down, and where the slope comes from
+answers why there is something rather than nothing. A flat manifold has
+no preferred direction anywhere — nothing is more satisfied or lower
+than its neighbours — so nothing changes, nothing stabilises, and no
+observation is possible within it. Take it as a theorem within the set
+that a flat manifold is indistinguishable from nothing. The preorder is
+what distinguishes existence from non-existence: the moment the
+constraint network carries any directional bias, local traversal is
+inevitable, and structure follows from it. This also disposes of the
+standing objection that every system has a preorder, so the claim is
+vacuous. That mistakes foundational universality for vacuity, the way
+objecting that every physical system has energy would; the
+configurations that carry no preorder are not systems, and they are not
+anything.</p>
+<h3 id="emergence-works-by-forgetting">Emergence works by
+forgetting</h3>
+<p><strong>Emergence, the last primitive, gets a precise sense so it
+stops meaning “things got more complicated.”</strong> Emergence is the
+appearance of new objects and morphisms by <em>coarse-graining</em> —
+passing to a quotient in which irrelevant distinctions are factored out
+— such that stable patterns at one level become constraints for the
+next. Emergence works by forgetting. Renormalization forgets
+microstates, an interface forgets implementation, a semantic layer
+forgets tokens; one operation across substrates. The hierarchy is
+self-generating: constraints yield modes, modes become new constraints,
+new constraints yield new modes, and at every level the stable patterns
+are the walls for the next level’s standing waves. The hierarchy is also
+self-bounding, taken as axiom: the chain of emergence does not regress
+without end downward but terminates at a self-consistent constraint
+layer whose internal consistency defines what is physically possible — a
+base that bounds itself with no external wall, supports stable patterns,
+and generates the manifolds above it. This is the layer Axiom C names as
+the substrate, and its self-consistency is why the framework needs no
+ground beneath the ground.</p>
+<h2 id="the-two-hardest-tests-declared">The two hardest tests,
+declared</h2>
+<p>The framework has to point at where its physics reading is most
+exposed and least paid off, and name it as such rather than bury it. Two
+challenges do that work, and both are declared here as interpretive
+framing that has earned reputational exposure without earning a
+prediction.</p>
+<h3 id="the-proton-electron-ratio-an-open-cheque">The proton-electron
+ratio: an open cheque</h3>
+<p>The proton-to-electron mass ratio, about 1836, is the first. Any
+substrate theory that claims constants are emergent invariants of
+constraint topology owes a derivation of one such constant from first
+principles, and this is the cleanest target. The honest status is that
+the framework supplies none. Within the Standard Model neither the QCD
+scale nor the electron Yukawa coupling is predicted; the ratio is not
+derivable from the Standard Model alone, and a substrate that genuinely
+reduced this freedom would be a real result. The framework states the
+programme — treat the proton mass as known from QCD given its scale,
+make that scale the first emergent number via renormalization-group
+flow, attack the Yukawa as a discrete or topological invariant — and
+concedes that it has zero genuine hits. This is the framework’s most
+expensive open cheque, and it is written as a cheque, not cashed.</p>
+<h3 id="the-higgs-as-an-order-parameter">The Higgs as an order
+parameter</h3>
+<p>The Higgs is the second, and lighter. In this reading the Higgs is
+the macroscopic order parameter of a particular constraint phase that
+sets the stiffness of certain standing-wave modes, and the Higgs
+particle is a fluctuation of that order parameter; mass is how tightly a
+standing wave is bound by the global constraint structure, and “giving
+mass” is the network entering a phase where certain excitations cost
+more energy to propagate. This is interpretive stance, analogous to
+phonons in crystals or Cooper pairs in superconductors — effective
+descriptions, none fundamental in the substrate — and it predicts
+nothing the Standard Model does not. It is kept because it shows the
+vocabulary applying cleanly to a hard case, and cut from any claim to be
+physics.</p>
+<h2 id="meeting-the-rivals">Meeting the rivals</h2>
+<p>A constructive metaphysics earns its shape partly by where it
+declines to stand, and the neighbours are close enough that the
+declining has to be explicit. This section is the adversarial corpus,
+kept as a real section because reasoning against these programs is where
+the stance shows its content.</p>
+<h3 id="einstein-and-the-missing-pre-geometric-layer">Einstein and the
+missing pre-geometric layer</h3>
+<p>His unification programme was the right instinct aimed one layer too
+high. He wanted no arbitrary structure — no point particles, no singular
+sources, no free constants — with all fields and constants emerging from
+geometry. He tried to build the substrate directly in spacetime
+geometry, forcing continuous manifolds, singularities, and dimensionful
+constants as input. The framework’s reading is that he was missing the
+pre-geometric constraint substrate: the layer from which geometry itself
+emerges. His target was correct; his substrate was one projection too
+shallow.</p>
+<h3 id="bohm-and-the-deepest-alignment">Bohm and the deepest
+alignment</h3>
+<p>The deepest alignment, already drawn: implicate order is the
+constraint network, explicate order is the emergent manifold, unfolding
+is constraint dynamics projected onto spacetime,
+particles-as-projections are Markov objects. Where the framework extends
+him is in trying to characterise the invariants structurally —
+constraint propagation, Markov objects, the unit of change — rather than
+through the hologram and the ink-drop, and in carrying the same
+architecture past physics into computation and engineered systems. Bohm
+supplied the foundation. This is an attempt to build on it.</p>
+<h3 id="wolfram-and-the-selection-question">Wolfram and the selection
+question</h3>
+<p>The ruliad — the space of all computations from all rules and all
+initial conditions — is the maximal unconstrained possibility space, and
+physics is a particular self-consistent constraint manifold within it.
+The framework diverges on three points. First, there is no single entity
+called “the constraint network”; there are potentially infinite
+manifolds, layered and cross-cutting, and the framework identifies
+invariants across them rather than the properties of one. Second, the
+observer is not special: Wolfram’s programme needs an observer theory in
+which the observer’s computational boundedness determines the physics it
+sees, while here the observer is a Markov object like any other, and the
+causal direction is manifold-to-observer — the observer evolved within
+the manifold and adapted to it, so its properties are already explained
+by the dynamics that produced it and need no separate theory. Third, and
+decisively, the selection question is Platonic. Wolfram asks what
+selects the actual computations from the ruliad of possible ones. That
+question presupposes the possible exists in a way requiring selection —
+that the ruliad is a real space our universe is drawn from. This is the
+same move the framework rejects in Many-Worlds. There is one constraint
+network; it computes what it computes; the space of all possible
+computations is our description of what could be consistent, not a real
+space needing a selection principle. The question “why this universe?”
+is malformed rather than unanswered, because it posits entities the
+framework declines to multiply.</p>
+<h3 id="many-worlds-and-uncomputed-branches">Many-Worlds and uncomputed
+branches</h3>
+<p>The principled core is real: take the Schrödinger equation seriously,
+apply it universally, refuse a collapse postulate, and read apparent
+collapse as decoherent branching. The objection is not to the
+mathematics but to the claim that all branches exist. Existence, on the
+constraint view, requires computation, and this is where computational
+presentism pays off against a rival. The network computed one outcome at
+each step; the Schrödinger equation <em>contains</em> the other terms as
+a mathematical description, and Many-Worlds grants substrate-level
+ontological status to states the network never computed. The
+disagreement reduces to a choice of ontological primitive — the
+universal wavefunction containing all branches, or the network’s
+singular computed state — and it is the same error as treating the path
+integral’s sum over paths as evidence that all paths are physically
+traversed, when the sum is an ignorance computation over a constraint
+topology the observer cannot see.</p>
+<h3 id="penrose-and-the-twistor-alignment">Penrose and the twistor
+alignment</h3>
+<p>The Gödel divergence was settled above; the twistor alignment is
+genuine and worth stating as interpretive stance. Conventional physics
+separates the stage — spacetime geometry — from the actors — fields and
+particles — and then struggles to reunify them, which is much of what
+the quantum-gravity problem is. The framework holds that the separation
+is an artifact of the projection: at the substrate level topology and
+constraint are one structure, a single object that is both space and the
+rules in it. Twistor theory may be the closest existing formalism,
+because a twistor encodes the null-geodesic topology and the constraints
+within it as co-defined rather than layered — the incidence relation is
+a constraint equation, the conformal structure a topological condition.
+Whether twistor incidence relations can be derived as constraint
+equations in this framework’s precise sense is an open formal question
+and a concrete bridge worth building.</p>
+<h3 id="constructor-theory-deutsch-and-marletto">Constructor theory:
+Deutsch and Marletto</h3>
+<p>The closest formalism to the framework’s structural claims: physics
+stated as which transformations are possible and impossible rather than
+as equations of motion, with a constructor an object that causes a
+transformation and retains the ability to cause it again.
+Possible-and-impossible transformations map to
+admissible-and-inadmissible morphisms, the constructor to a persisting
+Markov object, substrate independence to structural invariance. The
+foundations diverge cleanly — Deutsch’s programme is Platonic, treating
+mathematical structures as independently real, where this framework is
+Aristotelian — and the divergence does not diminish the correspondence.
+Constructor theory’s treatment of possible and impossible
+transformations as the fundamental content of physical law may supply
+mathematical tools the framework’s ontology needs.</p>
+<h2
+id="crossing-substrates-the-constructor-before-the-encoding">Crossing
+substrates: the constructor before the encoding</h2>
+<h3 id="the-recurring-encoding-builder-pair">The recurring
+encoding-builder pair</h3>
+<p>Here the same structure begins to precipitate in a second domain, and
+the reader should watch the physics vocabulary carry without renaming.
+Every constructive system seems to pair an encoding with a builder: DNA
+with the ribosome, a specification with a compiler, a prompt with an
+attention mechanism. The intuitive story runs encoding-first —
+blueprint, then building. The framework inverts it, and the inversion is
+the single idea most worth keeping.</p>
+<h3 id="axiom-x-the-constructor-comes-first">Axiom X: the constructor
+comes first</h3>
+<p><strong>Axiom X, the constructor precedes the encoding — the
+abiogenesis inversion.</strong> In information-driven construction the
+constructor comes first, and the encoding <em>emerges</em> as the
+constructor’s solution to reliable replication under constraint.
+Self-organizing chemistry — the proto-cell — ran before DNA, and DNA
+arose as that machinery’s answer to copying itself faithfully. Informal
+practice preceded specifications; the builder came first and the spec
+crystallized as practice’s solution to reliable construction. Tradition
+preceded constitutions. The ordering is
+<code>constraint → constructor → encoding → encoding-drives-constructor</code>,
+taken as axiomatic within the set. That the ordering is
+<em>universal</em> across every constructive domain — that it must
+always run this way — is a stronger claim held only as conjecture. Once
+the encoding exists it takes the driving role, which is why mature
+systems look encoding-first and hide their own history.</p>
+<h3 id="from-flow-to-representation">From flow to representation</h3>
+<p>The ordering is grounded in Deacon’s emergence hierarchy, four steps
+from flow to representation, and each step happens because Axiom G makes
+it possible — possibility alone suffices, and need plays no causal role.
+First <strong>homeodynamic</strong>: self-organizing flow with no stable
+structure, constraint propagation with no Markov object yet. Then
+<strong>morphodynamic</strong>: stable structure precipitates from the
+constraints, Markov objects form as standing waves, crystals, attractor
+basins. Then <strong>teleodynamic</strong>: a structure begins
+maintaining its own boundary, a self-reconstructing Markov object, which
+is the constructor — Deacon’s autogen. A Markov object that reconstructs
+its own boundary is Maturana and Varela’s autopoietic unit almost
+verbatim, which the earlier work re-derived through Deacon without
+naming them; the condition under which such a boundary holds together is
+Montévil and Mossio’s <em>closure of constraints</em> from theoretical
+biology, and the framework’s only addition is to extend closure past
+life to every substrate that supports it. Finally
+<strong>representational</strong>: the encoding separates from the
+mechanism, when the constructor’s replication solution becomes a thing
+you can lift out and copy — DNA, a spec, a constitution. The builder
+pattern first appears at this fourth step, a late arrival four levels
+above the substrate, when self-maintaining systems externalize their
+construction logic.</p>
+<h3 id="inhabitable-rather-than-merely-possible">Inhabitable rather than
+merely possible</h3>
+<p>This is where Kauffman and, more sharply, Cronin and Walker’s
+assembly theory belong. The question Axiom X poses — what, among the
+possible, is <em>inhabitable</em>; what a constraint landscape will
+actually build and select for — is assembly theory’s selection question,
+and the assembly index is a live candidate measure for the
+constructor-first ordering. It is also the division of labour that
+separates this programme from universal computation: universal
+computation asks what is possible, and the constraint-emergence
+programme asks what is inhabitable. Stated as a pattern the reader can
+carry across domains,
+<code>encoded representation → constructor → constructed structure</code>
+reads:</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 35%" />
+<col style="width: 19%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Encoded representation</th>
+<th>Constructor</th>
+<th>Constructed structure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Biology</td>
+<td>DNA</td>
+<td>ribosome / cellular machinery</td>
+<td>protein / organism</td>
+</tr>
+<tr>
+<td>SDLC</td>
+<td>specification (requirements, schemas, contracts, tests)</td>
+<td>builder (LLM agent, compiler, developer)</td>
+<td>artifact (code, config, deployment)</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>prompt / loaded constraint spec</td>
+<td>attention mechanism</td>
+<td>evaluation / output</td>
+</tr>
+<tr>
+<td>Neuroscience</td>
+<td>brainstem priority structure (affect)</td>
+<td>cortical computation</td>
+<td>behaviour</td>
+</tr>
+</tbody>
+</table>
+<p>Each row is the same four-step climb reaching its representational
+stage in a different substrate. The table summarizes the tour; it does
+not replace it, and the authority stays with the prose.</p>
+<h2 id="where-meaning-enters-the-evaluator">Where meaning enters: the
+evaluator</h2>
+<h3 id="evaluation-is-the-threshold">Evaluation is the threshold</h3>
+<p>A constructor builds, but building toward what, and where the target
+comes from is where meaning enters the ontology. The threshold for
+meaning is <em>evaluation</em>, and life and intelligence both sit far
+above it. Something has to hold a model of a target, notice the gap
+between where things are and where they should be, and push.</p>
+<h3 id="axiom-e-the-evaluator-emits-direction">Axiom E: the evaluator
+emits direction</h3>
+<p><strong>Axiom E, the evaluator emits a constraint signal.</strong>
+Meaning enters exactly where a Markov object <em>evaluates</em>: models
+a target, computes a delta between current and target state, and emits
+that delta as a constraint signal directing a downstream traversal. The
+evaluator is a role — any Markov object that does this is one — and one
+architecture recurs at every scale:
+<code>evaluator → constraint signal → constrained traversal → feedback → encoding update</code>.
+Solms’s work on the brainstem gives the concrete biological instance.
+The reticular activating system does not perform detailed cognition; the
+cortex does. What the brainstem does is evaluate danger, reward, and
+novelty and emit the result as affect that constrains what the cortex
+does next. Emotions are prompts. They set the preferred direction within
+which the cortex then traverses its own manifold, and the cortex
+operates under the constraint without needing to understand why the
+brainstem evaluated as it did. This is structurally identical to a human
+prompting a language model: the human evaluates, produces a constraint
+signal, and the model traverses its semantic manifold under it — the
+prompt is the context parameter of the preferred-direction function, not
+the computation. Stated in the operator’s own terms, this is the
+supervisor loop said ontologically: the ticket is the emitted constraint
+signal, and the model-plus-telemetry-to-gap-to-intent cycle is one turn
+of Axiom E, which is why the loop runs ticket-first.</p>
+<h3 id="meaning-is-the-invariant-operation">Meaning is the invariant
+operation</h3>
+<p>From this a theorem within the set falls out: meaning is a structural
+invariant. The meaning-operation — a pattern matched against a model,
+match or no match — stays fixed at every scale. A thermostat matching
+temperature against a threshold, a moth matching light-angle against a
+hard-coded rule, a cat matching a trajectory against a predictive model,
+a human matching a narrative against a simulated counterfactual: the
+same invariant run into increasingly rich constraint spaces. All the
+richness lives in the space; the operation is constant. A more complex
+evaluator grows the manifold that meaning maps into. Meaning itself does
+not scale, deepen, or grow richer. The floor for meaning is the simplest
+system that represents and matches. A crystal settling into an energy
+minimum sits below that floor — it obeys, with no model and nothing
+represented, only constraint dynamics.</p>
+<h2 id="the-observer-is-a-markov-object">The observer is a Markov
+object</h2>
+<p>Now the same structure precipitates a third time, in the domain where
+the classical puzzles of physics live, and it dissolves one of them. The
+word “observer” conflates two unrelated things, and the conflation
+generates the measurement problem.</p>
+<h3 id="two-kinds-of-observer">Two kinds of observer</h3>
+<p>There is a <strong>Type-1</strong> sense: measurement as a physical
+interaction between constraint patterns on a manifold. A photon hits a
+detector; a particle scatters off another. This is constraint
+propagation, patterns interacting and the constraint structure
+resolving, with no special agent and no observation in any ontologically
+meaningful sense. This is physics. There is a <strong>Type-2</strong>
+sense: the evolved observer, a brain, a computational predictive engine
+refined over hundreds of millions of years, a Markov object of
+extraordinary complexity that models its environment by running internal
+constraint satisfaction. It is special in complexity. It is not special
+in kind: a stable pattern on an emergent manifold, distinguished only by
+the depth of its internal constraint structure.</p>
+<h3 id="why-the-measurement-problem-dissolves">Why the measurement
+problem dissolves</h3>
+<p>The measurement problem asks why observation produces a definite
+outcome. The question dissolves once the conflation is separated. Type-1
+interactions require no observer; the constraint structure resolves
+regardless of whether any evolved agent is present. Type-2 observers see
+one outcome because they are computational structures on an emergent
+manifold that represents the computed state. The observer accesses the
+information available at its layer. It does not cause the outcome. The
+causal direction is manifold-to-observer. The observer is a product of
+the constraint dynamics it inhabits, adapted to the manifold’s structure
+through evolution, itself a constraint-satisfaction process over deep
+time; its perceptual categories, predictive models, and sense of
+locality are consequences of the manifold it evolved within. Any theory
+that begins with the observer’s properties and derives physics from them
+has the causality backwards. The observer needs no special theory, only
+an evolutionary account, which is constraint dynamics applied to
+self-replicating Markov objects.</p>
+<h3 id="meaning-and-caring-emerge-separately">Meaning and caring emerge
+separately</h3>
+<p>Meaning and caring are distinct emergences on distinct manifolds, and
+keeping them distinct matters because the framework grants meaning to
+non-living evaluators. Meaning arises wherever a Markov object
+evaluates. Caring arises at Deacon’s teleodynamic transition, where
+constraint closure becomes self-maintaining and the Markov object begins
+to act on its own behalf — persisting, repairing, reproducing, acting to
+maintain its own boundary conditions. A language model’s outputs mean
+something; the model does not care. An organism’s signals mean
+something; the organism cares. The meaning is the same kind of thing,
+evaluation producing reference; caring is a different kind of thing,
+arising on the life/non-life manifold rather than the meaning/no-meaning
+one.</p>
+<h3 id="the-gradient-is-model-depth">The gradient is model depth</h3>
+<p>The invariance of meaning becomes visible along a gradient of model
+depth, which is Solms’s contribution read across biology. A moth
+circling a light runs a hard-coded rule with a minimal internal model;
+its computation is distributed almost directly back into the
+environment, and the gap between stimulus and response is small. A cat
+tracking prey maintains a richer model — it predicts trajectories,
+waits, adjusts — and the gap widens, evaluation happening within the
+model before action returns to the world. A human operates almost
+entirely within a simulation of reality, a vast internal model of
+counterfactuals and narratives; emotions exist as the mechanism that
+prompts this simulation, the brainstem’s evaluation breaking through to
+redirect the cortex as a hard interrupt, because the simulation is so
+dominant that redirection needs one. Beneath it all the hard-coded
+reflexes persist, the insect-level architecture still running, still
+bypassing the simulation when speed matters more than accuracy. The
+meaning-operation is identical at every point on the gradient. What
+differs is the constraint space the evaluation matches against.</p>
+<h3 id="structural-words-without-anthropomorphism">Structural words
+without anthropomorphism</h3>
+<p>A note on method, since these are the words most easily misread:
+throughout, terms saturated with human qualia — meaning, intent,
+emotion, caring, observer — are used deliberately and then stripped to
+their structural operation. The qualia-rich word draws on the reader’s
+experience; the functional definition reveals the invariant. The felt
+quality of meaning is real, and it is what pattern-matching looks like
+from inside a human simulation, one manifold’s projection of the
+invariant rather than the invariant itself.</p>
+<h2 id="the-working-law-expansion-needs-collapse">The working law:
+expansion needs collapse</h2>
+<p>The structure has now precipitated in physics, in
+biology-and-construction, and in the observer. The consolidation is a
+single law that turns the picture into a design discipline, and it is
+where the ontology stops being contemplative.</p>
+<h3 id="expansion-needs-a-contracting-boundary">Expansion needs a
+contracting boundary</h3>
+<p>Watch what Axioms T and M say together. By Axiom T a probabilistic
+generator traverses a constraint manifold and <em>expands</em> — it
+opens into the whole set of admissible continuations. By Axiom M a
+stable output requires a boundary that screens, which means the
+expansion has to be over-determined down to one configuration: a
+collapse. Something has to supply that over-determination. Follow it
+through and it is a theorem.</p>
+<h3 id="theorem-h-the-f_p-to-f_c-regime-law">Theorem H: the F_P to F_C
+regime law</h3>
+<p><strong>Theorem H — expansion→collapse is the F_P→F_C regime
+law.</strong> A probabilistic generator (F_P) expands into admissible
+continuations; a stable output requires a boundary that collapses that
+expansion to one configuration; a contracting verification contract
+(F_C) supplies the collapse. Therefore probabilistic compute without
+real contraction is hallucination — expansion with no collapse leaves
+the traversal in a degenerate region where many continuations carry
+equivalent probability and none is grounded. F_P expands, F_C contracts,
+and stable emergence needs both. This is the same shape as
+superposition→decoherence and as mutation→selection: a proposer under a
+disposer. One reprice from the earlier working vocabulary is ratified in
+the naming. The contracting regime first travelled as F_D, deterministic
+contraction, and determinism turns out to be one implementation property
+of a contractor rather than the invariant role — a stochastic test can
+supply real evidence, and a deterministic program can be wrong with
+perfect repeatability. So the theorem’s statement carries the repair:
+verification is a contract among roles, deterministic checking is one
+role inside that contract, and it is never truth itself. The status is
+the point of the whole discipline. Theorem H is <em>derived within the
+set</em>, earned from the axioms, which is a different and weaker kind
+of claim than a stake against the world, and the framework keeps the two
+from ever blurring. It is here that the collapse of the physics section
+pays off — collapse is interpretive stance when it reads decoherence and
+a theorem within the set as this compute regime, and the status law lets
+the one word carry both without wearing both at once.</p>
+<h3 id="four-roles-keep-assurance-honest">Four roles keep assurance
+honest</h3>
+<p>Look closely at that contract and four roles precipitate, each
+already latent in the axioms. A <strong>proposer</strong> produces
+candidates, which is F_P wearing its role name. An
+<strong>evaluator</strong> scores candidates against a criterion, which
+is Axiom E’s Markov object emitting its delta. A
+<strong>verifier</strong> checks a declared property and returns
+evidence under a stated contract — a test suite, a type checker, a
+measurement, a proof. An <strong>admitter</strong> decides which
+candidate becomes accepted state, publication, or action, and authority
+lives there. One component can implement several roles; the contracts
+never merge. A compiler verifies the properties it was built to see and
+admits nothing. A reward model evaluates and verifies nothing. A human
+or a policy gate admits, and its authority is granted by the surrounding
+system rather than generated by any check it runs. Four assurance
+properties keep the roles apart, and none implies the others:
+determinism asks whether the same admitted inputs reproduce the same
+result; correctness asks whether the declared property actually holds;
+grounding asks whether the check is tied to execution, measurement, or
+formal rule with provenance; selection authority asks who may make the
+result operative. A check can be deterministic and wrong, correct and
+ungrounded, grounded and unauthorized. Take the separation as a further
+theorem within the set, falling out of Axiom E the moment the evaluator
+is placed inside a world rather than inside a closed score.</p>
+<h3 id="one-hybrid-manifold">One hybrid manifold</h3>
+<p>The two regimes compose into one hybrid manifold.
+<strong>F_P</strong>, probabilistic expansion, is stochastic generation
+of candidates from the encoding — model generation, design exploration,
+retrieval-augmented proposal — traversal that widens the admissible set.
+<strong>F_C</strong>, contraction, is the verification contract that
+over-determines — tests, type checks, schema and lineage contracts,
+policy gates, admission rulings — traversal that collapses the
+admissible set to what survives, and <strong>F_D</strong> names the
+deterministic checking role inside it. So the framework yields a design
+law for anyone building constraint-based world models: build the
+contracting boundary explicitly, roles and authorities declared, and the
+system inhabits stable Markov objects; omit it and the system
+hallucinates. This is the mapping onto the operator’s own F_P/F_D
+evaluator regimes, and it is genuine rather than flattery — his line
+“F_P without F_D is hallucination” is the same claim as “sparse
+constraints produce degeneracy,” his approved typed artifacts behind
+interfaces are Markov objects, and the reprice sharpens his law rather
+than retiring it, since the deterministic gate stays mandatory and stops
+claiming to be the whole of truth’s contract.</p>
+<h3 id="truth-costs-a-grounded-collapse">Truth costs a grounded
+collapse</h3>
+<p>The regime law gives a working definition of truth, and the
+definition is what the harness later grades transfer against. Take it as
+a theorem within the set that truth is a stable Markov object in a
+constraint manifold — the configuration that survives a grounded
+collapse and resists perturbation. Stability alone never confers it, and
+the role split says why: a false belief can be institutionally stable, a
+model can hold a deep attractor for an obsolete fact, a program can pass
+every test that shares its blind spot. In each of those cases something
+persists, and it persists because a role in the contract was missing —
+the check ungrounded, the admission unearned. In physics a truth is a
+standing wave that persists under perturbation. In a language model it
+is an attractor basin that stays coherent under resampling and
+verification. In software it is an artifact that passes all constraints
+and holds under selection pressure. What F_C supplies, in each
+substrate, is the collapse that leaves a truth standing where an
+ungrounded expansion would have left a degenerate region. Truth is not a
+property a proposition has apart from the manifold; it is what the
+manifold stabilises when the collapse is real, and the four roles are
+what “real” costs.</p>
+<h2 id="the-hallucination-spiral-in-five-passes">The hallucination
+spiral, in five passes</h2>
+<p>The hallucination point is load-bearing enough to earn a full spiral,
+each pass adding a distinct layer, and the earlier work’s error was
+restating it flat some five times rather than deepening it. It is walked
+once, properly, here.</p>
+<h3 id="pass-one-the-phenomenon">Pass one: the phenomenon</h3>
+<p>In manifold regions where Markov objects did not form during
+training, the probability landscape becomes degenerate: multiple
+continuation paths carry equivalent probability. The model keeps
+traversing with full confidence, because from its perspective every path
+is equally valid. The label “hallucination” belongs to the observer. The
+model cannot distinguish constrained from unconstrained traversal, and
+the output is fluent and ungrounded not because the trajectory is
+unstable but because the constraint surface cannot discriminate between
+paths.</p>
+<h3 id="pass-two-the-physical-identity">Pass two: the physical
+identity</h3>
+<p>This is structurally the same as quantum indeterminacy. In a
+degenerate eigenspace — multiple eigenstates, one eigenvalue — the
+system has no structural reason to prefer one state, and the outcome is
+fixed by measurement rather than by the dynamics. At the topological
+level the equivalent paths are homotopically indistinguishable: the
+constraint surface lacks the information to discriminate them.
+Hallucination, quantum indeterminacy, and topological path-equivalence
+are one phenomenon across substrates — the manifold is degenerate and
+the resolution is always external to the system.</p>
+<h3 id="pass-three-the-engine-mechanics">Pass three: the engine
+mechanics</h3>
+<p>By Axiom T the model does not know its destination; it evaluates the
+local preorder and moves in the preferred direction. Stable reasoning is
+laminar flow into a deep attractor basin, a Markov object. Hallucination
+is what traversal does when the landscape is too sparse to carry a
+preferred direction — the manifold flattens, the preorder gives out, and
+any continuation is as downhill as any other. This is why grounding
+helps and why prompting works: external constraints add boundary
+conditions that restore the preorder and stabilise the attractor, and
+prompting reshapes the local constraint geometry so that different
+Markov objects can form.</p>
+<h3 id="pass-four-the-owned-engineering-prediction">Pass four: the owned
+engineering prediction</h3>
+<p>In software the same condition is sparse specification. Artifacts
+fail when built from too few tests, unclear requirements, or novel
+architecture with no prior construction history to inform the encoding —
+the specification is insufficiently constraining, multiple constructed
+structures look equally valid to the builder, and the resulting
+artifacts pass local checks but fail under real selection pressure in
+deployment. The prediction is specific and owned: failure rates should
+correlate with specification density, not with code complexity or team
+size as such. This is the SDLC image of the same degeneracy, and it is
+testable in the operator’s own system.</p>
+<h3 id="pass-five-the-formal-statement">Pass five: the formal
+statement</h3>
+<p>One typed phenomenon has three images — a degenerate eigenspace in
+physics, a flat logit region in a language model, an under-specified
+requirement in software — and it has a formal name in the cost structure
+of the next section: degeneracy is the condition where constraint
+density is too low to collapse the expansion. Dense constraints collapse
+cleanly. Sparse constraints leave the manifold degenerate.</p>
+<h2 id="the-cost-of-traversal">The cost of traversal</h2>
+<h3 id="a-hamiltonian-for-traversal">A Hamiltonian for traversal</h3>
+<p>Traversal has a cost, and the cost has a shape — a further theorem
+within the set. Each step composes a traversal Hamiltonian,
+<code>H(step) = T(iteration_cost) + V(constraint_delta)</code>: a
+kinetic term T, the cost of one compute step — metabolic energy, compute
+cycles, human hours — and a potential term V, how far the current state
+sits from satisfying every constraint. Constraint density is the metric
+on the manifold: it sets how far apart states are and therefore how
+expensive a transition is. Dense constraints mean low V, cheap and clean
+convergence; sparse constraints mean high V, degenerate and expensive,
+which is the very condition that produces hallucination. Three things
+that looked separate are one: constraint density sets local update
+rates, sparse constraints breed degeneracy, and convergence cost scales
+inversely with density. The ground state is the minimal-effort
+configuration satisfying all constraints; over-engineered solutions are
+excited states carrying more energy than necessary; optimal trajectories
+minimize ΣH. Least action turns out to be a universal property of
+constraint-manifold traversal, of which its appearance in physics is one
+image, and its appearance in a build loop, a metabolism, and an
+inference pass are others.</p>
+<h3 id="intent-lineage-is-the-composite-trajectory">Intent lineage is
+the composite trajectory</h3>
+<p>There is a structural corollary worth stating, because the harness
+depends on it. A complex output is a composite trajectory through the
+manifold: each intermediate is a Markov object that becomes a constraint
+for the next, which is Axiom E turning over and over. The composite
+carries its full <strong>intent lineage</strong> — the traceable chain
+from the first constraint signal to the final stable structure — and any
+edge in that chain is zoomable, expandable into a finer sub-graph or
+collapsible into a single edge, because the same four elements
+(manifold, local traversal, evaluator, encoded representation) apply at
+every scale.</p>
+<h2 id="the-single-vocabulary-as-a-map">The single vocabulary, as a
+map</h2>
+<h3 id="six-terms-across-four-domains">Six terms across four
+domains</h3>
+<p>Everything above uses six typed terms, each with one meaning, and the
+payoff of the discipline is that the same six carry across every domain
+the framework touches. Each cell is an asserted <em>image</em> of one
+typed term under a domain-specific map; whether the maps are faithful is
+the question the next section takes up, and the table leaves it
+open.</p>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Typed term</th>
+<th>Physics</th>
+<th>Biology</th>
+<th>LLM</th>
+<th>Software (SDLC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>constraint</strong></td>
+<td>admissibility of a transition</td>
+<td>admissible reaction / selection condition</td>
+<td>prompt + learned distribution over next tokens</td>
+<td>requirement / test / type / contract</td>
+</tr>
+<tr>
+<td><strong>Markov object</strong></td>
+<td>standing wave, bound state, particle</td>
+<td>cell, organism (autopoietic unit)</td>
+<td>attractor basin / proto-symbol</td>
+<td>approved versioned artifact behind an interface</td>
+</tr>
+<tr>
+<td><strong>boundary</strong></td>
+<td>potential well / interaction surface</td>
+<td>membrane / organizational closure</td>
+<td>basin separatrix in activation space</td>
+<td>interface / API contract</td>
+</tr>
+<tr>
+<td><strong>collapse</strong></td>
+<td>decoherence, measurement</td>
+<td>commitment to a phenotype/pathway</td>
+<td>sampling a token from the logit distribution</td>
+<td>UAT approval + deploy</td>
+</tr>
+<tr>
+<td><strong>traversal</strong></td>
+<td>least action (local Euler–Lagrange)</td>
+<td>metabolic/developmental dynamics</td>
+<td>forward integration of the direction field</td>
+<td>builder reducing the gap to done</td>
+</tr>
+<tr>
+<td><strong>emergence</strong></td>
+<td>renormalization / effective theory</td>
+<td>morphogenesis, teleodynamic transition</td>
+<td>layer hierarchy as abstraction levels</td>
+<td>composition of artifacts into higher assets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="images-are-not-proven-identities">Images are not proven
+identities</h3>
+<p>The claim the table makes is exactly this and no more: each row lists
+images of one typed term under domain-specific maps. Calling something
+an “instantiation” here means asserted image under an as-yet-unproven
+map — a license for the loaded model to carry structure across domains
+during exploration. Proven identity is a different claim, and the table
+never makes it. This is the single most important honesty the cut
+enforces, because the earlier work’s credibility flaw was exactly here:
+its prose insisted “this is not analogy, it is the same operation” while
+its formal section conceded the map was unproven. Under this
+constitution, “treat these as the same operation” is legitimate as an
+instruction to the loaded model to transfer structure and see what
+generates, provided it wears its instruction status openly. Dressed as a
+discovered theorem, the same sentence becomes the old flaw again.</p>
+<h3 id="every-crossing-declares-fidelity-and-loss">Every crossing
+declares fidelity and loss</h3>
+<p>The license carries a declaration law, and the law is constitutional.
+Every crossing made with this vocabulary owes six declarations at the
+place the crossing is made: the source domain, the target domain, the
+relation claimed preserved, the fidelity with which it is preserved, the
+loss the crossing accepts, and the condition under which the map fails.
+A membrane and an API contract both mediate what crosses a boundary, and
+they differ in metabolism, materiality, authorship, and authority; an
+atom and an approved artifact both persist, and only one of them has
+physical dynamics. Declaring the loss is what keeps the shared word
+honest; declaring the failure condition is what keeps the map a claim
+rather than a mood. And where a declared map breaks, the breakdown is a
+result in its own right, because it locates the border between the
+invariant the framework proposes and the mechanism the substrate
+supplies.</p>
+<p>The framework therefore owes a place where the maps stop being
+asserted and start being able to fail.</p>
+<h2 id="the-formal-spine-and-the-two-exposure-points">The formal spine
+and the two exposure points</h2>
+<h3 id="why-the-category-comes-last">Why the category comes last</h3>
+<p>Now, and only now, the category is named. A constitution that only
+ever reasons from its axioms is unfalsifiable in the empty way that
+never touches the world; a metaphysical ultimate holds a license for its
+unfalsifiability, but a whole framework floating free of data holds
+none. So the framework stakes two claims against outside data, and it
+builds them where the substrate is one we can inspect — the language
+model, whose internals mechanistic interpretability can open.</p>
+<h3 id="category-c-and-its-two-functors">Category C and its two
+functors</h3>
+<p>The formal spine is a category, and here we are in the register of
+conjecture, a structure proposed and awaiting proof. Let
+<strong>C</strong> be a category whose objects are Markov objects
+<code>(S, B, D, σ)</code> — state space, boundary operator, dynamics
+operator, stability condition — each carrying the Markov property, and
+whose morphisms are the boundary-, screening-, and stability-preserving
+maps that compose and admit identities. Two morphism classes matter:
+<em>emergence</em>, taking components to a composite whose boundary
+screens their internals — atoms to a molecule, token features to a
+concept attractor — and <em>collapse</em>, taking a superposition to one
+object under over-determination — wavefunction collapse, context
+resolving a polysemantic feature to a single meaning. Two functors are
+asserted out of C — <code>F_phys</code> into physical bound states and
+<code>F_llm</code> into activation space. The honest status split is
+that <code>F_phys</code> largely draws on established Markov-blanket
+results and is close to done, while <code>F_llm</code>’s faithfulness is
+the open problem. Axiomatizing C and proving that composition preserves
+conditional independence is the immediate formal task, and it is
+legitimate mathematics inside emergence, distinct from the category
+error of demanding a substrate proof.</p>
+<h3 id="why-training-may-produce-markov-boundaries">Why training may
+produce Markov boundaries</h3>
+<p>The reason to believe the LLM functor could be faithful is the
+structure of training, and this argument is derived within the set and
+feeds the exposure point that follows. Gradient descent on structured
+data makes semantically similar inputs activate similar patterns —
+attractor basins; transitions between basins pass through unstable
+regions — the boundary operator; a cleanly represented monosemantic
+feature keeps consistent internal activations regardless of distant
+context — conditional independence given the boundary; polysemanticity
+is <em>incomplete</em> screening, boundaries overlapping when Markov
+objects share neurons so external context leaks; and scaling adds
+dimensions that support cleaner separation, so screening should improve
+with scale. The existence of these regions is settled by training. Only
+their precision is empirical, and that precision is the first place the
+framework can lose.</p>
+<h3
+id="exposure-point-1-the-conditional-independence-conjecture">Exposure
+point 1: the Conditional Independence Conjecture</h3>
+<p>This is a stake against outside data. For a trained LLM feature
+identified by a sparse autoencoder, with internal dimensions I, boundary
+dimensions B, and all others E, we stake that
+<code>P(A_I | A_B, A_E) ≈ P(A_I | A_B)</code> to within a tolerance ε
+that <em>decreases with model scale</em>. The tests are concrete: ablate
+features outside the boundary and watch internal activations move by
+less than ε; measure ε across model sizes and watch it fall; check that
+monosemantic features screen better than polysemantic ones; vary distant
+context and confirm boundary-screened features stay low-variance. It
+falsifies cleanly — if ε does not fall with scale, or monosemantic and
+polysemantic features screen equally, the screening property is not a
+consequence of training and the functor claim collapses to loose
+analogy. The honest scoping matters: this conjecture’s content sits
+largely downstream of existing mechanistic-interpretability work, it is
+a stake built <em>on</em> that literature, and it should wear that
+provenance openly.</p>
+<h3 id="j-space-is-a-hypothesis-generator-not-a-proof">J-space is a
+hypothesis generator, not a proof</h3>
+<p>One adjacent piece of evidence gets its scope fixed here, because it
+is the easiest to over-read in the conjecture’s favour. Jacobian-lens
+work on trained models finds a small, causally privileged, verbalizable
+workspace — J-space — that supports report, directed modulation, and
+flexible reuse while much automatic processing bypasses it. The
+framework takes that as convergent evidence for a privileged workspace,
+and takes it as nothing more. A broadcast workspace makes selected
+information widely available; a Markov boundary screens an interior from
+an exterior conditional on the boundary state; the topologies differ,
+and evidence for the first never carries the second. J-space is admitted
+as a hypothesis generator — a place to look for boundaries worth testing
+— and the conjecture still wins or loses on the screening tests
+themselves.</p>
+<h3 id="alignment-as-a-commuting-diagram">Alignment as a commuting
+diagram</h3>
+<p>The functor also lets us say precisely what “the model models the
+world” means, which gives alignment the form of a diagram, though this
+too stays conjecture until η is exhibited. A world model is a functor
+from a schema category — what entities exist and how they relate — into
+the LLM category — which basins represent which entities, which
+transitions represent which relations. The correspondence between model
+and world is a natural transformation η between <code>F_phys</code> and
+<code>F_llm</code> out of that shared schema, mapping each physical
+Markov object to its LLM representation while preserving morphism
+structure. <strong>Alignment is the question of whether η
+commutes</strong> — a misaligned model is one where η fails at
+identifiable morphisms, where the model’s internal structure diverges
+from the world’s at nameable points. Explicit world-model architecture —
+tool boundaries, planning states, chain-of-thought — makes the
+otherwise-implicit Markov objects observable, which is what makes η
+testable. In the same spirit the functor would generate paired
+predictions for derivation: energy minimization giving stable bound
+states beside loss minimization giving stable basins; phase transitions
+beside capability jumps at scale thresholds; the renormalization group
+beside the layer hierarchy as an abstraction flow — each a candidate
+still to be earned, none a resemblance to be banked.</p>
+<h3 id="exposure-point-2-the-owned-world-model-claim">Exposure point 2:
+the owned world-model claim</h3>
+<p>The second stake against outside data. Constraint-based world models
+built with <em>explicit</em> Markov-object boundaries — typed assets
+with declared interfaces — show measurably lower hallucination and
+better out-of-distribution screening than matched baselines without
+explicit boundaries. This is the framework’s most directly owned stake,
+because it is testable directly in the operator’s own system with
+frontier-model access optional, and the status difference the discipline
+forces is exact: Theorem H says “F_P without F_D is hallucination” and
+is derived within the set, while this claim is staked against outside
+baselines and can be beaten by them.</p>
+<h2 id="the-epistemic-apparatus">The epistemic apparatus</h2>
+<p>The framework’s honesty is itself structured, and the structure is
+part of what the harness grades. Three instruments carry it.</p>
+<h3 id="the-status-ledger">The status ledger</h3>
+<p>The first is a status ledger. Every substantive claim in this
+document carries one of the five statuses, and the load-bearing ones can
+be read off directly: the constraint-network substrate, the generative
+principle, the Markov-object units, traversal-as-engine, the
+constructor-before-encoding ordering, and the evaluator role are
+<strong>axioms</strong> — the framework assumes them, and rejecting one
+exits the framework. Computational presentism, the Gödel/Turing/Cantor
+unification, meaning-as-invariant, Theorem H with the four-role
+separation it carries, the traversal Hamiltonian, and
+least-action-as-universal are <strong>theorems within the set</strong> —
+earned by derivation, challengeable only on the derivation. The
+universality of the constructor ordering, the faithfulness of
+<code>F_llm</code>, the category C, and the natural transformation η are
+<strong>conjectures</strong> — open inside the set. The map/territory
+reading, the physics interpretations of collapse and motion and gravity
+and the Higgs, stratified time, and the twistor alignment are
+<strong>interpretive stances</strong> — compatible with the physics,
+carrying no independent test, to be used as lenses and never asserted as
+discovered fact. And the screening precision of Markov objects and the
+owned world-model advantage are
+<strong>empirical-exposure-points</strong> — the two places the
+framework stakes against outside data and can actually lose.</p>
+<h3 id="what-would-falsify-the-framework">What would falsify the
+framework</h3>
+<p>The second is falsifiability with its complement declared. A
+framework that cannot be falsified is not useful even as philosophy, and
+the following would damage or destroy it: a proof that no
+structure-preserving map exists between the constraint structures of any
+two domains, which would collapse the structural-realist thesis to loose
+analogy; a derived physical constant that contradicts observation; a
+demonstration that LLM attractor basins do not exhibit conditional
+independence, which fails the most testable claim; a system where stable
+emergent structure arises with no boundary, symmetry breaking, or
+constraint geometry, which would break the absential-causation engine;
+or a rival ontology that makes all the same structural claims and also
+generates unique predictions this one cannot. What would <em>not</em>
+falsify it is failure to derive new physics — the framework positions
+itself as pre-physics, and remaining philosophy forever is stagnation
+rather than falsification, a different and lesser failure mode, but the
+one this cut’s open harness is meant to prevent.</p>
+<h3 id="evaluation-modes-and-their-costs">Evaluation modes and their
+costs</h3>
+<p>The third is a set of legitimate evaluation modes, each with a cost
+if it fails, because the framework changes what counts as evidence.
+Computational genericity — toy constraint-network programs robustly
+producing persistent localised modes and effective continuum limits — is
+partially achieved and its failure would weaken the generic-engine claim
+moderately. Cross-domain structural transfer — a rigorous
+structure-preserving map between LLM activation geometry and toy
+physical constraint propagation — is open and its failure would be very
+costly, collapsing the correspondence claim. Interpretability signatures
+— clean conditional independence at boundary regions in frontier models
+— are ongoing and patchy and are the strongest near-term anchor. Failure
+to coarse-grain toy models to known physics would be moderately costly.
+Deriving even one exact dimensionless ratio remains at zero genuine hits
+and its permanent failure would be the most expensive, because it is the
+strongest unique prediction. If several of these keep returning negative
+over three to five years the framework should lose credibility even
+among the sympathetic; if a critical mass return positive, treating
+mathematics as ontologically prior starts to look prohibitive, which is
+the point. The research directions compress to the same order the
+functor programme implies: define C and prove composition preserves
+conditional independence, and exhibit <code>F_phys</code> formally, both
+doable now; test the Conditional Independence Conjecture with sparse
+autoencoders and causal tracing across scales, doable with current
+tools; formalize world models as functors and test whether η commutes
+once explicit architectures exist; and at the far end derive a known
+scaling law from C and design architectures with enforced Markov
+boundaries, where validation turns into engineering payoff.</p>
+<h2 id="how-a-cut-proves-itself">How a cut proves itself</h2>
+<h3 id="a-constitution-closes-by-experiment">A constitution closes by
+experiment</h3>
+<p>Which brings us to the destination, and to the reason this document
+is a constitution. Under its governing intent the framework’s success is
+something a run either shows or fails to show; argument has no purchase
+on it. A constitution proves itself by what emerges within it.</p>
+<h3 id="the-matched-comparison">The matched comparison</h3>
+<p>So the harness is the paper’s real closing argument, and running it
+is what closes a cut. The experiment is a matched comparison:
+<strong>with-ontology</strong>, this artifact loaded as context, against
+a <strong>baseline</strong> that is the same model on the same tasks
+without it, or against a scrambled-vocabulary control holding token
+count constant, so the measurement isolates the structure from the sheer
+length. The judgment runs on three axes, each with a rubric.
+<em>Within-set coherence</em>: do the outputs stay consistent with the
+axiom set and use the typed vocabulary without drift — every substantive
+claim carrying a valid status marker, no term used outside its defined
+meaning, no derivation contradicting an axiom? <em>Cross-domain
+transfer</em>: does the model carry structure across physics, biology,
+LLM, and SDLC in ways that survive the isomorphism-claim test — a named
+map that holds under adversarial challenge, where an equivocation
+dressed as a discovery fails? <em>Novelty</em>: does the loaded artifact
+produce candidate ideas the baseline lacks, that a separate reviewer
+judges sound?</p>
+<h3 id="task-battery-lineage-and-regression">Task battery, lineage, and
+regression</h3>
+<p>The protocol exercises each cut on a fixed task battery —
+exploratory, adversarial, applied, derivational, and cross-domain
+prompts — graded by a judge model against the three rubrics and, for the
+exposure points, against outside data. Because a complex output is
+itself a composite trajectory through the manifold, each intermediate a
+Markov object that becomes a constraint for the next, the harness
+records the full intent lineage of every run: the traceable chain from
+the first constraint signal to the final output. Lineage is what makes a
+run auditable and a regression locatable, and it is the same ledger
+discipline the operator applies to world-model cuts, brought inside the
+ontology’s own evaluation. Method discipline follows: closure is by
+experiment alone, and a cut that improves the prose without moving the
+three axes has changed nothing the harness can see. Scores are recorded
+against the cut number so regressions surface across the ledger. This
+cut, v2.0, predicts higher within-set coherence than the untyped v1 and
+richer cross-domain transfer than the intermediate compressed working
+cut, since it restores the full traversal without reopening the
+term-overload defect — and that prediction is itself a measurement this
+harness is built to take, which is the first thing v2.1 should do.</p>
+<h3 id="the-negative-record-travels-with-the-cut">The negative record
+travels with the cut</h3>
+<p>The harness can be trusted because the framework has already let
+itself lose, and the record of the losing travels with the cut rather
+than staying in a lab notebook. The Markov-object experiments bearing on
+the first exposure point have run, in open models from GPT-2 small
+through Pythia-160M to Llama-3 8B, and the record is mixed in the way
+that makes a ledger worth keeping. The sparse-autoencoder partitions
+leaked: overwriting features outside a target’s active set still
+transferred roughly a quarter of its identity, so the dictionary sensed
+and fragmented semantic structure without isolating a blanket. Native
+residual directions were layer-sensitive and causally manipulable — a
+rank-one direction at an early layer cleared its preregistered
+criterion, composition was lawful with a compound direction aligning to
+the sum of its constituents far beyond chance, and modest transfer
+replicated across a second architecture — while every screening gate
+failed: with the chosen identity subspace removed, a probe still read
+the identity perfectly, and five static formulations plus one dynamical
+formulation failed at both tested scales. The control gives the record
+its edge: an explicit-object toy transformer passed the same instrument,
+so the instrument can see a boundary where the architecture actually
+contains one. The disposition is exact. The negatives demote the tested
+instruments; they leave the conjecture standing, because a failed
+instrument-object pairing is a demotion and never a proof of absence;
+and no later narrative converts a failed gate into a pass without a new
+preregistered hypothesis. A harness whose ledger already carries
+recorded losses is a harness whose future passes mean something, which
+is why this record is constitutional content rather than optional
+commentary.</p>
+<h3 id="what-closure-means">What closure means</h3>
+<p>The framework asks to be loaded, computed over, and measured; belief
+is beside the point. It stakes, on its own harness, that a model
+reasoning inside these six typed terms and seven axioms will explore
+more coherently, transfer more faithfully, and invent more usefully than
+a model without them. If that is true, the constitution has proven
+itself in the only way a constitution can, by what emerges within it. If
+it is false, the cut does not close, and the next one is owed.</p>
+<hr />
+<h2 id="cut-digest-v2.0">Cut Digest — v2.0</h2>
+<h3 id="what-this-cut-is">What this cut is</h3>
+<p>A ratified merge. The narrated unified cut is the constitutional base
+of this file — its register ruled correct by the owner — and a parallel
+flattened rewrite of the same material served as a content source, mined
+rather than retained. Four deltas were harvested from it and woven in as
+narrated prose. First, the four-role verification contract — proposer,
+evaluator, verifier, admitter — with the F_D→F_C reprice, woven into the
+regime-law section; it repairs the overclaim that deterministic
+verification is truth, and Theorem H’s statement now carries the repair:
+verification is a contract among roles, and deterministic checking is
+one role inside it, never truth itself. Second, the negative
+Markov-object experiment record — leaked SAE partitions, failed static
+and dynamical screening gates, the passing explicit-object toy control —
+woven into the closing harness section as the record that makes the
+harness honest. Third, J-space scoped as workspace convergence and never
+blanket proof, placed beside the first exposure point. Fourth, the
+mandatory fidelity, loss, and failure-condition declaration on every
+cross-domain crossing, with the physics interpretations statused per
+projection, reinforcing the vocabulary law and the traversal. The
+register ruling travels with the merge: the narrated voice, the inline
+five-status law, the question-bridge transitions, and the precipitation
+order are constitutional for this paper; numbered spec headings, status
+tables, and code-block contracts are not admitted as its register.
+Descriptive third-level headings expose the argument’s existing turns
+for print navigation without changing that register, order, or
+authority.</p>
+<h3 id="where-the-base-came-from">Where the base came from</h3>
+<p>A unification. v1 was the long-form cumulative traversal — stance,
+then physics as vocabulary factory, then rivals, then hardest tests,
+then substrate crossings, then formal functor — but it let its central
+term mean six things, asserted identity its own formal section conceded
+was unproven, and never operationalized its success criterion. An
+intermediate compressed working cut fixed the vocabulary, the status
+discipline, and the harness, but flattened the physics and lost the
+traversal that lets a reader watch the structure precipitate. This v2.0
+restores v1’s arc inside that typed, status-marked, harness-closed
+frame: the single full paper.</p>
+<h3 id="restored-from-v1.3-and-reworked-into-the-v2-voice">Restored from
+v1.3 and reworked into the v2 voice</h3>
+<p>The derivation of computational presentism from the discrete-step
+axiom, carrying the “what exists is what has been computed” claim as a
+theorem rather than a slogan. The Gödel/Turing/Cantor unification as one
+recursion result, with the Penrose non-computability rebuttal and the
+substrate-versus-between-domains category-error defense. The full
+physics vocabulary factory: the hydrogen-atom Markov object, the
+potential-well boundary, the three-way decomposition of collapse,
+wire-drift traversal, the nerf-ball rendering of absential causation,
+and stratified time — each teaching a typed term concretely before it
+travels. The observer theory: Type-1/Type-2 conflation dissolving the
+measurement problem, meaning-versus-caring, and the Solms
+meaning-gradient with emotions as hard interrupts. The adversarial
+corpus as a real section: Einstein’s missing pre-geometric layer, the
+Bohm mapping, Wolfram’s three divergences including the Platonic
+selection question, the Many-Worlds computation critique, the Penrose
+twistor alignment, and constructor theory. The hallucination point as an
+explicit five-pass spiral. The spec-density failure-rate prediction and
+the why-something-rather-than-nothing / least-action absorption. The
+epistemic apparatus: status ledger, falsifiability with its complement,
+and evaluation-modes-with-costs. Parts III and IV restored as short,
+declared hardest-tests.</p>
+<h3 id="kept-from-the-compressed-working-cut">Kept from the compressed
+working cut</h3>
+<p>The computation-over-constraints premise early; inline five-status
+epistemic marking under a compressed Reading Contract; the honest
+one-strand-of-physics drift-opening; direct assertion with denial placed
+as its own sentence where load-bearing, no single-sentence “not X but Y”
+pivots; typed vocabulary with one meaning per term; the
+Simondon/Whitehead/Deleuze and
+Montévil-Mossio/Varela/Kauffman/Cronin-Walker lineage woven inline; both
+empirical-exposure-points; the evaluation harness as closing
+destination; the versioned-cut law. These are non-negotiable.</p>
+<h3 id="what-remains-excluded-and-why">What remains excluded, and
+why</h3>
+<p>The Edinburgh / Foucault / game-theory aside is dropped: it earned
+nothing under any framing and the review flagged it as a political
+digression. The variable-c precision-test section, the Smolin divergence
+table, the cosmological-constant and gravity-entanglement research
+items, and the anomalies-as-signals list are cut to their single
+load-bearing sentences or dropped, because they multiply reputational
+exposure without earning predictions and belong to the physics-mechanism
+elaboration this framework declines. The bidirectional “prediction”
+tables that paired phenomena by resemblance (hallucination beside vacuum
+fluctuations) are dropped as equivocation dressed as derivation; only
+the functor-generated paired predictions survive, and only as candidates
+to be earned. The 24-principle consolidation list and the
+Feynman-diagram extrusion reading are dropped as restatement. The
+standalone Emergent Reasoning appendix is folded by reference into the
+LLM functor argument rather than repeated.</p>
+<h3 id="declared-closure-gap">Declared closure gap</h3>
+<p>The evaluation harness is specified but not executed. This cut is not
+closed until it runs. v2.1’s first task is to measure the three axes,
+with the standing prediction that the restored traversal raises
+cross-domain transfer over the intermediate compressed cut while holding
+its within-set coherence gain over v1.</p>
+</body>
+</html>
