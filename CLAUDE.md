@@ -6,7 +6,11 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
 
 ## Documents
 
-- **constraint_emergence_ontology.md** (v1.3) - Core ontological framework (includes Part VIII-D: Constraint Functor)
+- **constraint_emergence_ontology_v2.md** (v2.0 draft cut) - THE paper and sole current ontology surface. Narrated unified cut (constitutional base, register ruled correct by owner) merged with four content deltas harvested from the codex flattened rewrite: the four-role verification contract with the F_D→F_C reprice, the negative Markov-object experiment record, the J-space workspace scoping, and the fidelity/loss/failure-condition law with per-projection physics statusing
+- **constraint_emergence_ontology.md** (v1.3) - Published originating framework; historical source
+
+Provenance of the v2 merge: the narrated base previously held at `constraint_emergence_ontology_claude_V2.md` is fully carried into v2 and preserved byte-identical in git history (commit `137f55c`); that file was deleted as redundant. The codex rewrite's content is merged as the four deltas above; its flattened register (numbered spec headings, status tables, code-block contracts) was ruled against and its surface was superseded in place.
+
 - **constraints_and_the_implicate_order.md** - Philosophy of science and diagnostic methodology for intractable problems (Bohmian extension)
 - **[emergent_reasoning](https://github.com/foolishimp/emergent_reasoning)** - Formal companion (separate repo): LLMs as constraint-manifold traversal systems
 - **ontology_templates.md** - Logical Encapsulation meta-template for LLM constraint specs
@@ -15,7 +19,30 @@ This repository contains philosophical ontology work by Dimitar Popov exploring 
   - Comparative analysis (The Governance Stack), US Democratic OS implementation, test suite
   - reports/ - Real-world invariant analyses
 
-## Core Framework (constraint_emergence_ontology.md)
+## Originating Framework (constraint_emergence_ontology.md v1.3)
+
+The structure and concept list below describe the originating published cut.
+Use `constraint_emergence_ontology_v2.md` for the current claim status,
+terminology, evidence boundaries, and research programme.
+
+### Current v2 Corrections
+
+- The v2 paper is one standalone narrated surface; do not require v1 or a
+  companion document to understand a load-bearing claim.
+- Theorem H is the F_P→F_C regime law: verification is a contract among four
+  roles — proposer, evaluator, verifier, admitter — and deterministic checking
+  (F_D) is one role inside it, never truth itself. Stability alone never
+  confers truth.
+- Every cross-domain crossing declares source, target, relation preserved,
+  fidelity, loss, and a failure condition. Shared vocabulary does not
+  establish literal mechanism identity. Physics interpretations are statused
+  per projection; none inherits standing from a neighbour.
+- The negative Markov-object experiment record (leaked SAE partitions, failed
+  static and dynamical screening gates, passing explicit-object toy control)
+  and the J-space workspace scoping (workspace convergence, never blanket
+  proof) are constitutional content carried in the paper itself.
+- Epistemic statuses are inline, five and only five. The v2 cut remains open
+  until its closing harness runs.
 
 ### Structure
 - **Part 0**: Structural invariance, universal computation, ontology of change, generative principle

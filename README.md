@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This repository contains a philosophical ontology and its worked applications. The central thesis: reality is fundamentally a self-organising constraint network. Stable patterns — Markov objects — emerge in gaps between constraints, and their boundaries, hierarchies, and dynamics recur across substrates (physics, computation, biology, cognition, engineered systems).
+This repository contains a philosophical ontology and its worked applications. The central thesis: reality is fundamentally a self-organising constraint network. Stable bounded patterns — Markov objects — emerge in the gaps between constraints, and the precision of their screening is a declared empirical exposure. Boundaries, hierarchies, construction, evaluation, and grounded regulation recur across substrates including physics, computation, biology, cognition, and engineered systems.
 
 The framework operates at the level of structure, not material:
 
@@ -14,7 +14,7 @@ The framework operates at the level of structure, not material:
 
 From this ontology, two practical contributions follow:
 
-1. **Emergent Reasoning** — a formal model of LLM computation as constrained topological traversal on a semantic manifold, explaining how probabilistic systems produce structured inference.
+1. **Emergent Reasoning** — a bounded account of LLM computation as context-conditioned structured traversal, soft relational binding, and candidate semantic objects, exposed to mechanistic and behavioural tests.
 
 2. **Logical Encapsulation** — a method for programming LLM reasoning by loading constraint specifications (axioms, invariants, evaluation algorithms) rather than detailed instructions. This converts an LLM from a generative peer into a mechanical evaluator.
 
@@ -24,11 +24,12 @@ The [Political OS Suite](political_os/) is the primary worked example of Logical
 
 ```
 constraint_emergence_ontology/
-├── constraint_emergence_ontology.md   # Core ontology
+├── constraint_emergence_ontology_v2.md # THE paper — narrated v2.0 cut (base + content harvest)
+├── constraint_emergence_ontology.md    # Published v1.3 originating paper (historical)
 ├── concepts.md                        # Concept index, dependencies, and status map
 ├── ontology_templates.md              # Logical Encapsulation meta-template
 ├── presentations/                     # PDF snapshots (periodically updated)
-│   ├── constraint_emergence_ontology.pdf
+│   ├── constraint_emergence_ontology.pdf # Published v1.3 snapshot; v2 not yet rendered
 │   ├── ontology_templates.pdf
 │   └── README.pdf
 └── political_os/                      # Worked example: Political OS Suite
@@ -64,11 +65,19 @@ constraint_emergence_ontology/
 
 | Document | Description |
 |----------|-------------|
-| [Constraint-Emergence Ontology](constraint_emergence_ontology.md) | The core philosophical work (v1.3). Constraint networks, Markov objects, emergent manifolds, observer theory, meaning as structural invariant, information-driven construction pattern. Part VIII-D formalizes the Constraint Functor — the category-theoretic bridge between physical and computational Markov objects. |
+| [Constraint-Emergence Ontology v2](constraint_emergence_ontology_v2.md) | **The paper — sole current ontology surface.** The narrated v2.0 cut: the full traversal from physics vocabulary through rivals, construction, the evaluator, the observer, the F_P→F_C regime law with its four-role verification contract, the hallucination spiral, the typed vocabulary under the fidelity/loss/failure-condition law, the formal spine with both exposure points and the J-space scoping, the negative experiment record, and the closing harness. No prior paper is required. |
 | [Constraints and the Implicate Order](constraints_and_the_implicate_order.md) | **Philosophy of Science** — Extension of the ontology into a diagnostic methodology for intractable problems. Reframes physics problems (cosmological constant, measurement, three generations) as constraint-topology tasks using a Bohmian lens. |
-| [Concept Index](concepts.md) | Canonical concept map for the ontology: definitions, section locations, dependency graph, and epistemic status tags (axiom, derived, conjecture, instantiation). |
-| [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Formal companion paper (separate repo). LLMs as constraint-manifold traversal systems: attention as soft unification, proto-symbolic attractors, hallucination as probability degeneracy. Published on [Zenodo](https://zenodo.org/records/16592399). |
+| [Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning) | Detailed companion research programme: transformer state mechanics, soft unification, candidate Markov objects, the full experiment ledger, multi-level hallucination, J-space, and grounded-system architecture. Published cuts are collected on [Zenodo](https://zenodo.org/records/16592399). |
 | [Ontology Templates](ontology_templates.md) | The Logical Encapsulation meta-template. How to build constraint specifications that program LLM reasoning within defined axioms and procedures. Published on [Zenodo](https://zenodo.org/records/18653641). |
+
+### Historical Lineage
+
+| Document | Role |
+|----------|------|
+| [Constraint-Emergence Ontology v1.3](constraint_emergence_ontology.md) | Published originating paper, preserved for provenance. Historical. |
+| Narrated base cut | Constitutional base of v2 (register ruled correct by owner). Fully carried into `constraint_emergence_ontology_v2.md`; the standalone file was removed as redundant and is preserved byte-identical in git history at commit `137f55c`. |
+| Codex flattened rewrite | Content source for the v2 merge. Four deltas harvested (four-role verification contract with the F_D→F_C reprice, negative experiment record, J-space scoping, fidelity/loss law); its flattened register was ruled against and the surface was superseded in place by the merged cut. |
+| [Concept Index](concepts.md) | Historical concept map for the v1.3 line. It does not override v2's inline definitions and statuses. |
 
 ### [Political OS Suite](political_os/)
 
@@ -86,9 +95,7 @@ Four political philosophies expressed as formal constraint specifications. Start
 
 ### If you want to understand the ontology
 
-1. Start with **[Constraint-Emergence Ontology](constraint_emergence_ontology.md)**. Read Part 0 (structural invariance) and Part I (the ontology itself — sections 1-18). Part II positions against existing thinkers; Part VIII maps to specific domains; Part IX is the research agenda.
-2. Use **[Concept Index](concepts.md)** as the glossary and dependency map while reading; it tracks definitions, section anchors, and concept status.
-3. Read **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** for the formal treatment of how LLMs instantiate the constraint architecture.
+Read **[Constraint-Emergence Ontology v2](constraint_emergence_ontology_v2.md)**. It is the complete current argument and the only required ontology surface. Read **[Emergent Reasoning](https://github.com/foolishimp/emergent_reasoning)** afterward for the deeper LLM experiment and literature record.
 
 ### If you want to see the method in action
 
@@ -107,7 +114,7 @@ Start with **[The Political Operating System](political_os/political_operating_s
 ## Publication
 
 - Emergent Reasoning paper: [Zenodo](https://zenodo.org/records/16592399)
-- Constraint-Emergence Ontology: [Zenodo](https://zenodo.org/records/18573722)
+- Constraint-Emergence Ontology v1.3: [Zenodo](https://zenodo.org/records/18573722)
 - Programming LLM Reasoning (Ontology Templates): [Zenodo](https://zenodo.org/records/18653641)
 
 ## Author
