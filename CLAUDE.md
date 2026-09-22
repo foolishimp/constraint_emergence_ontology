@@ -2,14 +2,15 @@
 
 ## Project Overview
 
-This repository contains philosophical ontology work by Dimitar Popov exploring structural invariants across reality, computation, and engineered systems.
+This repository contains a working systems model by Dimitar Popov, related philosophical proposals and experimental records. The current paper explores which relationships among constraint, persistence, construction and evaluation transfer across implementations.
 
 ## Documents
 
-- **constraint_emergence_ontology_v2.md** (v2.0 draft cut) - THE paper and sole current ontology surface. Narrated unified cut (constitutional base, register ruled correct by owner) merged with four content deltas harvested from the codex flattened rewrite: the four-role verification contract with the F_D→F_C reprice, the negative Markov-object experiment record, the J-space workspace scoping, and the fidelity/loss/failure-condition law with per-projection physics statusing
+- **constraint_emergence_ontology_v3.md** (v3.0 draft, 22 September 2026) - The current standalone paper, titled **Constraint and Emergence**. The owner requested a concise rewrite retaining the arguments, explanatory power and reasoning while correcting terminology and unsupported derivations.
+- **constraint_emergence_ontology_v2.md** (v2.0) - The original paper, preserved unchanged at the owner's request; historical source for v3.
 - **constraint_emergence_ontology.md** (v1.3) - Published originating framework; historical source
 
-Provenance of the v2 merge: the narrated base previously held at `constraint_emergence_ontology_claude_V2.md` is fully carried into v2 and preserved byte-identical in git history (commit `137f55c`); that file was deleted as redundant. The codex rewrite's content is merged as the four deltas above; its flattened register (numbered spec headings, status tables, code-block contracts) was ruled against and its surface was superseded in place.
+The preserved v2 file matches commit `2da7871`; its earlier narrated base is preserved at `137f55c`. Revisions belong in v3. The current owner instruction supersedes the earlier requirement to retain v2's register and five-status vocabulary in the new paper. The root HTML and PDF are earlier v2 exports; no v3 exports have been generated.
 
 - **constraints_and_the_implicate_order.md** - Philosophy of science and diagnostic methodology for intractable problems (Bohmian extension)
 - **[emergent_reasoning](https://github.com/foolishimp/emergent_reasoning)** - Formal companion (separate repo): LLMs as constraint-manifold traversal systems
@@ -22,27 +23,36 @@ Provenance of the v2 merge: the narrated base previously held at `constraint_eme
 ## Originating Framework (constraint_emergence_ontology.md v1.3)
 
 The structure and concept list below describe the originating published cut.
-Use `constraint_emergence_ontology_v2.md` for the current claim status,
+Use `constraint_emergence_ontology_v3.md` for the current claim status,
 terminology, evidence boundaries, and research programme.
 
-### Current v2 Corrections
+### Current v3 Guidance
 
-- The v2 paper is one standalone narrated surface; do not require v1 or a
-  companion document to understand a load-bearing claim.
-- Theorem H is the F_P→F_C regime law: verification is a contract among four
-  roles — proposer, evaluator, verifier, admitter — and deterministic checking
-  (F_D) is one role inside it, never truth itself. Stability alone never
-  confers truth.
-- Every cross-domain crossing declares source, target, relation preserved,
-  fidelity, loss, and a failure condition. Shared vocabulary does not
-  establish literal mechanism identity. Physics interpretations are statused
-  per projection; none inherits standing from a neighbour.
-- The negative Markov-object experiment record (leaked SAE partitions, failed
-  static and dynamical screening gates, passing explicit-object toy control)
-  and the J-space workspace scoping (workspace convergence, never blanket
-  proof) are constitutional content carried in the paper itself.
-- Epistemic statuses are inline, five and only five. The v2 cut remains open
-  until its closing harness runs.
+- Keep the paper standalone and analytical. Preserve causal reasoning and
+  meaningful examples; remove repetitions, rhetorical setup and unexplained
+  technical labels.
+- Distinguish admissibility, dynamics, evaluation, statistical screening and
+  physical boundaries. Persistence alone does not establish a Markov object.
+- Preserve proposer, evaluator, verifier and admitter as distinct roles.
+  Determinism, correctness, grounding and authority are separate properties.
+  The assurance process is not a third kind of computation or a theorem that
+  unchecked probabilistic output is always false.
+- Cross-domain mappings state source, target, preserved relationship,
+  fidelity, loss and failure conditions. Shared vocabulary establishes no
+  mechanism identity. The physical conjecture remains separate from the
+  functional model.
+- Retain both positive and negative experimental evidence with its scope.
+  The explicit-object toy passed training, alignment and transfer checks;
+  it did not establish a general screening result. Inspect a failed assay's
+  measurements before interpreting its failure label.
+- Workspace availability, including the earlier J-space proposal, supplies
+  no conditional-independence proof. The context-use comparison also cannot
+  establish the physical conjecture.
+- The paper remains a draft. The September rewrite adds no experiments or
+  publication claim.
+
+The structure and concepts below are historical notes on v1.3. They do not
+override the revised paper's definitions, reasoning or claim status.
 
 ### Structure
 - **Part 0**: Structural invariance, universal computation, ontology of change, generative principle
